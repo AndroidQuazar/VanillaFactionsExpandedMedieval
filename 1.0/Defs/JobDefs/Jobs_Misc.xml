@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <JobDef>
+        <defName>EquipShield</defName>
+        <driverClass>VanillaFactionsExpandedMedieval.JobDriver_EquipShield</driverClass>
+        <reportString>equipping TargetA.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
+</Defs>

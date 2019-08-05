@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Dan: Plaseholder that uses values from tribal factions from now -->
-    <FactionDef ParentName="HumanFactionBase" Name="MedievalBase" Abstract="True">
+    <!-- Dan: Placeholder that uses values from tribal factions from now -->
+    <FactionDef ParentName="HumanFactionBase" Name="MedievalFactionBase" Abstract="True">
         <pawnSingular>tribesman</pawnSingular>
         <pawnsPlural>tribespeople</pawnsPlural>
         <listOrderPriority>25</listOrderPriority>
@@ -122,7 +122,7 @@
         <homeIconPath>World/WorldObjects/TribalSettlement</homeIconPath>
     </FactionDef>
 
-    <FactionDef ParentName="MedievalBase">
+    <FactionDef ParentName="MedievalFactionBase">
         <defName>MedievalCivil</defName>
         <label>civil kingdom</label>
         <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies and valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe pursues a gentle way of life where they can. They are quite open to trade and alliances, even with strange peoples.</description>
@@ -141,7 +141,7 @@
         </naturalColonyGoodwill>
     </FactionDef>
 
-    <FactionDef ParentName="MedievalBase">
+    <FactionDef ParentName="MedievalFactionBase">
         <defName>MedievalRough</defName>
         <label>rough kingdom</label>
         <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies and valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe values warlike dominance; it may be difficult to turn them into an ally.</description>

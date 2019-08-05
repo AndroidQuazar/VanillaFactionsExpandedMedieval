@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+        <defName>Shield_Kite</defName>
+        <label>kiteshield</label>
+        <description>Placeholder.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Shield/Kiteshield</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Medieval</techLevel>
+        <weaponTags>
+            <li>NeolithicMeleeBasic</li>
+        </weaponTags>
+        <costStuffCount>20</costStuffCount>
+        <costList>
+            <WoodLog>60</WoodLog>
+        </costList>
+        <statBases>
+            <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.9</ArmorRating_Heat>
+            <WorkToMake>3000</WorkToMake>
+            <Mass>2</Mass>
+        </statBases>
+        <comps>
+            <li Class="VanillaFactionsExpandedMedieval.CompProperties_Shield">
+                <coveredBodyPartGroups>
+                    <li>Torso</li>
+                    <li>Arms</li>
+                </coveredBodyPartGroups>
+            </li>
+        </comps>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <stuffCategories>
+            <li>Leathery</li>
+        </stuffCategories>
+        <tools>
+            <li>
+                <label>base</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>centre</label>
+                <labelUsedInLogging>false</labelUsedInLogging>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <ignoreConfigErrors>true</ignoreConfigErrors>
+        <apparel>
+            <useDeflectMetalEffect>false</useDeflectMetalEffect>
+        </apparel>
+        <!-- Dual shields? Why not! -->
+        <modExtensions>
+            <li Class="VanillaFactionsExpandedMedieval.ThingDefExtension">
+                <usableWithShields>true</usableWithShields>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>
