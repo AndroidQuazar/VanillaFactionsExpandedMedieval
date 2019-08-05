@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <PawnKindDef Name="MedievalBase" Abstract="True">
+        <race>Human</race>
+        <defaultFactionType>TribeCivil</defaultFactionType>
+        <backstoryCategories>
+            <li>Tribal</li>
+        </backstoryCategories>
+        <maxGenerationAge>60</maxGenerationAge>
+        <chemicalAddictionChance>0.05</chemicalAddictionChance>
+        <invNutrition>2.55</invNutrition>
+        <invFoodDef>Pemmican</invFoodDef>
+        <apparelTags>
+            <li>Neolithic</li>
+        </apparelTags>
+    </PawnKindDef>
+
+    <!-- Poverty tier: Peasant -->
+    <!-- Dan: Currently using Penitent's values as placeholders; replace as soon as possible -->
+    <PawnKindDef ParentName="MedievalBase">
+        <defName>Medieval_Peasant</defName>
+        <label>peasant</label>
+        <combatPower>35</combatPower>
+        <chemicalAddictionChance>0.10</chemicalAddictionChance>
+        <invNutrition>0</invNutrition>
+        <itemQuality>Poor</itemQuality>
+        <gearHealthRange>
+            <min>0.2</min>
+            <max>1.1</max>
+        </gearHealthRange>
+        <apparelMoney>
+            <min>50</min>
+            <max>100</max>
+        </apparelMoney>
+        <weaponMoney>
+            <min>90</min>
+            <max>150</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>NeolithicMeleeBasic</li>
+        </weaponTags>
+        <techHediffsMoney>
+            <min>50</min>
+            <max>50</max>
+        </techHediffsMoney>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+        <techHediffsChance>0.15</techHediffsChance>
+    </PawnKindDef>
+
+    <!-- Mid-tier melee: Squire -->
+    <!-- Dan: Currently using Warrior's values as placeholders; replace as soon as possible -->
+    <PawnKindDef ParentName="MedievalBase">
+        <defName>Medieval_Squire</defName>
+        <label>squire</label>
+        <combatPower>60</combatPower>
+        <itemQuality>Poor</itemQuality>
+        <canBeSapper>true</canBeSapper>
+        <gearHealthRange>
+            <min>0.5</min>
+            <max>1.8</max>
+        </gearHealthRange>
+        <apparelMoney>
+            <min>200</min>
+            <max>300</max>
+        </apparelMoney>
+        <apparelRequired>
+            <li>Apparel_WarVeil</li>
+        </apparelRequired>
+        <weaponMoney>
+            <min>150</min>
+            <max>150</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>NeolithicMeleeDecent</li>
+        </weaponTags>
+    </PawnKindDef>
+
+    <!-- Mid-tier ranged: Crossbowman and Longbowman -->
+    <!-- Dan: Currently using Hunter's values as placeholders; replace as soon as possible -->
+    <PawnKindDef Name="MedievalRangedBase" ParentName="MedievalBase" Abstract="True">
+        <combatPower>65</combatPower>
+        <gearHealthRange>
+            <min>0.5</min>
+            <max>1.8</max>
+        </gearHealthRange>
+        <apparelMoney>
+            <min>200</min>
+            <max>300</max>
+        </apparelMoney>
+        <apparelRequired>
+            <li>Apparel_WarVeil</li>
+        </apparelRequired>
+        <weaponMoney>
+            <min>100</min>
+            <max>100</max>
+        </weaponMoney>
+    </PawnKindDef>
+
+    <!-- High-tier melee: Knight -->
+    <!-- Dan: Currently using Berserker's values as placeholders; replace as soon as possible -->
+    <PawnKindDef ParentName="MedievalBase">
+        <defName>Medieval_Knight</defName>
+        <label>knight</label>
+        <combatPower>90</combatPower>
+        <canBeSapper>true</canBeSapper>
+        <apparelMoney>
+            <min>200</min>
+            <max>550</max>
+        </apparelMoney>
+        <apparelRequired>
+            <li>Apparel_WarMask</li>
+        </apparelRequired>
+        <weaponMoney>
+            <min>300</min>
+            <max>300</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>NeolithicMeleeAdvanced</li>
+        </weaponTags>
+    </PawnKindDef>
+
+    <!-- Top-tier: Lord -->
+    <!-- Dan: Currently using both Chiefs' values as placeholders; replace as soon as possible -->
+    <PawnKindDef ParentName="MedievalBase">
+        <defName>Medieval_Lord</defName>
+        <label>lord</label>
+        <combatPower>130</combatPower>
+        <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+        <minGenerationAge>30</minGenerationAge>
+        <maxGenerationAge>999</maxGenerationAge>
+        <itemQuality>Normal</itemQuality>        <!-- Dan: Could potentially make this Good? No other isFighter PawnKinds do this AFAIK -->
+        <factionLeader>true</factionLeader>
+        <canBeSapper>true</canBeSapper>
+        <apparelMoney>
+            <min>450</min>
+            <max>750</max>
+        </apparelMoney>
+        <apparelRequired>
+            <li>Apparel_TribalHeaddress</li>
+            <li>Apparel_PlateArmor</li>
+        </apparelRequired>
+        <weaponMoney>
+            <min>500</min>
+            <max>1000</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>NeolithicMeleeAdvanced</li>
+            <li>MedievalMeleeAdvanced</li>
+            <li>NeolithicRangedChief</li>
+        </weaponTags>
+    </PawnKindDef>
+
+</Defs>

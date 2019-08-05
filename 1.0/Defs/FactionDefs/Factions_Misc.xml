@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Dan: Plaseholder that uses values from tribal factions from now -->
+    <FactionDef ParentName="HumanFactionBase" Name="MedievalBase" Abstract="True">
+        <pawnSingular>tribesman</pawnSingular>
+        <pawnsPlural>tribespeople</pawnsPlural>
+        <listOrderPriority>25</listOrderPriority>
+        <settlementGenerationWeight>1</settlementGenerationWeight>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <canMakeRandomly>true</canMakeRandomly>
+        <canStageAttacks>true</canStageAttacks>
+        <expandingIconTexture>World/WorldObjects/Expanding/Village</expandingIconTexture>
+        <geneticVariance>0.1</geneticVariance>
+        <factionNameMaker>NamerFactionTribal</factionNameMaker>
+        <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+        <pawnNameMaker>NamerPersonTribal</pawnNameMaker>
+        <techLevel>Medieval</techLevel>
+        <backstoryCategories>
+            <li>Tribal</li>
+        </backstoryCategories>
+        <leaderTitle>lord</leaderTitle>
+        <hairTags>
+            <li>Tribal</li>
+        </hairTags>
+        <raidCommonalityFromPointsCurve>
+            <points>
+                <li>(0, 1)</li>                <!--Constant 1 at all points levels-->
+            </points>
+        </raidCommonalityFromPointsCurve>
+        <caravanTraderKinds>
+            <li>Caravan_Neolithic_BulkGoods</li>
+            <li>Caravan_Neolithic_WarMerchant</li>
+            <li>Caravan_Neolithic_Slaver</li>
+            <li>Caravan_Neolithic_ShamanMerchant</li>
+        </caravanTraderKinds>
+        <visitorTraderKinds>
+            <li>Visitor_Neolithic_Standard</li>
+        </visitorTraderKinds>
+        <baseTraderKinds>
+            <li>Base_Neolithic_Standard</li>
+        </baseTraderKinds>
+        <allowedArrivalTemperatureRange>
+            <min>-40</min>
+            <max>45</max>
+        </allowedArrivalTemperatureRange>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0,35)</li>
+                <li>(70, 50)</li>
+                <li>(800, 100)</li>
+                <li>(1300, 150)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+        <!-- Dan: Ranged PawnKinds will be added via xpath patches -->
+        <pawnGroupMakers>
+            <li>
+                <!-- Normal fights, ranged with melee mix-ins -->
+                <kindDef>Combat</kindDef>
+                <commonality>100</commonality>
+                <options>
+                    <Medieval_Peasant>5</Medieval_Peasant>
+                    <Medieval_Squire>5</Medieval_Squire>
+                    <Medieval_Knight>5</Medieval_Knight>
+                    <Medieval_Lord>3</Medieval_Lord>
+                </options>
+            </li>
+            <li>
+                <!-- Normal fights, ranged only -->
+                <kindDef>Combat</kindDef>
+                <commonality>60</commonality>
+                <options>
+                    <Medieval_Lord>5</Medieval_Lord>
+                </options>
+            </li>
+            <li>
+                <!-- Normal fights, melee only -->
+                <kindDef>Combat</kindDef>
+                <commonality>60</commonality>
+                <options>
+                    <Medieval_Peasant>10</Medieval_Peasant>
+                    <Medieval_Squire>10</Medieval_Squire>
+                    <Medieval_Knight>10</Medieval_Knight>
+                    <Medieval_Lord>5</Medieval_Lord>
+                </options>
+            </li>
+            <li>
+                <!-- Peaceful -->
+                <kindDef>Peaceful</kindDef>
+                <options>
+                    <Medieval_Squire>20</Medieval_Squire>
+                    <Medieval_Knight>5</Medieval_Knight>
+                    <Medieval_Lord>3</Medieval_Lord>
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <Tribal_Trader>1</Tribal_Trader>
+                </traders>
+                <carriers>
+                    <Muffalo>6</Muffalo>
+                    <Dromedary>5</Dromedary>
+                    <Alpaca>2.5</Alpaca>
+                    <Elephant>2</Elephant>
+                </carriers>
+                <guards>
+                    <Medieval_Squire>7</Medieval_Squire>
+                    <Medieval_Knight>7</Medieval_Knight>
+                </guards>
+            </li>
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <Medieval_Squire>7</Medieval_Squire>
+                    <Medieval_Knight>7</Medieval_Knight>
+                    <Medieval_Lord>10</Medieval_Lord>
+                </options>
+            </li>
+        </pawnGroupMakers>
+        <homeIconPath>World/WorldObjects/TribalSettlement</homeIconPath>
+    </FactionDef>
+
+    <FactionDef ParentName="MedievalBase">
+        <defName>MedievalCivil</defName>
+        <label>civil kingdom</label>
+        <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies and valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe pursues a gentle way of life where they can. They are quite open to trade and alliances, even with strange peoples.</description>
+        <colorSpectrum>
+            <!-- <li>(0.85, 0.75, 0.37)</li>
+            <li>(0.95, 0.95, 0.37)</li> -->
+            <li>(0, 1, 0)</li>
+        </colorSpectrum>
+        <startingGoodwill>
+            <min>-0</min>
+            <max>0</max>
+        </startingGoodwill>
+        <naturalColonyGoodwill>
+            <min>-50</min>
+            <max>50</max>
+        </naturalColonyGoodwill>
+    </FactionDef>
+
+    <FactionDef ParentName="MedievalBase">
+        <defName>MedievalRough</defName>
+        <label>rough kingdom</label>
+        <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies and valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe values warlike dominance; it may be difficult to turn them into an ally.</description>
+        <colorSpectrum>
+            <!-- <li>(0.25, 0.65, 0.05)</li>
+            <li>(0.25, 0.75, 0.05)</li> -->
+            <li>(1, 0, 0)</li>
+        </colorSpectrum>
+        <startingGoodwill>
+            <min>-20</min>
+            <max>-20</max>
+        </startingGoodwill>
+        <naturalColonyGoodwill>
+            <min>-100</min>
+            <max>-80</max>
+        </naturalColonyGoodwill>
+    </FactionDef>
+
+</Defs>
