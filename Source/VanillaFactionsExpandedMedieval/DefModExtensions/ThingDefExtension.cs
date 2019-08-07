@@ -14,7 +14,12 @@ namespace VanillaFactionsExpandedMedieval
 
         public static readonly ThingDefExtension defaultValues = new ThingDefExtension();
 
+        // For weapons
         public bool usableWithShields = false;
+
+        // For apparel
+        public bool useFactionColour = false;
+        public bool overrideKindDefApparelColour = false;
 
     }
 
