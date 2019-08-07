@@ -10,7 +10,7 @@
         <requiredCountAtGameStart>1</requiredCountAtGameStart>
         <canMakeRandomly>true</canMakeRandomly>
         <canStageAttacks>true</canStageAttacks>
-        <expandingIconTexture>World/WorldObjects/Expanding/Village</expandingIconTexture>
+        <expandingIconTexture>World/WorldObjects/Expanding/Castle</expandingIconTexture>
         <geneticVariance>0.1</geneticVariance>
         <factionNameMaker>NamerFactionTribal</factionNameMaker>
         <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
@@ -119,7 +119,7 @@
                 </options>
             </li>
         </pawnGroupMakers>
-        <homeIconPath>World/WorldObjects/TribalSettlement</homeIconPath>
+        <homeIconPath>World/WorldObjects/MedievalSettlement</homeIconPath>
     </FactionDef>
 
     <FactionDef ParentName="MedievalFactionBase">

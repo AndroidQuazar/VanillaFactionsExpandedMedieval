@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using UnityEngine;
 using Verse;
@@ -18,6 +19,10 @@ namespace VanillaFactionsExpandedMedieval
         {
             //HarmonyInstance.DEBUG = true;
             VanillaFactionsExpandedMedieval.HarmonyInstance.PatchAll();
+
+            // PawnApparelGenerator.PossibleApparelSet.CoatButNoShirt
+            VanillaFactionsExpandedMedieval.HarmonyInstance.Patch(typeof(PawnApparelGenerator).GetNestedType("PossibleApparelSet", BindingFlags.NonPublic | BindingFlags.Instance).GetMethod("CoatButNoShirt", BindingFlags.Public | BindingFlags.Instance),
+                transpiler: new HarmonyMethod(typeof(Patch_PawnApparelGenerator.PossibleApparelSet.manual_CoatButNoShirt), "Transpiler"));
 
             // Dual Wield
             if (ModCompatibilityCheck.DualWield)

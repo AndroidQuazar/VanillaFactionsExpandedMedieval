@@ -3,7 +3,7 @@
 
     <PawnKindDef Name="MedievalBase" Abstract="True">
         <race>Human</race>
-        <defaultFactionType>TribeCivil</defaultFactionType>
+        <defaultFactionType>KingdomCivil</defaultFactionType>
         <backstoryCategories>
             <li>Tribal</li>
         </backstoryCategories>
@@ -12,8 +12,14 @@
         <invNutrition>2.55</invNutrition>
         <invFoodDef>Pemmican</invFoodDef>
         <apparelTags>
-            <li>Neolithic</li>
+            <li>MedievalBasic</li>
         </apparelTags>
+    </PawnKindDef>
+
+    <PawnKindDef Name="MedievalMilitaryBase" ParentName="MedievalBase" Abstract="True">
+        <apparelRequired>
+            <li>Apparel_Tabard</li>
+        </apparelRequired>
     </PawnKindDef>
 
     <!-- Poverty tier: Peasant -->
@@ -52,7 +58,7 @@
 
     <!-- Mid-tier melee: Squire -->
     <!-- Dan: Currently using Warrior's values as placeholders; replace as soon as possible -->
-    <PawnKindDef ParentName="MedievalBase">
+    <PawnKindDef ParentName="MedievalMilitaryBase">
         <defName>Medieval_Squire</defName>
         <label>squire</label>
         <combatPower>60</combatPower>
@@ -66,9 +72,9 @@
             <min>200</min>
             <max>300</max>
         </apparelMoney>
-        <apparelRequired>
-            <li>Apparel_WarVeil</li>
-        </apparelRequired>
+        <apparelTags>
+            <li>MedievalMilitary</li>
+        </apparelTags>
         <weaponMoney>
             <min>150</min>
             <max>150</max>
@@ -80,7 +86,7 @@
 
     <!-- Mid-tier ranged: Crossbowman and Longbowman -->
     <!-- Dan: Currently using Hunter's values as placeholders; replace as soon as possible -->
-    <PawnKindDef Name="MedievalRangedBase" ParentName="MedievalBase" Abstract="True">
+    <PawnKindDef Name="MedievalRangedBase" ParentName="MedievalMilitaryBase" Abstract="True">
         <combatPower>65</combatPower>
         <gearHealthRange>
             <min>0.5</min>
@@ -90,9 +96,9 @@
             <min>200</min>
             <max>300</max>
         </apparelMoney>
-        <apparelRequired>
-            <li>Apparel_WarVeil</li>
-        </apparelRequired>
+        <apparelTags>
+            <li>MedievalMilitary</li>
+        </apparelTags>
         <weaponMoney>
             <min>100</min>
             <max>100</max>
@@ -101,7 +107,7 @@
 
     <!-- High-tier melee: Knight -->
     <!-- Dan: Currently using Berserker's values as placeholders; replace as soon as possible -->
-    <PawnKindDef ParentName="MedievalBase">
+    <PawnKindDef ParentName="MedievalMilitaryBase">
         <defName>Medieval_Knight</defName>
         <label>knight</label>
         <combatPower>90</combatPower>
@@ -111,7 +117,8 @@
             <max>550</max>
         </apparelMoney>
         <apparelRequired>
-            <li>Apparel_WarMask</li>
+            <li>Apparel_PlateArmor</li>
+            <li>Apparel_SimpleHelmet</li>
         </apparelRequired>
         <weaponMoney>
             <min>300</min>
@@ -124,7 +131,7 @@
 
     <!-- Top-tier: Lord -->
     <!-- Dan: Currently using both Chiefs' values as placeholders; replace as soon as possible -->
-    <PawnKindDef ParentName="MedievalBase">
+    <PawnKindDef ParentName="MedievalMilitaryBase">
         <defName>Medieval_Lord</defName>
         <label>lord</label>
         <combatPower>130</combatPower>
@@ -139,8 +146,8 @@
             <max>750</max>
         </apparelMoney>
         <apparelRequired>
-            <li>Apparel_TribalHeaddress</li>
-            <li>Apparel_PlateArmor</li>
+            <li>Apparel_PlateArmorHeavy</li>
+            <li>Apparel_PlateHelmetHeavy</li>
         </apparelRequired>
         <weaponMoney>
             <min>500</min>

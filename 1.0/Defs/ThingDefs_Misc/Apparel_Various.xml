@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="ArmorSmithableBase">
+        <defName>Apparel_PlateArmorHeavy</defName>
+        <label>heavy plate armor</label>
+        <description>Overlapping solid plates of armor covering the entire body from neck to feet.</description>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+            <researchPrerequisite>PlateArmor</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/HeavyPlateArmor/HeavyPlateArmor</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <costStuffCount>250</costStuffCount>
+        <statBases>
+            <WorkToMake>65000</WorkToMake>
+            <MaxHitPoints>290</MaxHitPoints>
+            <Mass>20</Mass>
+            <StuffEffectMultiplierArmor>1.0</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+            <EquipDelay>20</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-1.2</MoveSpeed>
+        </equippedStatOffsets>
+        <thingCategories>
+            <li>Apparel</li>
+        </thingCategories>
+        <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Neck</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Things/Pawn/Humanlike/Apparel/HeavyPlateArmor/HeavyPlateArmor</wornGraphicPath>
+            <layers>
+                <li>Middle</li>
+                <li>Shell</li>
+            </layers>
+            <tags>
+                <li>MedievalMilitaryAdvanced</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.33,0.33,0.33)</only>
+                </li>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.65,0.65,0.65)</only>
+                </li>
+                <li>
+                    <weight>6</weight>
+                    <min>(0.3,0.3,0.3)</min>
+                    <max>(0.5,0.5,0.5)</max>
+                </li>
+            </options>
+        </colorGenerator>
+    </ThingDef>
+
+    <ThingDef ParentName="ApparelMakeableBase">
+        <defName>Apparel_Tabard</defName>
+        <label>tabard</label>
+        <description>A garment that is worn over armour by medieval militia which depicts their army's symbol.</description>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/Tabard/Tabard</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <costStuffCount>60</costStuffCount> <!-- Same cost as tribalwear -->
+        <stuffCategories>
+            <li>Fabric</li>
+            <li>Leathery</li>
+        </stuffCategories>
+        <thingCategories>
+            <li>Apparel</li>
+        </thingCategories>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToMake>1800</WorkToMake>
+            <Mass>0.4</Mass>
+            <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.22</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0.11</StuffEffectMultiplierInsulation_Heat>
+            <EquipDelay>1.5</EquipDelay>
+        </statBases>
+        <apparel>
+            <bodyPartGroups>
+                <li>Neck</li>
+                <li>Torso</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Tabard/Tabard</wornGraphicPath>
+            <layers>
+                <li>OuterShell</li>
+            </layers>
+            <tags>
+                <li>MedievalMilitaryTabard</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_StandardApparel" />
+        <modExtensions>
+            <li Class="VanillaFactionsExpandedMedieval.ThingDefExtension">
+                <useFactionColour>true</useFactionColour>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

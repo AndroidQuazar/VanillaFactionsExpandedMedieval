@@ -18,6 +18,7 @@ namespace VanillaFactionsExpandedMedieval
         }
 
         public List<BodyPartGroupDef> coveredBodyPartGroups = new List<BodyPartGroupDef>();
+        public GraphicData unequippedGraphicData;
 
     }
 

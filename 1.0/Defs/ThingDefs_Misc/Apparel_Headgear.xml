@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="ArmorHelmetMakeableBase">
+        <defName>Apparel_PlateHelmetHeavy</defName>
+        <label>heavy plate helmet</label>
+        <description>A bulky helmet that provides full-head coverage. Restricts the wearer's field of vision.</description>
+        <techLevel>Medieval</techLevel>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/HeavyPlateHelmet/HeavyPlateHelmet</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <WorkToMake>12000</WorkToMake>
+            <MaxHitPoints>120</MaxHitPoints>
+            <Mass>3</Mass>
+            <StuffEffectMultiplierArmor>0.7</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+            <EquipDelay>4.5</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <ShootingAccuracyPawn>-8</ShootingAccuracyPawn>
+        </equippedStatOffsets>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <costStuffCount>60</costStuffCount>
+        <apparel>
+            <bodyPartGroups>
+                <li>FullHead</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Things/Pawn/Humanlike/Apparel/HeavyPlateHelmet/HeavyPlateHelmet</wornGraphicPath>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <tags>
+                <li>MedievalMilitaryAdvanced</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+        </apparel>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="PlantBase">
+        <defName>Plant_Grape</defName>
+        <label>grape plant</label>
+        <description>A flowering crop that yields hops, an essential ingredient in beer.</description>
+        <statBases>
+            <MaxHitPoints>85</MaxHitPoints>
+            <Nutrition>0.2</Nutrition>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Plant/GrapePlant</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+        </graphicData>
+        <selectable>true</selectable>
+        <pathCost>10</pathCost>
+        <ingestible />
+        <plant>
+            <fertilitySensitivity>0.7</fertilitySensitivity>
+            <growDays>5</growDays>
+            <dieIfLeafless>true</dieIfLeafless>
+            <harvestTag>Standard</harvestTag>
+            <harvestedThingDef>RawHops</harvestedThingDef>
+            <harvestYield>8</harvestYield>
+            <sowMinSkill>3</sowMinSkill>
+            <sowTags>
+                <li>Ground</li>
+                <li>Hydroponic</li>
+            </sowTags>
+            <topWindExposure>0.1</topWindExposure>
+            <visualSizeRange>
+                <min>0.3</min>
+                <max>1.05</max>
+            </visualSizeRange>
+            <wildOrder>2</wildOrder>
+        </plant>
+    </ThingDef>
+
+</Defs>

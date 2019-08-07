@@ -6,7 +6,7 @@
         <label>kiteshield</label>
         <description>Placeholder.</description>
         <graphicData>
-            <texPath>Things/Item/Equipment/Shield/Kiteshield</texPath>
+            <texPath>Things/Item/Equipment/Shield/KiteShield/KiteShield</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <techLevel>Medieval</techLevel>

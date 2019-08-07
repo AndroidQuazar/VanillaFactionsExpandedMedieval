@@ -23,18 +23,23 @@ namespace VanillaFactionsExpandedMedieval
             return typeof(ThingWithComps).IsAssignableFrom(tDef.thingClass) && tDef.HasComp(typeof(CompShield));
         }
 
-        public static ThingWithComps EquippedShield(this Pawn_EquipmentTracker equipment)
+        public static ThingWithComps OffHandShield(this Pawn_EquipmentTracker equipment)
         {
             // Get the first shield that the pawn has equipped which isn't in the primary slot
-            return equipment.AllEquipmentListForReading.FirstOrDefault(t => equipment.Primary != t && t.def.IsShield());
+            return equipment.AllEquipmentListForReading.LastOrDefault(t => equipment.Primary != t && t.def.IsShield());
+        }
+
+        public static int EquippedShieldCount(this Pawn_EquipmentTracker equipment)
+        {
+            return equipment.AllEquipmentListForReading.Count(t => equipment.Primary != t && t.def.IsShield());
         }
 
         public static void MakeRoomForShield(this Pawn_EquipmentTracker equipment, ThingWithComps eq)
         {
-            if (eq.def.equipmentType == EquipmentType.Primary && equipment.EquippedShield() != null)
+            if (eq.def.equipmentType == EquipmentType.Primary && equipment.OffHandShield() != null)
             {
                 ThingWithComps thingWithComps;
-                if (equipment.TryDropEquipment(equipment.EquippedShield(), out thingWithComps, equipment.pawn.Position, true))
+                if (equipment.TryDropEquipment(equipment.OffHandShield(), out thingWithComps, equipment.pawn.Position, true))
                 {
                     if (thingWithComps != null)
                     {
@@ -50,7 +55,7 @@ namespace VanillaFactionsExpandedMedieval
 
         public static void AddShield(this Pawn_EquipmentTracker equipment, ThingWithComps newEq)
         {
-            if (newEq.def.equipmentType == EquipmentType.Primary && equipment.EquippedShield() != null)
+            if (newEq.def.equipmentType == EquipmentType.Primary && equipment.OffHandShield() != null)
             {
                 Log.Error(string.Concat(new object[]
                 {
