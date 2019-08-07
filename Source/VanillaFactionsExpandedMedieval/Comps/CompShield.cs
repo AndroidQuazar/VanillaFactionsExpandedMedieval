@@ -30,7 +30,19 @@ namespace VanillaFactionsExpandedMedieval
             {
                 if (EquippingPawn != null)
                 {
-                    // Get pawn's primary weapon and check if it is flagged to be usable with shields
+                    // Too few hands
+                    Log.Message(EquippingPawn.HandCount().ToString());
+                    if (!EquippingPawn.CanUseShields())
+                        return false;
+
+                    // Dual wielding - has offhand
+                    if (ModCompatibilityCheck.DualWield)
+                    {
+                        if (NonPublicMethods.DualWield_Ext_Pawn_EquipmentTracker_TryGetOffHandEquipment(EquippingPawn.equipment, out ThingWithComps offHand))
+                            return false;
+                    }
+
+                    // Get pawn's primary weapon and check if it is flagged to be usable with shields, as well as the pawn having at least 1 hand
                     var primary = EquippingPawn.equipment.Primary;
                     if (primary != null && !primary.def.IsShield())
                     {

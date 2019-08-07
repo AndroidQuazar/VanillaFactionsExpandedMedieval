@@ -16,7 +16,8 @@ namespace VanillaFactionsExpandedMedieval
     public static class Patch_FloatMenuMakerMap
     {
 
-        [HarmonyPatch(typeof(FloatMenuMakerMap), "AddHumanlikeOrders")]
+        // Deactivated the 'equip x as shield' functionality for now since it is redundant
+        //[HarmonyPatch(typeof(FloatMenuMakerMap), "AddHumanlikeOrders")]
         public static class AddHumanlikeOrders
         {
 
@@ -72,7 +73,7 @@ namespace VanillaFactionsExpandedMedieval
                         shieldOption = new FloatMenuOption("CannotEquip".Translate(labelShort) + " (" + "NoPath".Translate() + ")", null, MenuOptionPriority.Default, null, null, 0f, null, null);
 
                     // Pawn cannot manipulate
-                    else if (!pawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation))
+                    else if (!pawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation) || !pawn.CanUseShields())
                         shieldOption = new FloatMenuOption("CannotEquip".Translate(labelShort) + " (" + "Incapable".Translate() + ")", null, MenuOptionPriority.Default, null, null, 0f, null, null);
 
                     // Shield is burning
@@ -93,7 +94,7 @@ namespace VanillaFactionsExpandedMedieval
                         {
                             var thingDefExtension = weapon.def.GetModExtension<ThingDefExtension>() ?? ThingDefExtension.defaultValues;
                             if (!thingDefExtension.usableWithShields)
-                                optionLabel += $" {"VanillaFactionsExpandedMedieval.EquipWarningShieldUnusable".Translate(weapon.LabelShort)}";
+                                optionLabel += $" {"VanillaFactionsExpandedMedieval.EquipWarningShieldUnusable".Translate(weapon.def.label)}";
                         }
 
                         shieldOption = FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption(optionLabel, delegate ()

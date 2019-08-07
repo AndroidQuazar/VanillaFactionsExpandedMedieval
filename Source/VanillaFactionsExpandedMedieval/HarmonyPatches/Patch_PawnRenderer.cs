@@ -15,6 +15,52 @@ namespace VanillaFactionsExpandedMedieval
     public static class Patch_PawnRenderer
     {
 
+        [HarmonyPatch(typeof(PawnRenderer), "DrawEquipment")]
+        public static class DrawEquipment
+        {
+
+            public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+            {
+                var instructionList = instructions.ToList();
+
+                var drawEquipmentAimingInfo = AccessTools.Method(typeof(PawnRenderer), nameof(PawnRenderer.DrawEquipmentAiming));
+                var tryDrawShieldAimingInfo = AccessTools.Method(typeof(DrawEquipment), nameof(TryDrawShieldAiming));
+
+                for (int i = 0; i < instructionList.Count; i++)
+                {
+                    var instruction = instructionList[i];
+
+                    // For every call that draws equipment, also add a call to draw shield
+                    if (instruction.opcode == OpCodes.Call && instruction.operand == drawEquipmentAimingInfo)
+                    {
+                        yield return instruction;
+                        yield return new CodeInstruction(OpCodes.Ldarg_0); // this
+                        yield return instructionList[i - 2]; // drawLoc
+                        instruction = new CodeInstruction(OpCodes.Call, tryDrawShieldAimingInfo); // TryDrawShieldAiming(this, drawLoc)
+                    }
+
+                    yield return instruction;
+                }
+            }
+
+            private static void TryDrawShieldAiming(PawnRenderer instance, Vector3 drawLoc)
+            {
+                var pawn = (Pawn)NonPublicFields.PawnRenderer_pawn.GetValue(instance);
+                if (pawn.equipment.OffHandShield() is ThingWithComps shield)
+                {
+                    var shieldComp = shield.GetComp<CompShield>();
+                    if (shieldComp.UsableNow)
+                    {
+                        var curHoldOffset = shieldComp.Props.offHandHoldOffset.Pick(pawn.Rotation);
+                        var finalDrawLoc = drawLoc + curHoldOffset.offset + new Vector3(0, (curHoldOffset.behind ? -0.0390625f : 0.0390625f), 0);
+                        shieldComp.Props.offHandGraphicData.GraphicColoredFor(shield).Draw(finalDrawLoc, (curHoldOffset.flip ? pawn.Rotation.Opposite : pawn.Rotation), pawn);
+                    }
+                        
+                }
+            }
+
+        }
+
         [HarmonyPatch(typeof(PawnRenderer), "RenderPawnInternal", new Type[] { typeof(Vector3), typeof(float), typeof(bool), typeof(Rot4), typeof(Rot4), typeof(RotDrawMode), typeof(bool), typeof(bool) })]
         public static class RenderPawnInternal
         {

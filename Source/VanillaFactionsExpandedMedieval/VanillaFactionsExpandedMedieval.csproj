@@ -59,9 +59,12 @@
     <Compile Include="HarmonyPatches\DualWield\Patch_DualWield_Harmony_FloatMenuMakerMap_AddHumanlikeOrders.cs" />
     <Compile Include="HarmonyPatches\Patch_PawnGraphicSet.cs" />
     <Compile Include="HarmonyPatches\Patch_PawnRenderer.cs" />
-    <Compile Include="HarmonyPatches\Patch_FloatMenuMakerMap.cs" />
+    <None Include="HarmonyPatches\Patch_FloatMenuMakerMap.cs" />
     <Compile Include="HarmonyPatches\Patch_PawnApparelGenerator.cs" />
+    <Compile Include="HarmonyPatches\Patch_CompEquippable.cs" />
+    <Compile Include="HarmonyPatches\Patch_Pawn_HealthTracker.cs" />
     <Compile Include="HarmonyPatches\Patch_Pawn_EquipmentTracker.cs" />
+    <Compile Include="HarmonyPatches\Patch_Verb.cs" />
     <Compile Include="HarmonyPatches\Patch_ThingDef.cs" />
     <Compile Include="HarmonyPatches\Patch_ArmorUtility.cs" />
     <Compile Include="JobDrivers\JobDriver_EquipShield.cs" />

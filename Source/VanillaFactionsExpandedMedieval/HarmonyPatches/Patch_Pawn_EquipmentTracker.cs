@@ -17,13 +17,12 @@ namespace VanillaFactionsExpandedMedieval
         public static class AddEquipment
         {
 
-            public static bool Prefix(Pawn_EquipmentTracker __instance, ThingWithComps newEq)
+            public static bool Prefix(Pawn_EquipmentTracker __instance, ThingWithComps newEq, ThingOwner<ThingWithComps> ___equipment)
             {
-                if (__instance.Primary != null && __instance.Primary.def.IsShield() && __instance.EquippedShieldCount() < 2)
+                if (__instance.pawn.CanUseShields() && __instance.Primary != null && __instance.OffHandShield() == null)
                 {
-                    var equipmentOwner = (ThingOwner<ThingWithComps>)NonPublicFields.Pawn_EquipmentTracker_equipment.GetValue(__instance);
-                    equipmentOwner.TryAdd(newEq);
-                    equipmentOwner.InnerListForReading.SortBy(t => t.def.IsShield());
+                    ___equipment.TryAdd(newEq);
+                    ___equipment.InnerListForReading.SortBy(t => t.def.IsShield());
                     return false;
                 }
                 return true;
@@ -37,7 +36,7 @@ namespace VanillaFactionsExpandedMedieval
 
             public static bool Prefix(Pawn_EquipmentTracker __instance, ThingWithComps eq)
             {
-                return __instance.Primary == null || !__instance.Primary.def.IsShield() || __instance.EquippedShieldCount() >= 2;
+                return __instance.pawn.CanUseShields() && __instance.OffHandShield() != null;
             }
 
         }
@@ -50,7 +49,7 @@ namespace VanillaFactionsExpandedMedieval
         //    {
         //        // If a shield was dropped from the equipment tracker, set equippedOffhand to false
         //        if (__result && resultingEq != null && resultingEq.TryGetComp<CompShield>() is CompShield shieldComp)
-        //            shieldComp.equippedOffhand = false;
+        //            shieldComp.equippedOffHand = false;
         //    }
 
         //}

@@ -80,6 +80,11 @@
                 <cooldownTime>2</cooldownTime>
             </li>
         </tools>
+        <modExtensions>
+            <li Class="VanillaFactionsExpandedMedieval.ThingDefExtension">
+                <usableWithShields>true</usableWithShields>
+            </li>
+        </modExtensions>
     </ThingDef>
 
 </Defs>

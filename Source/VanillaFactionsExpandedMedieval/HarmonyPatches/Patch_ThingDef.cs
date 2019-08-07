@@ -20,7 +20,7 @@ namespace VanillaFactionsExpandedMedieval
             public static void Postfix(ThingDef __instance, ref bool __result)
             {
                 // Don't count shields as apparel
-                if (__result && __instance.IsShield())
+                if (__instance.IsShield())
                     __result = false;
             }
 

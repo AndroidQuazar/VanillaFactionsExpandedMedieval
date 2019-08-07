@@ -10,9 +10,6 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <techLevel>Medieval</techLevel>
-        <weaponTags>
-            <li>NeolithicMeleeBasic</li>
-        </weaponTags>
         <costStuffCount>20</costStuffCount>
         <costList>
             <WoodLog>60</WoodLog>
@@ -29,7 +26,30 @@
                 <coveredBodyPartGroups>
                     <li>Torso</li>
                     <li>Arms</li>
+                    <li>Hands</li>
                 </coveredBodyPartGroups>
+                <offHandGraphicData>
+                    <texPath>Things/Item/Equipment/Shield/KiteShield/KiteShield</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                    <drawSize>1.6</drawSize>
+                </offHandGraphicData>
+                <offHandHoldOffset>
+                    <northDefault>
+                        <offset>(0.1, 0, 0.2)</offset>
+                        <behind>true</behind>
+                    </northDefault>
+                    <east>
+                        <offset>(-0.1, 0, 0.2)</offset>
+                        <behind>true</behind>
+                    </east>
+                    <south>
+                        <offset>(-0.1, -0.04, 0.2)</offset>
+                    </south>
+                    <west>
+                        <offset>(0.1, 0, 0.2)</offset>
+                    </west>
+                </offHandHoldOffset>
             </li>
         </comps>
         <equippedAngleOffset>-65</equippedAngleOffset>

@@ -18,7 +18,8 @@ namespace VanillaFactionsExpandedMedieval
         }
 
         public List<BodyPartGroupDef> coveredBodyPartGroups = new List<BodyPartGroupDef>();
-        public GraphicData unequippedGraphicData;
+        public GraphicData offHandGraphicData;
+        public HoldOffsetSet offHandHoldOffset;
 
     }
 
