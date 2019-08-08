@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.Reflection.Emit;
 using System.Text;
 using UnityEngine;
 using Verse;
@@ -55,6 +57,48 @@ namespace VanillaFactionsExpandedMedieval
                 }
 
                 return true;
+            }
+
+        }
+
+        [HarmonyPriority(Priority.HigherThanNormal)]
+        [HarmonyPatch(typeof(ArmorUtility), "ApplyArmor")]
+        public static class ApplyArmor
+        {
+
+            public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator ilGen)
+            {
+                var instructionList = instructions.ToList();
+
+                // Create a label for the start of the original method
+                var firstLabel = ilGen.DefineLabel();
+                instructionList[0].labels.Add(firstLabel);
+
+                yield return new CodeInstruction(OpCodes.Ldarg_3); // armorThing
+                yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(ApplyArmor), nameof(IsShield))); // IsShield(armorThing)
+                yield return new CodeInstruction(OpCodes.Brfalse, firstLabel); // if (IsShield(armorThing))
+                yield return new CodeInstruction(OpCodes.Ldarg_S, 6); // metalArmor
+                yield return new CodeInstruction(OpCodes.Ldarg_3); // armourThing
+                yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(ApplyArmor), nameof(ShieldUseDeflectMetalEffect))); // ShieldUseDeflectMetalEffect(armorThing)
+                //yield return new CodeInstruction(OpCodes.Stind_I1); - this line makes the game explode. Keeping it here for historical purposes because of how spectacular it is
+                yield return instructionList.First(i => i.opcode == OpCodes.Br).Clone(); // metalArmor = ShieldUseDeflectMetalEffect(armorThing) - effectively
+
+                // Original method - leaving like this in case future changes need to be made
+                for (int i = 0; i < instructionList.Count; i++)
+                {
+                    var instruction = instructionList[i];
+                    yield return instruction;
+                }
+            }
+
+            private static bool IsShield(Thing armourThing)
+            {
+                return armourThing != null && armourThing.def.IsShield();
+            }
+
+            private static bool ShieldUseDeflectMetalEffect(Thing armourThing)
+            {
+                return armourThing.TryGetComp<CompShield>().Props.useDeflectMetalEffect;
             }
 
         }

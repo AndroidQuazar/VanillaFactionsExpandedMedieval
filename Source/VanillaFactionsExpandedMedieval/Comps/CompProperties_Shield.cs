@@ -17,7 +17,9 @@ namespace VanillaFactionsExpandedMedieval
             compClass = typeof(CompShield);
         }
 
-        public List<BodyPartGroupDef> coveredBodyPartGroups = new List<BodyPartGroupDef>();
+        public List<string> shieldTags;
+        public bool useDeflectMetalEffect;
+        public List<BodyPartGroupDef> coveredBodyPartGroups;
         public GraphicData offHandGraphicData;
         public HoldOffsetSet offHandHoldOffset;
 

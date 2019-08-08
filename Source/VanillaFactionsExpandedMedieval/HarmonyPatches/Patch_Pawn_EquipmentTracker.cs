@@ -19,7 +19,8 @@ namespace VanillaFactionsExpandedMedieval
 
             public static bool Prefix(Pawn_EquipmentTracker __instance, ThingWithComps newEq, ThingOwner<ThingWithComps> ___equipment)
             {
-                if (__instance.pawn.CanUseShields() && __instance.Primary != null && __instance.OffHandShield() == null)
+                // If the pawn's primary is a shield that was designated to be equipped off-hand, proceed with equipping normally
+                if (__instance.Primary == __instance.OffHandShield())
                 {
                     ___equipment.TryAdd(newEq);
                     ___equipment.InnerListForReading.SortBy(t => t.def.IsShield());
@@ -36,23 +37,23 @@ namespace VanillaFactionsExpandedMedieval
 
             public static bool Prefix(Pawn_EquipmentTracker __instance, ThingWithComps eq)
             {
-                return __instance.pawn.CanUseShields() && __instance.OffHandShield() != null;
+                return __instance.Primary != __instance.OffHandShield();
             }
 
         }
 
-        //[HarmonyPatch(typeof(Pawn_EquipmentTracker), nameof(Pawn_EquipmentTracker.TryDropEquipment))]
-        //public static class TryDropEquipment
-        //{
+        [HarmonyPatch(typeof(Pawn_EquipmentTracker), nameof(Pawn_EquipmentTracker.TryDropEquipment))]
+        public static class TryDropEquipment
+        {
 
-        //    public static void Postfix(ThingWithComps resultingEq, bool __result)
-        //    {
-        //        // If a shield was dropped from the equipment tracker, set equippedOffhand to false
-        //        if (__result && resultingEq != null && resultingEq.TryGetComp<CompShield>() is CompShield shieldComp)
-        //            shieldComp.equippedOffHand = false;
-        //    }
+            public static void Postfix(ThingWithComps resultingEq, bool __result)
+            {
+                // If a shield was dropped from the equipment tracker, set equippedOffhand to false
+                if (__result && resultingEq != null && resultingEq.TryGetComp<CompShield>() is CompShield shieldComp)
+                    shieldComp.equippedOffHand = false;
+            }
 
-        //}
+        }
 
     }
 

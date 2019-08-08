@@ -24,7 +24,6 @@ namespace VanillaFactionsExpandedMedieval
                 var instructionList = instructions.ToList();
 
                 var getItemInfo = AccessTools.Method(typeof(List<Thing>), "get_Item");
-                Log.Message(getItemInfo.ToStringSafe());
                 var eligibleForDualWieldOptionInfo = AccessTools.Method(typeof(manual_Postfix), nameof(EligibleForDualWieldOption));
 
                 for (int i = 0; i < instructionList.Count; i++)
@@ -46,7 +45,6 @@ namespace VanillaFactionsExpandedMedieval
 
             private static bool EligibleForDualWieldOption(bool result, Thing thing)
             {
-                Log.Message("Called");
                 if (result && thing.def.IsShield())
                     return false;
                 return result;

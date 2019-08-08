@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <ThingDef Name="BaseShieldMedieval" ParentName="BaseMeleeWeapon_Blunt_Quality" Abstract="True">
+        <techLevel>Medieval</techLevel>
+        <comps>
+            <li>
+                <compClass>CompColorable</compClass>
+            </li>
+        </comps>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <stuffCategories>
+            <li>Leathery</li>
+        </stuffCategories>
+        <modExtensions>
+            <li Class="VanillaFactionsExpandedMedieval.ThingDefExtension">
+                <useFactionColour>true</useFactionColour>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseShieldMedieval">
         <defName>Shield_Kite</defName>
         <label>kiteshield</label>
         <description>Placeholder.</description>
@@ -9,7 +27,6 @@
             <texPath>Things/Item/Equipment/Shield/KiteShield/KiteShield</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <techLevel>Medieval</techLevel>
         <costStuffCount>20</costStuffCount>
         <costList>
             <WoodLog>60</WoodLog>
@@ -23,6 +40,10 @@
         </statBases>
         <comps>
             <li Class="VanillaFactionsExpandedMedieval.CompProperties_Shield">
+                <shieldTags>
+                    <li>MedievalBasic</li>
+                </shieldTags>
+                <useDeflectMetalEffect>false</useDeflectMetalEffect>
                 <coveredBodyPartGroups>
                     <li>Torso</li>
                     <li>Arms</li>
@@ -52,10 +73,6 @@
                 </offHandHoldOffset>
             </li>
         </comps>
-        <equippedAngleOffset>-65</equippedAngleOffset>
-        <stuffCategories>
-            <li>Leathery</li>
-        </stuffCategories>
         <tools>
             <li>
                 <label>base</label>
@@ -75,16 +92,6 @@
                 <cooldownTime>2</cooldownTime>
             </li>
         </tools>
-        <ignoreConfigErrors>true</ignoreConfigErrors>
-        <apparel>
-            <useDeflectMetalEffect>false</useDeflectMetalEffect>
-        </apparel>
-        <!-- Dual shields? Why not! -->
-        <modExtensions>
-            <li Class="VanillaFactionsExpandedMedieval.ThingDefExtension">
-                <usableWithShields>true</usableWithShields>
-            </li>
-        </modExtensions>
     </ThingDef>
 
 </Defs>

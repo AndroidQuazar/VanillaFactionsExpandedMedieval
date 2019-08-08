@@ -12,6 +12,8 @@ namespace VanillaFactionsExpandedMedieval
     public class CompShield : ThingComp
     {
 
+        public bool equippedOffHand;
+
         public CompProperties_Shield Props => (CompProperties_Shield)props;
 
         public Pawn EquippingPawn
@@ -31,24 +33,17 @@ namespace VanillaFactionsExpandedMedieval
                 if (EquippingPawn != null)
                 {
                     // Too few hands
-                    Log.Message(EquippingPawn.HandCount().ToString());
                     if (!EquippingPawn.CanUseShields())
                         return false;
 
                     // Dual wielding - has offhand
-                    if (ModCompatibilityCheck.DualWield)
-                    {
-                        if (NonPublicMethods.DualWield_Ext_Pawn_EquipmentTracker_TryGetOffHandEquipment(EquippingPawn.equipment, out ThingWithComps offHand))
-                            return false;
-                    }
+                    if (ModCompatibilityCheck.DualWield && EquippingPawn.equipment.Primary != null && NonPublicMethods.DualWield.Ext_Pawn_EquipmentTracker_TryGetOffHandEquipment(EquippingPawn.equipment, out ThingWithComps offHand))
+                        return false;
 
                     // Get pawn's primary weapon and check if it is flagged to be usable with shields, as well as the pawn having at least 1 hand
                     var primary = EquippingPawn.equipment.Primary;
-                    if (primary != null && !primary.def.IsShield())
-                    {
-                        var thingDefExtension = primary.def.GetModExtension<ThingDefExtension>() ?? ThingDefExtension.defaultValues;
-                        return thingDefExtension.usableWithShields;
-                    }
+                    if (primary != null)
+                        return primary.def.UsableWithShields();
                 }
 
                 // No pawn or primary, or the primary is a shield, therefore can be used
@@ -58,8 +53,17 @@ namespace VanillaFactionsExpandedMedieval
 
         public bool CoversBodyPart(BodyPartRecord partRec)
         {
+            if (Props.coveredBodyPartGroups == null)
+                return false;
+
             // Go through each covered body part group in Props and each body part group within partRec; return if there are any matches
             return Props.coveredBodyPartGroups.Any(p => partRec.groups.Any(p2 => p == p2));
+        }
+
+        public override void PostExposeData()
+        {
+            Scribe_Values.Look(ref equippedOffHand, "equippedOffHand");
+            base.PostExposeData();
         }
 
     }

@@ -20,6 +20,17 @@
         <apparelRequired>
             <li>Apparel_Tabard</li>
         </apparelRequired>
+        <modExtensions>
+            <li Class="VanillaFactionsExpandedMedieval.PawnKindDefExtension">
+                <shieldTags>
+                    <li>MedievalBasic</li>
+                </shieldTags>
+                <shieldMoney>
+                    <min>120</min>
+                    <max>180</max>
+                </shieldMoney>
+            </li>
+        </modExtensions>
     </PawnKindDef>
 
     <!-- Poverty tier: Peasant -->
@@ -69,8 +80,8 @@
             <max>1.8</max>
         </gearHealthRange>
         <apparelMoney>
-            <min>200</min>
-            <max>300</max>
+            <min>300</min>
+            <max>500</max>
         </apparelMoney>
         <apparelTags>
             <li>MedievalMilitary</li>
@@ -93,8 +104,8 @@
             <max>1.8</max>
         </gearHealthRange>
         <apparelMoney>
-            <min>200</min>
-            <max>300</max>
+            <min>300</min>
+            <max>500</max>
         </apparelMoney>
         <apparelTags>
             <li>MedievalMilitary</li>
@@ -113,8 +124,8 @@
         <combatPower>90</combatPower>
         <canBeSapper>true</canBeSapper>
         <apparelMoney>
-            <min>200</min>
-            <max>550</max>
+            <min>500</min>
+            <max>800</max>
         </apparelMoney>
         <apparelRequired>
             <li>Apparel_PlateArmor</li>
@@ -142,8 +153,8 @@
         <factionLeader>true</factionLeader>
         <canBeSapper>true</canBeSapper>
         <apparelMoney>
-            <min>450</min>
-            <max>750</max>
+            <min>800</min>
+            <max>1200</max>
         </apparelMoney>
         <apparelRequired>
             <li>Apparel_PlateArmorHeavy</li>

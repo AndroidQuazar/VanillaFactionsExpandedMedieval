@@ -34,32 +34,45 @@ namespace VanillaFactionsExpandedMedieval
 
         public static bool IsShield(this ThingDef tDef)
         {
-            return typeof(ThingWithComps).IsAssignableFrom(tDef.thingClass) && tDef.HasComp(typeof(CompShield));
+            return tDef.HasComp(typeof(CompShield));
+        }
+
+        public static bool UsableWithShields(this ThingDef def)
+        {
+            var thingDefExtension = def.GetModExtension<ThingDefExtension>() ?? ThingDefExtension.defaultValues;
+            return thingDefExtension.usableWithShields;
         }
 
         public static ThingWithComps OffHandShield(this Pawn_EquipmentTracker equipment)
         {
             // Get the first shield that the pawn has equipped which isn't in the primary slot
-            return equipment.AllEquipmentListForReading.FirstOrDefault(t => equipment.Primary != t && t.def.IsShield());
+            return equipment.AllEquipmentListForReading.FirstOrDefault(t => t.IsShield(out CompShield shieldComp) && shieldComp.equippedOffHand);
         }
 
         public static void MakeRoomForShield(this Pawn_EquipmentTracker equipment, ThingWithComps eq)
         {
-            if (eq.def.equipmentType == EquipmentType.Primary && equipment.OffHandShield() != null)
+            if (eq.def.equipmentType == EquipmentType.Primary)
             {
-                ThingWithComps thingWithComps;
-                if (equipment.TryDropEquipment(equipment.OffHandShield(), out thingWithComps, equipment.pawn.Position, true))
+                if (equipment.OffHandShield() != null)
                 {
-                    if (thingWithComps != null)
+                    if (equipment.TryDropEquipment(equipment.OffHandShield(), out ThingWithComps thingWithComps, equipment.pawn.Position, true))
                     {
-                        thingWithComps.SetForbidden(false, true);
+                        if (thingWithComps != null)
+                        {
+                            thingWithComps.SetForbidden(false, true);
+                        }
+                    }
+                    else
+                    {
+                        Log.Error(equipment.pawn + " couldn't make room for shield " + eq, false);
                     }
                 }
-                else
-                {
-                    Log.Error(equipment.pawn + " couldn't make room for shield " + eq, false);
-                }
+
+                // Prevent infinite looping :P
+                else if (ModCompatibilityCheck.DualWield && NonPublicMethods.DualWield.Ext_Pawn_EquipmentTracker_TryGetOffHandEquipment(equipment, out ThingWithComps eq2))
+                    NonPublicMethods.DualWield.Ext_Pawn_EquipmentTracker_MakeRoomForOffHand(equipment, eq2);
             }
+            
         }
 
         public static void AddShield(this Pawn_EquipmentTracker equipment, ThingWithComps newEq)
@@ -77,7 +90,8 @@ namespace VanillaFactionsExpandedMedieval
                 }), false);
                 return;
             }
-            ((ThingOwner<ThingWithComps>)NonPublicFields.Pawn_EquipmentTracker_equipment.GetValue(equipment)).TryAdd(newEq, true);
+            if (((ThingOwner<ThingWithComps>)NonPublicFields.Pawn_EquipmentTracker_equipment.GetValue(equipment)).TryAdd(newEq, true))
+                newEq.GetComp<CompShield>().equippedOffHand = true;
         }
 
     }

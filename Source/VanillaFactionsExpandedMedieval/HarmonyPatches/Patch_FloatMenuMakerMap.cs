@@ -16,8 +16,7 @@ namespace VanillaFactionsExpandedMedieval
     public static class Patch_FloatMenuMakerMap
     {
 
-        // Deactivated the 'equip x as shield' functionality for now since it is redundant
-        //[HarmonyPatch(typeof(FloatMenuMakerMap), "AddHumanlikeOrders")]
+        [HarmonyPatch(typeof(FloatMenuMakerMap), "AddHumanlikeOrders")]
         public static class AddHumanlikeOrders
         {
 

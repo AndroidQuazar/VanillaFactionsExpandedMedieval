@@ -46,7 +46,7 @@ namespace VanillaFactionsExpandedMedieval
             private static void TryDrawShieldAiming(PawnRenderer instance, Vector3 drawLoc)
             {
                 var pawn = (Pawn)NonPublicFields.PawnRenderer_pawn.GetValue(instance);
-                if (pawn.equipment.OffHandShield() is ThingWithComps shield)
+                if (pawn.equipment.OffHandShield() is ThingWithComps shield && pawn.equipment.Primary != shield)
                 {
                     var shieldComp = shield.GetComp<CompShield>();
                     if (shieldComp.UsableNow)
