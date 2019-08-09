@@ -63,6 +63,7 @@ namespace VFEMedieval
 
         private void TrySpawnWall(IntVec3 c, Map map, ResolveParams rp, ThingDef wallStuff)
         {
+            // Not in bounds
             if (!c.InBounds(map))
                 return;
 
@@ -72,9 +73,14 @@ namespace VFEMedieval
                 {
                     return;
                 }
-                Thing thing = ThingMaker.MakeThing(RimWorld.ThingDefOf.Wall, wallStuff);
-                thing.SetFaction(rp.faction, null);
-                GenSpawn.Spawn(thing, c, map, WipeMode.Vanish);
+
+                // Do bridge under wall if possible
+                if (GenConstruct.CanBuildOnTerrain(TerrainDefOf.Bridge, c, map, Rot4.North))
+                    map.terrainGrid.SetTerrain(c, TerrainDefOf.Bridge);
+
+                var wall = ThingMaker.MakeThing(RimWorld.ThingDefOf.Wall, wallStuff);
+                wall.SetFaction(rp.faction, null);
+                GenSpawn.Spawn(wall, c, map, WipeMode.Vanish);
             }
         }
 

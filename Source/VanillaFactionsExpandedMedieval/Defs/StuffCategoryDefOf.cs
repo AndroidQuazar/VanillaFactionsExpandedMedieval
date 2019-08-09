@@ -9,10 +9,11 @@ using RimWorld;
 namespace VFEMedieval
 {
 
-    public static class CircleUtility
+    [DefOf]
+    public static class StuffCategoryDefOf
     {
 
-        
+        public static StuffCategoryDef StoneChunks;
 
     }
 

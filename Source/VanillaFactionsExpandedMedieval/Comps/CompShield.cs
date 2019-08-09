@@ -32,6 +32,11 @@ namespace VFEMedieval
             {
                 if (EquippingPawn != null)
                 {
+                    // Pawn's primary is this shield
+                    var primary = EquippingPawn.equipment.Primary;
+                    if (primary == parent)
+                        return true;
+
                     // Too few hands
                     if (!EquippingPawn.CanUseShields())
                         return false;
@@ -41,12 +46,11 @@ namespace VFEMedieval
                         return false;
 
                     // Get pawn's primary weapon and check if it is flagged to be usable with shields, as well as the pawn having at least 1 hand
-                    var primary = EquippingPawn.equipment.Primary;
                     if (primary != null)
-                        return primary.def.UsableWithShields();
+                        return primary == parent || primary.def.UsableWithShields();
                 }
 
-                // No pawn or primary, or the primary is a shield, therefore can be used
+                // No pawn or primary, therefore can be used
                 return true;
             }
         }

@@ -14,7 +14,7 @@
 
                 <!-- Combat (1) -->
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/Factions[@Name="MedievalBase"]/pawnGroupMakers/li[1]/options</xpath>
+                    <xpath>/Defs/FactionDef[@Name="MedievalFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
                     <value>
                         <Medieval_Crossbowman>10</Medieval_Crossbowman>
                         <Medieval_Longbowman>10</Medieval_Longbowman>
@@ -23,7 +23,7 @@
 
                 <!-- Combat (2) -->
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/Factions[@Name="MedievalBase"]/pawnGroupMakers/li[2]/options</xpath>
+                    <xpath>/Defs/FactionDef[@Name="MedievalFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
                     <value>
                         <Medieval_Crossbowman>10</Medieval_Crossbowman>
                         <Medieval_Longbowman>10</Medieval_Longbowman>
@@ -32,7 +32,7 @@
 
                 <!-- Peaceful -->
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/Factions[@Name="MedievalBase"]/pawnGroupMakers/li[4]/options</xpath>
+                    <xpath>/Defs/FactionDef[@Name="MedievalFactionBase"]/pawnGroupMakers/li[4]/options</xpath>
                     <value>
                         <Medieval_Crossbowman>10</Medieval_Crossbowman>
                         <Medieval_Longbowman>10</Medieval_Longbowman>
@@ -41,7 +41,7 @@
 
                 <!-- Trader -->
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/Factions[@Name="MedievalBase"]/pawnGroupMakers/li[5]/options</xpath>
+                    <xpath>/Defs/FactionDef[@Name="MedievalFactionBase"]/pawnGroupMakers/li[5]/guards</xpath>
                     <value>
                         <Medieval_Crossbowman>10</Medieval_Crossbowman>
                         <Medieval_Longbowman>10</Medieval_Longbowman>
@@ -50,7 +50,7 @@
 
                 <!-- Settlement -->
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/Factions[@Name="MedievalBase"]/pawnGroupMakers/li[6]/options</xpath>
+                    <xpath>/Defs/FactionDef[@Name="MedievalFactionBase"]/pawnGroupMakers/li[6]/options</xpath>
                     <value>
                         <Medieval_Crossbowman>10</Medieval_Crossbowman>
                         <Medieval_Longbowman>10</Medieval_Longbowman>
@@ -67,7 +67,7 @@
 
                 <!-- Combat (1) -->
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/Factions[@Name="MedievalBase"]/pawnGroupMakers/li[1]/options</xpath>
+                    <xpath>/Defs/FactionDef[@Name="MedievalFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
                     <value>
                         <Medieval_Archer>20</Medieval_Archer>
                     </value>
@@ -75,7 +75,7 @@
 
                 <!-- Combat (2) -->
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/Factions[@Name="MedievalBase"]/pawnGroupMakers/li[2]/options</xpath>
+                    <xpath>/Defs/FactionDef[@Name="MedievalFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
                     <value>
                         <Medieval_Archer>20</Medieval_Archer>
                     </value>
@@ -83,7 +83,7 @@
 
                 <!-- Peaceful -->
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/Factions[@Name="MedievalBase"]/pawnGroupMakers/li[4]/options</xpath>
+                    <xpath>/Defs/FactionDef[@Name="MedievalFactionBase"]/pawnGroupMakers/li[4]/options</xpath>
                     <value>
                         <Medieval_Archer>20</Medieval_Archer>
                     </value>
@@ -91,7 +91,7 @@
 
                 <!-- Trader -->
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/Factions[@Name="MedievalBase"]/pawnGroupMakers/li[5]/options</xpath>
+                    <xpath>/Defs/FactionDef[@Name="MedievalFactionBase"]/pawnGroupMakers/li[5]/guards</xpath>
                     <value>
                         <Medieval_Archer>20</Medieval_Archer>
                     </value>
@@ -99,7 +99,7 @@
 
                 <!-- Settlement -->
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/Factions[@Name="MedievalBase"]/pawnGroupMakers/li[6]/options</xpath>
+                    <xpath>/Defs/FactionDef[@Name="MedievalFactionBase"]/pawnGroupMakers/li[6]/options</xpath>
                     <value>
                         <Medieval_Archer>20</Medieval_Archer>
                     </value>

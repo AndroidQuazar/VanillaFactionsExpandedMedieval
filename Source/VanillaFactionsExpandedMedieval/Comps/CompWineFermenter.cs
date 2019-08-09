@@ -10,6 +10,7 @@ using Harmony;
 namespace VFEMedieval
 {
 
+    [StaticConstructorOnStartup]
     public class CompWineFermenter : ThingComp
     {
 

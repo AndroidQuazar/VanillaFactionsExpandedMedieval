@@ -19,7 +19,7 @@ namespace VFEMedieval
         public static class GetPostArmorDamage
         {
 
-            public static bool Prefix(Pawn pawn, float amount, float armorPenetration, BodyPartRecord part, ref DamageDef damageDef, out bool deflectedByMetalArmor, out bool diminishedByMetalArmor, ref float __result)
+            public static bool Prefix(Pawn pawn, ref float amount, ref float armorPenetration, BodyPartRecord part, ref DamageDef damageDef, out bool deflectedByMetalArmor, out bool diminishedByMetalArmor, ref float __result)
             {
                 deflectedByMetalArmor = false;
                 diminishedByMetalArmor = false;
@@ -61,7 +61,7 @@ namespace VFEMedieval
 
         }
 
-        [HarmonyPriority(Priority.HigherThanNormal)]
+        [HarmonyPriority(Priority.First)]
         [HarmonyPatch(typeof(ArmorUtility), "ApplyArmor")]
         public static class ApplyArmor
         {

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- For the purpose of passing error checking -->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName="ChunkGranite"]/stuffProps</xpath>
+            </li>
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="ChunkGranite"]</xpath>
+            </li>
+        </operations>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="ChunkGranite"]</xpath>
+        <value>
+            <stuffProps>
+                <categories>
+                    <li>StoneChunks</li>
+                </categories>
+            </stuffProps>
+        </value>
+    </Operation>
+
+</Patch>

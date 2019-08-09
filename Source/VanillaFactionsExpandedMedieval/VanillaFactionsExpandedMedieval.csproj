@@ -69,11 +69,11 @@
     <Compile Include="DefModExtensions\PawnKindDefExtension.cs" />
     <Compile Include="DefModExtensions\FactionDefExtension.cs" />
     <Compile Include="Defs\ApparelLayerDefOf.cs" />
+    <Compile Include="Defs\StuffCategoryDefOf.cs" />
     <Compile Include="Defs\ThingDefOf.cs" />
     <Compile Include="Defs\JobDefOf.cs" />
     <Compile Include="HarmonyPatches\Patch_StatWorker.cs" />
     <Compile Include="HarmonyPatches\Patch_GenStep_Settlement.cs" />
-    <Compile Include="CircleUtility.cs" />
     <Compile Include="StaticConstructorClass.cs" />
     <Compile Include="HarmonyPatches\DualWield\Patch_DualWield_Harmony_FloatMenuMakerMap_AddHumanlikeOrders.cs" />
     <Compile Include="HarmonyPatches\DualWield\Patch_DualWield_Ext_Pawn_EquipmentTracker.cs" />

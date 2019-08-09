@@ -133,7 +133,8 @@
         <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies and valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe pursues a gentle way of life where they can. They are quite open to trade and alliances, even with strange peoples.</description>
         <colorSpectrum>
             <li>(0.34, 0.73, 0.76)</li>
-            <li>(0.47, 1.05, 1.12)</li>
+            <li>(0.47, 1, 1)</li>
+            <!-- <li>(0.47, 1.05, 1.12)</li> -->
         </colorSpectrum>
         <startingGoodwill>
             <min>-0</min>
@@ -151,7 +152,8 @@
         <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies and valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe values warlike dominance; it may be difficult to turn them into an ally.</description>
         <colorSpectrum>
             <li>(0.99, 0.65, 0.40)</li>
-            <li>(1.45, 0.93, 0.49)</li>
+            <li>(1, 0.65, 0.40)</li>
+            <!-- <li>(1.45, 0.93, 0.49)</li> -->
         </colorSpectrum>
         <startingGoodwill>
             <min>-20</min>

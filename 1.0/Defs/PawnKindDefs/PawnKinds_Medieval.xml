@@ -55,7 +55,7 @@
             <max>150</max>
         </weaponMoney>
         <weaponTags>
-            <li>NeolithicMeleeBasic</li>
+            <li>MedievalMeleeBasic</li>
         </weaponTags>
         <techHediffsMoney>
             <min>50</min>
@@ -91,7 +91,7 @@
             <max>150</max>
         </weaponMoney>
         <weaponTags>
-            <li>NeolithicMeleeDecent</li>
+            <li>MedievalMeleeDecent</li>
         </weaponTags>
     </PawnKindDef>
 
@@ -136,7 +136,8 @@
             <max>300</max>
         </weaponMoney>
         <weaponTags>
-            <li>NeolithicMeleeAdvanced</li>
+            <li>MedievalMeleeDecent</li>
+            <li>MedievalMeleeAdvanced</li>
         </weaponTags>
     </PawnKindDef>
 
@@ -165,7 +166,7 @@
             <max>1000</max>
         </weaponMoney>
         <weaponTags>
-            <li>NeolithicMeleeAdvanced</li>
+            <li>MedievalMeleeDecent</li>
             <li>MedievalMeleeAdvanced</li>
             <li>NeolithicRangedChief</li>
         </weaponTags>
