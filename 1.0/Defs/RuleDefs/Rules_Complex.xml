@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <RuleDef>
+        <defName>MedievalSettlement</defName>
+        <symbol>medievalSettlement</symbol>
+        <resolvers>
+            <li Class="VFEMedieval.SymbolResolver_MedievalSettlement">
+                <minRectSize>(12, 12)</minRectSize>
+            </li>
+        </resolvers>
+    </RuleDef>
+
+    <RuleDef>
+        <defName>MedievalEdgeDefense</defName>
+        <symbol>medievalEdgeDefense</symbol>
+        <resolvers>
+            <li Class="VFEMedieval.SymbolResolver_MedievalEdgeDefense">
+                <minRectSize>(2, 2)</minRectSize>
+            </li>
+        </resolvers>
+    </RuleDef>
+
+</Defs>

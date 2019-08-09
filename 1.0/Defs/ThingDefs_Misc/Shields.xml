@@ -13,7 +13,7 @@
             <li>Leathery</li>
         </stuffCategories>
         <modExtensions>
-            <li Class="VanillaFactionsExpandedMedieval.ThingDefExtension">
+            <li Class="VFEMedieval.ThingDefExtension">
                 <useFactionColour>true</useFactionColour>
             </li>
         </modExtensions>
@@ -39,7 +39,7 @@
             <Mass>2</Mass>
         </statBases>
         <comps>
-            <li Class="VanillaFactionsExpandedMedieval.CompProperties_Shield">
+            <li Class="VFEMedieval.CompProperties_Shield">
                 <shieldTags>
                     <li>MedievalBasic</li>
                 </shieldTags>

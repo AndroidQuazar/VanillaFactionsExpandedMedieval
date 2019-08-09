@@ -9,11 +9,10 @@ using RimWorld;
 namespace VFEMedieval
 {
 
-    [DefOf]
-    public static class ApparelLayerDefOf
+    public static class CircleUtility
     {
 
-        public static ApparelLayerDef OuterShell;
+        
 
     }
 

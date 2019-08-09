@@ -10,7 +10,7 @@ using Verse.AI;
 using RimWorld;
 using Harmony;
 
-namespace VanillaFactionsExpandedMedieval
+namespace VFEMedieval
 {
 
     public static class Patch_DualWield_Harmony_FloatMenuMakerMap_AddHumanlikeOrders

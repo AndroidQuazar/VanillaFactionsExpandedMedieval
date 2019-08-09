@@ -120,6 +120,11 @@
             </li>
         </pawnGroupMakers>
         <homeIconPath>World/WorldObjects/MedievalSettlement</homeIconPath>
+        <modExtensions>
+            <li Class="VFEMedieval.FactionDefExtension">
+                <settlementGenerationSymbol>medievalSettlement</settlementGenerationSymbol>
+            </li>
+        </modExtensions>
     </FactionDef>
 
     <FactionDef ParentName="MedievalFactionBase">

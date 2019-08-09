@@ -21,7 +21,7 @@
             <li>Apparel_Tabard</li>
         </apparelRequired>
         <modExtensions>
-            <li Class="VanillaFactionsExpandedMedieval.PawnKindDefExtension">
+            <li Class="VFEMedieval.PawnKindDefExtension">
                 <shieldTags>
                     <li>MedievalBasic</li>
                 </shieldTags>

@@ -5,7 +5,7 @@
     <Operation Class="PatchOperationAddModExtension">
         <xpath>/Defs/ThingDef[defName="Pila"]</xpath>
         <value>
-            <li Class="VanillaFactionsExpandedMedieval.ThingDefExtension">
+            <li Class="VFEMedieval.ThingDefExtension">
                 <usableWithShields>true</usableWithShields>
             </li>
         </value>

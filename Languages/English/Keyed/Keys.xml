@@ -2,14 +2,14 @@
 <LanguageData>
 
     <!-- Shield -->
-    <VanillaFactionsExpandedMedieval.EquipShield>Equip {0} as shield</VanillaFactionsExpandedMedieval.EquipShield>
-    <VanillaFactionsExpandedMedieval.EquipWarningShieldUnusable>(unusable with {0})</VanillaFactionsExpandedMedieval.EquipWarningShieldUnusable>
+    <VFEMedieval.EquipShield>Equip {0} as shield</VFEMedieval.EquipShield>
+    <VFEMedieval.EquipWarningShieldUnusable>(unusable with {0})</VFEMedieval.EquipWarningShieldUnusable>
 
     <!-- Wine barrel -->
-    <VanillaFactionsExpandedMedieval.NoMust>need must</VanillaFactionsExpandedMedieval.NoMust>
-    <VanillaFactionsExpandedMedieval.ContainsMust>Contains {0} / {1} must</VanillaFactionsExpandedMedieval.ContainsMust>
-    <VanillaFactionsExpandedMedieval.ContainsWine>Contains {0} / {1} wine</VanillaFactionsExpandedMedieval.ContainsWine>
-    <VanillaFactionsExpandedMedieval.TargetWineQuality>Target quality: {0}</VanillaFactionsExpandedMedieval.TargetWineQuality>
-    <VanillaFactionsExpandedMedieval.TargetWineQuality_Description>Your colonists will remove the wine from this barrel when it reaches the specified target quality.</VanillaFactionsExpandedMedieval.TargetWineQuality_Description>
+    <VFEMedieval.NoMust>need must</VFEMedieval.NoMust>
+    <VFEMedieval.ContainsMust>Contains {0} / {1} must</VFEMedieval.ContainsMust>
+    <VFEMedieval.ContainsWine>Contains {0} / {1} wine</VFEMedieval.ContainsWine>
+    <VFEMedieval.TargetWineQuality>Target quality: {0}</VFEMedieval.TargetWineQuality>
+    <VFEMedieval.TargetWineQuality_Description>Your colonists will remove the wine from this barrel when it reaches the specified target quality.</VFEMedieval.TargetWineQuality_Description>
 
 </LanguageData>

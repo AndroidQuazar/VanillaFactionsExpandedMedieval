@@ -84,7 +84,7 @@
             </li>
         </tools>
         <modExtensions>
-            <li Class="VanillaFactionsExpandedMedieval.ThingDefExtension">
+            <li Class="VFEMedieval.ThingDefExtension">
                 <usableWithShields>true</usableWithShields>
             </li>
         </modExtensions>

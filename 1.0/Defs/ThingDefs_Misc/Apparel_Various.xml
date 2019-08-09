@@ -117,7 +117,7 @@
         </apparel>
         <colorGenerator Class="ColorGenerator_StandardApparel" />
         <modExtensions>
-            <li Class="VanillaFactionsExpandedMedieval.ThingDefExtension">
+            <li Class="VFEMedieval.ThingDefExtension">
                 <useFactionColour>true</useFactionColour>
             </li>
         </modExtensions>

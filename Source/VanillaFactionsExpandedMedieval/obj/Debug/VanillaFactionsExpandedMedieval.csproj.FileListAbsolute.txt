@@ -1,4 +1,4 @@
-E:\Documents\GitHub\VanillaFactionsExpandedMedieval\1.0\Assemblies\VanillaFactionsExpandedMedieval.dll
+E:\Documents\GitHub\VanillaFactionsExpandedMedieval\1.0\Assemblies\VFEMedieval.dll
+E:\Documents\GitHub\VanillaFactionsExpandedMedieval\Source\VanillaFactionsExpandedMedieval\obj\Debug\VFEMedieval.dll
 E:\Documents\GitHub\VanillaFactionsExpandedMedieval\Source\VanillaFactionsExpandedMedieval\obj\Debug\VanillaFactionsExpandedMedieval.csprojAssemblyReference.cache
 E:\Documents\GitHub\VanillaFactionsExpandedMedieval\Source\VanillaFactionsExpandedMedieval\obj\Debug\VanillaFactionsExpandedMedieval.csproj.CoreCompileInputs.cache
-E:\Documents\GitHub\VanillaFactionsExpandedMedieval\Source\VanillaFactionsExpandedMedieval\obj\Debug\VanillaFactionsExpandedMedieval.dll

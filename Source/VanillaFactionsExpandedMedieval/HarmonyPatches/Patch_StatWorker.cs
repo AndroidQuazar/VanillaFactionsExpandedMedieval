@@ -7,7 +7,7 @@ using Verse;
 using RimWorld;
 using Harmony;
 
-namespace VanillaFactionsExpandedMedieval
+namespace VFEMedieval
 {
 
     public static class Patch_StatWorker

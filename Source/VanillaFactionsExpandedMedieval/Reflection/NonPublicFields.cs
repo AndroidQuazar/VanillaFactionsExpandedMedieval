@@ -8,7 +8,7 @@ using UnityEngine;
 using Verse;
 using RimWorld;
 
-namespace VanillaFactionsExpandedMedieval
+namespace VFEMedieval
 {
 
     [StaticConstructorOnStartup]

@@ -7,8 +7,8 @@
     <ProjectGuid>{FD0467CB-B509-496E-8755-C3B86D1EE432}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VanillaFactionsExpandedMedieval</RootNamespace>
-    <AssemblyName>VanillaFactionsExpandedMedieval</AssemblyName>
+    <RootNamespace>VFEMedieval</RootNamespace>
+    <AssemblyName>VFEMedieval</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -56,16 +56,24 @@
     <Compile Include="AI\WorkGiver_FillWineBarrel.cs" />
     <Compile Include="AI\JobDriver_TakeWineOutOfWineBarrel.cs" />
     <Compile Include="AI\JobDriver_FillWineBarrel.cs" />
+    <Compile Include="BaseGen\MedievalResolveParams.cs" />
+    <Compile Include="BaseGen\SymbolResolver_CastleEdgeSandbags.cs" />
+    <Compile Include="BaseGen\SymbolResolver_CastleEdgeWalls.cs" />
+    <Compile Include="BaseGen\SymbolResolver_MedievalEdgeDefense.cs" />
+    <Compile Include="BaseGen\SymbolResolver_MedievalSettlement.cs" />
     <Compile Include="Comps\CompProperties_Shield.cs" />
     <Compile Include="Comps\CompProperties_WineFermenter.cs" />
     <Compile Include="Comps\CompShield.cs" />
     <Compile Include="Comps\CompWineFermenter.cs" />
     <Compile Include="Commands\Command_SetWineTargetQuality.cs" />
     <Compile Include="DefModExtensions\PawnKindDefExtension.cs" />
+    <Compile Include="DefModExtensions\FactionDefExtension.cs" />
     <Compile Include="Defs\ApparelLayerDefOf.cs" />
     <Compile Include="Defs\ThingDefOf.cs" />
     <Compile Include="Defs\JobDefOf.cs" />
     <Compile Include="HarmonyPatches\Patch_StatWorker.cs" />
+    <Compile Include="HarmonyPatches\Patch_GenStep_Settlement.cs" />
+    <Compile Include="CircleUtility.cs" />
     <Compile Include="StaticConstructorClass.cs" />
     <Compile Include="HarmonyPatches\DualWield\Patch_DualWield_Harmony_FloatMenuMakerMap_AddHumanlikeOrders.cs" />
     <Compile Include="HarmonyPatches\DualWield\Patch_DualWield_Ext_Pawn_EquipmentTracker.cs" />
@@ -84,7 +92,7 @@
     <Compile Include="Reflection\NonPublicFields.cs" />
     <Compile Include="Reflection\NonPublicMethods.cs" />
     <Compile Include="PawnShieldGenerator.cs" />
-    <Compile Include="VanillaFactionsExpandedMedieval.cs" />
+    <Compile Include="VFEMedieval.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatches.cs" />
     <Compile Include="ShieldUtility.cs" />
     <Compile Include="DefModExtensions\ThingDefExtension.cs" />

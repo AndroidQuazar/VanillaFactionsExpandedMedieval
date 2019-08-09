@@ -7,7 +7,7 @@ using Verse;
 using RimWorld;
 using Harmony;
 
-namespace VanillaFactionsExpandedMedieval
+namespace VFEMedieval
 {
 
     public class CompProperties_WineFermenter : CompProperties

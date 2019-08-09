@@ -4,7 +4,7 @@
     <WorkGiverDef>
         <defName>TakeBeerOutOfWineBarrel</defName>
         <label>take wine out of wine barrels</label>
-        <giverClass>VanillaFactionsExpandedMedieval.WorkGiver_TakeWineOutOfWineBarrel</giverClass>
+        <giverClass>VFEMedieval.WorkGiver_TakeWineOutOfWineBarrel</giverClass>
         <workType>Hauling</workType>
         <verb>take wine</verb>
         <gerund>taking wine from</gerund>
@@ -17,7 +17,7 @@
     <WorkGiverDef>
         <defName>FillWineBarrel</defName>
         <label>fill wine barrels</label>
-        <giverClass>VanillaFactionsExpandedMedieval.WorkGiver_FillWineBarrel</giverClass>
+        <giverClass>VFEMedieval.WorkGiver_FillWineBarrel</giverClass>
         <workType>Hauling</workType>
         <verb>fill</verb>
         <gerund>filling</gerund>

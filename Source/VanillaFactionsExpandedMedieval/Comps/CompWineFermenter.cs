@@ -7,7 +7,7 @@ using Verse;
 using RimWorld;
 using Harmony;
 
-namespace VanillaFactionsExpandedMedieval
+namespace VFEMedieval
 {
 
     public class CompWineFermenter : ThingComp
@@ -213,8 +213,8 @@ namespace VanillaFactionsExpandedMedieval
         {
             yield return new Command_SetTargetWineQuality()
             {
-                defaultLabel = "VanillaFactionsExpandedMedieval.TargetWineQuality".Translate(targetQuality.GetLabel()),
-                defaultDesc = "VanillaFactionsExpandedMedieval.TargetWineQuality_Description".Translate(),
+                defaultLabel = "VFEMedieval.TargetWineQuality".Translate(targetQuality.GetLabel()),
+                defaultDesc = "VFEMedieval.TargetWineQuality_Description".Translate(),
                 icon = ThingDefOf.Wine.uiIcon,
                 wineFermenter = this,
             };
@@ -238,9 +238,9 @@ namespace VanillaFactionsExpandedMedieval
                 if (!TemperatureRuinableComp.Ruined)
                 {
                     if (AgeDays >= Props.awfulQualityAgeDaysThreshold)
-                        stringBuilder.AppendLine($"{"VanillaFactionsExpandedMedieval.ContainsWine".Translate(mustCount, Props.mustCapacity)} ({"QualityIs".Translate(CurrentQuality.GetLabel())})");
+                        stringBuilder.AppendLine($"{"VFEMedieval.ContainsWine".Translate(mustCount, Props.mustCapacity)} ({"QualityIs".Translate(CurrentQuality.GetLabel())})");
                     else
-                        stringBuilder.AppendLine("VanillaFactionsExpandedMedieval.ContainsMust".Translate(mustCount, Props.mustCapacity, AgeTicks.ToStringTicksToPeriod()));
+                        stringBuilder.AppendLine("VFEMedieval.ContainsMust".Translate(mustCount, Props.mustCapacity, AgeTicks.ToStringTicksToPeriod()));
                 }
                 if (Fermented)
                 {

@@ -10,7 +10,7 @@ using Verse.AI;
 using RimWorld;
 using Harmony;
 
-namespace VanillaFactionsExpandedMedieval
+namespace VFEMedieval
 {
 
     public static class Patch_FloatMenuMakerMap
@@ -82,7 +82,7 @@ namespace VanillaFactionsExpandedMedieval
                     // Able to equip shield
                     else
                     {
-                        string optionLabel = "VanillaFactionsExpandedMedieval.EquipShield".Translate(labelShort);
+                        string optionLabel = "VFEMedieval.EquipShield".Translate(labelShort);
 
                         // I seriously doubt this'll ever return true but hey, why not
                         if (equipment.def.IsRangedWeapon && pawn.story != null && pawn.story.traits.HasTrait(TraitDefOf.Brawler))
@@ -93,7 +93,7 @@ namespace VanillaFactionsExpandedMedieval
                         {
                             var thingDefExtension = weapon.def.GetModExtension<ThingDefExtension>() ?? ThingDefExtension.defaultValues;
                             if (!thingDefExtension.usableWithShields)
-                                optionLabel += $" {"VanillaFactionsExpandedMedieval.EquipWarningShieldUnusable".Translate(weapon.def.label)}";
+                                optionLabel += $" {"VFEMedieval.EquipWarningShieldUnusable".Translate(weapon.def.label)}";
                         }
 
                         shieldOption = FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption(optionLabel, delegate ()

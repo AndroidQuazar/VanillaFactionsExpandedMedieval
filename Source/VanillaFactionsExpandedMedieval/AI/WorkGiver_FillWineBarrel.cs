@@ -7,7 +7,7 @@ using Verse;
 using Verse.AI;
 using RimWorld;
 
-namespace VanillaFactionsExpandedMedieval
+namespace VFEMedieval
 {
 
     public class WorkGiver_FillWineBarrel : WorkGiver_Scanner
@@ -54,7 +54,7 @@ namespace VanillaFactionsExpandedMedieval
                     }
                     if (this.FindMust(pawn, wineFermenter) == null)
                     {
-                        JobFailReason.Is("VanillaFactionsExpandedMedieval.NoMust".Translate(), null);
+                        JobFailReason.Is("VFEMedieval.NoMust".Translate(), null);
                         return false;
                     }
                     return !t.IsBurning();

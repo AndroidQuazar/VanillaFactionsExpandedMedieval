@@ -7,7 +7,7 @@ using Verse;
 using Verse.AI;
 using RimWorld;
 
-namespace VanillaFactionsExpandedMedieval
+namespace VFEMedieval
 {
 
     public class JobDriver_FillWineBarrel : JobDriver

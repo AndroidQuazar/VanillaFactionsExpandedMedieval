@@ -6,7 +6,7 @@ using UnityEngine;
 using Verse;
 using RimWorld;
 
-namespace VanillaFactionsExpandedMedieval
+namespace VFEMedieval
 {
 
     public class Command_SetTargetWineQuality : Command

@@ -8,7 +8,7 @@ using Verse.AI;
 using Verse.Sound;
 using RimWorld;
 
-namespace VanillaFactionsExpandedMedieval
+namespace VFEMedieval
 {
 
     public class JobDriver_EquipShield : JobDriver_Equip
