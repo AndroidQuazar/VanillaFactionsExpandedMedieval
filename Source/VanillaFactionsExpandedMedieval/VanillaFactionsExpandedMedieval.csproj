@@ -52,12 +52,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comps\CompShield.cs" />
+    <Compile Include="AI\WorkGiver_TakeWineOutOfWineBarrel.cs" />
+    <Compile Include="AI\WorkGiver_FillWineBarrel.cs" />
+    <Compile Include="AI\JobDriver_TakeWineOutOfWineBarrel.cs" />
+    <Compile Include="AI\JobDriver_FillWineBarrel.cs" />
     <Compile Include="Comps\CompProperties_Shield.cs" />
+    <Compile Include="Comps\CompProperties_WineFermenter.cs" />
+    <Compile Include="Comps\CompShield.cs" />
+    <Compile Include="Comps\CompWineFermenter.cs" />
+    <Compile Include="Commands\Command_SetWineTargetQuality.cs" />
     <Compile Include="DefModExtensions\PawnKindDefExtension.cs" />
     <Compile Include="Defs\ApparelLayerDefOf.cs" />
+    <Compile Include="Defs\ThingDefOf.cs" />
     <Compile Include="Defs\JobDefOf.cs" />
-    <Compile Include="HarmonyPatches\Patch_Verb - Copy.cs" />
+    <Compile Include="HarmonyPatches\Patch_StatWorker.cs" />
     <Compile Include="StaticConstructorClass.cs" />
     <Compile Include="HarmonyPatches\DualWield\Patch_DualWield_Harmony_FloatMenuMakerMap_AddHumanlikeOrders.cs" />
     <Compile Include="HarmonyPatches\DualWield\Patch_DualWield_Ext_Pawn_EquipmentTracker.cs" />

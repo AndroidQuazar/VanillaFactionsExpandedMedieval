@@ -5,7 +5,6 @@
         <defName>WineBarrel</defName>
         <label>wine barrel</label>
         <description>A barrel for fermenting raw wort into beer.</description>
-        <thingClass>Building_FermentingBarrel</thingClass>
         <graphicData>
             <texPath>Things/Building/Production/WineBarrel/WineBarrel</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -39,6 +38,16 @@
                 <minSafeTemperature>-1</minSafeTemperature>
                 <maxSafeTemperature>32</maxSafeTemperature>
                 <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+            </li>
+            <li Class="VanillaFactionsExpandedMedieval.CompProperties_WineFermenter">
+                <mustCapacity>25</mustCapacity>
+                <awfulQualityAgeDaysThreshold>1</awfulQualityAgeDaysThreshold>
+                <poorQualityAgeDaysThreshold>3</poorQualityAgeDaysThreshold>
+                <normalQualityAgeDaysThreshold>8</normalQualityAgeDaysThreshold>
+                <goodQualityAgeDaysThreshold>15</goodQualityAgeDaysThreshold>
+                <excellentQualityAgeDaysThreshold>30</excellentQualityAgeDaysThreshold>
+                <masterworkQualityAgeDaysThreshold>60</masterworkQualityAgeDaysThreshold>
+                <legendaryQualityAgeDaysThreshold>120</legendaryQualityAgeDaysThreshold>
             </li>
         </comps>
         <tickerType>Rare</tickerType>

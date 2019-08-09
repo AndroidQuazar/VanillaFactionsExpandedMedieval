@@ -10,12 +10,12 @@ namespace VanillaFactionsExpandedMedieval
 {
 
     [DefOf]
-    public static class JobDefOf
+    public static class ThingDefOf
     {
 
-        public static JobDef EquipShield;
-        public static JobDef FillWineBarrel;
-        public static JobDef TakeWineOutOfWineBarrel;
+        public static ThingDef Must;
+        public static ThingDef WineBarrel;
+        public static ThingDef Wine;
 
     }
 

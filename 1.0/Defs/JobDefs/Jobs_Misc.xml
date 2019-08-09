@@ -8,4 +8,19 @@
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     </JobDef>
 
+    <JobDef>
+        <defName>FillWineBarrel</defName>
+        <driverClass>VanillaFactionsExpandedMedieval.JobDriver_FillWineBarrel</driverClass>
+        <reportString>filling TargetA.</reportString>
+        <suspendable>false</suspendable>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
+    <JobDef>
+        <defName>TakeWineOutOfWineBarrel</defName>
+        <driverClass>VanillaFactionsExpandedMedieval.JobDriver_TakeWineOutOfWineBarrel</driverClass>
+        <reportString>taking wine out of TargetA.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
 </Defs>
