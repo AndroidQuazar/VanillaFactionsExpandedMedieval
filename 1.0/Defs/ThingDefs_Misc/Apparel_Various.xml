@@ -2,7 +2,7 @@
 <Defs>
 
     <ThingDef ParentName="ArmorSmithableBase">
-        <defName>Apparel_PlateArmorHeavy</defName>
+        <defName>VFE_Apparel_PlateArmorHeavy</defName>
         <label>heavy plate armor</label>
         <description>Overlapping solid plates of armor covering the entire body from neck to feet.</description>
         <recipeMaker>
@@ -55,27 +55,10 @@
                 <li>Soldier</li>
             </defaultOutfitTags>
         </apparel>
-        <colorGenerator Class="ColorGenerator_Options">
-            <options>
-                <li>
-                    <weight>10</weight>
-                    <only>(0.33,0.33,0.33)</only>
-                </li>
-                <li>
-                    <weight>10</weight>
-                    <only>(0.65,0.65,0.65)</only>
-                </li>
-                <li>
-                    <weight>6</weight>
-                    <min>(0.3,0.3,0.3)</min>
-                    <max>(0.5,0.5,0.5)</max>
-                </li>
-            </options>
-        </colorGenerator>
     </ThingDef>
 
     <ThingDef ParentName="ApparelMakeableBase">
-        <defName>Apparel_Tabard</defName>
+        <defName>VFE_Apparel_Tabard</defName>
         <label>tabard</label>
         <description>A garment that is worn over armour by medieval militia which depicts their army's symbol.</description>
         <graphicData>
@@ -109,21 +92,13 @@
                 <li>OuterShell</li>
             </layers>
             <tags>
-                <li>MedievalMilitaryTabard</li>
+                <li>MedievalMilitaryAdvanced</li>
             </tags>
             <defaultOutfitTags>
                 <li>Soldier</li>
             </defaultOutfitTags>
         </apparel>
         <colorGenerator Class="ColorGenerator_StandardApparel" />
-        <modExtensions>
-            <li Class="VFEMedieval.ThingDefExtension">
-                <useFactionColourForPawnKinds>
-                    <li>Medieval_Knight</li>
-                    <li>Medieval_Lord</li>
-                </useFactionColourForPawnKinds>
-            </li>
-        </modExtensions>
     </ThingDef>
 
 </Defs>

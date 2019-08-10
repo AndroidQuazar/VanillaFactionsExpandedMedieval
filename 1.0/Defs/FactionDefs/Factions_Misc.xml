@@ -21,8 +21,8 @@
         </backstoryCategories>
         <leaderTitle>lord</leaderTitle>
         <hairTags>
-            <li>Tribal</li>
-        </hairTags>
+			<li>Rural</li>
+		</hairTags>
         <raidCommonalityFromPointsCurve>
             <points>
                 <li>(0, 1)</li>                <!--Constant 1 at all points levels-->
@@ -53,17 +53,18 @@
                 <li>(100000, 10000)</li>
             </points>
         </maxPawnCostPerTotalPointsCurve>
-        <!-- Dan: Ranged PawnKinds will be added via xpath patches -->
         <pawnGroupMakers>
             <li>
                 <!-- Normal fights, ranged with melee mix-ins -->
                 <kindDef>Combat</kindDef>
                 <commonality>100</commonality>
                 <options>
-                    <Medieval_Peasant>5</Medieval_Peasant>
-                    <Medieval_Squire>7</Medieval_Squire>
-                    <Medieval_Knight>5</Medieval_Knight>
-                    <Medieval_Lord>3</Medieval_Lord>
+                    <Medieval_Peasant>20</Medieval_Peasant>
+                    <Medieval_Squire>40</Medieval_Squire>
+                    <Medieval_Footsoldier>30</Medieval_Footsoldier>
+                    <Medieval_Bowman>30</Medieval_Bowman>
+                    <Medieval_Knight>30</Medieval_Knight>
+                    <Medieval_Lord>10</Medieval_Lord>
                 </options>
             </li>
             <li>
@@ -71,7 +72,7 @@
                 <kindDef>Combat</kindDef>
                 <commonality>60</commonality>
                 <options>
-                    <Medieval_Lord>5</Medieval_Lord>
+                    <Medieval_Bowman>100</Medieval_Bowman>
                 </options>
             </li>
             <li>
@@ -79,9 +80,10 @@
                 <kindDef>Combat</kindDef>
                 <commonality>60</commonality>
                 <options>
-                    <Medieval_Peasant>10</Medieval_Peasant>
-                    <Medieval_Squire>15</Medieval_Squire>
-                    <Medieval_Knight>10</Medieval_Knight>
+                    <Medieval_Peasant>15</Medieval_Peasant>
+                    <Medieval_Squire>40</Medieval_Squire>
+                    <Medieval_Footsoldier>40</Medieval_Footsoldier>
+                    <Medieval_Knight>30</Medieval_Knight>
                     <Medieval_Lord>5</Medieval_Lord>
                 </options>
             </li>
@@ -89,9 +91,11 @@
                 <!-- Peaceful -->
                 <kindDef>Peaceful</kindDef>
                 <options>
-                    <Medieval_Squire>20</Medieval_Squire>
-                    <Medieval_Knight>5</Medieval_Knight>
-                    <Medieval_Lord>3</Medieval_Lord>
+                    <Medieval_Squire>30</Medieval_Squire>
+                    <Medieval_Footsoldier>30</Medieval_Footsoldier>
+                    <Medieval_Bowman>30</Medieval_Bowman>
+                    <Medieval_Knight>20</Medieval_Knight>
+                    <Medieval_Lord>10</Medieval_Lord>
                 </options>
             </li>
             <li>
@@ -106,16 +110,21 @@
                     <Elephant>2</Elephant>
                 </carriers>
                 <guards>
-                    <Medieval_Squire>10</Medieval_Squire>
-                    <Medieval_Knight>7</Medieval_Knight>
+                    <Medieval_Squire>30</Medieval_Squire>
+                    <Medieval_Footsoldier>30</Medieval_Footsoldier>
+                    <Medieval_Bowman>30</Medieval_Bowman>
+                    <Medieval_Knight>20</Medieval_Knight>
                 </guards>
             </li>
             <li>
                 <kindDef>Settlement</kindDef>
                 <options>
-                    <Medieval_Squire>10</Medieval_Squire>
-                    <Medieval_Knight>7</Medieval_Knight>
-                    <Medieval_Lord>10</Medieval_Lord>
+                    <Medieval_Peasant>20</Medieval_Peasant>
+                    <Medieval_Squire>20</Medieval_Squire>
+                    <Medieval_Footsoldier>20</Medieval_Footsoldier>
+                    <Medieval_Bowman>50</Medieval_Bowman>
+                    <Medieval_Knight>30</Medieval_Knight>
+                    <Medieval_Lord>50</Medieval_Lord>
                 </options>
             </li>
         </pawnGroupMakers>

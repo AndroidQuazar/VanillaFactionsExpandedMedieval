@@ -57,8 +57,11 @@
     <Compile Include="AI\JobDriver_TakeWineOutOfWineBarrel.cs" />
     <Compile Include="AI\JobDriver_FillWineBarrel.cs" />
     <Compile Include="BaseGen\MedievalResolveParams.cs" />
+    <Compile Include="BaseGen\SymbolResolver_AddMustToWineBarrels.cs" />
+    <Compile Include="BaseGen\SymbolResolver_Interior_Winery.cs" />
     <Compile Include="BaseGen\SymbolResolver_CastleEdgeSandbags.cs" />
     <Compile Include="BaseGen\SymbolResolver_CastleEdgeWalls.cs" />
+    <Compile Include="BaseGen\SymbolResolver_BasePart_Indoors_Leaf_Winery.cs" />
     <Compile Include="BaseGen\SymbolResolver_MedievalEdgeDefense.cs" />
     <Compile Include="BaseGen\SymbolResolver_MedievalSettlement.cs" />
     <Compile Include="Comps\CompProperties_Shield.cs" />

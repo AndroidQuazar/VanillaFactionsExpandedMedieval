@@ -2,7 +2,7 @@
 <Defs>
 
     <ThingDef ParentName="PlantBase">
-        <defName>Plant_Grape</defName>
+        <defName>VFE_Plant_Grape</defName>
         <label>grape plant</label>
         <description>A flowering crop that yields hops, an essential ingredient in beer.</description>
         <statBases>

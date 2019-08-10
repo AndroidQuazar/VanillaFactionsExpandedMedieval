@@ -17,7 +17,7 @@ namespace VFEMedieval
         {
             get
             {
-                return ThingRequest.ForDef(ThingDefOf.WineBarrel);
+                return ThingRequest.ForDef(ThingDefOf.VFE_WineBarrel);
             }
         }
 
@@ -75,7 +75,7 @@ namespace VFEMedieval
             Predicate<Thing> predicate = (Thing x) => !x.IsForbidden(pawn) && pawn.CanReserve(x, 1, -1, null, false);
             IntVec3 position = pawn.Position;
             Map map = pawn.Map;
-            ThingRequest thingReq = ThingRequest.ForDef(ThingDefOf.Must);
+            ThingRequest thingReq = ThingRequest.ForDef(ThingDefOf.VFE_Must);
             PathEndMode peMode = PathEndMode.ClosestTouch;
             TraverseParms traverseParams = TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false);
             Predicate<Thing> validator = predicate;

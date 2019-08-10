@@ -60,13 +60,30 @@ namespace VFEMedieval
             public static void Postfix(Pawn pawn)
             {
                 // Change the colour of appropriate apparel items to match the pawn's faction's colour
-                if (pawn.apparel != null && pawn.Faction != null)
+                if (pawn.apparel != null && pawn.Faction != null && pawn.kindDef.apparelColor == Color.white)
                 {
+                    var pawnKindDefExtension = pawn.kindDef.GetModExtension<PawnKindDefExtension>() ?? PawnKindDefExtension.defaultValues;
                     foreach (var apparel in pawn.apparel.WornApparel)
                     {
+                        // Check from ThingDefExtension
                         var thingDefExtension = apparel.def.GetModExtension<ThingDefExtension>() ?? ThingDefExtension.defaultValues;
                         if (!thingDefExtension.useFactionColourForPawnKinds.NullOrEmpty() && thingDefExtension.useFactionColourForPawnKinds.Contains(pawn.kindDef))
+                        {
                             apparel.SetColor(pawn.Faction.Color);
+                            continue;
+                        }
+
+                        // Check from PawnKindDefExtension
+                        var apparelProps = apparel.def.apparel;
+                        foreach (var partGroupAndLayerPair in pawnKindDefExtension.FactionColourApparelWithPartAndLayersList)
+                        {
+                            if (apparelProps.bodyPartGroups.Contains(partGroupAndLayerPair.First) && apparelProps.layers.Contains(partGroupAndLayerPair.Second))
+                            {
+                                apparel.SetColor(pawn.Faction.Color);
+                                break;
+                            }
+                        }
+                            
                     }
                 }
             }

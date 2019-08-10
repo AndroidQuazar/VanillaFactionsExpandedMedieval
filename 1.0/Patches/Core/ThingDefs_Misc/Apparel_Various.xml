@@ -1,31 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-    <!-- T-Shirt -->
-
+    <!-- Add apparel tags -->
     <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="Apparel_BasicShirt"]/apparel/tags</xpath>
-        <value>
-            <li>MedievalBasic</li>
-        </value>
-    </Operation>
-
-    <Operation Class="PatchOperationAddModExtension">
-        <xpath>/Defs/ThingDef[defName="Apparel_BasicShirt"]</xpath>
-        <value>
-            <li Class="VFEMedieval.ThingDefExtension">
-                <useFactionColourForPawnKinds>
-                    <li>Medieval_Peasant</li>
-                    <li>Medieval_Squire</li>
-                </useFactionColourForPawnKinds>
-            </li>
-        </value>
-    </Operation>
-
-    <!-- Pants -->
-
-    <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="Apparel_Pants"]/apparel/tags</xpath>
+        <xpath>/Defs/ThingDef[defName="Apparel_BasicShirt" or defName="Apparel_Pants"]/apparel/tags</xpath>
         <value>
             <li>MedievalBasic</li>
         </value>

@@ -13,8 +13,12 @@ using Harmony;
 namespace VFEMedieval
 {
 
+    [StaticConstructorOnStartup]
     public class SymbolResolver_CastleEdgeWalls : SymbolResolver
     {
+
+        private static List<IntVec3> potentialTowerDoorCells = new List<IntVec3>();
+
         public override void Resolve(ResolveParams rp)
         {
             var perimeterWallCells = rp.rect.EdgeCells;
@@ -26,37 +30,65 @@ namespace VFEMedieval
             var corners = rp.rect.Corners;
             float towerRadius = medievalrp?.towerRadius ?? 3.9f;
             var wallDef = medievalrp?.edgeWallDef ?? RimWorld.ThingDefOf.Wall;
-            var wallStuff = rp.wallStuff ?? BaseGenUtility.RandomCheapWallStuff(faction, true);
+            var wallStuff = rp.wallStuff ?? GenStuff.RandomStuffInexpensiveFor(wallDef, faction);
             foreach (var corner in corners)
             {
-                var towerCells = GenRadial.RadialCellsAround(corner, towerRadius, true);
-                perimeterWallCells = perimeterWallCells.Where(c => !towerCells.Contains(c));
-                var towerInteriorCells = GenRadial.RadialCellsAround(corner, towerRadius - 1.42f, true);
-                foreach (var pos in towerCells)
-                    DoTowerSection(pos, map, rp, wallDef, wallStuff, towerInteriorCells);
+                var towerCells = GenRadial.RadialCellsAround(corner, towerRadius, true).ToList();
+                if (ValidAreaForTower(towerCells, map))
+                {
+                    perimeterWallCells = perimeterWallCells.Where(c => !towerCells.Contains(c));
+                    var towerInteriorCells = GenRadial.RadialCellsAround(corner, towerRadius - 1.42f, true).ToList();
+                    var towerExteriorCells = towerCells.Where(c => !towerInteriorCells.Contains(c)).ToList();
+                    TryGenerateTower(towerExteriorCells, towerInteriorCells, map, rp, wallDef, wallStuff);
+                    potentialTowerDoorCells = potentialTowerDoorCells.Concat(towerExteriorCells.Where(c => rp.rect.ContractedBy(1).Contains(c) && ValidDoorCell(c, map))).ToList();
+                }
             }
+
+            // Generate tower entrances
+            foreach (var pos in potentialTowerDoorCells)
+            {
+                TrySpawnFloor(pos, map);
+                var doorStuff = faction.def.techLevel.IsNeolithicOrWorse() ? RimWorld.ThingDefOf.WoodLog : RimWorld.ThingDefOf.Steel;
+                var door = ThingMaker.MakeThing(RimWorld.ThingDefOf.Door, doorStuff);
+                door.SetFaction(faction);
+                GenSpawn.Spawn(door, pos, map);
+            }
+            potentialTowerDoorCells.Clear();
 
             // Generate perimeter walls
             foreach (var pos in perimeterWallCells)
                 TrySpawnWall(pos, map, rp, wallDef, wallStuff);
         }
 
-        private void DoTowerSection(IntVec3 c, Map map, ResolveParams rp, ThingDef wallDef, ThingDef wallStuff, IEnumerable<IntVec3> interiorCells)
+        private bool ValidAreaForTower(List<IntVec3> cells, Map map)
+        {
+            return !cells.Any(c => c.GetThingList(map).Any(t => t.def.building != null && t.def.building.isNaturalRock));
+        }
+
+        private bool ValidDoorCell(IntVec3 c, Map map)
+        {
+            return (!(c + IntVec3.North).Impassable(map) && !(c + IntVec3.South).Impassable(map)) || (!(c + IntVec3.West).Impassable(map) && !(c + IntVec3.East).Impassable(map));
+        }
+
+        private void TryGenerateTower(List<IntVec3> exteriorCells, List<IntVec3> interiorCells, Map map, ResolveParams rp, ThingDef wallDef, ThingDef wallStuff)
+        {
+            // Walls
+            foreach (var pos in exteriorCells)
+                TrySpawnWall(pos, map, rp, wallDef, wallStuff);
+
+            // Interior
+            foreach (var pos in interiorCells)
+                TryDoTowerInterior(pos, map, rp);
+        }
+
+        private void TryDoTowerInterior(IntVec3 c, Map map, ResolveParams rp)
         {
             // Not in bounds
             if (!c.InBounds(map))
                 return;
 
-            // Walls
-            if (!interiorCells.Contains(c))
-                TrySpawnWall(c, map, rp, wallDef, wallStuff);
-
             // Interior
-            else if (TryClearCell(c, map))
-            {
-                var floorDef = GenConstruct.CanBuildOnTerrain(TerrainDefOf.WoodPlankFloor, c, map, Rot4.North) ? TerrainDefOf.WoodPlankFloor : TerrainDefOf.Bridge;
-                map.terrainGrid.SetTerrain(c, floorDef);
-            }
+            TrySpawnFloor(c, map);
 
             // Roof
             if (rp.noRoof != false)
@@ -91,13 +123,25 @@ namespace VFEMedieval
             var thingList = c.GetThingList(map);
             foreach (var thing in thingList)
             {
-                if (!thing.def.destroyable || thing.def == RimWorld.ThingDefOf.Sandbags)
+                if (!thing.def.destroyable || thing.def == RimWorld.ThingDefOf.Sandbags || (thing.def.building != null && thing.def.building.isNaturalRock))
                     return false;
             }
 
             for (int i = 0; i < thingList.Count; i++)
                 thingList[i].Destroy();
             return true;
+        }
+
+        private void TrySpawnFloor(IntVec3 c, Map map)
+        {
+            if (!c.InBounds(map))
+                return;
+
+            if (TryClearCell(c, map))
+            {
+                var floorDef = GenConstruct.CanBuildOnTerrain(TerrainDefOf.WoodPlankFloor, c, map, Rot4.North) ? TerrainDefOf.WoodPlankFloor : TerrainDefOf.Bridge;
+                map.terrainGrid.SetTerrain(c, floorDef);
+            }
         }
 
         private void TrySpawnRoof(IntVec3 c, Map map)

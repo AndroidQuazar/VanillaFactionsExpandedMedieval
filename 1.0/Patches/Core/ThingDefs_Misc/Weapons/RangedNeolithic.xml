@@ -11,4 +11,12 @@
         </value>
     </Operation>
 
+    <!-- Add weapon tag to greatbows -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Bow_Great"]/weaponTags</xpath>
+        <value>
+            <li>MedievalRanged</li>
+        </value>
+    </Operation>
+
 </Patch>

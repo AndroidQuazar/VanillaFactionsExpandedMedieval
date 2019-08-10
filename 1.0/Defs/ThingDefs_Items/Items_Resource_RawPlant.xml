@@ -2,7 +2,7 @@
 <Defs>
 
     <ThingDef ParentName="PlantFoodRawBase">
-        <defName>RawGrapes</defName>
+        <defName>VFE_RawGrapes</defName>
         <label>grapes</label>
         <description>Assorted berries. Nice to eat, even when raw.</description>
         <graphicData>

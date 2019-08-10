@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <ThingDef Name="BaseShieldMedieval" ParentName="BaseMeleeWeapon_Blunt_Quality" Abstract="True">
+    <ThingDef Name="VFE_BaseShield" ParentName="BaseMeleeWeapon_Blunt_Quality" Abstract="True">
         <techLevel>Medieval</techLevel>
         <comps>
             <li>
@@ -42,8 +42,8 @@
         </modExtensions>
     </ThingDef>
 
-    <ThingDef ParentName="BaseShieldMedieval">
-        <defName>Shield_Kite</defName>
+    <ThingDef ParentName="VFE_BaseShield">
+        <defName>VFE_Shield_Kite</defName>
         <label>kite shield</label>
         <description>Placeholder.</description>
         <graphicData>
@@ -98,12 +98,12 @@
         </comps>
     </ThingDef>
 
-    <ThingDef ParentName="BaseShieldMedieval">
-        <defName>Shield_Heater</defName>
+    <ThingDef ParentName="VFE_BaseShield">
+        <defName>VFE_Shield_Heater</defName>
         <label>heater shield</label>
         <description>Placeholder.</description>
         <graphicData>
-            <texPath>Things/Item/Equipment/Shield/KiteShield/KiteShield</texPath>
+            <texPath>Things/Item/Equipment/Shield/HeaterShield/HeaterShield</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <costStuffCount>30</costStuffCount>

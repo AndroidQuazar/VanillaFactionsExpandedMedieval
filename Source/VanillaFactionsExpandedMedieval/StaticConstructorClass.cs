@@ -34,8 +34,8 @@ namespace VFEMedieval
                 commonality = referenceProps.commonality,
                 categories = new List<StuffCategoryDef>() { StuffCategoryDefOf.Rocks },
                 smeltable = referenceProps.smeltable,
-                statOffsets = new List<StatModifier>(referenceProps.statOffsets),
-                statFactors = new List<StatModifier>(referenceProps.statFactors),
+                statOffsets = new List<StatModifier>(),
+                statFactors = new List<StatModifier>(),
                 color = referenceProps.color,
                 constructEffect = referenceProps.constructEffect,
                 appearance = referenceProps.appearance,
@@ -43,10 +43,15 @@ namespace VFEMedieval
                 soundMeleeHitSharp = referenceProps.soundMeleeHitSharp,
                 soundMeleeHitBlunt = referenceProps.soundMeleeHitBlunt
             };
-            var statFactors = stoneChunk.stuffProps.statFactors;
 
-            ModifyStatModifier(ref statFactors, StatDefOf.WorkToMake, ToStringNumberSense.Factor, factor: 1.5f);
-            ModifyStatModifier(ref statFactors, StatDefOf.WorkToBuild, ToStringNumberSense.Factor, factor: 1.5f);
+            var chunkProps = stoneChunk.stuffProps;
+            foreach (var statOffset in referenceProps.statOffsets)
+                chunkProps.statOffsets.Add(new StatModifier() { stat = statOffset.stat, value = statOffset.value });
+            foreach (var statFactor in referenceProps.statFactors)
+                chunkProps.statFactors.Add(new StatModifier() { stat = statFactor.stat, value = statFactor.value });
+
+            ModifyStatModifier(ref chunkProps.statFactors, StatDefOf.WorkToMake, ToStringNumberSense.Factor, factor: 1.5f);
+            ModifyStatModifier(ref chunkProps.statFactors, StatDefOf.WorkToBuild, ToStringNumberSense.Factor, factor: 1.5f);
         }
 
         private static void ModifyStatModifier(ref List<StatModifier> modifierList, StatDef stat, ToStringNumberSense mode, float offset = 0, float factor = 1)

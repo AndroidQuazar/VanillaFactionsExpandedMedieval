@@ -21,4 +21,23 @@
         </resolvers>
     </RuleDef>
 
+    <RuleDef>
+        <defName>Winery</defName>
+        <symbol>winery</symbol>
+        <resolvers>
+            <li Class="SymbolResolver_GenericRoom">
+                <minRectSize>(4, 4)</minRectSize>
+                <interior>interior_winery</interior>
+            </li>
+        </resolvers>
+    </RuleDef>
+
+    <RuleDef>
+        <defName>AddMustToWineBarrels</defName>
+        <symbol>addMustToWineBarrels</symbol>
+        <resolvers>
+            <li Class="VFEMedieval.SymbolResolver_AddMustToWineBarrels" />
+        </resolvers>
+    </RuleDef>
+
 </Defs>

@@ -38,9 +38,8 @@ namespace VFEMedieval
                         }
                     }
                 }
+                enumerator.Dispose();
             }
-
-            Log.Message(allShieldPairs.ToStringSafeEnumerable());
         }
 
         public static void TryGenerateShieldFor(Pawn pawn)

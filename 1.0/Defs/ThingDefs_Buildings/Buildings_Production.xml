@@ -2,7 +2,7 @@
 <Defs>
 
     <ThingDef ParentName="BuildingBase">
-        <defName>WineBarrel</defName>
+        <defName>VFE_WineBarrel</defName>
         <label>wine barrel</label>
         <description>A barrel for fermenting raw wort into beer.</description>
         <graphicData>

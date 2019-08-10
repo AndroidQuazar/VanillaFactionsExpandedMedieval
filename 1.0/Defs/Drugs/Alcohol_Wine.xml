@@ -2,7 +2,7 @@
 <Defs>
 
     <ThingDef ParentName="DrugBase">
-        <defName>Wine</defName>
+        <defName>VFE_Wine</defName>
         <label>wine</label>
         <description>The first beverage besides water ever consumed by mankind. Beer can taste good, but its main effect is intoxication. Excessive consumption can lead to alcohol blackouts and, over time, addiction.</description>
         <graphicData>
@@ -109,7 +109,7 @@
             <li>
                 <filter>
                     <thingDefs>
-                        <li>RawGrapes</li>
+                        <li>VFE_RawGrapes</li>
                     </thingDefs>
                 </filter>
                 <count>25</count>
@@ -117,16 +117,16 @@
         </ingredients>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>RawGrapes</li>
+                <li>VFE_RawGrapes</li>
             </thingDefs>
         </fixedIngredientFilter>
         <products>
-            <Wort>5</Wort>
+            <VFE_Must>5</VFE_Must>
         </products>
     </RecipeDef>
 
     <ThingDef ParentName="ResourceBase">
-        <defName>Must</defName>
+        <defName>VFE_Must</defName>
         <label>must</label>
         <description>Un-fermented wine. This substance needs to ferment in a wine barrel before it becomes drinkable wine.</description>
         <graphicData>

@@ -91,7 +91,7 @@ namespace VFEMedieval
             var thingList = c.GetThingList(map);
             foreach (var thing in thingList)
             {
-                if (!thing.def.destroyable || thing.def == RimWorld.ThingDefOf.Sandbags)
+                if (!thing.def.destroyable || thing.def == RimWorld.ThingDefOf.Sandbags || (thing.def.building != null && thing.def.building.isNaturalRock))
                     return false;
             }
 

@@ -2,7 +2,7 @@
 <Defs>
 
     <ThingDef ParentName="Wall">
-        <defName>CobblestoneWall</defName>
+        <defName>VFE_CobblestoneWall</defName>
         <label>cobblestone wall</label>
         <graphicData>
             <texPath>Things/Building/Linked/RockWall</texPath>

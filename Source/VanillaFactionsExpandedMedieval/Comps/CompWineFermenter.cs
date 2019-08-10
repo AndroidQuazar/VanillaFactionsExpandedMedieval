@@ -101,7 +101,12 @@ namespace VFEMedieval
             }
         }
 
-        private float Progress => (DaysToReachTargetQuality > 0) ? (AgeDays / DaysToReachTargetQuality) : 1;
+        public float Progress
+        {
+            get => (DaysToReachTargetQuality > 0) ? (AgeDays / DaysToReachTargetQuality) : 1;
+            set => AgeTicks = Mathf.RoundToInt(DaysToReachTargetQuality * GenDate.TicksPerDay * value);
+        }
+
 
         private float CurrentTempProgressSpeedFactor
         {
@@ -171,7 +176,7 @@ namespace VFEMedieval
                 Log.Warning("Tried to get wine but it's not yet fermented.", false);
                 return null;
             }
-            var wine = ThingMaker.MakeThing(ThingDefOf.Wine, null);
+            var wine = ThingMaker.MakeThing(ThingDefOf.VFE_Wine, null);
             wine.stackCount = mustCount;
             if (wine.TryGetComp<CompQuality>() is CompQuality qualityComp)
                 qualityComp.SetQuality(CurrentQuality, ArtGenerationContext.Colony);
@@ -216,7 +221,7 @@ namespace VFEMedieval
             {
                 defaultLabel = "VFEMedieval.TargetWineQuality".Translate(targetQuality.GetLabel()),
                 defaultDesc = "VFEMedieval.TargetWineQuality_Description".Translate(),
-                icon = ThingDefOf.Wine.uiIcon,
+                icon = ThingDefOf.VFE_Wine.uiIcon,
                 wineFermenter = this,
             };
 

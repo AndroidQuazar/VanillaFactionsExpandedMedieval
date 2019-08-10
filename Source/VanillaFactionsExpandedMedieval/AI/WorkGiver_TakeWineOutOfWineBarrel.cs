@@ -16,7 +16,7 @@ namespace VFEMedieval
         {
             get
             {
-                return ThingRequest.ForDef(ThingDefOf.WineBarrel);
+                return ThingRequest.ForDef(ThingDefOf.VFE_WineBarrel);
             }
         }
 
