@@ -12,16 +12,39 @@
         <stuffCategories>
             <li>Leathery</li>
         </stuffCategories>
+        <tools>
+            <li>
+                <label>base</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>centre</label>
+                <labelUsedInLogging>false</labelUsedInLogging>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
         <modExtensions>
             <li Class="VFEMedieval.ThingDefExtension">
-                <useFactionColour>true</useFactionColour>
+                <useFactionColourForPawnKinds>
+                    <li>Medieval_Squire</li>
+                    <li>Medieval_Knight</li>
+                    <li>Medieval_Lord</li>
+                </useFactionColourForPawnKinds>
             </li>
         </modExtensions>
     </ThingDef>
 
     <ThingDef ParentName="BaseShieldMedieval">
         <defName>Shield_Kite</defName>
-        <label>kiteshield</label>
+        <label>kite shield</label>
         <description>Placeholder.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Shield/KiteShield/KiteShield</texPath>
@@ -73,25 +96,62 @@
                 </offHandHoldOffset>
             </li>
         </comps>
-        <tools>
-            <li>
-                <label>base</label>
-                <capacities>
-                    <li>Poke</li>
-                </capacities>
-                <power>9</power>
-                <cooldownTime>2</cooldownTime>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseShieldMedieval">
+        <defName>Shield_Heater</defName>
+        <label>heater shield</label>
+        <description>Placeholder.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Shield/KiteShield/KiteShield</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <costStuffCount>30</costStuffCount>
+        <costList>
+            <Steel>90</Steel>
+        </costList>
+        <statBases>
+            <ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+            <WorkToMake>8000</WorkToMake>
+            <Mass>4</Mass>
+        </statBases>
+        <comps>
+            <li Class="VFEMedieval.CompProperties_Shield">
+                <shieldTags>
+                    <li>MedievalAdvanced</li>
+                </shieldTags>
+                <useDeflectMetalEffect>true</useDeflectMetalEffect>
+                <coveredBodyPartGroups>
+                    <li>Torso</li>
+                    <li>Arms</li>
+                    <li>Hands</li>
+                </coveredBodyPartGroups>
+                <offHandGraphicData>
+                    <texPath>Things/Item/Equipment/Shield/KiteShield/KiteShield</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                    <drawSize>1.6</drawSize>
+                </offHandGraphicData>
+                <offHandHoldOffset>
+                    <northDefault>
+                        <offset>(0.1, 0, 0.2)</offset>
+                        <behind>true</behind>
+                    </northDefault>
+                    <east>
+                        <offset>(-0.1, 0, 0.2)</offset>
+                        <behind>true</behind>
+                    </east>
+                    <south>
+                        <offset>(-0.1, -0.04, 0.2)</offset>
+                    </south>
+                    <west>
+                        <offset>(0.1, 0, 0.2)</offset>
+                    </west>
+                </offHandHoldOffset>
             </li>
-            <li>
-                <label>centre</label>
-                <labelUsedInLogging>false</labelUsedInLogging>
-                <capacities>
-                    <li>Blunt</li>
-                </capacities>
-                <power>9</power>
-                <cooldownTime>2</cooldownTime>
-            </li>
-        </tools>
+        </comps>
     </ThingDef>
 
 </Defs>

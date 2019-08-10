@@ -17,9 +17,8 @@ namespace VFEMedieval
         // For weapons
         public bool usableWithShields = false;
 
-        // For apparel
-        public bool useFactionColour = false;
-        public bool overrideKindDefApparelColour = false;
+        // For shields and apparel
+        public List<PawnKindDef> useFactionColourForPawnKinds;
 
     }
 

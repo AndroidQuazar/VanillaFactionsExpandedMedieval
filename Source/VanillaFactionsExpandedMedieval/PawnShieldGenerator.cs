@@ -96,9 +96,12 @@ namespace VFEMedieval
                 PawnGenerator.PostProcessGeneratedGear(shield, pawn);
 
                 // Colour the shield
-                var thingDefExtension = thingStuffPair.thing.GetModExtension<ThingDefExtension>() ?? ThingDefExtension.defaultValues;
-                if (thingDefExtension.useFactionColour && pawn.Faction != null)
-                    shield.SetColor(pawn.Faction.Color);
+                if (pawn.Faction != null)
+                {
+                    var thingDefExtension = thingStuffPair.thing.GetModExtension<ThingDefExtension>() ?? ThingDefExtension.defaultValues;
+                    if (!thingDefExtension.useFactionColourForPawnKinds.NullOrEmpty() && thingDefExtension.useFactionColourForPawnKinds.Contains(pawn.kindDef))
+                        shield.SetColor(pawn.Faction.Color);
+                }
 
                 pawn.equipment.AddShield(shield);
             }

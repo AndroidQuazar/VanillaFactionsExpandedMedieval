@@ -32,7 +32,7 @@ namespace VFEMedieval
             {
                 stuffAdjective = referenceProps.stuffAdjective,
                 commonality = referenceProps.commonality,
-                categories = new List<StuffCategoryDef>() { StuffCategoryDefOf.StoneChunks },
+                categories = new List<StuffCategoryDef>() { StuffCategoryDefOf.Rocks },
                 smeltable = referenceProps.smeltable,
                 statOffsets = new List<StatModifier>(referenceProps.statOffsets),
                 statFactors = new List<StatModifier>(referenceProps.statFactors),
@@ -45,8 +45,6 @@ namespace VFEMedieval
             };
             var statFactors = stoneChunk.stuffProps.statFactors;
 
-            ModifyStatModifier(ref statFactors, StatDefOf.MeleeWeapon_CooldownMultiplier, ToStringNumberSense.Factor, 0.2f);
-            ModifyStatModifier(ref statFactors, StatDefOf.MaxHitPoints, ToStringNumberSense.Factor, 0.2f);
             ModifyStatModifier(ref statFactors, StatDefOf.WorkToMake, ToStringNumberSense.Factor, factor: 1.5f);
             ModifyStatModifier(ref statFactors, StatDefOf.WorkToBuild, ToStringNumberSense.Factor, factor: 1.5f);
         }

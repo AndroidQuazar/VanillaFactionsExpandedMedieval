@@ -20,10 +20,12 @@ namespace VFEMedieval
             var perimeterWallCells = rp.rect.EdgeCells;
             var map = BaseGen.globalSettings.map;
             var faction = rp.faction ?? Find.FactionManager.RandomEnemyFaction();
+            var medievalrp = rp.GetCustom<MedievalResolveParams>(MedievalResolveParams.Name);
 
             // Generate towers on each corner of the rect
             var corners = rp.rect.Corners;
-            float towerRadius = rp.GetCustom<MedievalResolveParams>(MedievalResolveParams.Name)?.towerRadius ?? 3.9f;
+            float towerRadius = medievalrp?.towerRadius ?? 3.9f;
+            var wallDef = medievalrp?.edgeWallDef ?? RimWorld.ThingDefOf.Wall;
             var wallStuff = rp.wallStuff ?? BaseGenUtility.RandomCheapWallStuff(faction, true);
             foreach (var corner in corners)
             {
@@ -31,15 +33,15 @@ namespace VFEMedieval
                 perimeterWallCells = perimeterWallCells.Where(c => !towerCells.Contains(c));
                 var towerInteriorCells = GenRadial.RadialCellsAround(corner, towerRadius - 1.42f, true);
                 foreach (var pos in towerCells)
-                    DoTowerSection(pos, map, rp, wallStuff, towerInteriorCells);
+                    DoTowerSection(pos, map, rp, wallDef, wallStuff, towerInteriorCells);
             }
 
             // Generate perimeter walls
             foreach (var pos in perimeterWallCells)
-                TrySpawnWall(pos, map, rp, wallStuff);
+                TrySpawnWall(pos, map, rp, wallDef, wallStuff);
         }
 
-        private void DoTowerSection(IntVec3 c, Map map, ResolveParams rp, ThingDef wallStuff, IEnumerable<IntVec3> interiorCells)
+        private void DoTowerSection(IntVec3 c, Map map, ResolveParams rp, ThingDef wallDef, ThingDef wallStuff, IEnumerable<IntVec3> interiorCells)
         {
             // Not in bounds
             if (!c.InBounds(map))
@@ -47,7 +49,7 @@ namespace VFEMedieval
 
             // Walls
             if (!interiorCells.Contains(c))
-                TrySpawnWall(c, map, rp, wallStuff);
+                TrySpawnWall(c, map, rp, wallDef, wallStuff);
 
             // Interior
             else if (TryClearCell(c, map))
@@ -61,7 +63,7 @@ namespace VFEMedieval
                 TrySpawnRoof(c, map);
         }
 
-        private void TrySpawnWall(IntVec3 c, Map map, ResolveParams rp, ThingDef wallStuff)
+        private void TrySpawnWall(IntVec3 c, Map map, ResolveParams rp, ThingDef wallDef, ThingDef wallStuff)
         {
             // Not in bounds
             if (!c.InBounds(map))
@@ -78,7 +80,7 @@ namespace VFEMedieval
                 if (GenConstruct.CanBuildOnTerrain(TerrainDefOf.Bridge, c, map, Rot4.North))
                     map.terrainGrid.SetTerrain(c, TerrainDefOf.Bridge);
 
-                var wall = ThingMaker.MakeThing(RimWorld.ThingDefOf.Wall, wallStuff);
+                var wall = ThingMaker.MakeThing(wallDef, wallStuff);
                 wall.SetFaction(rp.faction, null);
                 GenSpawn.Spawn(wall, c, map, WipeMode.Vanish);
             }

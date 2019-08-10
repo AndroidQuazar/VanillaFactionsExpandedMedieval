@@ -118,7 +118,10 @@
         <colorGenerator Class="ColorGenerator_StandardApparel" />
         <modExtensions>
             <li Class="VFEMedieval.ThingDefExtension">
-                <useFactionColour>true</useFactionColour>
+                <useFactionColourForPawnKinds>
+                    <li>Medieval_Knight</li>
+                    <li>Medieval_Lord</li>
+                </useFactionColourForPawnKinds>
             </li>
         </modExtensions>
     </ThingDef>

@@ -65,7 +65,7 @@ namespace VFEMedieval
                     foreach (var apparel in pawn.apparel.WornApparel)
                     {
                         var thingDefExtension = apparel.def.GetModExtension<ThingDefExtension>() ?? ThingDefExtension.defaultValues;
-                        if (thingDefExtension.useFactionColour && (thingDefExtension.overrideKindDefApparelColour || pawn.kindDef.apparelColor == Color.white))
+                        if (!thingDefExtension.useFactionColourForPawnKinds.NullOrEmpty() && thingDefExtension.useFactionColourForPawnKinds.Contains(pawn.kindDef))
                             apparel.SetColor(pawn.Faction.Color);
                     }
                 }

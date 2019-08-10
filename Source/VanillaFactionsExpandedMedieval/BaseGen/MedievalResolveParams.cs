@@ -18,6 +18,7 @@ namespace VFEMedieval
 
         public const string Name = "VFEMedievalResolveParams";
 
+        public ThingDef edgeWallDef;
         public float? towerRadius;
         public bool? symmetricalSandbags;
 

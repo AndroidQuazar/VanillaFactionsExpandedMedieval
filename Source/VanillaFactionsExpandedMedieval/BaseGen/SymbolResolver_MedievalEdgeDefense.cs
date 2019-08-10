@@ -23,6 +23,10 @@ namespace VFEMedieval
             BaseGen.symbolStack.Push("castleEdgeSandbags", sandbagParams);
 
             // Generate perimeter
+            var edgeWallParams = rp;
+            edgeWallParams.GetCustom<MedievalResolveParams>(MedievalResolveParams.Name).edgeWallDef = ThingDefOf.CobblestoneWall;
+            edgeWallParams.wallStuff = Find.World.NaturalRockTypesIn(BaseGen.globalSettings.map.Tile).Select(t => t.building.mineableThing).Where(t => t.IsStuff).
+                RandomElementByWeight(t => (1 + t.stuffProps.statOffsets.GetStatOffsetFromList(StatDefOf.MaxHitPoints)) * t.stuffProps.statFactors.GetStatFactorFromList(StatDefOf.MaxHitPoints) * t.stuffProps.commonality);
             BaseGen.symbolStack.Push("castleEdgeWalls", rp);
         }
 

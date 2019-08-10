@@ -13,6 +13,7 @@ namespace VFEMedieval
     public static class ThingDefOf
     {
 
+        public static ThingDef CobblestoneWall;
         public static ThingDef Must;
         public static ThingDef WineBarrel;
         public static ThingDef Wine;

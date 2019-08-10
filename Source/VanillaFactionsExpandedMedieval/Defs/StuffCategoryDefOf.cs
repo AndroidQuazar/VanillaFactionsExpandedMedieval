@@ -13,7 +13,7 @@ namespace VFEMedieval
     public static class StuffCategoryDefOf
     {
 
-        public static StuffCategoryDef StoneChunks;
+        public static StuffCategoryDef Rocks;
 
     }
 

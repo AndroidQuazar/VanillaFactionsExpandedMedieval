@@ -130,7 +130,7 @@
         <label>must</label>
         <description>Un-fermented wine. This substance needs to ferment in a wine barrel before it becomes drinkable wine.</description>
         <graphicData>
-            <texPath>Things/Item/Resource/Wort</texPath>
+            <texPath>Things/Item/Resource/Must</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <rotatable>false</rotatable>

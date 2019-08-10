@@ -61,7 +61,7 @@
                 <commonality>100</commonality>
                 <options>
                     <Medieval_Peasant>5</Medieval_Peasant>
-                    <Medieval_Squire>5</Medieval_Squire>
+                    <Medieval_Squire>7</Medieval_Squire>
                     <Medieval_Knight>5</Medieval_Knight>
                     <Medieval_Lord>3</Medieval_Lord>
                 </options>
@@ -80,7 +80,7 @@
                 <commonality>60</commonality>
                 <options>
                     <Medieval_Peasant>10</Medieval_Peasant>
-                    <Medieval_Squire>10</Medieval_Squire>
+                    <Medieval_Squire>15</Medieval_Squire>
                     <Medieval_Knight>10</Medieval_Knight>
                     <Medieval_Lord>5</Medieval_Lord>
                 </options>
@@ -106,14 +106,14 @@
                     <Elephant>2</Elephant>
                 </carriers>
                 <guards>
-                    <Medieval_Squire>7</Medieval_Squire>
+                    <Medieval_Squire>10</Medieval_Squire>
                     <Medieval_Knight>7</Medieval_Knight>
                 </guards>
             </li>
             <li>
                 <kindDef>Settlement</kindDef>
                 <options>
-                    <Medieval_Squire>7</Medieval_Squire>
+                    <Medieval_Squire>10</Medieval_Squire>
                     <Medieval_Knight>7</Medieval_Knight>
                     <Medieval_Lord>10</Medieval_Lord>
                 </options>

@@ -2,12 +2,63 @@
 <Defs>
 
     <ThingDef ParentName="ArmorHelmetMakeableBase">
+        <defName>Apparel_PlateHelmetLight</defName>
+        <label>light plate helmet</label>
+        <description>A simple helmet which gives moderate protection against sharp attacks. Not effective against blunt weapons.</description>
+        <techLevel>Medieval</techLevel>
+        <recipeMaker>
+            <recipeUsers>
+                <li>ElectricSmithy</li>
+                <li>FueledSmithy</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/LightPlateHelmet/LightPlateHelmet</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <costStuffCount>40</costStuffCount>
+        <statBases>
+            <WorkToMake>3200</WorkToMake>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>2</Mass>
+            <StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+            <EquipDelay>2.5</EquipDelay>
+        </statBases>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <apparel>
+            <bodyPartGroups>
+                <li>UpperHead</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Things/Pawn/Humanlike/Apparel/LightPlateHelmet/LightPlateHelmet</wornGraphicPath>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <tags>
+                <li>MedievalMilitaryBasic</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="ArmorHelmetMakeableBase">
         <defName>Apparel_PlateHelmetHeavy</defName>
         <label>heavy plate helmet</label>
         <description>A bulky helmet that provides full-head coverage. Restricts the wearer's field of vision.</description>
         <techLevel>Medieval</techLevel>
         <recipeMaker>
-            <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+            <recipeUsers>
+                <li>ElectricSmithy</li>
+                <li>FueledSmithy</li>
+            </recipeUsers>
             <skillRequirements>
                 <Crafting>9</Crafting>
             </skillRequirements>
