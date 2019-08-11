@@ -8,7 +8,7 @@
                 <compClass>CompColorable</compClass>
             </li>
         </comps>
-        <equippedAngleOffset>-65</equippedAngleOffset>
+        <equippedAngleOffset>-30</equippedAngleOffset>
         <stuffCategories>
             <li>Leathery</li>
         </stuffCategories>
@@ -34,7 +34,7 @@
         <modExtensions>
             <li Class="VFEMedieval.ThingDefExtension">
                 <useFactionColourForPawnKinds>
-                    <li>Medieval_Squire</li>
+                    <li>Medieval_Footsoldier</li>
                     <li>Medieval_Knight</li>
                     <li>Medieval_Lord</li>
                 </useFactionColourForPawnKinds>
@@ -45,16 +45,19 @@
     <ThingDef ParentName="VFE_BaseShield">
         <defName>VFE_Shield_Kite</defName>
         <label>kite shield</label>
-        <description>Placeholder.</description>
+        <description>A medium-sized wooden shield, with the front decoratively covered by leather. Offers a moderate amount of protection against melee and ranged attacks.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Shield/KiteShield/KiteShield</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.83</drawSize>
         </graphicData>
         <costStuffCount>20</costStuffCount>
         <costList>
             <WoodLog>60</WoodLog>
         </costList>
         <statBases>
+            <MaxHitPoints>120</MaxHitPoints>
+            <Flammability>1.0</Flammability>
             <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
             <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
             <ArmorRating_Heat>0.9</ArmorRating_Heat>
@@ -62,6 +65,8 @@
             <Mass>2</Mass>
         </statBases>
         <comps>
+            <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+            </li>
             <li Class="VFEMedieval.CompProperties_Shield">
                 <shieldTags>
                     <li>MedievalBasic</li>
@@ -80,7 +85,7 @@
                 </offHandGraphicData>
                 <offHandHoldOffset>
                     <northDefault>
-                        <offset>(0.1, 0, 0.2)</offset>
+                        <offset>(0, 0, 0.2)</offset>
                         <behind>true</behind>
                     </northDefault>
                     <east>
@@ -101,16 +106,19 @@
     <ThingDef ParentName="VFE_BaseShield">
         <defName>VFE_Shield_Heater</defName>
         <label>heater shield</label>
-        <description>Placeholder.</description>
+        <description>A heavy medium-sized steel shield, with the front decoratively covered by leather. Offers a significant amount of protection against melee and ranged attacks.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Shield/HeaterShield/HeaterShield</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.75</drawSize>
         </graphicData>
         <costStuffCount>30</costStuffCount>
         <costList>
             <Steel>90</Steel>
         </costList>
         <statBases>
+            <MaxHitPoints>180</MaxHitPoints>
+            <Flammability>0.4</Flammability>
             <ArmorRating_Sharp>0.9</ArmorRating_Sharp>
             <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
             <ArmorRating_Heat>1.2</ArmorRating_Heat>
@@ -118,6 +126,8 @@
             <Mass>4</Mass>
         </statBases>
         <comps>
+            <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+            </li>
             <li Class="VFEMedieval.CompProperties_Shield">
                 <shieldTags>
                     <li>MedievalAdvanced</li>
@@ -129,25 +139,25 @@
                     <li>Hands</li>
                 </coveredBodyPartGroups>
                 <offHandGraphicData>
-                    <texPath>Things/Item/Equipment/Shield/KiteShield/KiteShield</texPath>
+                    <texPath>Things/Item/Equipment/Shield/HeaterShield/HeaterShield</texPath>
                     <graphicClass>Graphic_Multi</graphicClass>
                     <shaderType>CutoutComplex</shaderType>
-                    <drawSize>1.6</drawSize>
+                    <drawSize>1.5</drawSize>
                 </offHandGraphicData>
                 <offHandHoldOffset>
                     <northDefault>
-                        <offset>(0.1, 0, 0.2)</offset>
+                        <offset>(0, 0, 0.2)</offset>
                         <behind>true</behind>
                     </northDefault>
                     <east>
-                        <offset>(-0.1, 0, 0.2)</offset>
+                        <offset>(-0.05, 0, 0.2)</offset>
                         <behind>true</behind>
                     </east>
                     <south>
-                        <offset>(-0.1, -0.04, 0.2)</offset>
+                        <offset>(0, -0.04, 0.2)</offset>
                     </south>
                     <west>
-                        <offset>(0.1, 0, 0.2)</offset>
+                        <offset>(0.05, 0, 0.2)</offset>
                     </west>
                 </offHandHoldOffset>
             </li>

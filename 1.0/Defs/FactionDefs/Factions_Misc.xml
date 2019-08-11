@@ -3,8 +3,8 @@
 
     <!-- Dan: Placeholder that uses values from tribal factions from now -->
     <FactionDef ParentName="HumanFactionBase" Name="MedievalFactionBase" Abstract="True">
-        <pawnSingular>tribesman</pawnSingular>
-        <pawnsPlural>tribespeople</pawnsPlural>
+        <pawnSingular>member</pawnSingular>
+        <pawnsPlural>members</pawnsPlural>
         <listOrderPriority>25</listOrderPriority>
         <settlementGenerationWeight>1</settlementGenerationWeight>
         <requiredCountAtGameStart>1</requiredCountAtGameStart>
@@ -12,12 +12,11 @@
         <canStageAttacks>true</canStageAttacks>
         <expandingIconTexture>World/WorldObjects/Expanding/Castle</expandingIconTexture>
         <geneticVariance>0.1</geneticVariance>
-        <factionNameMaker>NamerFactionTribal</factionNameMaker>
-        <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
-        <pawnNameMaker>NamerPersonTribal</pawnNameMaker>
+        <factionNameMaker>NamerFactionMedieval</factionNameMaker>
+        <settlementNameMaker>NamerSettlementMedieval</settlementNameMaker>
         <techLevel>Medieval</techLevel>
         <backstoryCategories>
-            <li>Tribal</li>
+            <li>Civil</li>
         </backstoryCategories>
         <leaderTitle>lord</leaderTitle>
         <hairTags>
@@ -29,16 +28,16 @@
             </points>
         </raidCommonalityFromPointsCurve>
         <caravanTraderKinds>
-            <li>Caravan_Neolithic_BulkGoods</li>
-            <li>Caravan_Neolithic_WarMerchant</li>
-            <li>Caravan_Neolithic_Slaver</li>
-            <li>Caravan_Neolithic_ShamanMerchant</li>
+            <li>Caravan_Medieval_BulkGoods</li>
+            <li>Caravan_Medieval_CombatSupplier</li>
+            <li>Caravan_Medieval_PirateMerchant</li>
+            <li>Caravan_Medieval_Exotic</li>
         </caravanTraderKinds>
         <visitorTraderKinds>
-            <li>Visitor_Neolithic_Standard</li>
+            <li>Visitor_Medieval_Standard</li>
         </visitorTraderKinds>
         <baseTraderKinds>
-            <li>Base_Neolithic_Standard</li>
+            <li>Base_Medieval_Standard</li>
         </baseTraderKinds>
         <allowedArrivalTemperatureRange>
             <min>-40</min>

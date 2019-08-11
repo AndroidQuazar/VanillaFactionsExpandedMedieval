@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <RulePackDef>
+        <defName>MedievalWordUtility</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>WordTribal(p=3)->[tribal_word_file]</li>
+                <li>WordTribal(p=3)->[SylE][SylE]</li>
+                <li>WordTribal(p=2)->[SylE][SylE][SylE]</li>
+                <li>WordTribal->[SylE][SylE][SylE][SylE]</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>tribal_word_file->Words/Foreign/Tribal</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+
+</Defs>

@@ -23,6 +23,18 @@ namespace VFEMedieval
         public GraphicData offHandGraphicData;
         public HoldOffsetSet offHandHoldOffset;
 
+        public override IEnumerable<string> ConfigErrors(ThingDef parentDef)
+        {
+            if (coveredBodyPartGroups.NullOrEmpty())
+                yield return "coveredBodyPartGroups is not defined or is empty.";
+        }
+
+        public override IEnumerable<StatDrawEntry> SpecialDisplayStats(StatRequest req)
+        {
+            string valueString = coveredBodyPartGroups.Select(p => p.label).ToCommaList(true).CapitalizeFirst();
+            yield return new StatDrawEntry(StatCategoryDefOf.Apparel, "VFEMedieval.Protects".Translate(), valueString, 100);
+        }
+
     }
 
 }

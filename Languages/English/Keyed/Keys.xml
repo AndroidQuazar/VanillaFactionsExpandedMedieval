@@ -5,6 +5,8 @@
     <VFEMedieval.EquipShield>Equip {0} as shield</VFEMedieval.EquipShield>
     <VFEMedieval.EquipWarningShieldUnusable>(unusable with {0})</VFEMedieval.EquipWarningShieldUnusable>
 
+    <VFEMedieval.Protects>Protects</VFEMedieval.Protects>
+
     <!-- Wine barrel -->
     <VFEMedieval.NoMust>need must</VFEMedieval.NoMust>
     <VFEMedieval.ContainsMust>Contains {0} / {1} must</VFEMedieval.ContainsMust>
