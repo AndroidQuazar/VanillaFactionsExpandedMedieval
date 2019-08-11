@@ -244,7 +244,7 @@ namespace VFEMedieval
                 if (!TemperatureRuinableComp.Ruined)
                 {
                     if (AgeDays >= Props.awfulQualityAgeDaysThreshold)
-                        stringBuilder.AppendLine($"{"VFEMedieval.ContainsWine".Translate(mustCount, Props.mustCapacity)} ({"QualityIs".Translate(CurrentQuality.GetLabel())})");
+                        stringBuilder.AppendLine($"{"VFEMedieval.ContainsWine".Translate(mustCount, Props.mustCapacity)} ({"QualityIs".Translate(CurrentQuality.GetLabel()).ToLower()})");
                     else
                         stringBuilder.AppendLine("VFEMedieval.ContainsMust".Translate(mustCount, Props.mustCapacity, AgeTicks.ToStringTicksToPeriod()));
                 }

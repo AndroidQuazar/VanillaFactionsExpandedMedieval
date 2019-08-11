@@ -4,6 +4,7 @@
     <!-- Shield -->
     <VFEMedieval.EquipShield>Equip {0} as shield</VFEMedieval.EquipShield>
     <VFEMedieval.EquipWarningShieldUnusable>(unusable with {0})</VFEMedieval.EquipWarningShieldUnusable>
+    <VFEMedieval.EquipWarningShieldUnusableWithWeapon>({0} will be unusable)</VFEMedieval.EquipWarningShieldUnusableWithWeapon>
 
     <VFEMedieval.Protects>Protects</VFEMedieval.Protects>
 

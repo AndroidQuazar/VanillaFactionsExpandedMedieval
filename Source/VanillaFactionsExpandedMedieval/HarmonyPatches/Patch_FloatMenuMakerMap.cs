@@ -29,18 +29,37 @@ namespace VFEMedieval
                     First(t => t.Name.Contains("AddHumanlikeOrders") && t.GetFields(BindingFlags.NonPublic | BindingFlags.Instance).Any(f => f.FieldType == typeof(ThingWithComps) && f.Name == "equipment")).
                     GetField("equipment", BindingFlags.NonPublic | BindingFlags.Instance);
 
+                bool foundBrawlerWarningInstruction = false;
+
                 var addInfo = AccessTools.Method(typeof(List<FloatMenuOption>), "Add");
+                var equipWarningShieldUnusableWithWeaponInfo = AccessTools.Method(typeof(AddHumanlikeOrders), nameof(EquipWarningShieldUnusableWithWeapon));
                 var addShieldFloatMenuOptionInfo = AccessTools.Method(typeof(AddHumanlikeOrders), nameof(AddShieldFloatMenuOption));
 
                 for (int i = 0; i < instructionList.Count; i++)
                 {
                     var instruction = instructionList[i];
 
-                    // Look for the section that gives the 'Equip x' float menu instruction; add our 'equip x as shield' float menu method after
+                    // Look for the 'EquipWarningBrawler' instruction so we know when to try and hook into modifying 'text5'
+                    if (instruction.opcode == OpCodes.Ldstr && (string)instruction.operand == "EquipWarningBrawler")
+                        foundBrawlerWarningInstruction = true;
+
+                    // Once we've found 'EquipWarningBrawler', look for the next instruction that loads 'text5'; add our call to potentially further modify it
+                    if (foundBrawlerWarningInstruction && instruction.opcode == OpCodes.Ldloc_S && instruction.operand is LocalBuilder lb && lb.LocalIndex == 44)
+                    {
+                        yield return instruction;
+                        yield return new CodeInstruction(OpCodes.Ldarg_1); // pawn
+                        yield return new CodeInstruction(OpCodes.Ldloc_S, 39); // equipment
+                        yield return new CodeInstruction(OpCodes.Ldfld, equipmentInfo); // Necessary since the 'equipment' variable is a reference to this
+                        yield return new CodeInstruction(OpCodes.Call, equipWarningShieldUnusableWithWeaponInfo); // EquipWarningShieldUnusableWithWeapon(text5, pawn, equipment)
+                        yield return new CodeInstruction(OpCodes.Stloc_S, 44); // text5 = EquipWarningShieldUnusableWithWeapon(text5, pawn, equipment)
+                        instruction = instruction.Clone(); 
+                    }
+
+                    // Look for the section that gives the 'Equip x' float menu instruction; add our 'Equip x as shield' float menu method after
                     if (instruction.opcode == OpCodes.Callvirt && instruction.operand == addInfo)
                     {
                         var prevInstruction = instructionList[i - 1];
-                        if (prevInstruction.opcode == OpCodes.Ldloc_S && prevInstruction.operand is LocalBuilder lb && lb.LocalIndex == 42)
+                        if (prevInstruction.opcode == OpCodes.Ldloc_S && prevInstruction.operand is LocalBuilder lb2 && lb2.LocalIndex == 42)
                         {
                             yield return instruction;
                             yield return new CodeInstruction(OpCodes.Ldarg_1); // pawn
@@ -53,6 +72,21 @@ namespace VFEMedieval
 
                     yield return instruction;
                 }
+            }
+
+            private static string EquipWarningShieldUnusableWithWeapon(string equipString, Pawn pawn, Thing equipment)
+            {
+                // Append '([shield] will be unusable)' to float menu if appropriate
+                if (pawn.equipment != null && pawn.equipment.OffHandShield() is ThingWithComps shield)
+                {
+                    Log.Message(equipment.def.label);
+                    var thingDefExtension = equipment.def.GetModExtension<ThingDefExtension>() ?? ThingDefExtension.defaultValues;
+                    if (!thingDefExtension.usableWithShields)
+                    {
+                        return $"{equipString} {"VFEMedieval.EquipWarningShieldUnusableWithWeapon".Translate(shield.def.label)}";
+                    }
+                }
+                return equipString;
             }
 
             private static void AddShieldFloatMenuOption(Pawn pawn, Thing equipment, ref List<FloatMenuOption> opts)
