@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- It's just a flesh wound! -->
+    <PawnKindDef>
+        <defName>VFE_BlackKnight</defName>
+        <label>black knight</label>
+        <race>Human</race>
+        <defaultFactionType>AncientsHostile</defaultFactionType>
+        <combatPower>130</combatPower>
+        <backstoryCategories>
+            <li>Tribal</li>
+        </backstoryCategories>
+        <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+        <chemicalAddictionChance>0.01</chemicalAddictionChance>
+        <invNutrition>2.55</invNutrition>
+        <invFoodDef>Pemmican</invFoodDef>
+        <itemQuality>Normal</itemQuality>
+        <gearHealthRange>
+            <min>1</min>
+            <max>1</max>
+        </gearHealthRange>
+        <apparelMoney>
+            <min>700</min>
+            <max>1000</max>
+        </apparelMoney>
+        <apparelRequired>
+            <li>VFE_Apparel_PlateHelmetHeavy</li>
+            <li>Apparel_PlateArmor</li>
+            <li>VFE_Apparel_Tabard</li>
+        </apparelRequired>
+        <apparelTags>
+            <li>MedievalBasic</li>
+        </apparelTags>
+        <weaponMoney>
+            <min>300</min>
+            <max>300</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>Longsword</li>
+        </weaponTags>
+        <techHediffsMoney>
+            <min>9999</min>
+            <max>9999</max>
+        </techHediffsMoney>
+        <techHediffsTags>
+            <li>Painstopper</li>
+        </techHediffsTags>
+        <apparelColor>(58,58,58)</apparelColor>
+        <techHediffsChance>1</techHediffsChance>
+    </PawnKindDef>
+
+</Defs>
