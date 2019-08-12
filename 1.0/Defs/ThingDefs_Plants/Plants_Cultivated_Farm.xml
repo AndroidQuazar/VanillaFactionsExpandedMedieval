@@ -4,7 +4,7 @@
     <ThingDef ParentName="PlantBase">
         <defName>VFE_Plant_Grape</defName>
         <label>grape plant</label>
-        <description>A flowering crop that yields hops, an essential ingredient in beer.</description>
+        <description>A medium-sized vine that yields grapes when harvested - an essential ingredient in the production of wine that also tastes nice when eaten raw. Takes a long time to initially grow but can be harvested repeatedly in a single lifespan.</description>
         <statBases>
             <MaxHitPoints>85</MaxHitPoints>
             <Nutrition>0.2</Nutrition>
@@ -18,12 +18,13 @@
         <ingestible />
         <plant>
             <fertilitySensitivity>0.7</fertilitySensitivity>
-            <growDays>5</growDays>
+            <growDays>17.2</growDays>
             <dieIfLeafless>true</dieIfLeafless>
             <harvestTag>Standard</harvestTag>
-            <harvestedThingDef>RawHops</harvestedThingDef>
-            <harvestYield>8</harvestYield>
-            <sowMinSkill>3</sowMinSkill>
+            <harvestAfterGrowth>0.30</harvestAfterGrowth>
+            <harvestedThingDef>VFE_RawGrapes</harvestedThingDef>
+            <harvestYield>12</harvestYield>
+            <sowMinSkill>5</sowMinSkill>
             <sowTags>
                 <li>Ground</li>
                 <li>Hydroponic</li>

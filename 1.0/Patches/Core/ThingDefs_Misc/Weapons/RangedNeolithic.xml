@@ -11,12 +11,24 @@
         </value>
     </Operation>
 
-    <!-- Add weapon tag to greatbows -->
-    <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="Bow_Great"]/weaponTags</xpath>
-        <value>
-            <li>MedievalRanged</li>
-        </value>
+    <!-- Add weapon tag to greatbows if Vanilla Weapons Expanded isn't active -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Weapons Expanded</li>
+        </mods>
+        <nomatch Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Bow_Great"]/weaponTags</xpath>
+                    <value>
+                        <li>MedievalRanged</li>
+                    </value>
+                </li>
+
+            </operations>
+        </nomatch>
     </Operation>
 
 </Patch>

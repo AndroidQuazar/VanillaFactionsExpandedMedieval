@@ -4,7 +4,7 @@
     <ThingDef ParentName="ArmorSmithableBase">
         <defName>VFE_Apparel_PlateArmorHeavy</defName>
         <label>heavy plate armor</label>
-        <description>Overlapping solid plates of armor covering the entire body from neck to feet.</description>
+        <description>Overlapping solid plates of armor covering the entire body from neck to feet. The plates have been reinforced which offers significantly more protection, but at the cost of mobility.</description>
         <recipeMaker>
             <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
             <researchPrerequisite>PlateArmor</researchPrerequisite>
@@ -19,18 +19,19 @@
         <stuffCategories>
             <li>Metallic</li>
         </stuffCategories>
-        <costStuffCount>250</costStuffCount>
+        <costStuffCount>240</costStuffCount>
         <statBases>
-            <WorkToMake>65000</WorkToMake>
-            <MaxHitPoints>290</MaxHitPoints>
+            <WorkToMake>60000</WorkToMake>
+            <MaxHitPoints>380</MaxHitPoints>
             <Mass>20</Mass>
-            <StuffEffectMultiplierArmor>1.0</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierArmor>0.95</StuffEffectMultiplierArmor>
             <StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
             <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
             <EquipDelay>20</EquipDelay>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>-1.2</MoveSpeed>
+            <MeleeDodgeChance>-20</MeleeDodgeChance> <!-- Offsets nimble and the minimum skill to get a dodge chance -->
         </equippedStatOffsets>
         <thingCategories>
             <li>Apparel</li>
@@ -49,7 +50,7 @@
                 <li>Shell</li>
             </layers>
             <tags>
-                <li>MedievalMilitaryAdvanced</li>
+                <li>MedievalArmorDecent</li>
             </tags>
             <defaultOutfitTags>
                 <li>Soldier</li>
@@ -60,7 +61,7 @@
     <ThingDef ParentName="ApparelMakeableBase">
         <defName>VFE_Apparel_Tabard</defName>
         <label>tabard</label>
-        <description>A garment that is worn over armour by medieval militia which depicts their army's symbol.</description>
+        <description>A garment that is worn over armour by medieval militia which depicts their kingdom's coat of arms.</description>
         <graphicData>
             <texPath>Things/Pawn/Humanlike/Apparel/Tabard/Tabard</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -91,9 +92,6 @@
             <layers>
                 <li>OuterShell</li>
             </layers>
-            <tags>
-                <li>MedievalMilitaryAdvanced</li>
-            </tags>
             <defaultOutfitTags>
                 <li>Soldier</li>
             </defaultOutfitTags>

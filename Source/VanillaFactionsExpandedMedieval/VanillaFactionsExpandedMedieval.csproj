@@ -64,9 +64,11 @@
     <Compile Include="BaseGen\SymbolResolver_BasePart_Indoors_Leaf_Winery.cs" />
     <Compile Include="BaseGen\SymbolResolver_MedievalEdgeDefense.cs" />
     <Compile Include="BaseGen\SymbolResolver_MedievalSettlement.cs" />
+    <Compile Include="Comps\CompProperties_IngestedThoughtFromQuality.cs" />
     <Compile Include="Comps\CompProperties_Shield.cs" />
     <Compile Include="Comps\CompProperties_WineFermenter.cs" />
     <Compile Include="Comps\CompShield.cs" />
+    <Compile Include="Comps\CompIngestedThoughtFromQuality.cs" />
     <Compile Include="Comps\CompWineFermenter.cs" />
     <Compile Include="Commands\Command_SetWineTargetQuality.cs" />
     <Compile Include="DefModExtensions\PawnKindDefExtension.cs" />
@@ -101,6 +103,7 @@
     <Compile Include="Reflection\NonPublicFields.cs" />
     <Compile Include="Reflection\NonPublicMethods.cs" />
     <Compile Include="PawnShieldGenerator.cs" />
+    <Compile Include="StockGenerators\StockGenerator_MedievalMercs.cs" />
     <Compile Include="VFEMedieval.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatches.cs" />
     <Compile Include="ShieldUtility.cs" />

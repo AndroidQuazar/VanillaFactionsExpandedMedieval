@@ -18,6 +18,11 @@ namespace VFEMedieval
         public static ApplyArmourDelegate<float, float, float, Thing, DamageDef, Pawn, bool> ArmorUtility_ApplyArmor = (ApplyArmourDelegate<float, float, float, Thing, DamageDef, Pawn, bool>)
             Delegate.CreateDelegate(typeof(ApplyArmourDelegate<float, float, float, Thing, DamageDef, Pawn, bool>), typeof(ArmorUtility).GetMethod("ApplyArmor", BindingFlags.NonPublic | BindingFlags.Static));
 
+        public static Func<Thing, StatDef, string> StatWorker_InfoTextLineFromGear = (Func<Thing, StatDef, string>)
+            Delegate.CreateDelegate(typeof(Func<Thing, StatDef, string>), typeof(StatWorker).GetMethod("InfoTextLineFromGear", BindingFlags.NonPublic | BindingFlags.Static));
+        public static Func<Thing, StatDef, float> StatWorker_StatOffsetFromGear = (Func<Thing, StatDef, float>)
+            Delegate.CreateDelegate(typeof(Func<Thing, StatDef, float>), typeof(StatWorker).GetMethod("StatOffsetFromGear", BindingFlags.NonPublic | BindingFlags.Static));
+
         public delegate void ApplyArmourDelegate<A, B, C, D, E, F, G>(ref A first, B second, C third, D fourth, ref E fifth, F sixth, out G seventh);
         public delegate C FuncOut<A, B, C>(A first, out B second);
 

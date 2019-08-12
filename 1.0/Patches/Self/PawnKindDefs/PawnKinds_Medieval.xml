@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Integration with Vanilla Weapons Expanded -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Weapons Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+            
+                <!-- Peasants will be able to throw rocks -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/PawnKindDef[defName="Medieval_Peasant"]/weaponTags</xpath>
+                    <value>
+                        <li>MedievalRangedPeasant</li>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+    <!-- Integration with Vanilla Armour Expanded -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Armour Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+
+                <!-- Modify footman's armour -->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/PawnKindDef[defName="Medieval_Footsoldier"]/apparelTags/li[text()="MedievalMilitary"]</xpath>
+                    <value>
+                        <li>MedievalArmorDecent</li>
+                    </value>
+                </li>
+
+                <!-- Improve bowman's armour -->
+                <li Class="PatchOperationSequence">
+                    <success>Always</success>
+                    <operations>
+                        <li Class="PatchOperationTest">
+                            <xpath>/Defs/PawnKindDef[defName="Medieval_Bowman"]/apparelTags</xpath>
+                            <success>Invert</success>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <xpath>/Defs/PawnKindDef[defName="Medieval_Bowman"]</xpath>
+                            <value>
+                                <apparelTags/>
+                            </value>
+                        </li>
+                    </operations>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/PawnKindDef[defName="Medieval_Bowman"]/apparelTags</xpath>
+                    <value>
+                        <li>MedievalArmorDecent</li>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

@@ -3,6 +3,13 @@
 
     <ThingDef Name="VFE_BaseShield" ParentName="BaseMeleeWeapon_Blunt_Quality" Abstract="True">
         <techLevel>Medieval</techLevel>
+        <thingCategories Inherit="False">
+            <li>VFE_Shields</li>
+        </thingCategories>
+        <equippedStatOffsets>
+            <MeleeHitChance>-2</MeleeHitChance>
+            <MeleeDodgeChance>-5</MeleeDodgeChance>
+        </equippedStatOffsets>
         <comps>
             <li>
                 <compClass>CompColorable</compClass>
@@ -130,7 +137,7 @@
             </li>
             <li Class="VFEMedieval.CompProperties_Shield">
                 <shieldTags>
-                    <li>MedievalAdvanced</li>
+                    <li>MedievalDecent</li>
                 </shieldTags>
                 <useDeflectMetalEffect>true</useDeflectMetalEffect>
                 <coveredBodyPartGroups>

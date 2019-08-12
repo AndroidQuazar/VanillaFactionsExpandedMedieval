@@ -4,7 +4,7 @@
     <ThingDef ParentName="BuildingBase">
         <defName>VFE_WineBarrel</defName>
         <label>wine barrel</label>
-        <description>A barrel for fermenting raw wort into beer.</description>
+        <description>A barrel for fermenting raw must into wine.</description>
         <graphicData>
             <texPath>Things/Building/Production/WineBarrel/WineBarrel</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -43,11 +43,11 @@
                 <mustCapacity>25</mustCapacity>
                 <awfulQualityAgeDaysThreshold>1</awfulQualityAgeDaysThreshold>
                 <poorQualityAgeDaysThreshold>3</poorQualityAgeDaysThreshold>
-                <normalQualityAgeDaysThreshold>8</normalQualityAgeDaysThreshold>
-                <goodQualityAgeDaysThreshold>15</goodQualityAgeDaysThreshold>
-                <excellentQualityAgeDaysThreshold>30</excellentQualityAgeDaysThreshold>
-                <masterworkQualityAgeDaysThreshold>60</masterworkQualityAgeDaysThreshold>
-                <legendaryQualityAgeDaysThreshold>120</legendaryQualityAgeDaysThreshold>
+                <normalQualityAgeDaysThreshold>6</normalQualityAgeDaysThreshold>
+                <goodQualityAgeDaysThreshold>10.5</goodQualityAgeDaysThreshold>
+                <excellentQualityAgeDaysThreshold>15</excellentQualityAgeDaysThreshold>
+                <masterworkQualityAgeDaysThreshold>40</masterworkQualityAgeDaysThreshold>
+                <legendaryQualityAgeDaysThreshold>100</legendaryQualityAgeDaysThreshold>
             </li>
         </comps>
         <tickerType>Rare</tickerType>

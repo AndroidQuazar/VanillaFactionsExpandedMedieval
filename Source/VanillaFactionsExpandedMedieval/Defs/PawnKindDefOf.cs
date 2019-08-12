@@ -14,6 +14,7 @@ namespace VFEMedieval
     {
 
         public static PawnKindDef VFE_BlackKnight;
+        public static PawnKindDef VFE_SellSword;
 
     }
 

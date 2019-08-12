@@ -19,10 +19,14 @@
                 <factionColourApparelPartList>
                     <li>Torso</li>
                     <li>Torso</li>
+                    <li>Torso</li>
+                    <li>Torso</li>
                     <li>Legs</li>
                 </factionColourApparelPartList>
                 <factionColourApparelLayerList>
                     <li>OnSkin</li>
+                    <li>Middle</li>
+                    <li>Shell</li>
                     <li>OuterShell</li>
                     <li>OnSkin</li>
                 </factionColourApparelLayerList>
@@ -30,7 +34,50 @@
         </modExtensions>
     </PawnKindDef>
 
-    <!-- Poverty tier: Peasant -->
+    <PawnKindDef Name="MedievalMilitaryBase" ParentName="MedievalBase" Abstract="True">
+        <apparelRequired>
+            <li>VFE_Apparel_Tabard</li>
+        </apparelRequired>
+        <modExtensions Inherit="False">
+            <li Class="VFEMedieval.PawnKindDefExtension">
+                <factionColourApparelPartList>
+                    <li>Torso</li>
+                </factionColourApparelPartList>
+                <factionColourApparelLayerList>
+                    <li>OuterShell</li>
+                </factionColourApparelLayerList>
+                <shieldMoney>
+                    <min>150</min>
+                    <max>200</max>
+                </shieldMoney>
+                <shieldTags>
+                    <li>MedievalBasic</li>
+                </shieldTags>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <PawnKindDef Name="MedievalEliteMilitaryBase" ParentName="MedievalMilitaryBase" Abstract="True">
+        <modExtensions Inherit="False">
+            <li Class="VFEMedieval.PawnKindDefExtension">
+                <factionColourApparelPartList>
+                    <li>Torso</li>
+                </factionColourApparelPartList>
+                <factionColourApparelLayerList>
+                    <li>OuterShell</li>
+                </factionColourApparelLayerList>
+                <shieldMoney>
+                    <min>300</min>
+                    <max>500</max>
+                </shieldMoney>
+                <shieldTags>
+                    <li>MedievalDecent</li>
+                </shieldTags>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <!-- Poverty tier - peasant -->
     <PawnKindDef ParentName="MedievalBase">
         <defName>Medieval_Peasant</defName>
         <label>peasant</label>
@@ -55,7 +102,6 @@
         </weaponMoney>
         <weaponTags>
             <li>NeolithicMeleeBasic</li>
-            <li>NeolithicMeleeDecent</li>
         </weaponTags>
         <techHediffsMoney>
             <min>50</min>
@@ -67,12 +113,34 @@
         <techHediffsChance>0.15</techHediffsChance>
     </PawnKindDef>
 
-    <!-- Low-tier melee: Squire -->
+    <!-- Low-tier - merchant, squire -->
+    <PawnKindDef ParentName="MedievalBase">
+        <defName>Medieval_Merchant</defName>
+        <label>merchant</label>
+        <combatPower>40</combatPower>
+        <trader>true</trader>
+        <isFighter>false</isFighter>
+        <gearHealthRange>
+            <min>1</min>
+            <max>1</max>
+        </gearHealthRange>
+        <apparelMoney>
+            <min>300</min>
+            <max>500</max>
+        </apparelMoney>
+        <weaponMoney>
+            <min>100</min>
+            <max>150</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>NeolithicMeleeBasic</li>
+        </weaponTags>
+    </PawnKindDef>
+
     <PawnKindDef ParentName="MedievalBase">
         <defName>Medieval_Squire</defName>
         <label>squire</label>
         <combatPower>50</combatPower>
-        <itemQuality>Normal</itemQuality>
         <canBeSapper>true</canBeSapper>
         <gearHealthRange>
             <min>0.5</min>
@@ -80,10 +148,10 @@
         </gearHealthRange>
         <apparelMoney>
             <min>300</min>
-            <max>400</max>
+            <max>500</max>
         </apparelMoney>
         <apparelTags>
-            <li>MedievalMilitaryBasic</li>
+            <li>MedievalArmorBasic</li>
         </apparelTags>
         <weaponMoney>
             <min>100</min>
@@ -94,34 +162,7 @@
         </weaponTags>
     </PawnKindDef>
 
-    <!-- Mid-tier melee: Footsoldier -->
-    <PawnKindDef Name="MedievalMilitaryBase" ParentName="MedievalBase" Abstract="True">
-        <itemQuality>Normal</itemQuality>
-        <apparelRequired>
-            <li>VFE_Apparel_Tabard</li>
-        </apparelRequired>
-        <apparelTags>
-            <li>MedievalMilitaryBasic</li>
-        </apparelTags>
-        <modExtensions Inherit="False">
-            <li Class="VFEMedieval.PawnKindDefExtension">
-                <factionColourApparelPartList>
-                    <li>Torso</li>
-                </factionColourApparelPartList>
-                <factionColourApparelLayerList>
-                    <li>OuterShell</li>
-                </factionColourApparelLayerList>
-                <shieldMoney>
-                    <min>200</min>
-                    <max>300</max>
-                </shieldMoney>
-                <shieldTags>
-                    <li>MedievalBasic</li>
-                </shieldTags>
-            </li>
-        </modExtensions>
-    </PawnKindDef>
-
+    <!-- Mid-tier - footsoldier, bowman -->
     <PawnKindDef ParentName="MedievalMilitaryBase">
         <defName>Medieval_Footsoldier</defName>
         <label>footsoldier</label>
@@ -132,12 +173,12 @@
             <max>1.8</max>
         </gearHealthRange>
         <apparelMoney>
-            <min>500</min>
-            <max>700</max>
+            <min>700</min>
+            <max>1000</max>
         </apparelMoney>
-        <apparelRequired>
-            <li>Apparel_PlateArmor</li>
-        </apparelRequired>
+        <apparelTags>
+            <li>MedievalMilitary</li>
+        </apparelTags>
         <weaponMoney>
             <min>150</min>
             <max>150</max>
@@ -147,7 +188,6 @@
         </weaponTags>
     </PawnKindDef>
 
-    <!-- Mid-tier ranged: Bowman -->
     <PawnKindDef ParentName="MedievalMilitaryBase">
         <defName>Medieval_Bowman</defName>
         <label>bowman</label>
@@ -157,8 +197,8 @@
             <max>1.8</max>
         </gearHealthRange>
         <apparelMoney>
-            <min>400</min>
-            <max>500</max>
+            <min>500</min>
+            <max>700</max>
         </apparelMoney>
         <weaponMoney>
             <min>150</min>
@@ -169,44 +209,21 @@
         </weaponTags>
     </PawnKindDef>
 
-    <!-- High-tier melee: Knight -->
-    <PawnKindDef Name="MedievalEliteMilitaryBase" ParentName="MedievalMilitaryBase" Abstract="True">
-        <itemQuality>Good</itemQuality>
-        <apparelTags>
-            <li>MedievalMilitaryAdvanced</li>
-        </apparelTags>
-        <modExtensions Inherit="False">
-            <li Class="VFEMedieval.PawnKindDefExtension">
-                <factionColourApparelPartList>
-                    <li>Torso</li>
-                </factionColourApparelPartList>
-                <factionColourApparelLayerList>
-                    <li>OuterShell</li>
-                </factionColourApparelLayerList>
-                <shieldMoney>
-                    <min>500</min>
-                    <max>700</max>
-                </shieldMoney>
-                <shieldTags>
-                    <li>MedievalAdvanced</li>
-                </shieldTags>
-            </li>
-        </modExtensions>
-    </PawnKindDef>
-
-    <PawnKindDef ParentName="MedievalMilitaryBase">
+    <!-- High-tier - knight, lord -->
+    <PawnKindDef Name="Medieval_Knight" ParentName="MedievalEliteMilitaryBase">
         <defName>Medieval_Knight</defName>
         <label>knight</label>
         <combatPower>100</combatPower>
+        <itemQuality>Good</itemQuality>
         <canBeSapper>true</canBeSapper>
         <apparelMoney>
-            <min>700</min>
-            <max>1000</max>
+            <min>1000</min>
+            <max>1600</max>
         </apparelMoney>
-        <apparelRequired>
-            <li>Apparel_PlateArmor</li>
-            <li>VFE_Apparel_PlateHelmetHeavy</li>
-        </apparelRequired>
+        <apparelTags>
+            <li>MedievalMilitary</li>
+            <li>MedievalArmorDecent</li>
+        </apparelTags>
         <weaponMoney>
             <min>300</min>
             <max>300</max>
@@ -215,22 +232,9 @@
             <li>MedievalMeleeDecent</li>
             <li>MedievalMeleeAdvanced</li>
         </weaponTags>
-        <modExtensions>
-            <li Class="VFEMedieval.PawnKindDefExtension">
-                <shieldMoney>
-                    <min>250</min>
-                    <max>400</max>
-                </shieldMoney>
-                <shieldTags>
-                    <li>MedievalAdvanced</li>
-                </shieldTags>
-            </li>
-        </modExtensions>
     </PawnKindDef>
 
-    <!-- Top-tier: Lord -->
-    <!-- Dan: Currently using both Chiefs' values as placeholders; replace as soon as possible -->
-    <PawnKindDef ParentName="MedievalEliteMilitaryBase">
+    <PawnKindDef ParentName="Medieval_Knight">
         <defName>Medieval_Lord</defName>
         <label>lord</label>
         <combatPower>140</combatPower>
@@ -241,21 +245,13 @@
         <factionLeader>true</factionLeader>
         <canBeSapper>true</canBeSapper>
         <apparelMoney>
-            <min>1000</min>
-            <max>1600</max>
+            <min>1600</min>
+            <max>2400</max>
         </apparelMoney>
-        <apparelRequired>
-            <li>VFE_Apparel_PlateArmorHeavy</li>
-            <li>VFE_Apparel_PlateHelmetHeavy</li>
-        </apparelRequired>
         <weaponMoney>
             <min>500</min>
             <max>700</max>
         </weaponMoney>
-        <weaponTags>
-            <li>MedievalMeleeDecent</li>
-            <li>MedievalMeleeAdvanced</li>
-        </weaponTags>
     </PawnKindDef>
 
 </Defs>

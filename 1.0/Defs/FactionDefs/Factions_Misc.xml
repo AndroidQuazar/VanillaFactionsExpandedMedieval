@@ -28,10 +28,11 @@
             </points>
         </raidCommonalityFromPointsCurve>
         <caravanTraderKinds>
-            <li>Caravan_Medieval_BulkGoods</li>
-            <li>Caravan_Medieval_CombatSupplier</li>
-            <li>Caravan_Medieval_PirateMerchant</li>
-            <li>Caravan_Medieval_Exotic</li>
+            <li>Caravan_Medieval_Farmer</li>
+            <li>Caravan_Medieval_ArtPatron</li>
+            <li>Caravan_Medieval_Armourer</li>
+            <li>Caravan_Medieval_Weaponsmith</li>
+            <li>Caravan_Medieval_Sellswords</li>
         </caravanTraderKinds>
         <visitorTraderKinds>
             <li>Visitor_Medieval_Standard</li>
@@ -100,7 +101,7 @@
             <li>
                 <kindDef>Trader</kindDef>
                 <traders>
-                    <Tribal_Trader>1</Tribal_Trader>
+                    <Medieval_Merchant>1</Medieval_Merchant>
                 </traders>
                 <carriers>
                     <Muffalo>6</Muffalo>

@@ -4,7 +4,7 @@
     <ThingDef ParentName="DrugBase">
         <defName>VFE_Wine</defName>
         <label>wine</label>
-        <description>The first beverage besides water ever consumed by mankind. Beer can taste good, but its main effect is intoxication. Excessive consumption can lead to alcohol blackouts and, over time, addiction.</description>
+        <description>A strong alcoholic beverage that is made from fermented grapes. Excessive consumption can lead to alcohol blackouts and, over time, addiction.</description>
         <graphicData>
             <texPath>Things/Item/Drug/Wine</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -14,7 +14,7 @@
         <stackLimit>25</stackLimit>
         <statBases>
             <DeteriorationRate>0.5</DeteriorationRate>
-            <MarketValue>12</MarketValue>
+            <MarketValue>18</MarketValue>
             <Mass>0.3</Mass>
             <Flammability>0.5</Flammability>
             <Nutrition>0.08</Nutrition>
@@ -37,12 +37,12 @@
             <outcomeDoers>
                 <li Class="IngestionOutcomeDoer_GiveHediff">
                     <hediffDef>AlcoholHigh</hediffDef>
-                    <severity>0.15</severity>
+                    <severity>0.2</severity>
                     <toleranceChemical>Alcohol</toleranceChemical>
                 </li>
                 <li Class="IngestionOutcomeDoer_GiveHediff">
                     <hediffDef>AlcoholTolerance</hediffDef>
-                    <severity>0.016</severity>
+                    <severity>0.021</severity>
                     <divideByBodySize>true</divideByBodySize>
                 </li>
             </outcomeDoers>
@@ -57,6 +57,9 @@
                 <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
                 <needLevelOffset>1</needLevelOffset>
                 <listOrder>10</listOrder>
+            </li>
+            <li Class="VFEMedieval.CompProperties_IngestedThoughtFromQuality">
+                <ingestedThought>DrankWine</ingestedThought>
             </li>
             <li>
                 <compClass>CompQuality</compClass>

@@ -4,7 +4,7 @@
     <ThingDef ParentName="ArmorHelmetMakeableBase">
         <defName>VFE_Apparel_PlateHelmetLight</defName>
         <label>light plate helmet</label>
-        <description>A simple helmet which gives moderate protection against sharp attacks. Not effective against blunt weapons.</description>
+        <description>A lightweight medieval helmet that provides moderate protection against sharp attacks. Not effective against blunt weapons.</description>
         <techLevel>Medieval</techLevel>
         <recipeMaker>
             <recipeUsers>
@@ -41,7 +41,7 @@
                 <li>Overhead</li>
             </layers>
             <tags>
-                <li>MedievalMilitaryBasic</li>
+                <li>MedievalArmorBasic</li>
             </tags>
             <defaultOutfitTags>
                 <li>Soldier</li>
@@ -52,7 +52,7 @@
     <ThingDef ParentName="ArmorHelmetMakeableBase">
         <defName>VFE_Apparel_PlateHelmetHeavy</defName>
         <label>heavy plate helmet</label>
-        <description>A bulky helmet that provides full-head coverage. Restricts the wearer's field of vision.</description>
+        <description>A bulky medieval helmet that provides full-head coverage. Offers a considerable amount of protectuon but restricts the wearer's field of vision.</description>
         <techLevel>Medieval</techLevel>
         <recipeMaker>
             <recipeUsers>
@@ -78,11 +78,12 @@
         </statBases>
         <equippedStatOffsets>
             <ShootingAccuracyPawn>-8</ShootingAccuracyPawn>
+            <MeleeHitChance>-2</MeleeHitChance>
         </equippedStatOffsets>
         <stuffCategories>
             <li>Metallic</li>
         </stuffCategories>
-        <costStuffCount>60</costStuffCount>
+        <costStuffCount>70</costStuffCount>
         <apparel>
             <bodyPartGroups>
                 <li>FullHead</li>
@@ -92,7 +93,7 @@
                 <li>Overhead</li>
             </layers>
             <tags>
-                <li>MedievalMilitaryAdvanced</li>
+                <li>MedievalArmorDecent</li>
             </tags>
             <defaultOutfitTags>
                 <li>Soldier</li>

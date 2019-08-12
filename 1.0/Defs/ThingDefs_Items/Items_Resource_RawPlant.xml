@@ -4,7 +4,7 @@
     <ThingDef ParentName="PlantFoodRawBase">
         <defName>VFE_RawGrapes</defName>
         <label>grapes</label>
-        <description>Assorted berries. Nice to eat, even when raw.</description>
+        <description>Raw grapes. Nice to eat, even when raw. Grapes can also be made into must which can then be used to make wine.</description>
         <graphicData>
             <texPath>Things/Item/Resource/PlantFoodRaw/Grapes</texPath>
         </graphicData>
@@ -20,7 +20,6 @@
         </comps>
         <ingestible>
             <preferability>RawTasty</preferability>
-            <tasteThought></tasteThought>
             <foodType>VegetableOrFruit</foodType>
         </ingestible>
     </ThingDef>

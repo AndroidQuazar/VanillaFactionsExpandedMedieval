@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>DrankWine</defName>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon>
+        <durationDays>1</durationDays>
+        <stages>
+            <!-- Awful wine -->
+            <li>
+                <label>drank awful wine</label>
+                <description>Placeholder description.</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+
+            <!-- Poor wine -->
+            <li>
+                <label>drank poor wine</label>
+                <description>Placeholder description.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+
+            <!-- Normal wine -->
+            <li>
+                <label>drank normal wine</label>
+                <visible>false</visible>
+                <baseMoodEffect>0</baseMoodEffect>
+            </li>
+
+            <!-- Good wine -->
+            <li>
+                <label>drank good wine</label>
+                <description>Placeholder description.</description>
+                <baseMoodEffect>3</baseMoodEffect>
+            </li>
+
+            <!-- Excellent wine -->
+            <li>
+                <label>drank excellent wine</label>
+                <description>Placeholder description.</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+
+            <!-- Masterwork wine -->
+            <li>
+                <label>drank masterwork wine</label>
+                <description>Placeholder description.</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+
+            <!-- Legendary wine -->
+            <li>
+                <label>drank legendary wine</label>
+                <description>Placeholder description.</description>
+                <baseMoodEffect>15</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

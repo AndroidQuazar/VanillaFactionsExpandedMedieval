@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Ugh, that stench -->
+    <PawnKindDef ParentName="MedievalBase">
+        <defName>VFE_SellSword</defName>
+        <label>sellsword</label>
+        <combatPower>90</combatPower>
+        <apparelMoney>
+            <min>1000</min>
+            <max>1600</max>
+        </apparelMoney>
+        <apparelTags>
+            <li>MedievalMilitary</li>
+            <li>MedievalArmorDecent</li>
+        </apparelTags>
+        <weaponMoney>
+            <min>300</min>
+            <max>300</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>MedievalMeleeDecent</li>
+            <li>MedievalMeleeAdvanced</li>
+        </weaponTags>
+        <modExtensions Inherit="False">
+            <li Class="VFEMedieval.PawnKindDefExtension">
+                <shieldMoney>
+                    <min>-100</min>
+                    <max>500</max>
+                </shieldMoney>
+                <shieldTags>
+                    <li>MedievalDecent</li>
+                </shieldTags>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <!-- It's just a flesh wound! -->
+    <PawnKindDef ParentName="Medieval_Knight">
+        <defName>VFE_BlackKnight</defName>
+        <label>black knight</label>
+        <defaultFactionType>AncientsHostile</defaultFactionType>
+        <combatPower>100</combatPower>
+        <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+        <itemQuality>Normal</itemQuality>
+        <weaponMoney>
+            <min>300</min>
+            <max>300</max>
+        </weaponMoney>
+        <weaponTags Inherit="False">
+            <li>Longsword</li>
+        </weaponTags>
+        <techHediffsMoney>
+            <min>9999</min>
+            <max>9999</max>
+        </techHediffsMoney>
+        <techHediffsTags>
+            <li>Painstopper</li>
+        </techHediffsTags>
+        <apparelColor>(30,30,30)</apparelColor>
+        <techHediffsChance>1</techHediffsChance>
+    </PawnKindDef>
+
+</Defs>
