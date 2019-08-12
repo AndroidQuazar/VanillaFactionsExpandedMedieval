@@ -13,42 +13,40 @@
                 </countRange>
             </li>
             <li Class="StockGenerator_SingleDef">
-                <thingDef>ComponentIndustrial</thingDef>
+                <thingDef>Pemmican</thingDef>
                 <countRange>
-                    <min>-2</min>
-                    <max>5</max>
+                    <min>60</min>
+                    <max>120</max>
                 </countRange>
             </li>
             <li Class="StockGenerator_SingleDef">
-                <thingDef>MealSurvivalPack</thingDef>
-                <countRange>
-                    <min>3</min>
-                    <max>6</max>
-                </countRange>
-            </li>
-            <li Class="StockGenerator_SingleDef">
-                <thingDef>MedicineIndustrial</thingDef>
+                <thingDef>MedicineHerbal</thingDef>
                 <countRange>
                     <min>1</min>
                     <max>6</max>
                 </countRange>
             </li>
             <li Class="StockGenerator_WeaponsRanged">
+                <maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
                 <countRange>
                     <min>0</min>
                     <max>1</max>
                 </countRange>
             </li>
             <li Class="StockGenerator_Category">
-                <categoryDef>Drugs</categoryDef>
-                <thingDefCountRange>
-                    <min>-1</min>
+                <maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
+                <categoryDef>WeaponsMelee</categoryDef>
+                <countRange>
+                    <min>0</min>
                     <max>1</max>
-                </thingDefCountRange>
-                <totalPriceRange>
-                    <min>100</min>
-                    <max>300</max>
-                </totalPriceRange>
+                </countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>VFE_Wine</thingDef>
+                <countRange>
+                    <min>1</min>
+                    <max>10</max>
+                </countRange>
             </li>
             <li Class="StockGenerator_Clothes">
                 <countRange>

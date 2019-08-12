@@ -11,19 +11,16 @@
                     <max>3000</max>
                 </countRange>
             </li>
-            <li Class="StockGenerator_SingleDef">
-                <thingDef>ComponentIndustrial</thingDef>
-                <countRange>
-                    <min>20</min>
-                    <max>70</max>
-                </countRange>
-            </li>
-            <li Class="StockGenerator_SingleDef">
-                <thingDef>ComponentSpacer</thingDef>
-                <countRange>
-                    <min>1</min>
-                    <max>6</max>
-                </countRange>
+            <li Class="StockGenerator_Category">
+                <categoryDef>StoneBlocks</categoryDef>
+                <thingDefCountRange>
+                    <min>2</min>
+                    <max>3</max>
+                </thingDefCountRange>
+                <totalPriceRange>
+                    <min>400</min>
+                    <max>800</max>
+                </totalPriceRange>
             </li>
             <li Class="StockGenerator_SingleDef">
                 <thingDef>Steel</thingDef>
@@ -40,20 +37,6 @@
                 </countRange>
             </li>
             <li Class="StockGenerator_SingleDef">
-                <thingDef>Plasteel</thingDef>
-                <countRange>
-                    <min>100</min>
-                    <max>250</max>
-                </countRange>
-            </li>
-            <li Class="StockGenerator_SingleDef">
-                <thingDef>Uranium</thingDef>
-                <countRange>
-                    <min>40</min>
-                    <max>200</max>
-                </countRange>
-            </li>
-            <li Class="StockGenerator_SingleDef">
                 <thingDef>Cloth</thingDef>
                 <countRange>
                     <min>400</min>
@@ -63,22 +46,8 @@
             <li Class="StockGenerator_SingleDef">
                 <thingDef>Gold</thingDef>
                 <countRange>
-                    <min>100</min>
-                    <max>200</max>
-                </countRange>
-            </li>
-            <li Class="StockGenerator_SingleDef">
-                <thingDef>Neutroamine</thingDef>
-                <countRange>
-                    <min>50</min>
-                    <max>200</max>
-                </countRange>
-            </li>
-            <li Class="StockGenerator_SingleDef">
-                <thingDef>Chemfuel</thingDef>
-                <countRange>
-                    <min>300</min>
-                    <max>500</max>
+                    <min>120</min>
+                    <max>240</max>
                 </countRange>
             </li>
             <li Class="StockGenerator_SingleDef">
@@ -89,28 +58,17 @@
                 </countRange>
             </li>
             <li Class="StockGenerator_SingleDef">
-                <thingDef>Beer</thingDef>
+                <thingDef>VFE_Wine</thingDef>
                 <countRange>
                     <min>-40</min>
                     <max>100</max>
                 </countRange>
             </li>
             <li Class="StockGenerator_SingleDef">
-                <thingDef>MedicineIndustrial</thingDef>
+                <thingDef>MedicineHerbal</thingDef>
                 <countRange>
                     <min>25</min>
                     <max>50</max>
-                </countRange>
-            </li>
-            <li Class="StockGenerator_Tag">
-                <tradeTag>MortarShell</tradeTag>
-                <thingDefCountRange>
-                    <min>1</min>
-                    <max>2</max>
-                </thingDefCountRange>
-                <countRange>
-                    <min>20</min>
-                    <max>40</max>
                 </countRange>
             </li>
             <li Class="StockGenerator_Category">
@@ -149,26 +107,21 @@
                     <max>800</max>
                 </totalPriceRange>
             </li>
-            <li Class="StockGenerator_Category">
-                <categoryDef>FoodMeals</categoryDef>
-                <thingDefCountRange>
-                    <min>1</min>
-                    <max>2</max>
-                </thingDefCountRange>
+            <li Class="StockGenerator_Animals">
+                <tradeTagsSell>
+                    <li>AnimalFarm</li>
+                </tradeTagsSell>
+                <tradeTagsBuy>
+                    <li>AnimalUncommon</li>
+                    <li>AnimalExotic</li>
+                </tradeTagsBuy>
+                <kindCountRange>
+                    <min>2</min>
+                    <max>3</max>
+                </kindCountRange>
                 <countRange>
-                    <min>12</min>
-                    <max>50</max>
-                </countRange>
-            </li>
-            <li Class="StockGenerator_Category">
-                <categoryDef>BuildingsFurniture</categoryDef>
-                <thingDefCountRange>
                     <min>3</min>
-                    <max>4</max>
-                </thingDefCountRange>
-                <countRange>
-                    <min>1</min>
-                    <max>2</max>
+                    <max>8</max>
                 </countRange>
             </li>
             <li Class="StockGenerator_Animals">
@@ -190,80 +143,58 @@
                 </countRange>
             </li>
             <li Class="StockGenerator_Clothes">
+                <maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
                 <countRange>
-                    <min>10</min>
-                    <max>16</max>
+                    <min>8</min>
+                    <max>12</max>
                 </countRange>
             </li>
-            <li Class="StockGenerator_Category">
-                <categoryDef>Drugs</categoryDef>
-                <thingDefCountRange>
-                    <min>3</min>
-                    <max>4</max>
-                </thingDefCountRange>
-                <totalPriceRange>
-                    <min>700</min>
-                    <max>1500</max>
-                </totalPriceRange>
-            </li>
             <li Class="StockGenerator_WeaponsRanged">
+                <maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
                 <countRange>
-                    <min>3</min>
+                    <min>4</min>
                     <max>6</max>
                 </countRange>
             </li>
             <li Class="StockGenerator_Category">
                 <categoryDef>WeaponsMelee</categoryDef>
+                <maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
+                <excludedCategories>
+                    <li>VFE_Shields</li> <!-- Handled in another StockGenerator -->
+                </excludedCategories>
                 <thingDefCountRange>
                     <min>3</min>
                     <max>4</max>
                 </thingDefCountRange>
                 <countRange>
-                    <min>1</min>
-                    <max>2</max>
+                    <min>2</min>
+                    <max>3</max>
+                </countRange>
+            </li>
+            <li Class="StockGenerator_Category">
+                <categoryDef>VFE_Shields</categoryDef>
+                <maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
+                <thingDefCountRange>
+                    <min>2</min>
+                    <max>3</max>
+                </thingDefCountRange>
+                <countRange>
+                    <min>2</min>
+                    <max>3</max>
                 </countRange>
             </li>
             <li Class="StockGenerator_Armor">
+                <maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
                 <countRange>
                     <min>2</min>
                     <max>4</max>
                 </countRange>
-            </li>
-            <li Class="StockGenerator_Tag">
-                <tradeTag>TechHediff</tradeTag>
-                <thingDefCountRange>
-                    <min>2</min>
-                    <max>4</max>
-                </thingDefCountRange>
-                <countRange>
-                    <min>1</min>
-                    <max>1</max>
-                </countRange>
-            </li>
-            <li Class="StockGenerator_Tag">
-                <tradeTag>ExoticMisc</tradeTag>
-                <thingDefCountRange>
-                    <min>1</min>
-                    <max>4</max>
-                </thingDefCountRange>
-                <countRange>
-                    <min>1</min>
-                    <max>2</max>
-                </countRange>
-                <excludedThingDefs>
-                    <li>Luciferium</li>                    <!-- already handled by drugs -->
-                    <li>ComponentSpacer</li>                    <!-- already handled by single def -->
-                </excludedThingDefs>
-                <customCountRanges>
-                    <MedicineUltratech>2~15</MedicineUltratech>
-                    <Hyperweave>50~200</Hyperweave>
-                </customCountRanges>
             </li>
             <li Class="StockGenerator_Tag">
                 <tradeTag>Artifact</tradeTag>
                 <thingDefCountRange>
                     <min>1</min>
-                    <max>4</max>
+                    <max>3</max>
                 </thingDefCountRange>
                 <countRange>
                     <min>1</min>
@@ -287,35 +218,15 @@
                     <max>10</max>
                 </countRange>
             </li>
-            <li Class="StockGenerator_Tag">
-                <tradeTag>Television</tradeTag>
-                <thingDefCountRange>
-                    <min>1</min>
-                    <max>2</max>
-                </thingDefCountRange>
+            <li Class="VFEMedieval.StockGenerator_MedievalMercs">
                 <countRange>
-                    <min>1</min>
-                    <max>2</max>
-                </countRange>
-            </li>
-            <li Class="StockGenerator_SingleDef">
-                <thingDef>Telescope</thingDef>
-                <countRange>
-                    <min>0</min>
-                    <max>1</max>
-                </countRange>
-            </li>
-            <li Class="StockGenerator_Slaves">
-                <respectPopulationIntent>true</respectPopulationIntent>
-                <countRange>
-                    <min>-1</min>
-                    <max>2</max>
+                    <min>2</min>
+                    <max>4</max>
                 </countRange>
             </li>
             <li Class="StockGenerator_MultiDef">
                 <thingDefs>
                     <li>Kibble</li>
-                    <li>Pemmican</li>
                 </thingDefs>
             </li>
             <li Class="StockGenerator_BuyArt" />
