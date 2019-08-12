@@ -10,14 +10,14 @@
             <operations>
 
                 <!-- Patch appropriate weapons to be usable with shields -->
-                <Operation Class="PatchOperationAddModExtension">
+                <li Class="PatchOperationAddModExtension">
                     <xpath>/Defs/ThingDef[defName="VWE_Throwing_Rocks"]</xpath>
                     <value>
                         <li Class="VFEMedieval.ThingDefExtension">
                             <usableWithShields>true</usableWithShields>
                         </li>
                     </value>
-                </Operation>
+                </li>
 
                 <!-- Add weapon tags -->
                 <li Class="PatchOperationAdd">
