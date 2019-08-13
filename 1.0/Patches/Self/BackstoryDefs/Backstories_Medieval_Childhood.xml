@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- If Editable Backstories is loaded, add backstories -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[RF] Editable Backstories and Names [1.0]</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+
+                <!-- Medieval blacksmith -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMC001</defName>
+                    <slot>Childhood</slot>
+                    <title>Medieval blacksmith</title>
+                    <titleShort>Blacksmith</titleShort>
+                    <baseDesc>[PAWN_nameDef] travelled far and wide on a medieval world, peddling many goods and getting into [PAWN_possessive] fair share of trouble. [PAWN_possessive] lifestyle kept [PAWN_objective] in good physical condition, though [PAWN_pronoun] wouldn't appreciate doing most menial labour.</baseDesc>
+                    <baseDesc>[PAWN_nameDef] was bound to [PAWN_possessive] home by tradition and followed the path of [PAWN_possessive] ancestors. [PAWN_possessive] small village in the mountain got raided one night, so [PAWN_possessive] lost family and nearly lost [PAWN_possessive] life. After being close to death, [PAWN_pronoun] swore an oath: protecting those which were left behind. [PAWN_pronoun] survived, and with the knowledge [PAWN_possessive] father gave [PAWN_objective], [PAWN_pronoun] started to defend [PAWN_possessive] people with shield and weapon.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Crafting</key>
+                            <value>5</value>
+                        </li>
+                        <li>
+                            <key>Melee</key>
+                            <value>3</value>
+                        </li>
+                        <li>
+                            <key>Artistic</key>
+                            <value>-2</value>
+                        </li>
+                    </skillGains>
+                    <spawnCategories>
+                        <li>Civil</li>
+                        <li>Raider</li>
+                        <li>Slave</li>
+                        <li>Trader</li>
+                        <li>Traveler</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+            </value>
+        </match>
+    </Operation>
+
+</Patch>
