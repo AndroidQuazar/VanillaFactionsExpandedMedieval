@@ -58,8 +58,7 @@
                     <slot>Adulthood</slot>
                     <title>Medieval herald</title>
                     <titleShort>Herald</titleShort>
-                    <baseDesc>[PAWN_nameDef] was a herald for a medieval kingdom, travelling the kingdom to announce the latest decrees issued by [PAWN_possessive] king wherever it was required while also being trained in the art of medieval warfare to fend for [PAWN_objective]self. [PAWN_pronoun] learnt to tend to himself while out on the road [PAWN_pronoun] travelled.
-                    </baseDesc>
+                    <baseDesc>[PAWN_nameDef] was a herald for a medieval kingdom, travelling the kingdom to announce the latest decrees issued by [PAWN_possessive] king wherever it was required while also being trained in the art of medieval warfare to fend for [PAWN_objective]self. [PAWN_pronoun] learnt to tend to himself while out on the road [PAWN_pronoun] travelled.</baseDesc>
                     <requiredWorkTags>
                         <li>Violent</li>
                     </requiredWorkTags>
@@ -110,8 +109,7 @@
                     <slot>Adulthood</slot>
                     <title>Medieval paladin</title>
                     <titleShort>Paladin</titleShort>
-                    <baseDesc>[PAWN_nameDef] was an anointed knight of the hexagonal table alongside the mythical king Barthur. [PAWN_pronoun] lost track of [PAWN_possessive] companions and king when [PAWN_pronoun] was knocked out on the battlefield and woke up on a different planet.
-                    </baseDesc>
+                    <baseDesc>[PAWN_nameDef] was an anointed knight of the hexagonal table alongside the mythical king Barthur. [PAWN_pronoun] lost track of [PAWN_possessive] companions and king when [PAWN_pronoun] was knocked out on the battlefield and woke up on a different planet.</baseDesc>
                     <requiredWorkTags>
                         <li>Violent</li>
                     </requiredWorkTags>
@@ -147,6 +145,76 @@
                         <li>FilterSet1</li>
                         <li>Medieval</li>
                         <li>Rare</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Idle knight -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA004</defName>
+                    <slot>Adulthood</slot>
+                    <title>Idle knight</title>
+                    <titleShort>Knight</titleShort>
+                    <baseDesc>[PAWN_nameDef] was born to a long line of noble knights and was expected to continue this legacy. Despite eventually receiving [PAWN_possessive] knighthood, [PAWN_nameDef] has always been more interested in more idle and esoteric pursuits.</baseDesc>
+                    <requiredWorkTags>
+                        <li>Violent</li>
+                    </requiredWorkTags>
+                    <skillGains>
+                        <li>
+                            <key>Intellectual</key>
+                            <value>4</value>
+                        </li>
+                        <li>
+                            <key>Medicine</key>
+                            <value>3</value>
+                        </li>
+                    </skillGains>
+                    <workDisables>
+                        <li>ManualDumb</li>
+                        <li>ManualSkilled</li>
+                    </workDisables>
+                    <spawnCategories>
+                        <li>Civil</li>
+                        <li>Raider</li>
+                        <li>Slave</li>
+                        <li>Trader</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Drunken monk -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA005</defName>
+                    <slot>Adulthood</slot>
+                    <title>Drunken monk</title>
+                    <titleShort>Monk</titleShort>
+                    <baseDesc>[PAWN_nameDef] was a monk responsible for the production of the high-quality wine vintage [PAWN_possessive] monastery was known for. Despite [PAWN_possessive] vows, [PAWN_nameDef] partook in the fruits of [PAWN_possessive] labor more often than not.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Plants</key>
+                            <value>5</value>
+                        </li>
+                        <li>
+                            <key>Cooking</key>
+                            <value>5</value>
+                        </li>
+                    </skillGains>
+                    <workDisables>
+                        <li>Violent</li>
+                    </workDisables>
+                    <forcedTraits>
+                        <li>
+                            <key>DrugDesire</key>
+                            <value>1</value>
+                        </li>
+                    </forcedTraits>
+                    <spawnCategories>
+                        <li>Civil</li>
+                        <li>Raider</li>
+                        <li>Slave</li>
+                        <li>Trader</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
                     </spawnCategories>
                 </REB_Code.BackstoryDef>
 

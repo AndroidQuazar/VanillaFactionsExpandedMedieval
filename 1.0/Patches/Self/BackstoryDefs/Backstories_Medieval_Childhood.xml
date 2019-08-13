@@ -16,7 +16,6 @@
                     <slot>Childhood</slot>
                     <title>Medieval blacksmith</title>
                     <titleShort>Blacksmith</titleShort>
-                    <baseDesc>[PAWN_nameDef] travelled far and wide on a medieval world, peddling many goods and getting into [PAWN_possessive] fair share of trouble. [PAWN_possessive] lifestyle kept [PAWN_objective] in good physical condition, though [PAWN_pronoun] wouldn't appreciate doing most menial labour.</baseDesc>
                     <baseDesc>[PAWN_nameDef] was bound to [PAWN_possessive] home by tradition and followed the path of [PAWN_possessive] ancestors. [PAWN_possessive] small village in the mountain got raided one night, so [PAWN_possessive] lost family and nearly lost [PAWN_possessive] life. After being close to death, [PAWN_pronoun] swore an oath: protecting those which were left behind. [PAWN_pronoun] survived, and with the knowledge [PAWN_possessive] father gave [PAWN_objective], [PAWN_pronoun] started to defend [PAWN_possessive] people with shield and weapon.</baseDesc>
                     <skillGains>
                         <li>
