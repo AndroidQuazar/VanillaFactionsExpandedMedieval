@@ -13,6 +13,7 @@ namespace VFEMedieval
     {
 
         private const string ForcedFactionGoodwillTag = "VFE_ForcedFactionGoodwill";
+        private const float OptionRectPartWidth = 0.45f;
         private const float GoodwillRangeSliderWidth = 0.65f;
 
         private FactionDef factionDef;
@@ -23,7 +24,7 @@ namespace VFEMedieval
         public bool affectNaturalGoodwill;
         public IntRange naturalGoodwillRange = IntRange.zero;
 
-        private IEnumerable<FactionDef> EligibleFactionDefs => DefDatabase<FactionDef>.AllDefsListForReading.Where(f => !f.isPlayer && !f.hidden);
+        private IEnumerable<FactionDef> EligibleFactionDefs => DefDatabase<FactionDef>.AllDefsListForReading.Where(f => !f.isPlayer && (affectHiddenFactions || !f.hidden));
 
         public bool AffectsFaction(FactionDef faction)
         {
@@ -61,16 +62,16 @@ namespace VFEMedieval
             if (Widgets.ButtonText(selectionRect, LabelText))
             {
                 var floatMenuOptions = new List<FloatMenuOption>();
-                floatMenuOptions.Add(new FloatMenuOption("VFEMedieval.AllFactions".Translate(), () => { factionDef = null; affectHiddenFactions = false; }));
-                floatMenuOptions.Add(new FloatMenuOption("VFEMedieval.AllFactionsIncludingHidden".Translate(), () => { factionDef = null; affectHiddenFactions = true; }));
+                floatMenuOptions.Add(new FloatMenuOption("VFEMedieval.AllFactions".Translate(), () => factionDef = null));
                 foreach (var faction in EligibleFactionDefs)
-                    floatMenuOptions.Add(new FloatMenuOption(faction.LabelCap, () => { factionDef = faction; affectHiddenFactions = false; }));
+                    floatMenuOptions.Add(new FloatMenuOption(faction.LabelCap, () =>  factionDef = faction ));
                 Find.WindowStack.Add(new FloatMenu(floatMenuOptions));
             }
 
             // Faction options
             var optionsRect = new Rect(scenPartRect.x, scenPartRect.y + (scenPartRect.height / 4), scenPartRect.width, scenPartRect.height / 4);
-            Widgets.CheckboxLabeled(optionsRect, "VFEMedieval.AlwaysHostile".Translate(), ref alwaysHostile);
+            Widgets.CheckboxLabeled(optionsRect.LeftPart(OptionRectPartWidth), "VFEMedieval.AlwaysHostile".Translate(), ref alwaysHostile);
+            Widgets.CheckboxLabeled(optionsRect.RightPart(OptionRectPartWidth), "VFEMedieval.AffectHiddenFactions".Translate(), ref affectHiddenFactions);
 
             // No point showing these if the faction is set to always be hostile
             if (!alwaysHostile)

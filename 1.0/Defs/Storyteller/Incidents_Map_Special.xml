@@ -16,8 +16,8 @@
             <li Class="VFEMedieval.IncidentDefExtension">
                 <forcedFaction>KingdomRough</forcedFaction>
                 <forcedPointsRange>
-                    <min>140</min>
-                    <max>180</max>
+                    <min>150</min>
+                    <max>200</max>
                 </forcedPointsRange>
                 <forcedStrategy>ImmediateAttack</forcedStrategy>
             </li>

@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
+    <!-- Integration with Editable Backstories -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[RF] Editable Backstories and Names [1.0]</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/PawnKindDef[@Name="MedievalBase"]/backstoryCategories/li[text()="Tribal"]</xpath>
+            <value>
+                <li>Medieval</li>
+            </value>
+        </match>
+    </Operation>
+
     <!-- Integration with Vanilla Weapons Expanded -->
     <Operation Class="PatchOperationFindMod">
         <mods>

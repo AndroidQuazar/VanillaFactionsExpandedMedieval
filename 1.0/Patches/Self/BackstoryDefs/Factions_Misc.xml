@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- If Editable Backstories is loaded, add backstories -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[RF] Editable Backstories and Names [1.0]</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+
+                <!-- Medieval merchant -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA001</defName>
+                    <slot>Adulthood</slot>
+                    <title>Medieval merchant</title>
+                    <titleShort>Merchant</titleShort>
+                    <baseDesc>[PAWN_nameDef] travelled far and wide on a medieval world, peddling many goods and getting into [PAWN_possessive] fair share of trouble. [PAWN_possessive] lifestyle kept [PAWN_objective] in good physical condition, though [PAWN_pronoun] wouldn't appreciate doing most menial labour.</baseDesc>
+                    <requiredWorkTags>
+                        <li>Social</li>
+                    </requiredWorkTags>
+                    <skillGains>
+                        <li>
+                            <key>Social</key>
+                            <value>8</value>
+                        </li>
+                        <li>
+                            <key>Growing</key>
+                            <value>-3</value>
+                        </li>
+                        <li>
+                            <key>Mining</key>
+                            <value>-3</value>
+                        </li>
+                    </skillGains>
+                    <workDisables>
+                        <li>ManualDumb</li>
+                    </workDisables>
+                    <spawnCategories>
+                        <li>Civil</li>
+                        <li>Raider</li>
+                        <li>Slave</li>
+                        <li>Trader</li>
+                        <li>Traveler</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+            </value>
+        </match>
+    </Operation>
+
+</Patch>
