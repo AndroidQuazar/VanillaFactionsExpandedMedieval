@@ -3,7 +3,7 @@
 
     <IncidentDef>
         <defName>VFE_BlackKnight</defName>
-        <label>ambush</label>
+        <label>none shall pass</label>
         <category>ThreatBig</category>
         <targetTags>
             <li>Caravan</li>
@@ -12,7 +12,7 @@
         <workerClass>VFEMedieval.IncidentWorker_BlackKnight</workerClass>
         <pointsScaleable>false</pointsScaleable>
         <minRefireDays>0</minRefireDays>
-        <letterText>{0} has encountered a mysterious knight in black who's guarding a bridge!</letterText>
+        <letterText>{0} has encountered a mysterious knight in black who appears to be guarding a bridge!</letterText>
         <letterLabel>None shall pass!</letterLabel>
         <letterDef>ThreatBig</letterDef>
         <tale>CaravanAmbushedByHumanlike</tale>

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Dan: Placeholder that uses values from tribal factions from now -->
     <FactionDef ParentName="HumanFactionBase" Name="MedievalFactionBase" Abstract="True">
-        <pawnSingular>member</pawnSingular>
-        <pawnsPlural>members</pawnsPlural>
+        <pawnSingular>subject</pawnSingular>
+        <pawnsPlural>subjects</pawnsPlural>
         <listOrderPriority>25</listOrderPriority>
         <settlementGenerationWeight>1</settlementGenerationWeight>
         <requiredCountAtGameStart>1</requiredCountAtGameStart>
@@ -29,6 +28,7 @@
         </raidCommonalityFromPointsCurve>
         <caravanTraderKinds>
             <li>Caravan_Medieval_Farmer</li>
+            <li>Caravan_Medieval_WineMerchant</li>
             <li>Caravan_Medieval_ArtPatron</li>
             <li>Caravan_Medieval_Armourer</li>
             <li>Caravan_Medieval_Weaponsmith</li>

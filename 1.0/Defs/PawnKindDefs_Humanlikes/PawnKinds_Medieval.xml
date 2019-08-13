@@ -135,6 +135,7 @@
         <weaponTags>
             <li>NeolithicMeleeBasic</li>
         </weaponTags>
+        <modExtensions Inherit="False"/>
     </PawnKindDef>
 
     <PawnKindDef ParentName="MedievalBase">

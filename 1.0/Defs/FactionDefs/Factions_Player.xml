@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <FactionDef ParentName="PlayerFactionBase">
+        <defName>PlayerKingdom</defName>
+        <label>New Kingdom</label>
+        <description>A small kingdom.</description>
+        <isPlayer>true</isPlayer>
+        <pawnSingular>subject</pawnSingular>
+        <pawnsPlural>subjects</pawnsPlural>
+        <basicMemberKind>Subject</basicMemberKind>
+        <techLevel>Medieval</techLevel>
+        <backstoryCategories>
+            <li>Tribal</li>
+        </backstoryCategories>
+        <expandingIconTexture>World/WorldObjects/Expanding/Castle</expandingIconTexture>
+        <homeIconPath>World/WorldObjects/MedievalSettlement</homeIconPath>
+        <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+        <factionNameMaker>NamerFactionMedieval</factionNameMaker>
+        <settlementNameMaker>NamerSettlementMedieval</settlementNameMaker>
+        <geneticVariance>1</geneticVariance>
+        <startingResearchTags>
+            <li>TribalStart</li>
+        </startingResearchTags>
+        <hairTags>
+            <li>Rural</li>
+        </hairTags>
+        <apparelStuffFilter>
+            <thingDefs>
+                <li>Cloth</li>
+            </thingDefs>
+        </apparelStuffFilter>
+    </FactionDef>
+
+</Defs>

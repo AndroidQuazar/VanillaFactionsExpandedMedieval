@@ -16,6 +16,7 @@ namespace VFEMedieval
         static StaticConstructorClass()
         {
             PawnShieldGenerator.Reset();
+            ScenPartUtility.SetCaches();
             foreach (var tDef in DefDatabase<ThingDef>.AllDefs)
             {
                 // Implied stuffProps for stone chunks
