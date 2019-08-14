@@ -19,36 +19,35 @@ namespace VFEMedieval
         public override void Resolve(ResolveParams rp)
         {
             Map map = BaseGen.globalSettings.map;
+
             wineFermenters.Clear();
-            CellRect.CellRectIterator iterator = rp.rect.GetIterator();
-            while (!iterator.Done())
+            foreach (var pos in rp.rect)
             {
-                List<Thing> thingList = iterator.Current.GetThingList(map);
-                for (int i = 0; i < thingList.Count; i++)
+                var thingList = pos.GetThingList(map);
+                foreach (var thing in thingList)
                 {
-                    var wineFermenter = thingList[i].TryGetComp<CompWineFermenter>();
-                    if (wineFermenter != null && !wineFermenters.Contains(wineFermenter))
-                    {
-                        wineFermenters.Add(wineFermenter);
-                    }
+                    var wineFermenterComp = thing.TryGetComp<CompWineFermenter>();
+                    if (wineFermenterComp != null && !wineFermenters.Contains(wineFermenterComp))
+                        wineFermenters.Add(wineFermenterComp);
                 }
-                iterator.MoveNext();
             }
-            float progress = Rand.Range(0.1f, 0.9f);
-            for (int j = 0; j < wineFermenters.Count; j++)
+
+            float legendaryAgeTicksFactor = Rand.Range(0.1f, 1.1f);
+            foreach (var fermenter in wineFermenters)
             {
-                wineFermenters[j].targetQuality = QualityUtility.GenerateQualityBaseGen();
-                if (!wineFermenters[j].Fermented)
+                fermenter.targetQuality = (QualityCategory)Mathf.Min((int)QualityUtility.GenerateQualityBaseGen() + 1, (int)QualityCategory.Legendary);
+                if (!fermenter.Fermented)
                 {
-                    int num = Rand.RangeInclusive(1, 25);
-                    num = Mathf.Min(num, wineFermenters[j].SpaceLeftForMust);
-                    if (num > 0)
+                    int mustToAdd = Mathf.Min(Rand.Range(1, fermenter.Props.mustCapacity), fermenter.SpaceLeftForMust);
+                    if (mustToAdd > 0)
                     {
-                        wineFermenters[j].AddMust(num);
-                        wineFermenters[j].Progress = progress;
+                        fermenter.AddMust(mustToAdd);
+                        int ageTicks = Mathf.RoundToInt((fermenter.Props.legendaryQualityAgeDaysThreshold * GenDate.TicksPerDay * legendaryAgeTicksFactor) % fermenter.TicksToReachTargetQuality);
+                        fermenter.AgeTicks = ageTicks;
                     }
                 }
             }
+
             wineFermenters.Clear();
         }
 

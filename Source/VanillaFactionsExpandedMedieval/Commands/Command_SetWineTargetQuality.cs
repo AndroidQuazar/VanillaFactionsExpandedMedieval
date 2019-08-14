@@ -12,6 +12,32 @@ namespace VFEMedieval
     public class Command_SetTargetWineQuality : Command
     {
 
+        public Command_SetTargetWineQuality()
+        {
+            QualityCategory? targetQuality = null;
+            bool multipleSelected = false;
+
+            // Determine if multiple barrels are selected that have different target qualities
+            foreach (var obj in Find.Selector.SelectedObjects)
+            {
+                if (obj is ThingWithComps thing && thing.TryGetComp<CompWineFermenter>() is CompWineFermenter wineFermenter)
+                {
+                    if (targetQuality.HasValue && targetQuality.Value != wineFermenter.targetQuality)
+                    {
+                        multipleSelected = true;
+                        break;
+                    }
+                    targetQuality = wineFermenter.targetQuality;
+                }
+            }
+
+            // Set gizmo label depending on whether or not multiple barrels with varying target qualities were selected
+            if (multipleSelected)
+                defaultLabel = "VFEMedieval.TargetWineQualityMulti".Translate();
+            else
+                defaultLabel = "VFEMedieval.TargetWineQuality".Translate(targetQuality.Value.GetLabel());
+        }
+
         public override void ProcessInput(Event ev)
         {
             base.ProcessInput(ev);

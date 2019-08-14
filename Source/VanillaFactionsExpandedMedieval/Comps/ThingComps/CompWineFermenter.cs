@@ -25,7 +25,7 @@ namespace VFEMedieval
         private Material barFilledCachedMat;
         public QualityCategory targetQuality = QualityCategory.Normal;
 
-        private CompProperties_WineFermenter Props => (CompProperties_WineFermenter)props;
+        public CompProperties_WineFermenter Props => (CompProperties_WineFermenter)props;
 
         public CompTemperatureRuinable TemperatureRuinableComp => parent.TryGetComp<CompTemperatureRuinable>();
 
@@ -77,7 +77,7 @@ namespace VFEMedieval
             }
         }
 
-        private float DaysToReachTargetQuality
+        public float DaysToReachTargetQuality
         {
             get
             {
@@ -101,10 +101,12 @@ namespace VFEMedieval
             }
         }
 
+        public int TicksToReachTargetQuality => Mathf.RoundToInt(DaysToReachTargetQuality * GenDate.TicksPerDay);
+
         public float Progress
         {
-            get => (DaysToReachTargetQuality > 0) ? (AgeDays / DaysToReachTargetQuality) : 1;
-            set => AgeTicks = Mathf.RoundToInt(DaysToReachTargetQuality * GenDate.TicksPerDay * value);
+            get => (TicksToReachTargetQuality > 0) ? ((float)AgeTicks / TicksToReachTargetQuality) : 1;
+            set => AgeTicks = Mathf.RoundToInt(TicksToReachTargetQuality * value);
         }
 
 
@@ -219,7 +221,6 @@ namespace VFEMedieval
         {
             yield return new Command_SetTargetWineQuality()
             {
-                defaultLabel = "VFEMedieval.TargetWineQuality".Translate(targetQuality.GetLabel()),
                 defaultDesc = "VFEMedieval.TargetWineQuality_Description".Translate(),
                 icon = ThingDefOf.VFE_Wine.uiIcon,
                 wineFermenter = this,
@@ -254,7 +255,7 @@ namespace VFEMedieval
                 }
                 else
                 {
-                    stringBuilder.AppendLine("FermentationProgress".Translate(Progress.ToStringPercent(), this.EstimatedTicksLeft.ToStringTicksToPeriod()));
+                    stringBuilder.AppendLine("FermentationProgress".Translate(Progress.ToStringPercent(), EstimatedTicksLeft.ToStringTicksToPeriod()));
                     if (CurrentTempProgressSpeedFactor != 1f)
                     {
                         stringBuilder.AppendLine("FermentationBarrelOutOfIdealTemperature".Translate(CurrentTempProgressSpeedFactor.ToStringPercent()));

@@ -79,7 +79,6 @@ namespace VFEMedieval
                 // Append '([shield] will be unusable)' to float menu if appropriate
                 if (pawn.equipment != null && pawn.equipment.OffHandShield() is ThingWithComps shield)
                 {
-                    Log.Message(equipment.def.label);
                     var thingDefExtension = equipment.def.GetModExtension<ThingDefExtension>() ?? ThingDefExtension.defaultValues;
                     if (!thingDefExtension.usableWithShields)
                     {

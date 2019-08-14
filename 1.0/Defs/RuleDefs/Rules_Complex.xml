@@ -27,7 +27,7 @@
         <resolvers>
             <li Class="SymbolResolver_GenericRoom">
                 <minRectSize>(4, 4)</minRectSize>
-                <interior>interior_winery</interior>
+                <interior>VFE_interior_winery</interior>
             </li>
         </resolvers>
     </RuleDef>

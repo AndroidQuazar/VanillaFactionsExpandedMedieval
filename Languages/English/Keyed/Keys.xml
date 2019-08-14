@@ -13,6 +13,7 @@
     <VFEMedieval.ContainsMust>Contains {0} / {1} must</VFEMedieval.ContainsMust>
     <VFEMedieval.ContainsWine>Contains {0} / {1} wine</VFEMedieval.ContainsWine>
     <VFEMedieval.TargetWineQuality>Target quality: {0}</VFEMedieval.TargetWineQuality>
+    <VFEMedieval.TargetWineQualityMulti>Set target quality</VFEMedieval.TargetWineQualityMulti>
     <VFEMedieval.TargetWineQuality_Description>Your colonists will remove the wine from this barrel when it reaches the specified target quality.</VFEMedieval.TargetWineQuality_Description>
 
     <!-- Scenario parts -->
