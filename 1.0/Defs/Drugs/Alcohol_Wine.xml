@@ -59,7 +59,7 @@
                 <listOrder>10</listOrder>
             </li>
             <li Class="VFEMedieval.CompProperties_IngestedThoughtFromQuality">
-                <ingestedThought>DrankWine</ingestedThought>
+                <ingestedThought>VFE_DrankWine</ingestedThought>
             </li>
             <li>
                 <compClass>CompQuality</compClass>
@@ -94,7 +94,7 @@
     </ThingDef>
 
     <RecipeDef>
-        <defName>Make_Must</defName>
+        <defName>VFE_Make_Must</defName>
         <label>make must</label>
         <description>Make must from grapes.</description>
         <jobString>Making must.</jobString>

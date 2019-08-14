@@ -2,10 +2,10 @@
 <Defs>
 
     <PawnKindDef ParentName="BasePlayerPawnKind">
-        <defName>Subject</defName>
+        <defName>VFE_Subject</defName>
         <label>subject</label>
         <race>Human</race>
-        <defaultFactionType>PlayerKingdom</defaultFactionType>
+        <defaultFactionType>VFE_PlayerKingdom</defaultFactionType>
         <backstoryCategories>
             <li>Tribal</li>
         </backstoryCategories>

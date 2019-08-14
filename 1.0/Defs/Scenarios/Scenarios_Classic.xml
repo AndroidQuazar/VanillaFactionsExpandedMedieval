@@ -2,14 +2,14 @@
 <Defs>
 
     <ScenarioDef>
-        <defName>RenegadeLord</defName>
+        <defName>VFE_RenegadeLord</defName>
         <label>Renegade Lord</label>
         <description>After years of serving under the unethical and immoral ways of a rough kingdom, you and five of your loyal subjects decided to defect and start anew. However, this decision didn't go unnoticed: a party in the name of your former kingdom is in pursuit in an attempt to bring you to justice.\n\nNote: Since you start without any supplies and research slower than usual, this is a difficult scenario.</description>
         <scenario>
             <summary>A lord and their subjects attempt to change their ways. Difficult.</summary>
             <playerFaction>
                 <def>PlayerFaction</def>
-                <factionDef>PlayerKingdom</factionDef>
+                <factionDef>VFE_PlayerKingdom</factionDef>
             </playerFaction>
             <parts>
 
@@ -97,7 +97,7 @@
                 <!-- Faction relations -->
                 <li Class="VFEMedieval.ScenPart_ForcedFactionGoodwill">
                     <def>VFE_ForcedFactionGoodwill</def>
-                    <factionDef>KingdomRough</factionDef>
+                    <factionDef>VFE_KingdomRough</factionDef>
                     <alwaysHostile>true</alwaysHostile>
                     <visible>false</visible>
                 </li>

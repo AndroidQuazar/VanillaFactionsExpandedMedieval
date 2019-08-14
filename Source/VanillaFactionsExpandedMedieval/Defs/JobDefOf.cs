@@ -13,9 +13,9 @@ namespace VFEMedieval
     public static class JobDefOf
     {
 
-        public static JobDef EquipShield;
-        public static JobDef FillWineBarrel;
-        public static JobDef TakeWineOutOfWineBarrel;
+        public static JobDef VFE_EquipShield;
+        public static JobDef VFE_FillWineBarrel;
+        public static JobDef VFE_TakeWineOutOfWineBarrel;
 
     }
 

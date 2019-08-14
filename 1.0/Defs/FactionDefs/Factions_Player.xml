@@ -2,13 +2,13 @@
 <Defs>
 
     <FactionDef ParentName="PlayerFactionBase">
-        <defName>PlayerKingdom</defName>
+        <defName>VFE_PlayerKingdom</defName>
         <label>New Kingdom</label>
         <description>A small kingdom.</description>
         <isPlayer>true</isPlayer>
         <pawnSingular>subject</pawnSingular>
         <pawnsPlural>subjects</pawnsPlural>
-        <basicMemberKind>Subject</basicMemberKind>
+        <basicMemberKind>VFE_Subject</basicMemberKind>
         <techLevel>Medieval</techLevel>
         <backstoryCategories>
             <li>Tribal</li>
@@ -16,8 +16,8 @@
         <expandingIconTexture>World/WorldObjects/Expanding/Castle</expandingIconTexture>
         <homeIconPath>World/WorldObjects/MedievalSettlement</homeIconPath>
         <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
-        <factionNameMaker>NamerFactionMedieval</factionNameMaker>
-        <settlementNameMaker>NamerSettlementMedieval</settlementNameMaker>
+        <factionNameMaker>VFE_NamerFactionMedieval</factionNameMaker>
+        <settlementNameMaker>VFE_NamerSettlementMedieval</settlementNameMaker>
         <geneticVariance>1</geneticVariance>
         <startingResearchTags>
             <li>TribalStart</li>

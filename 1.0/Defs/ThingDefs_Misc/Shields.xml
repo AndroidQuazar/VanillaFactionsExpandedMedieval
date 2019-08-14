@@ -41,9 +41,9 @@
         <modExtensions>
             <li Class="VFEMedieval.ThingDefExtension">
                 <useFactionColourForPawnKinds>
-                    <li>Medieval_Footsoldier</li>
-                    <li>Medieval_Knight</li>
-                    <li>Medieval_Lord</li>
+                    <li>VFE_Medieval_Footsoldier</li>
+                    <li>VFE_Medieval_Knight</li>
+                    <li>VFE_Medieval_Lord</li>
                 </useFactionColourForPawnKinds>
             </li>
         </modExtensions>

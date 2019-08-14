@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-    <!-- If Editable Backstories is loaded, make the medieval factions use medieval backstories -->
+    <!-- Integration with Editable Backstories -->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>[RF] Editable Backstories and Names [1.0]</li>
         </mods>
         <match Class="PatchOperationReplace">
-            <xpath>/Defs/FactionDef[@Name="VFE_MedievalFactionBase"]/backstoryCategories/li[text()="Tribal"]</xpath>
+            <xpath>/Defs/PawnKindDef[defName="VFE_Subject"]/backstoryCategories/li[text()="Tribal"]</xpath>
             <value>
                 <li>Medieval</li>
             </value>

@@ -2,7 +2,7 @@
 <Defs>
 
     <TraderKindDef>
-        <defName>Base_Medieval_Standard</defName>
+        <defName>VFE_Base_Medieval_Standard</defName>
         <stockGenerators>
             <li Class="StockGenerator_SingleDef">
                 <thingDef>Silver</thingDef>

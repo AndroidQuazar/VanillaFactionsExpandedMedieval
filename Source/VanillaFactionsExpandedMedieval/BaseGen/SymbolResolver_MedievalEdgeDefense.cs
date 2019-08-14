@@ -20,7 +20,7 @@ namespace VFEMedieval
             // Make sandbag placements
             var sandbagParams = rp;
             sandbagParams.GetCustom<MedievalResolveParams>(MedievalResolveParams.Name).symmetricalSandbags = true;
-            BaseGen.symbolStack.Push("castleEdgeSandbags", sandbagParams);
+            BaseGen.symbolStack.Push("VFE_castleEdgeSandbags", sandbagParams);
 
             // Generate perimeter
             var edgeWallParams = rp;
@@ -28,7 +28,7 @@ namespace VFEMedieval
             Log.Message(Find.World.NaturalRockTypesIn(BaseGen.globalSettings.map.Tile).Select(t => t.building.mineableThing).Where(t => t.IsStuff).ToStringSafeEnumerable());
             edgeWallParams.wallStuff = Find.World.NaturalRockTypesIn(BaseGen.globalSettings.map.Tile).Select(t => t.building.mineableThing).Where(t => t.IsStuff).
                 RandomElementByWeight(t => (1 + t.stuffProps.statOffsets.GetStatOffsetFromList(StatDefOf.MaxHitPoints)) * t.stuffProps.statFactors.GetStatFactorFromList(StatDefOf.MaxHitPoints) * t.stuffProps.commonality);
-            BaseGen.symbolStack.Push("castleEdgeWalls", rp);
+            BaseGen.symbolStack.Push("VFE_castleEdgeWalls", rp);
         }
 
     }

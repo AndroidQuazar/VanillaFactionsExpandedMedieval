@@ -2,7 +2,7 @@
 <Defs>
 
     <RulePackDef>
-        <defName>NamerFactionMedieval</defName>
+        <defName>VFE_NamerFactionMedieval</defName>
         <include>
             <li>OutlanderPlaceNameUtility</li>
         </include>
@@ -19,7 +19,7 @@
     </RulePackDef>
 
     <RulePackDef>
-        <defName>NamerSettlementMedieval</defName>
+        <defName>VFE_NamerSettlementMedieval</defName>
         <include>
             <li>OutlanderPlaceNameUtility</li>
         </include>

@@ -7,7 +7,7 @@
             <li>[RF] Editable Backstories and Names [1.0]</li>
         </mods>
         <match Class="PatchOperationReplace">
-            <xpath>/Defs/FactionDef[defName="PlayerKingdom"]/backstoryCategories/li[text()="Tribal"]</xpath>
+            <xpath>/Defs/FactionDef[defName="VFE_PlayerKingdom"]/backstoryCategories/li[text()="Tribal"]</xpath>
             <value>
                 <li>Medieval</li>
             </value>

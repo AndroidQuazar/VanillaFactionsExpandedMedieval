@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <FactionDef ParentName="HumanFactionBase" Name="MedievalFactionBase" Abstract="True">
+    <FactionDef Name="VFE_MedievalFactionBase" ParentName="HumanFactionBase" Abstract="True">
         <pawnSingular>subject</pawnSingular>
         <pawnsPlural>subjects</pawnsPlural>
         <listOrderPriority>25</listOrderPriority>
@@ -11,8 +11,8 @@
         <canStageAttacks>true</canStageAttacks>
         <expandingIconTexture>World/WorldObjects/Expanding/Castle</expandingIconTexture>
         <geneticVariance>0.1</geneticVariance>
-        <factionNameMaker>NamerFactionMedieval</factionNameMaker>
-        <settlementNameMaker>NamerSettlementMedieval</settlementNameMaker>
+        <factionNameMaker>VFE_NamerFactionMedieval</factionNameMaker>
+        <settlementNameMaker>VFE_NamerSettlementMedieval</settlementNameMaker>
         <techLevel>Medieval</techLevel>
         <backstoryCategories>
             <li>Tribal</li>
@@ -27,18 +27,18 @@
             </points>
         </raidCommonalityFromPointsCurve>
         <caravanTraderKinds>
-            <li>Caravan_Medieval_Farmer</li>
-            <li>Caravan_Medieval_WineMerchant</li>
-            <li>Caravan_Medieval_ArtPatron</li>
-            <li>Caravan_Medieval_Armourer</li>
-            <li>Caravan_Medieval_Weaponsmith</li>
-            <li>Caravan_Medieval_Sellswords</li>
+            <li>VFE_Caravan_Medieval_Farmer</li>
+            <li>VFE_Caravan_Medieval_WineMerchant</li>
+            <li>VFE_Caravan_Medieval_ArtPatron</li>
+            <li>VFE_Caravan_Medieval_Armourer</li>
+            <li>VFE_Caravan_Medieval_Weaponsmith</li>
+            <li>VFE_Caravan_Medieval_Sellswords</li>
         </caravanTraderKinds>
         <visitorTraderKinds>
-            <li>Visitor_Medieval_Standard</li>
+            <li>VFE_Visitor_Medieval_Standard</li>
         </visitorTraderKinds>
         <baseTraderKinds>
-            <li>Base_Medieval_Standard</li>
+            <li>VFE_Base_Medieval_Standard</li>
         </baseTraderKinds>
         <allowedArrivalTemperatureRange>
             <min>-40</min>
@@ -59,12 +59,12 @@
                 <kindDef>Combat</kindDef>
                 <commonality>100</commonality>
                 <options>
-                    <Medieval_Peasant>20</Medieval_Peasant>
-                    <Medieval_Squire>40</Medieval_Squire>
-                    <Medieval_Footsoldier>30</Medieval_Footsoldier>
-                    <Medieval_Bowman>30</Medieval_Bowman>
-                    <Medieval_Knight>30</Medieval_Knight>
-                    <Medieval_Lord>10</Medieval_Lord>
+                    <VFE_Medieval_Peasant>20</VFE_Medieval_Peasant>
+                    <VFE_Medieval_Squire>40</VFE_Medieval_Squire>
+                    <VFE_Medieval_Footsoldier>30</VFE_Medieval_Footsoldier>
+                    <VFE_Medieval_Bowman>30</VFE_Medieval_Bowman>
+                    <VFE_Medieval_Knight>30</VFE_Medieval_Knight>
+                    <VFE_Medieval_Lord>10</VFE_Medieval_Lord>
                 </options>
             </li>
             <li>
@@ -72,7 +72,7 @@
                 <kindDef>Combat</kindDef>
                 <commonality>60</commonality>
                 <options>
-                    <Medieval_Bowman>100</Medieval_Bowman>
+                    <VFE_Medieval_Bowman>100</VFE_Medieval_Bowman>
                 </options>
             </li>
             <li>
@@ -80,28 +80,28 @@
                 <kindDef>Combat</kindDef>
                 <commonality>60</commonality>
                 <options>
-                    <Medieval_Peasant>15</Medieval_Peasant>
-                    <Medieval_Squire>40</Medieval_Squire>
-                    <Medieval_Footsoldier>40</Medieval_Footsoldier>
-                    <Medieval_Knight>30</Medieval_Knight>
-                    <Medieval_Lord>5</Medieval_Lord>
+                    <VFE_Medieval_Peasant>15</VFE_Medieval_Peasant>
+                    <VFE_Medieval_Squire>40</VFE_Medieval_Squire>
+                    <VFE_Medieval_Footsoldier>40</VFE_Medieval_Footsoldier>
+                    <VFE_Medieval_Knight>30</VFE_Medieval_Knight>
+                    <VFE_Medieval_Lord>5</VFE_Medieval_Lord>
                 </options>
             </li>
             <li>
                 <!-- Peaceful -->
                 <kindDef>Peaceful</kindDef>
                 <options>
-                    <Medieval_Squire>30</Medieval_Squire>
-                    <Medieval_Footsoldier>30</Medieval_Footsoldier>
-                    <Medieval_Bowman>30</Medieval_Bowman>
-                    <Medieval_Knight>20</Medieval_Knight>
-                    <Medieval_Lord>10</Medieval_Lord>
+                    <VFE_Medieval_Squire>30</VFE_Medieval_Squire>
+                    <VFE_Medieval_Footsoldier>30</VFE_Medieval_Footsoldier>
+                    <VFE_Medieval_Bowman>30</VFE_Medieval_Bowman>
+                    <VFE_Medieval_Knight>20</VFE_Medieval_Knight>
+                    <VFE_Medieval_Lord>10</VFE_Medieval_Lord>
                 </options>
             </li>
             <li>
                 <kindDef>Trader</kindDef>
                 <traders>
-                    <Medieval_Merchant>1</Medieval_Merchant>
+                    <VFE_Medieval_Merchant>1</VFE_Medieval_Merchant>
                 </traders>
                 <carriers>
                     <Muffalo>6</Muffalo>
@@ -110,34 +110,34 @@
                     <Elephant>2</Elephant>
                 </carriers>
                 <guards>
-                    <Medieval_Squire>30</Medieval_Squire>
-                    <Medieval_Footsoldier>30</Medieval_Footsoldier>
-                    <Medieval_Bowman>30</Medieval_Bowman>
-                    <Medieval_Knight>20</Medieval_Knight>
+                    <VFE_Medieval_Squire>30</VFE_Medieval_Squire>
+                    <VFE_Medieval_Footsoldier>30</VFE_Medieval_Footsoldier>
+                    <VFE_Medieval_Bowman>30</VFE_Medieval_Bowman>
+                    <VFE_Medieval_Knight>20</VFE_Medieval_Knight>
                 </guards>
             </li>
             <li>
                 <kindDef>Settlement</kindDef>
                 <options>
-                    <Medieval_Peasant>20</Medieval_Peasant>
-                    <Medieval_Squire>20</Medieval_Squire>
-                    <Medieval_Footsoldier>20</Medieval_Footsoldier>
-                    <Medieval_Bowman>50</Medieval_Bowman>
-                    <Medieval_Knight>30</Medieval_Knight>
-                    <Medieval_Lord>50</Medieval_Lord>
+                    <VFE_Medieval_Peasant>20</VFE_Medieval_Peasant>
+                    <VFE_Medieval_Squire>20</VFE_Medieval_Squire>
+                    <VFE_Medieval_Footsoldier>20</VFE_Medieval_Footsoldier>
+                    <VFE_Medieval_Bowman>50</VFE_Medieval_Bowman>
+                    <VFE_Medieval_Knight>30</VFE_Medieval_Knight>
+                    <VFE_Medieval_Lord>50</VFE_Medieval_Lord>
                 </options>
             </li>
         </pawnGroupMakers>
         <homeIconPath>World/WorldObjects/MedievalSettlement</homeIconPath>
         <modExtensions>
             <li Class="VFEMedieval.FactionDefExtension">
-                <settlementGenerationSymbol>medievalSettlement</settlementGenerationSymbol>
+                <settlementGenerationSymbol>VFE_medievalSettlement</settlementGenerationSymbol>
             </li>
         </modExtensions>
     </FactionDef>
 
-    <FactionDef ParentName="MedievalFactionBase">
-        <defName>KingdomCivil</defName>
+    <FactionDef ParentName="VFE_MedievalFactionBase">
+        <defName>VFE_KingdomCivil</defName>
         <label>civil kingdom</label>
         <description>These people have been here for a shorter period of time than their neolithic bretheren. It is believed that some tribespeople and outlanders had come to embrace the medieval ways of life and decided to unite.\n\nThough still technologically inferior to many other factions, the subjects of this kingdom are well-known for using towering fortifications to protect their assets, as well as adopting the use of shields in combat and fighting in a particularly orderly manner.\n\nThis particular kingdom is open to keeping trade relations good with other settlements to bolster their economic position.</description>
         <colorSpectrum>
@@ -155,8 +155,8 @@
         </naturalColonyGoodwill>
     </FactionDef>
 
-    <FactionDef ParentName="MedievalFactionBase">
-        <defName>KingdomRough</defName>
+    <FactionDef ParentName="VFE_MedievalFactionBase">
+        <defName>VFE_KingdomRough</defName>
         <label>rough kingdom</label>
         <description>These people have been here for a shorter period of time than their neolithic bretheren. It is believed that some tribespeople and outlanders had come to embrace the medieval ways of life and decided to unite.\n\nThough still technologically inferior to many other factions, the subjects of this kingdom are well-known for using towering fortifications to protect their assets, as well as adopting the use of shields in combat and fighting in a particularly orderly manner.\n\nThis particular kingdom is ruled under a heavy hand and wishes to expand by laying the less fortunate to waste - though it is still possible to befriend them.</description>
         <colorSpectrum>

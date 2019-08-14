@@ -23,19 +23,19 @@
                     <skillGains>
                         <li>
                             <key>Social</key>
-                            <value>8</value>
+                            <value>6</value>
                         </li>
                         <li>
                             <key>Melee</key>
-                            <value>3</value>
+                            <value>2</value>
                         </li>
                         <li>
-                            <key>Growing</key>
-                            <value>-3</value>
+                            <key>Plants</key>
+                            <value>-2</value>
                         </li>
                         <li>
                             <key>Mining</key>
-                            <value>-3</value>
+                            <value>-2</value>
                         </li>
                     </skillGains>
                     <workDisables>
@@ -69,10 +69,6 @@
                         </li>
                         <li>
                             <key>Social</key>
-                            <value>4</value>
-                        </li>
-                        <li>
-                            <key>Cooking</key>
                             <value>2</value>
                         </li>
                         <li>
@@ -80,15 +76,7 @@
                             <value>2</value>
                         </li>
                         <li>
-                            <key>Crafting</key>
-                            <value>-2</value>
-                        </li>
-                        <li>
                             <key>Intellectual</key>
-                            <value>-3</value>
-                        </li>
-                        <li>
-                            <key>Plants</key>
                             <value>-4</value>
                         </li>
                     </skillGains>
@@ -116,11 +104,7 @@
                     <skillGains>
                         <li>
                             <key>Melee</key>
-                            <value>8</value>
-                        </li>
-                        <li>
-                            <key>Crafting</key>
-                            <value>3</value>
+                            <value>4</value>
                         </li>
                         <li>
                             <key>Medicine</key>
@@ -164,6 +148,10 @@
                             <value>4</value>
                         </li>
                         <li>
+                            <key>Artistic</key>
+                            <value>4</value>
+                        </li>
+                        <li>
                             <key>Medicine</key>
                             <value>3</value>
                         </li>
@@ -192,11 +180,15 @@
                     <skillGains>
                         <li>
                             <key>Plants</key>
-                            <value>5</value>
+                            <value>3</value>
                         </li>
                         <li>
                             <key>Cooking</key>
-                            <value>5</value>
+                            <value>3</value>
+                        </li>
+                        <li>
+                            <key>Artistic</key>
+                            <value>1</value>
                         </li>
                     </skillGains>
                     <workDisables>
@@ -208,6 +200,225 @@
                             <value>1</value>
                         </li>
                     </forcedTraits>
+                    <spawnCategories>
+                        <li>Civil</li>
+                        <li>Raider</li>
+                        <li>Slave</li>
+                        <li>Trader</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Guild Craftsman -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA006</defName>
+                    <slot>Adulthood</slot>
+                    <title>Guild craftsman</title>
+                    <titleShort>Craftsman</titleShort>
+                    <baseDesc>[PAWN_nameDef] was a member of one of the greatest craftsmen guilds of the realm. Unfortunately [PAWN_pronoun] was caught debasing silver currency and pocketing the raw material, and was promptly expelled from the guild and banished.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Crafting</key>
+                            <value>3</value>
+                        </li>
+                        <li>
+                            <key>Construction</key>
+                            <value>3</value>
+                        </li>
+                    </skillGains>
+                    <workDisables>
+                        <li>Social</li>
+                    </workDisables>
+                    <forcedTraits>
+                        <li>
+                            <key>Greedy</key>
+                            <value>0</value>
+                        </li>
+                    </forcedTraits>
+                    <spawnCategories>
+                        <li>Civil</li>
+                        <li>Raider</li>
+                        <li>Slave</li>
+                        <li>Trader</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                        <li>Uncommon</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Disgraced grandmaster -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA007</defName>
+                    <slot>Adulthood</slot>
+                    <title>Disgraced grandmaster</title>
+                    <titleShort>Grandmaster</titleShort>
+                    <baseDesc>[PAWN_nameDef] was the founder and leader of an order of knights tasked with exterminating the heathen tribals on the outskirts of the kingdom. An ambush in the dead of night while on a major campaign wiped out most of [PAWN_possessive] order and [PAWN_pronoun] was never seen again.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Melee</key>
+                            <value>3</value>
+                        </li>
+                        <li>
+                            <key>Social</key>
+                            <value>2</value>
+                        </li>
+                        <li>
+                            <key>Shooting</key>
+                            <value>-2</value>
+                        </li>
+                    </skillGains>
+                    <requiredWorkTags>
+                        <li>Violent</li>
+                    </requiredWorkTags>
+                    <spawnCategories>
+                        <li>Civil</li>
+                        <li>Raider</li>
+                        <li>Slave</li>
+                        <li>Trader</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                        <li>Uncommon</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Hunter -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA008</defName>
+                    <slot>Adulthood</slot>
+                    <title>Hunter</title>
+                    <titleFemale>Huntress</titleFemale>
+                    <titleShort>Hunter</titleShort>
+                    <titleShortFemale>Huntress</titleShortFemale>
+                    <baseDesc>[PAWN_nameDef] made a living by hunting big game, and [PAWN_pronoun] was good at it. Though most of [PAWN_possessive] kills were sold to common folks, [PAWN_pronoun] did occasionally hunt for the nobility that ruled [PAWN_nameDef]'s kingdom.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Shooting</key>
+                            <value>4</value>
+                        </li>
+                        <li>
+                            <key>Social</key>
+                            <value>2</value>
+                        </li>
+                        <li>
+                            <key>Animals</key>
+                            <value>-3</value>
+                        </li>
+                    </skillGains>
+                    <requiredWorkTags>
+                        <li>Violent</li>
+                    </requiredWorkTags>
+                    <spawnCategories>
+                        <li>Civil</li>
+                        <li>Raider</li>
+                        <li>Slave</li>
+                        <li>Trader</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Yeoman archer -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA009</defName>
+                    <slot>Adulthood</slot>
+                    <title>Yeoman archer</title>
+                    <titleShort>Archer</titleShort>
+                    <baseDesc>[PAWN_nameDef] and the rest of [PAWN_possessive] village were decreed to practice archery for 2 hour after church every week. Years later this practice payed off when [PAWN_nameDef]'s village was called to serve [PAWN_possessive] lord as archers.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Shooting</key>
+                            <value>4</value>
+                        </li>
+                    </skillGains>
+                    <requiredWorkTags>
+                        <li>Violent</li>
+                    </requiredWorkTags>
+                    <spawnCategories>
+                        <li>Civil</li>
+                        <li>Raider</li>
+                        <li>Slave</li>
+                        <li>Trader</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Charlatan -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA010</defName>
+                    <slot>Adulthood</slot>
+                    <title>Charlatan</title>
+                    <titleShort>Charlatan</titleShort>
+                    <baseDesc>After a charlatan fleeced [PAWN_objective] out of all of [PAWN_possessive] money and valuables, [PAWN_nameDef] decided to learn this trade to never be fooled by this deception again.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Social</key>
+                            <value>3</value>
+                        </li>
+                        <li>
+                            <key>Intellectual</key>
+                            <value>1</value>
+                        </li>
+                    </skillGains>
+                    <spawnCategories>
+                        <li>Civil</li>
+                        <li>Raider</li>
+                        <li>Slave</li>
+                        <li>Trader</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Siege engineer -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA011</defName>
+                    <slot>Adulthood</slot>
+                    <title>Siege engineer</title>
+                    <titleShort>Engineer</titleShort>
+                    <baseDesc>Wherever a siege was, [PAWN_nameDef] would be one of the people in [PAWN_possessive] lord's army responsible for constructing ballistae, trebuchets and the like.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Construction</key>
+                            <value>5</value>
+                        </li>
+                        <li>
+                            <key>Intellectual</key>
+                            <value>1</value>
+                        </li>
+                        <li>
+                            <key>Artistic</key>
+                            <value>-2</value>
+                        </li>
+                    </skillGains>
+                    <spawnCategories>
+                        <li>Civil</li>
+                        <li>Raider</li>
+                        <li>Slave</li>
+                        <li>Trader</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Carpenter -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA012</defName>
+                    <slot>Adulthood</slot>
+                    <title>Carpenter</title>
+                    <titleShort>Carpenter</titleShort>
+                    <baseDesc>[PAWN_nameDef]'s day-to-day duty was preparing building materials for constructing buildings in [PAWN_possessive] village, while also having picked up some skills from masters of the craft.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Construction</key>
+                            <value>3</value>
+                        </li>
+                        <li>
+                            <key>Crafting</key>
+                            <value>2</value>
+                        </li>
+                    </skillGains>
                     <spawnCategories>
                         <li>Civil</li>
                         <li>Raider</li>

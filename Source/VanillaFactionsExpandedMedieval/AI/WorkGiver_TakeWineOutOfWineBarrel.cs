@@ -52,7 +52,7 @@ namespace VFEMedieval
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            return new Job(JobDefOf.TakeWineOutOfWineBarrel, t);
+            return new Job(JobDefOf.VFE_TakeWineOutOfWineBarrel, t);
         }
 
     }

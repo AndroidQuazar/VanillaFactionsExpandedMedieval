@@ -2,7 +2,7 @@
 <Defs>
 
     <TraderKindDef>
-        <defName>Visitor_Medieval_Standard</defName>
+        <defName>VFE_Visitor_Medieval_Standard</defName>
         <label>trader</label>
         <stockGenerators>
             <li Class="StockGenerator_SingleDef">

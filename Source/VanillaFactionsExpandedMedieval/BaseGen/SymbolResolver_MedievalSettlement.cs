@@ -74,7 +74,7 @@ namespace VFEMedieval
                 var medievalDefenceParams = defenceParams.GetCustom<MedievalResolveParams>(MedievalResolveParams.Name);
                 defenceParams.faction = faction;
                 medievalDefenceParams.towerRadius = towerRadius;
-                BaseGen.symbolStack.Push("medievalEdgeDefense", defenceParams);
+                BaseGen.symbolStack.Push("VFE_medievalEdgeDefense", defenceParams);
             }
 
             // Map edge reachability

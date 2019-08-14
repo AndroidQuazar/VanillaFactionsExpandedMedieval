@@ -2,16 +2,16 @@
 <Defs>
 
     <RuleDef>
-        <defName>CastleEdgeWalls</defName>
-        <symbol>castleEdgeWalls</symbol>
+        <defName>VFE_CastleEdgeWalls</defName>
+        <symbol>VFE_castleEdgeWalls</symbol>
         <resolvers>
             <li Class="VFEMedieval.SymbolResolver_CastleEdgeWalls" />
         </resolvers>
     </RuleDef>
 
     <RuleDef>
-        <defName>CastleEdgeSandbags</defName>
-        <symbol>castleEdgeSandbags</symbol>
+        <defName>VFE_CastleEdgeSandbags</defName>
+        <symbol>VFE_castleEdgeSandbags</symbol>
         <resolvers>
             <li Class="VFEMedieval.SymbolResolver_CastleEdgeSandbags" />
         </resolvers>

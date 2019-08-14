@@ -2,7 +2,7 @@
 <Defs>
 
     <!-- Ugh, that stench -->
-    <PawnKindDef ParentName="MedievalBase">
+    <PawnKindDef ParentName="VFE_MedievalPawnKindBase">
         <defName>VFE_SellSword</defName>
         <label>sellsword</label>
         <combatPower>90</combatPower>
@@ -36,7 +36,7 @@
     </PawnKindDef>
 
     <!-- It's just a flesh wound! -->
-    <PawnKindDef ParentName="Medieval_Knight">
+    <PawnKindDef ParentName="VFE_Medieval_Knight">
         <defName>VFE_BlackKnight</defName>
         <label>black knight</label>
         <defaultFactionType>AncientsHostile</defaultFactionType>

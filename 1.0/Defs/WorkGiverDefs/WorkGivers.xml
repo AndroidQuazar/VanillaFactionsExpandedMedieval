@@ -2,7 +2,7 @@
 <Defs>
 
     <WorkGiverDef>
-        <defName>TakeBeerOutOfWineBarrel</defName>
+        <defName>VFE_TakeBeerOutOfWineBarrel</defName>
         <label>take wine out of wine barrels</label>
         <giverClass>VFEMedieval.WorkGiver_TakeWineOutOfWineBarrel</giverClass>
         <workType>Hauling</workType>
@@ -15,7 +15,7 @@
     </WorkGiverDef>
 
     <WorkGiverDef>
-        <defName>FillWineBarrel</defName>
+        <defName>VFE_FillWineBarrel</defName>
         <label>fill wine barrels</label>
         <giverClass>VFEMedieval.WorkGiver_FillWineBarrel</giverClass>
         <workType>Hauling</workType>

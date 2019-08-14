@@ -47,7 +47,7 @@ namespace VFEMedieval
                 resolveParams2.singleThingDef = singleThingDef;
                 BaseGen.symbolStack.Push("edgeThing", resolveParams2);
             }
-            BaseGen.symbolStack.Push("addMustToWineBarrels", rp);
+            BaseGen.symbolStack.Push("VFE_addMustToWineBarrels", rp);
             ResolveParams resolveParams3 = rp;
             resolveParams3.singleThingDef = ThingDefOf.VFE_WineBarrel;
             resolveParams3.thingRot = new Rot4?((!Rand.Bool) ? Rot4.East : Rot4.North);

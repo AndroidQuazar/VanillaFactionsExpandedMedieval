@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <PawnKindDef Name="MedievalBase" Abstract="True">
+    <PawnKindDef Name="VFE_MedievalPawnKindBase" Abstract="True">
         <race>Human</race>
-        <defaultFactionType>KingdomCivil</defaultFactionType>
+        <defaultFactionType>VFE_KingdomCivil</defaultFactionType>
         <backstoryCategories>
             <li>Tribal</li>
         </backstoryCategories>
@@ -34,7 +34,7 @@
         </modExtensions>
     </PawnKindDef>
 
-    <PawnKindDef Name="MedievalMilitaryBase" ParentName="MedievalBase" Abstract="True">
+    <PawnKindDef Name="VFE_MedievalMilitaryBase" ParentName="VFE_MedievalPawnKindBase" Abstract="True">
         <apparelRequired>
             <li>VFE_Apparel_Tabard</li>
         </apparelRequired>
@@ -57,7 +57,7 @@
         </modExtensions>
     </PawnKindDef>
 
-    <PawnKindDef Name="MedievalEliteMilitaryBase" ParentName="MedievalMilitaryBase" Abstract="True">
+    <PawnKindDef Name="VFE_MedievalEliteMilitaryBase" ParentName="VFE_MedievalMilitaryBase" Abstract="True">
         <modExtensions Inherit="False">
             <li Class="VFEMedieval.PawnKindDefExtension">
                 <factionColourApparelPartList>
@@ -78,8 +78,8 @@
     </PawnKindDef>
 
     <!-- Poverty tier - peasant -->
-    <PawnKindDef ParentName="MedievalBase">
-        <defName>Medieval_Peasant</defName>
+    <PawnKindDef ParentName="VFE_MedievalPawnKindBase">
+        <defName>VFE_Medieval_Peasant</defName>
         <label>peasant</label>
         <combatPower>35</combatPower>
         <chemicalAddictionChance>0.10</chemicalAddictionChance>
@@ -114,8 +114,8 @@
     </PawnKindDef>
 
     <!-- Low-tier - merchant, squire -->
-    <PawnKindDef ParentName="MedievalBase">
-        <defName>Medieval_Merchant</defName>
+    <PawnKindDef ParentName="VFE_MedievalPawnKindBase">
+        <defName>VFE_Medieval_Merchant</defName>
         <label>merchant</label>
         <combatPower>40</combatPower>
         <trader>true</trader>
@@ -138,8 +138,8 @@
         <modExtensions Inherit="False"/>
     </PawnKindDef>
 
-    <PawnKindDef ParentName="MedievalBase">
-        <defName>Medieval_Squire</defName>
+    <PawnKindDef ParentName="VFE_MedievalPawnKindBase">
+        <defName>VFE_Medieval_Squire</defName>
         <label>squire</label>
         <combatPower>50</combatPower>
         <canBeSapper>true</canBeSapper>
@@ -164,8 +164,8 @@
     </PawnKindDef>
 
     <!-- Mid-tier - footsoldier, bowman -->
-    <PawnKindDef ParentName="MedievalMilitaryBase">
-        <defName>Medieval_Footsoldier</defName>
+    <PawnKindDef ParentName="VFE_MedievalMilitaryBase">
+        <defName>VFE_Medieval_Footsoldier</defName>
         <label>footsoldier</label>
         <combatPower>70</combatPower>
         <canBeSapper>true</canBeSapper>
@@ -189,8 +189,8 @@
         </weaponTags>
     </PawnKindDef>
 
-    <PawnKindDef ParentName="MedievalMilitaryBase">
-        <defName>Medieval_Bowman</defName>
+    <PawnKindDef ParentName="VFE_MedievalMilitaryBase">
+        <defName>VFE_Medieval_Bowman</defName>
         <label>bowman</label>
         <combatPower>70</combatPower>
         <gearHealthRange>
@@ -211,8 +211,8 @@
     </PawnKindDef>
 
     <!-- High-tier - knight, lord -->
-    <PawnKindDef Name="Medieval_Knight" ParentName="MedievalEliteMilitaryBase">
-        <defName>Medieval_Knight</defName>
+    <PawnKindDef Name="VFE_Medieval_Knight" ParentName="VFE_MedievalEliteMilitaryBase">
+        <defName>VFE_Medieval_Knight</defName>
         <label>knight</label>
         <combatPower>100</combatPower>
         <itemQuality>Good</itemQuality>
@@ -235,8 +235,8 @@
         </weaponTags>
     </PawnKindDef>
 
-    <PawnKindDef ParentName="Medieval_Knight">
-        <defName>Medieval_Lord</defName>
+    <PawnKindDef ParentName="VFE_Medieval_Knight">
+        <defName>VFE_Medieval_Lord</defName>
         <label>lord</label>
         <combatPower>140</combatPower>
         <baseRecruitDifficulty>0.90</baseRecruitDifficulty>

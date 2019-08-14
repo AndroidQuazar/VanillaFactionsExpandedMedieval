@@ -67,7 +67,7 @@ namespace VFEMedieval
         {
             var wineFermenter = t.TryGetComp<CompWineFermenter>();
             Thing t2 = this.FindMust(pawn, wineFermenter);
-            return new Job(JobDefOf.FillWineBarrel, t, t2);
+            return new Job(JobDefOf.VFE_FillWineBarrel, t, t2);
         }
 
         private Thing FindMust(Pawn pawn, CompWineFermenter wineFermenter)

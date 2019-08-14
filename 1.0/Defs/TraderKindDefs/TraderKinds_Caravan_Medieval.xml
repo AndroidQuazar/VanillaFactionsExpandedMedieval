@@ -2,7 +2,7 @@
 <Defs>
 
   <TraderKindDef>
-    <defName>Caravan_Medieval_Farmer</defName>
+    <defName>VFE_Caravan_Medieval_Farmer</defName>
     <label>animal herder</label>
     <commonality>3</commonality>
     <stockGenerators>
@@ -77,7 +77,7 @@
   </TraderKindDef>
 
   <TraderKindDef>
-    <defName>Caravan_Medieval_WineMerchant</defName>
+    <defName>VFE_Caravan_Medieval_WineMerchant</defName>
     <label>wine merchant</label>
     <commonality>2</commonality>
     <stockGenerators>
@@ -107,7 +107,7 @@
   </TraderKindDef>
 
   <TraderKindDef>
-    <defName>Caravan_Medieval_ArtPatron</defName>
+    <defName>VFE_Caravan_Medieval_ArtPatron</defName>
     <label>art patron</label>
     <commonality>1</commonality>
     <stockGenerators>
@@ -172,7 +172,7 @@
   </TraderKindDef>
 
   <TraderKindDef>
-    <defName>Caravan_Medieval_Armourer</defName>
+    <defName>VFE_Caravan_Medieval_Armourer</defName>
     <label>armorsmith</label>
     <commonality>2</commonality>
     <stockGenerators>
@@ -220,7 +220,7 @@
   </TraderKindDef>
 
   <TraderKindDef>
-    <defName>Caravan_Medieval_Weaponsmith</defName>
+    <defName>VFE_Caravan_Medieval_Weaponsmith</defName>
     <label>weaponsmith</label>
     <commonality>2</commonality>
     <stockGenerators>
@@ -290,7 +290,7 @@
 
 
   <TraderKindDef>
-    <defName>Caravan_Medieval_Sellswords</defName>
+    <defName>VFE_Caravan_Medieval_Sellswords</defName>
     <label>sellswords</label>
     <commonality>1</commonality>
     <commonalityMultFromPopulationIntent>
