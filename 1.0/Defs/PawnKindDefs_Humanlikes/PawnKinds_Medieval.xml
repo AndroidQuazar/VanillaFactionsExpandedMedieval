@@ -7,7 +7,7 @@
         <backstoryCategories>
             <li>Tribal</li>
         </backstoryCategories>
-        <maxGenerationAge>60</maxGenerationAge>
+        <maxGenerationAge>70</maxGenerationAge>
         <chemicalAddictionChance>0.05</chemicalAddictionChance>
         <invNutrition>2.55</invNutrition>
         <invFoodDef>Pemmican</invFoodDef>
@@ -35,6 +35,7 @@
     </PawnKindDef>
 
     <PawnKindDef Name="VFE_MedievalMilitaryBase" ParentName="VFE_MedievalPawnKindBase" Abstract="True">
+        <minGenerationAge>20</minGenerationAge>
         <apparelRequired>
             <li>VFE_Apparel_Tabard</li>
         </apparelRequired>
@@ -58,6 +59,7 @@
     </PawnKindDef>
 
     <PawnKindDef Name="VFE_MedievalEliteMilitaryBase" ParentName="VFE_MedievalMilitaryBase" Abstract="True">
+        <maxGenerationAge>45</maxGenerationAge>
         <modExtensions Inherit="False">
             <li Class="VFEMedieval.PawnKindDefExtension">
                 <factionColourApparelPartList>

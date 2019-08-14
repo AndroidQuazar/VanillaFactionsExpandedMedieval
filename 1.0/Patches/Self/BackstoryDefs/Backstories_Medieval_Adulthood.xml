@@ -98,6 +98,7 @@
                     <title>Medieval paladin</title>
                     <titleShort>Paladin</titleShort>
                     <baseDesc>[PAWN_nameDef] was an anointed knight of the hexagonal table alongside the mythical king Barthur. [PAWN_pronoun] lost track of [PAWN_possessive] companions and king when [PAWN_pronoun] was knocked out on the battlefield and woke up on a different planet.</baseDesc>
+                    <bodyTypeGlobal>Hulk</bodyTypeGlobal>
                     <requiredWorkTags>
                         <li>Violent</li>
                     </requiredWorkTags>
@@ -139,6 +140,7 @@
                     <title>Idle knight</title>
                     <titleShort>Knight</titleShort>
                     <baseDesc>[PAWN_nameDef] was born to a long line of noble knights and was expected to continue this legacy. Despite eventually receiving [PAWN_possessive] knighthood, [PAWN_nameDef] has always been more interested in more idle and esoteric pursuits.</baseDesc>
+                    <bodyTypeGlobal>Fat</bodyTypeGlobal>
                     <requiredWorkTags>
                         <li>Violent</li>
                     </requiredWorkTags>
@@ -290,7 +292,7 @@
                     <titleFemale>Huntress</titleFemale>
                     <titleShort>Hunter</titleShort>
                     <titleShortFemale>Huntress</titleShortFemale>
-                    <baseDesc>[PAWN_nameDef] made a living by hunting big game, and [PAWN_pronoun] was good at it. Though most of [PAWN_possessive] kills were sold to common folks, [PAWN_pronoun] did occasionally hunt for the nobility that ruled [PAWN_nameDef]'s kingdom.</baseDesc>
+                    <baseDesc>[PAWN_nameDef] made a living by hunting big game. Though most of [PAWN_possessive] kills were sold to commonfolk, [PAWN_pronoun] did occasionally hunt for the nobility that ruled [PAWN_nameDef]'s kingdom.</baseDesc>
                     <skillGains>
                         <li>
                             <key>Shooting</key>
