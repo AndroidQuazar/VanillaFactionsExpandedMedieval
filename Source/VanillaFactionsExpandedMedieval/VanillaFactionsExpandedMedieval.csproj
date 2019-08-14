@@ -83,9 +83,11 @@
     <Compile Include="Defs\ScenPartDefOf.cs" />
     <Compile Include="Defs\ThingDefOf.cs" />
     <Compile Include="Defs\JobDefOf.cs" />
+    <Compile Include="HarmonyPatches\Patch_ITab_Pawn_Gear.cs" />
     <Compile Include="HarmonyPatches\Patch_Pawn.cs" />
     <Compile Include="HarmonyPatches\Patch_StatWorker.cs" />
     <Compile Include="HarmonyPatches\Patch_GenStep_Settlement.cs" />
+    <Compile Include="HarmonyPatches\RPGStyleInventory\Patch_Sandy_Detailed_RPG_GearTab_Sandy_Detailed_RPG_Inventory.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_RaidEnemySpecial.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_BlackKnight.cs" />
     <Compile Include="BlackKnightUtility.cs" />

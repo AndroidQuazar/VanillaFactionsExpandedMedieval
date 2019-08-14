@@ -41,6 +41,23 @@ namespace VFEMedieval
                 else
                     Log.Error("Could not find type DualWield.Ext_Pawn_EquipmentTracker in Dual Wield");
             }
+
+            // RPG Style Inventory
+            if (ModCompatibilityCheck.RPGStyleInventory)
+            {
+                var detailedRPGGearTab = GenTypes.GetTypeInAnyAssemblyNew("Sandy_Detailed_RPG_Inventory.Sandy_Detailed_RPG_GearTab", "Sandy_Detailed_RPG_Inventory");
+                if (detailedRPGGearTab != null)
+                {
+                    Patch_Sandy_Detailed_RPG_GearTab_Sandy_Detailed_RPG_Inventory.manual_TryDrawOverallArmor.DetailedRPGGearTab = detailedRPGGearTab;
+                    VFEMedieval.HarmonyInstance.Patch(AccessTools.Method(detailedRPGGearTab, "TryDrawOverallArmor"),
+                        transpiler: new HarmonyMethod(typeof(Patch_Sandy_Detailed_RPG_GearTab_Sandy_Detailed_RPG_Inventory.manual_TryDrawOverallArmor), "Transpiler"));
+                    VFEMedieval.HarmonyInstance.Patch(AccessTools.Method(detailedRPGGearTab, "TryDrawOverallArmor1"),
+                        transpiler: new HarmonyMethod(typeof(Patch_Sandy_Detailed_RPG_GearTab_Sandy_Detailed_RPG_Inventory.manual_TryDrawOverallArmor1), "Transpiler"));
+                }
+                    
+                else
+                    Log.Error("Could not find type Sandy_Detailed_RPG_Inventory.Sandy_Detailed_RPG_GearTab in RPG Style Inventory");
+            }
         }
 
     }

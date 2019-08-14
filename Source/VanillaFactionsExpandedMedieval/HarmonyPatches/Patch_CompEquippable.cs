@@ -19,8 +19,9 @@ namespace VFEMedieval
 
             public static void Postfix(CompEquippable __instance, ref IEnumerable<Command> __result)
             {
-                // Clear gizmos if parent is a shield and isn't usable
-                if (__instance.parent.IsShield(out CompShield shieldComp) && !shieldComp.UsableNow)
+                // Clear gizmos if parent is a shield and isn't off-hand - though the verb will still be usable
+                var pawn = __instance.PrimaryVerb.CasterPawn;
+                if (pawn != null && pawn.equipment.Primary != __instance.parent)
                     __result = __result.Where(g => false);
             }
 
