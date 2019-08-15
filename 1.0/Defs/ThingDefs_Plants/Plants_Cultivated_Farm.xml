@@ -18,7 +18,7 @@
         <ingestible />
         <plant>
             <fertilitySensitivity>0.7</fertilitySensitivity>
-            <growDays>17.2</growDays>
+            <growDays>19.5</growDays>
             <dieIfLeafless>true</dieIfLeafless>
             <harvestTag>Standard</harvestTag>
             <harvestAfterGrowth>0.30</harvestAfterGrowth>
@@ -27,7 +27,6 @@
             <sowMinSkill>5</sowMinSkill>
             <sowTags>
                 <li>Ground</li>
-                <li>Hydroponic</li>
             </sowTags>
             <topWindExposure>0.1</topWindExposure>
             <visualSizeRange>

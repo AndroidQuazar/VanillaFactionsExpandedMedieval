@@ -18,6 +18,11 @@ namespace VFEMedieval
         public static ApplyArmourDelegate<float, float, float, Thing, DamageDef, Pawn, bool> ArmorUtility_ApplyArmor = (ApplyArmourDelegate<float, float, float, Thing, DamageDef, Pawn, bool>)
             Delegate.CreateDelegate(typeof(ApplyArmourDelegate<float, float, float, Thing, DamageDef, Pawn, bool>), typeof(ArmorUtility).GetMethod("ApplyArmor", BindingFlags.NonPublic | BindingFlags.Static));
 
+        public static Func<ThingDef, Rot4, Map, IntVec3> SiegeBlueprintPlacer_FindArtySpot = (Func<ThingDef, Rot4, Map, IntVec3>)
+            Delegate.CreateDelegate(typeof(Func<ThingDef, Rot4, Map, IntVec3>), typeof(SiegeBlueprintPlacer).GetMethod("FindArtySpot", BindingFlags.NonPublic | BindingFlags.Static));
+        public static Func<float, Map, IEnumerable<Blueprint_Build>> SiegeBlueprintPlacer_PlaceArtilleryBlueprints = (Func<float, Map, IEnumerable<Blueprint_Build>>)
+            Delegate.CreateDelegate(typeof(Func<float, Map, IEnumerable<Blueprint_Build>>), typeof(SiegeBlueprintPlacer).GetMethod("PlaceArtilleryBlueprints", BindingFlags.NonPublic | BindingFlags.Static));
+
         public static Func<Thing, StatDef, string> StatWorker_InfoTextLineFromGear = (Func<Thing, StatDef, string>)
             Delegate.CreateDelegate(typeof(Func<Thing, StatDef, string>), typeof(StatWorker).GetMethod("InfoTextLineFromGear", BindingFlags.NonPublic | BindingFlags.Static));
         public static Func<Thing, StatDef, float> StatWorker_StatOffsetFromGear = (Func<Thing, StatDef, float>)

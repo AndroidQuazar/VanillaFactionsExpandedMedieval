@@ -18,7 +18,7 @@ namespace VFEMedieval
         public static Dictionary<FactionDef, bool> cachedFactionPermanentEnemyFlags;
         public static Dictionary<FactionDef, IntRange> cachedFactionNaturalGoodwillRanges;
 
-        public static void SetCaches()
+        public static void SetCache()
         {
             cachedFactionPermanentEnemyFlags = new Dictionary<FactionDef, bool>();
             cachedFactionNaturalGoodwillRanges = new Dictionary<FactionDef, IntRange>();

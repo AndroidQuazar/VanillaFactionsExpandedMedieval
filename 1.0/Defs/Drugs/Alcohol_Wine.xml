@@ -4,17 +4,17 @@
     <ThingDef ParentName="DrugBase">
         <defName>VFE_Wine</defName>
         <label>wine</label>
-        <description>A strong alcoholic beverage that is made from fermented grapes. Excessive consumption can lead to alcohol blackouts and, over time, addiction.</description>
+        <description>A large bottle of a strong alcoholic beverage that is made from fermented grapes. Excessive consumption can lead to alcohol blackouts and, over time, addiction.</description>
         <graphicData>
             <texPath>Things/Item/Drug/Wine</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <equippedAngleOffset>-150</equippedAngleOffset>
         <rotatable>false</rotatable>
-        <stackLimit>25</stackLimit>
+        <stackLimit>10</stackLimit>
         <statBases>
             <DeteriorationRate>0.5</DeteriorationRate>
-            <MarketValue>18</MarketValue>
+            <MarketValue>20</MarketValue>
             <Mass>0.3</Mass>
             <Flammability>0.5</Flammability>
             <Nutrition>0.08</Nutrition>
@@ -37,7 +37,7 @@
             <outcomeDoers>
                 <li Class="IngestionOutcomeDoer_GiveHediff">
                     <hediffDef>AlcoholHigh</hediffDef>
-                    <severity>0.2</severity>
+                    <severity>0.25</severity>
                     <toleranceChemical>Alcohol</toleranceChemical>
                 </li>
                 <li Class="IngestionOutcomeDoer_GiveHediff">

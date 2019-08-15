@@ -20,6 +20,9 @@ namespace VFEMedieval
         // For shields and apparel
         public List<PawnKindDef> useFactionColourForPawnKinds;
 
+        // For artillery
+        public float siegeBlueprintPoints;
+
     }
 
 }

@@ -9,7 +9,7 @@
                 <xpath>/Defs/ThingDef[defName="ChunkGranite"]/stuffProps</xpath>
             </li>
             <li Class="PatchOperationRemove">
-                <xpath>/Defs/ThingDef[defName="ChunkGranite"]</xpath>
+                <xpath>/Defs/ThingDef[defName="ChunkGranite"]/stuffProps</xpath>
             </li>
         </operations>
     </Operation>

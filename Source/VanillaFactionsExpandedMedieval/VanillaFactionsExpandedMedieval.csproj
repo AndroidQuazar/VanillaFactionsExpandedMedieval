@@ -52,10 +52,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AI\WorkGiver_TakeWineOutOfWineBarrel.cs" />
-    <Compile Include="AI\WorkGiver_FillWineBarrel.cs" />
-    <Compile Include="AI\JobDriver_TakeWineOutOfWineBarrel.cs" />
-    <Compile Include="AI\JobDriver_FillWineBarrel.cs" />
+    <None Include="AI\Lords\LordToil_SiegeCustom.cs" />
+    <None Include="AI\Lords\LordJob_SiegeCustom.cs" />
+    <Compile Include="AI\WorkGivers\WorkGiver_TakeWineOutOfWineBarrel.cs" />
+    <Compile Include="AI\WorkGivers\WorkGiver_FillWineBarrel.cs" />
+    <Compile Include="AI\JobDrivers\JobDriver_TakeWineOutOfWineBarrel.cs" />
+    <Compile Include="AI\JobDrivers\JobDriver_FillWineBarrel.cs" />
     <Compile Include="BaseGen\MedievalResolveParams.cs" />
     <Compile Include="BaseGen\SymbolResolver_AddMustToWineBarrels.cs" />
     <Compile Include="BaseGen\SymbolResolver_Interior_Winery.cs" />
@@ -84,15 +86,18 @@
     <Compile Include="Defs\ThingDefOf.cs" />
     <Compile Include="Defs\JobDefOf.cs" />
     <Compile Include="HarmonyPatches\Patch_ITab_Pawn_Gear.cs" />
+    <None Include="HarmonyPatches\Patch_RaidStrategyWorker_Siege.cs" />
     <Compile Include="HarmonyPatches\Patch_Pawn.cs" />
     <Compile Include="HarmonyPatches\Patch_StatWorker.cs" />
     <Compile Include="HarmonyPatches\Patch_GenStep_Settlement.cs" />
     <Compile Include="HarmonyPatches\RPGStyleInventory\Patch_Sandy_Detailed_RPG_GearTab_Sandy_Detailed_RPG_Inventory.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_RaidEnemySpecial.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_BlackKnight.cs" />
-    <Compile Include="BlackKnightUtility.cs" />
+    <Compile Include="Quick CS files\MakeSiegesSmarter.cs" />
+    <Compile Include="Utilities\BlackKnightUtility.cs" />
     <Compile Include="ScenParts\ScenPart_ForcedFactionGoodwill.cs" />
-    <Compile Include="ScenPartUtility.cs" />
+    <Compile Include="Utilities\CustomSiegeUtility.cs" />
+    <Compile Include="Utilities\ScenPartUtility.cs" />
     <Compile Include="StaticConstructorClass.cs" />
     <Compile Include="HarmonyPatches\DualWield\Patch_DualWield_Harmony_FloatMenuMakerMap_AddHumanlikeOrders.cs" />
     <Compile Include="HarmonyPatches\DualWield\Patch_DualWield_Ext_Pawn_EquipmentTracker.cs" />
@@ -114,7 +119,7 @@
     <Compile Include="StockGenerators\StockGenerator_MedievalMercs.cs" />
     <Compile Include="VFEMedieval.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatches.cs" />
-    <Compile Include="ShieldUtility.cs" />
+    <Compile Include="Utilities\ShieldUtility.cs" />
     <Compile Include="DefModExtensions\ThingDefExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

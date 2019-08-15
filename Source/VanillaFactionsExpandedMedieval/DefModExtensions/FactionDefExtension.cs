@@ -14,6 +14,9 @@ namespace VFEMedieval
 
         public static readonly FactionDefExtension defaultValues = new FactionDefExtension();
 
+        public bool customSieges;
+        public List<string> artilleryBuildingTags = new List<string>() { "Artillery_BaseDestroyer" };
+        public ThingDef siegeMealDef = RimWorld.ThingDefOf.MealSurvivalPack;
         public string settlementGenerationSymbol;
 
     }

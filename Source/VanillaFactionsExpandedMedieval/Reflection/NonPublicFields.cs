@@ -23,6 +23,8 @@ namespace VFEMedieval
 
         public static FieldInfo PawnRenderer_pawn = typeof(PawnRenderer).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
 
+        public static FieldInfo SiegeBlueprintPlacer_faction = typeof(SiegeBlueprintPlacer).GetField("faction", BindingFlags.NonPublic | BindingFlags.Static);
+
     }
 
 }

@@ -14,4 +14,33 @@
         </match>
     </Operation>
 
+    <!-- If Vanilla Furniture Expanded: Security is loaded, medieval factions can siege -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded: Security</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/FactionDef[@Name="VFE_MedievalFactionBase"]</xpath>
+                    <value>
+                        <canSiege>true</canSiege>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/FactionDef[@Name="VFE_MedievalFactionBase"]/modExtensions/li[@Class="VFEMedieval.FactionDefExtension"]</xpath>
+                    <value>
+                        <artilleryBuildingTags>
+                            <li>ArtilleryMedieval_BaseDestroyer</li>
+                        </artilleryBuildingTags>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
 </Patch>
