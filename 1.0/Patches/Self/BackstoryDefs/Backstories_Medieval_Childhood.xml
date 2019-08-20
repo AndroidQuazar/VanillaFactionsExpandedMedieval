@@ -229,7 +229,7 @@
                     <slot>Childhood</slot>
                     <title>Collier</title>
                     <titleShort>Collier</titleShort>
-                    <baseDesc>[PAWN_possessive] was born to a family of destitute colliers bound in perpetual debt-slavery. Their lives consisted of toil and misery in the mines.</baseDesc>
+                    <baseDesc>[PAWN_nameDef] was born to a family of destitute colliers bound in perpetual debt-slavery. Their lives consisted of toil and misery in the mines.</baseDesc>
                     <skillGains>
                         <li>
                             <key>Mining</key>
