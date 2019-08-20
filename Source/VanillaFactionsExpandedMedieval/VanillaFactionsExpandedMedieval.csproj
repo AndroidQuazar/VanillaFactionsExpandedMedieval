@@ -88,6 +88,7 @@
     <Compile Include="Defs\JobDefOf.cs" />
     <Compile Include="HarmonyPatches\Patch_ITab_Pawn_Gear.cs" />
     <None Include="HarmonyPatches\Patch_RaidStrategyWorker_Siege.cs" />
+    <Compile Include="HarmonyPatches\Patch_Game.cs" />
     <Compile Include="HarmonyPatches\Patch_ResearchProjectDef.cs" />
     <Compile Include="HarmonyPatches\Patch_Pawn.cs" />
     <Compile Include="HarmonyPatches\Patch_StatWorker.cs" />

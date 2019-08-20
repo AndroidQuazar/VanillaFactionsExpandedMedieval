@@ -25,6 +25,7 @@ namespace VFEMedieval
                     var researchProjectDefExtension = __instance.GetModExtension<ResearchProjectDefExtension>() ?? ResearchProjectDefExtension.defaultValues;
                     if (!researchProjectDefExtension.greylistedTags.NullOrEmpty() && researchProjectDefExtension.greylistedTags.Contains(tag))
                         __result = false;
+                        
                 }
             }
 
