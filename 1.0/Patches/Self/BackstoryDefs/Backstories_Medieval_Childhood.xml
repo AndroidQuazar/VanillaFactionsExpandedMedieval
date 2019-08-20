@@ -28,7 +28,6 @@
                     </workDisables>
                     <spawnCategories>
                         <li>Civil</li>
-                        <li>Raider</li>
                         <li>Slave</li>
                         <li>Trader</li>
                         <li>Traveler</li>
@@ -129,7 +128,6 @@
                     </workDisables>
                     <spawnCategories>
                         <li>Civil</li>
-                        <li>Raider</li>
                         <li>Slave</li>
                         <li>Trader</li>
                         <li>Traveler</li>

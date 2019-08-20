@@ -77,6 +77,7 @@
     <Compile Include="DefModExtensions\PawnKindDefExtension.cs" />
     <Compile Include="DefModExtensions\FactionDefExtension.cs" />
     <Compile Include="DefModExtensions\IncidentDefExtension.cs" />
+    <Compile Include="DefModExtensions\ResearchProjectDefExtension.cs" />
     <Compile Include="Defs\ApparelLayerDefOf.cs" />
     <Compile Include="Defs\RiverDefOf.cs" />
     <Compile Include="Defs\StuffCategoryDefOf.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Defs\JobDefOf.cs" />
     <Compile Include="HarmonyPatches\Patch_ITab_Pawn_Gear.cs" />
     <None Include="HarmonyPatches\Patch_RaidStrategyWorker_Siege.cs" />
+    <Compile Include="HarmonyPatches\Patch_ResearchProjectDef.cs" />
     <Compile Include="HarmonyPatches\Patch_Pawn.cs" />
     <Compile Include="HarmonyPatches\Patch_StatWorker.cs" />
     <Compile Include="HarmonyPatches\Patch_GenStep_Settlement.cs" />
