@@ -42,6 +42,16 @@ namespace VFEMedieval
                     Log.Error("Could not find type DualWield.Ext_Pawn_EquipmentTracker in Dual Wield");
             }
 
+            // Facial Stuff
+            if (ModCompatibilityCheck.FacialStuff)
+            {
+                var humanBipedDrawer = GenTypes.GetTypeInAnyAssemblyNew("FacialStuff.HumanBipedDrawer", "FacialStuff");
+                if (humanBipedDrawer != null)
+                    VFEMedieval.HarmonyInstance.Patch(AccessTools.Method(humanBipedDrawer, "DrawApparel"), transpiler: new HarmonyMethod(typeof(Patch_PawnRenderer.RenderPawnInternal), "Transpiler"));
+                else
+                    Log.Error("Could not find type FacialStuff.HumanBipedDrawer in Facial Stuff");
+            }
+
             // RPG Style Inventory
             if (ModCompatibilityCheck.RPGStyleInventory)
             {

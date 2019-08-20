@@ -47,6 +47,11 @@
                 </li>
                 <li Class="ScenPart_StartingThing_Defined">
                     <def>StartingThing_Defined</def>
+                    <thingDef>VFE_Wine</thingDef>
+                    <count>30</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
                     <thingDef>MeleeWeapon_LongSword</thingDef>
                     <stuff>Steel</stuff>
                     <count>1</count>

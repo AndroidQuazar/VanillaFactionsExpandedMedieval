@@ -20,12 +20,4 @@
         </value>
     </Operation>
 
-    <!-- 'tis but a scratch -->
-    <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="MeleeWeapon_LongSword"]/weaponTags</xpath>
-        <value>
-            <li>Longsword</li>
-        </value>
-    </Operation>
-
 </Patch>

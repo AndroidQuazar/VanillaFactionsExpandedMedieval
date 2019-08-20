@@ -93,7 +93,6 @@
     <Compile Include="HarmonyPatches\RPGStyleInventory\Patch_Sandy_Detailed_RPG_GearTab_Sandy_Detailed_RPG_Inventory.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_RaidEnemySpecial.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_BlackKnight.cs" />
-    <Compile Include="Quick CS files\MakeSiegesSmarter.cs" />
     <Compile Include="Utilities\BlackKnightUtility.cs" />
     <Compile Include="ScenParts\ScenPart_ForcedFactionGoodwill.cs" />
     <Compile Include="Utilities\CustomSiegeUtility.cs" />

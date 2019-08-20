@@ -40,7 +40,6 @@
         <defName>VFE_BlackKnight</defName>
         <label>black knight</label>
         <defaultFactionType>AncientsHostile</defaultFactionType>
-        <combatPower>100</combatPower>
         <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
         <itemQuality>Normal</itemQuality>
         <weaponMoney>
@@ -48,7 +47,7 @@
             <max>300</max>
         </weaponMoney>
         <weaponTags Inherit="False">
-            <li>Longsword</li>
+            <li>VFEClaymore</li>
         </weaponTags>
         <techHediffsMoney>
             <min>9999</min>
