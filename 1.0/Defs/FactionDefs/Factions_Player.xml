@@ -21,6 +21,7 @@
         <geneticVariance>1</geneticVariance>
         <startingResearchTags>
             <li>TribalStart</li>
+            <li>VFE_MedievalStart</li>
         </startingResearchTags>
         <hairTags>
             <li>Rural</li>
