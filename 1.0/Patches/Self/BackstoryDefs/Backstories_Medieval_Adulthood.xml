@@ -430,11 +430,11 @@
                     </spawnCategories>
                 </REB_Code.BackstoryDef>
 
-                <!-- Servant -->
+                <!-- Noble servant -->
                 <REB_Code.BackstoryDef>
-                    <defName>VFEMA012</defName>
+                    <defName>VFEMA013</defName>
                     <slot>Adulthood</slot>
-                    <title>Servant</title>
+                    <title>Noble servant</title>
                     <titleShort>Servant</titleShort>
                     <baseDesc>[PAWN_nameDef] was a servant in a prestigious household, carrying out mundane tasks such as cooking and cleaning. [PAWN_pronoun] has developed a more pleasant mannerism as a result, as well as an appreciation of the finer arts around [PAWN_objective].</baseDesc>
                     <skillGains>
