@@ -13,7 +13,7 @@
                 <li Class="PatchOperationAddModExtension">
                     <xpath>/Defs/ThingDef[defName="VWE_MeleeWeapon_Shovel"]</xpath>
                     <value>
-                        <li Class="VFEMedieval.ThingDefExtension">
+                        <li Class="VanillaFactionsExpanded.ThingDefExtension">
                             <usableWithShields>true</usableWithShields>
                         </li>
                     </value>
@@ -22,7 +22,7 @@
                 <li Class="PatchOperationAddModExtension">
                     <xpath>/Defs/ThingDef[defName="VWE_MeleeWeapon_Baton"]</xpath>
                     <value>
-                        <li Class="VFEMedieval.ThingDefExtension">
+                        <li Class="VanillaFactionsExpanded.ThingDefExtension">
                             <usableWithShields>true</usableWithShields>
                         </li>
                     </value>
@@ -31,7 +31,7 @@
                 <li Class="PatchOperationAddModExtension">
                     <xpath>/Defs/ThingDef[defName="VWE_MeleeWeapon_CombatKnife"]</xpath>
                     <value>
-                        <li Class="VFEMedieval.ThingDefExtension">
+                        <li Class="VanillaFactionsExpanded.ThingDefExtension">
                             <usableWithShields>true</usableWithShields>
                         </li>
                     </value>
@@ -40,7 +40,7 @@
                 <li Class="PatchOperationAddModExtension">
                     <xpath>/Defs/ThingDef[defName="VWE_MeleeWeapon_Wrench"]</xpath>
                     <value>
-                        <li Class="VFEMedieval.ThingDefExtension">
+                        <li Class="VanillaFactionsExpanded.ThingDefExtension">
                             <usableWithShields>true</usableWithShields>
                         </li>
                     </value>
@@ -49,7 +49,7 @@
                 <li Class="PatchOperationAddModExtension">
                     <xpath>/Defs/ThingDef[defName="VWE_MeleeWeapon_Cleaver"]</xpath>
                     <value>
-                        <li Class="VFEMedieval.ThingDefExtension">
+                        <li Class="VanillaFactionsExpanded.ThingDefExtension">
                             <usableWithShields>true</usableWithShields>
                         </li>
                     </value>
@@ -58,7 +58,7 @@
                 <li Class="PatchOperationAddModExtension">
                     <xpath>/Defs/ThingDef[defName="VWE_MeleeWeapon_Scalpel"]</xpath>
                     <value>
-                        <li Class="VFEMedieval.ThingDefExtension">
+                        <li Class="VanillaFactionsExpanded.ThingDefExtension">
                             <usableWithShields>true</usableWithShields>
                         </li>
                     </value>

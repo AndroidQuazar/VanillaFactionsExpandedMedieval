@@ -23,7 +23,7 @@
             <li>MedievalMeleeAdvanced</li>
         </weaponTags>
         <modExtensions Inherit="False">
-            <li Class="VFEMedieval.PawnKindDefExtension">
+            <li Class="VanillaFactionsExpanded.PawnKindDefExtension">
                 <shieldMoney>
                     <min>-100</min>
                     <max>500</max>

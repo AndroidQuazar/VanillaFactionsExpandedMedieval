@@ -39,7 +39,7 @@
             </li>
         </tools>
         <modExtensions>
-            <li Class="VFEMedieval.ThingDefExtension">
+            <li Class="VanillaFactionsExpanded.ThingDefExtension">
                 <useFactionColourForPawnKinds>
                     <li>VFE_Medieval_Footsoldier</li>
                     <li>VFE_Medieval_Knight</li>
@@ -74,7 +74,7 @@
         <comps>
             <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
             </li>
-            <li Class="VFEMedieval.CompProperties_Shield">
+            <li Class="VanillaFactionsExpanded.CompProperties_Shield">
                 <shieldTags>
                     <li>MedievalBasic</li>
                 </shieldTags>
@@ -135,7 +135,7 @@
         <comps>
             <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
             </li>
-            <li Class="VFEMedieval.CompProperties_Shield">
+            <li Class="VanillaFactionsExpanded.CompProperties_Shield">
                 <shieldTags>
                     <li>MedievalDecent</li>
                 </shieldTags>

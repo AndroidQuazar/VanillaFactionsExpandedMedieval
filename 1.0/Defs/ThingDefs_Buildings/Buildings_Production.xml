@@ -39,7 +39,7 @@
                 <maxSafeTemperature>32</maxSafeTemperature>
                 <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
             </li>
-            <li Class="VFEMedieval.CompProperties_WineFermenter">
+            <li Class="VanillaFactionsExpanded.CompProperties_WineFermenter">
                 <mustCapacity>10</mustCapacity>
                 <awfulQualityAgeDaysThreshold>1</awfulQualityAgeDaysThreshold>
                 <poorQualityAgeDaysThreshold>3</poorQualityAgeDaysThreshold>

@@ -4,7 +4,7 @@
     <ScenPartDef>
         <defName>VFE_ForcedFactionGoodwill</defName>
         <label>forced faction relations</label>
-        <scenPartClass>VFEMedieval.ScenPart_ForcedFactionGoodwill</scenPartClass>
+        <scenPartClass>VanillaFactionsExpanded.ScenPart_ForcedFactionGoodwill</scenPartClass>
         <category>Misc</category>
         <selectionWeight>1.0</selectionWeight>
         <summaryPriority>340</summaryPriority>

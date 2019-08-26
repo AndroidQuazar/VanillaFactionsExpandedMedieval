@@ -5,7 +5,7 @@
     <Operation Class="PatchOperationAddModExtension">
         <xpath>/Defs/ThingDef[@Name="OrbitalWeaponBase"]</xpath>
         <value>
-            <li Class="VFEMedieval.ThingDefExtension">
+            <li Class="VanillaFactionsExpanded.ThingDefExtension">
                 <usableWithShields>true</usableWithShields>
             </li>
         </value>

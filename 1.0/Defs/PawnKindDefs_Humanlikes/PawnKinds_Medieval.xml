@@ -15,7 +15,7 @@
             <li>MedievalBasic</li>
         </apparelTags>
         <modExtensions>
-            <li Class="VFEMedieval.PawnKindDefExtension">
+            <li Class="VanillaFactionsExpanded.PawnKindDefExtension">
                 <factionColourApparelPartList>
                     <li>Torso</li>
                     <li>Torso</li>
@@ -40,7 +40,7 @@
             <li>VFE_Apparel_Tabard</li>
         </apparelRequired>
         <modExtensions Inherit="False">
-            <li Class="VFEMedieval.PawnKindDefExtension">
+            <li Class="VanillaFactionsExpanded.PawnKindDefExtension">
                 <factionColourApparelPartList>
                     <li>Torso</li>
                 </factionColourApparelPartList>
@@ -61,7 +61,7 @@
     <PawnKindDef Name="VFE_MedievalEliteMilitaryBase" ParentName="VFE_MedievalMilitaryBase" Abstract="True">
         <maxGenerationAge>45</maxGenerationAge>
         <modExtensions Inherit="False">
-            <li Class="VFEMedieval.PawnKindDefExtension">
+            <li Class="VanillaFactionsExpanded.PawnKindDefExtension">
                 <factionColourApparelPartList>
                     <li>Torso</li>
                 </factionColourApparelPartList>

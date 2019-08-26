@@ -2,28 +2,28 @@
 <LanguageData>
 
     <!-- Shield -->
-    <VFEMedieval.EquipShield>Equip {0} as shield</VFEMedieval.EquipShield>
-    <VFEMedieval.EquipWarningShieldUnusable>(unusable with {0})</VFEMedieval.EquipWarningShieldUnusable>
-    <VFEMedieval.EquipWarningShieldUnusableWithWeapon>({0} will be unusable)</VFEMedieval.EquipWarningShieldUnusableWithWeapon>
+    <VanillaFactionsExpanded.EquipShield>Equip {0} as shield</VanillaFactionsExpanded.EquipShield>
+    <VanillaFactionsExpanded.EquipWarningShieldUnusable>(unusable with {0})</VanillaFactionsExpanded.EquipWarningShieldUnusable>
+    <VanillaFactionsExpanded.EquipWarningShieldUnusableWithWeapon>({0} will be unusable)</VanillaFactionsExpanded.EquipWarningShieldUnusableWithWeapon>
 
-    <VFEMedieval.Protects>Protects</VFEMedieval.Protects>
+    <VanillaFactionsExpanded.Protects>Protects</VanillaFactionsExpanded.Protects>
 
     <!-- Wine barrel -->
-    <VFEMedieval.NoMust>need must</VFEMedieval.NoMust>
-    <VFEMedieval.ContainsMust>Contains {0} / {1} must</VFEMedieval.ContainsMust>
-    <VFEMedieval.ContainsWine>Contains {0} / {1} wine</VFEMedieval.ContainsWine>
-    <VFEMedieval.TargetWineQuality>Target quality: {0}</VFEMedieval.TargetWineQuality>
-    <VFEMedieval.TargetWineQualityMulti>Set target quality</VFEMedieval.TargetWineQualityMulti>
-    <VFEMedieval.TargetWineQuality_Description>Your colonists will remove the wine from this barrel when it reaches the specified target quality.</VFEMedieval.TargetWineQuality_Description>
+    <VanillaFactionsExpanded.NoMust>need must</VanillaFactionsExpanded.NoMust>
+    <VanillaFactionsExpanded.ContainsMust>Contains {0} / {1} must</VanillaFactionsExpanded.ContainsMust>
+    <VanillaFactionsExpanded.ContainsWine>Contains {0} / {1} wine</VanillaFactionsExpanded.ContainsWine>
+    <VanillaFactionsExpanded.TargetWineQuality>Target quality: {0}</VanillaFactionsExpanded.TargetWineQuality>
+    <VanillaFactionsExpanded.TargetWineQualityMulti>Set target quality</VanillaFactionsExpanded.TargetWineQualityMulti>
+    <VanillaFactionsExpanded.TargetWineQuality_Description>Your colonists will remove the wine from this barrel when it reaches the specified target quality.</VanillaFactionsExpanded.TargetWineQuality_Description>
 
     <!-- Scenario parts -->
-    <VFEMedieval.ScenPart_ForcedFactionRelations>Faction relation modifiers</VFEMedieval.ScenPart_ForcedFactionRelations>
-    <VFEMedieval.NumberRange>{0} to {1}</VFEMedieval.NumberRange>
-    <VFEMedieval.AllFactions>All factions</VFEMedieval.AllFactions>
-    <VFEMedieval.AllFactionsIncludingHidden>All factions including hidden</VFEMedieval.AllFactionsIncludingHidden>
-    <VFEMedieval.AlwaysHostile>Always hostile</VFEMedieval.AlwaysHostile>
-    <VFEMedieval.AffectHiddenFactions>Affect hidden</VFEMedieval.AffectHiddenFactions>
-    <VFEMedieval.StartingGoodwill>Starting</VFEMedieval.StartingGoodwill>
-    <VFEMedieval.NaturalGoodwill>Natural</VFEMedieval.NaturalGoodwill>
+    <VanillaFactionsExpanded.ScenPart_ForcedFactionRelations>Faction relation modifiers</VanillaFactionsExpanded.ScenPart_ForcedFactionRelations>
+    <VanillaFactionsExpanded.NumberRange>{0} to {1}</VanillaFactionsExpanded.NumberRange>
+    <VanillaFactionsExpanded.AllFactions>All factions</VanillaFactionsExpanded.AllFactions>
+    <VanillaFactionsExpanded.AllFactionsIncludingHidden>All factions including hidden</VanillaFactionsExpanded.AllFactionsIncludingHidden>
+    <VanillaFactionsExpanded.AlwaysHostile>Always hostile</VanillaFactionsExpanded.AlwaysHostile>
+    <VanillaFactionsExpanded.AffectHiddenFactions>Affect hidden</VanillaFactionsExpanded.AffectHiddenFactions>
+    <VanillaFactionsExpanded.StartingGoodwill>Starting</VanillaFactionsExpanded.StartingGoodwill>
+    <VanillaFactionsExpanded.NaturalGoodwill>Natural</VanillaFactionsExpanded.NaturalGoodwill>
 
 </LanguageData>

@@ -5,7 +5,7 @@
     <Operation Class="PatchOperationAddModExtension">
         <xpath>/Defs/ThingDef[defName="MeleeWeapon_Club"]</xpath>
         <value>
-            <li Class="VFEMedieval.ThingDefExtension">
+            <li Class="VanillaFactionsExpanded.ThingDefExtension">
                 <usableWithShields>true</usableWithShields>
             </li>
         </value>
@@ -14,7 +14,7 @@
     <Operation Class="PatchOperationAddModExtension">
         <xpath>/Defs/ThingDef[defName="MeleeWeapon_Knife"]</xpath>
         <value>
-            <li Class="VFEMedieval.ThingDefExtension">
+            <li Class="VanillaFactionsExpanded.ThingDefExtension">
                 <usableWithShields>true</usableWithShields>
             </li>
         </value>
@@ -23,7 +23,7 @@
     <Operation Class="PatchOperationAddModExtension">
         <xpath>/Defs/ThingDef[defName="MeleeWeapon_Ikwa"]</xpath>
         <value>
-            <li Class="VFEMedieval.ThingDefExtension">
+            <li Class="VanillaFactionsExpanded.ThingDefExtension">
                 <usableWithShields>true</usableWithShields>
             </li>
         </value>

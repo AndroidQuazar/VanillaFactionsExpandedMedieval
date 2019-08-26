@@ -2,6 +2,9 @@
 <Manifest>
     <identifier>VanillaFactionsExpandedMedieval</identifier>
     <version>1.0.0.0</version>
+    <dependencies>
+        <li>VanillaFactionsExpandedCore</li>
+    </dependencies>
     <!-- <manifestUri></manifestUri>
     <downloadUri></downloadUri> -->
 </Manifest>

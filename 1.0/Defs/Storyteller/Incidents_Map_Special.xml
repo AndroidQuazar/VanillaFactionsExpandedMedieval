@@ -7,13 +7,13 @@
         <targetTags>
             <li>Map_PlayerHome</li>
         </targetTags>
-        <workerClass>VFEMedieval.IncidentWorker_RaidEnemySpecial</workerClass>
+        <workerClass>VanillaFactionsExpanded.IncidentWorker_RaidEnemySpecial</workerClass>
         <baseChance>0</baseChance>
         <category>ThreatBig</category>
         <pointsScaleable>false</pointsScaleable>
         <tale>Raid</tale>
         <modExtensions>
-            <li Class="VFEMedieval.IncidentDefExtension">
+            <li Class="VanillaFactionsExpanded.IncidentDefExtension">
                 <forcedFaction>VFE_KingdomRough</forcedFaction>
                 <forcedPointsRange>
                     <min>150</min>

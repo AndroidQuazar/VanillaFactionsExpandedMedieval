@@ -58,7 +58,7 @@
                 <needLevelOffset>1</needLevelOffset>
                 <listOrder>10</listOrder>
             </li>
-            <li Class="VFEMedieval.CompProperties_IngestedThoughtFromQuality">
+            <li Class="VanillaFactionsExpanded.CompProperties_IngestedThoughtFromQuality">
                 <ingestedThought>VFE_DrankWine</ingestedThought>
             </li>
             <li>
@@ -87,7 +87,7 @@
             </li>
         </tools>
         <modExtensions>
-            <li Class="VFEMedieval.ThingDefExtension">
+            <li Class="VanillaFactionsExpanded.ThingDefExtension">
                 <usableWithShields>true</usableWithShields>
             </li>
         </modExtensions>

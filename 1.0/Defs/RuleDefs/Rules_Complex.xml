@@ -5,7 +5,7 @@
         <defName>VFE_MedievalSettlement</defName>
         <symbol>VFE_medievalSettlement</symbol>
         <resolvers>
-            <li Class="VFEMedieval.SymbolResolver_MedievalSettlement">
+            <li Class="VanillaFactionsExpanded.SymbolResolver_MedievalSettlement">
                 <minRectSize>(12, 12)</minRectSize>
             </li>
         </resolvers>
@@ -15,7 +15,7 @@
         <defName>VFE_MedievalEdgeDefense</defName>
         <symbol>VFE_medievalEdgeDefense</symbol>
         <resolvers>
-            <li Class="VFEMedieval.SymbolResolver_MedievalEdgeDefense">
+            <li Class="VanillaFactionsExpanded.SymbolResolver_MedievalEdgeDefense">
                 <minRectSize>(2, 2)</minRectSize>
             </li>
         </resolvers>
@@ -36,7 +36,7 @@
         <defName>VFE_AddMustToWineBarrels</defName>
         <symbol>VFE_addMustToWineBarrels</symbol>
         <resolvers>
-            <li Class="VFEMedieval.SymbolResolver_AddMustToWineBarrels" />
+            <li Class="VanillaFactionsExpanded.SymbolResolver_AddMustToWineBarrels" />
         </resolvers>
     </RuleDef>
 

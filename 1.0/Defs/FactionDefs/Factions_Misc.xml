@@ -130,7 +130,7 @@
         </pawnGroupMakers>
         <homeIconPath>World/WorldObjects/MedievalSettlement</homeIconPath>
         <modExtensions>
-            <li Class="VFEMedieval.FactionDefExtension">
+            <li Class="VanillaFactionsExpanded.FactionDefExtension">
                 <settlementGenerationSymbol>VFE_medievalSettlement</settlementGenerationSymbol>
             </li>
         </modExtensions>

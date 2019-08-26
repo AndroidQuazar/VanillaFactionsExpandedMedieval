@@ -100,7 +100,7 @@
                 </li>
 
                 <!-- Faction relations -->
-                <li Class="VFEMedieval.ScenPart_ForcedFactionGoodwill">
+                <li Class="VanillaFactionsExpanded.ScenPart_ForcedFactionGoodwill">
                     <def>VFE_ForcedFactionGoodwill</def>
                     <factionDef>VFE_KingdomRough</factionDef>
                     <alwaysHostile>true</alwaysHostile>

@@ -5,7 +5,7 @@
     <Operation Class="PatchOperationAddModExtension">
         <xpath>/Defs/ResearchProjectDef[defName="PsychoidBrewing"]</xpath>
         <value>
-            <li Class="VFEMedieval.ResearchProjectDefExtension">
+            <li Class="VanillaFactionsExpanded.ResearchProjectDefExtension">
                 <greylistedTags>
                     <li>VFE_MedievalStart</li>
                 </greylistedTags>
@@ -16,7 +16,7 @@
     <Operation Class="PatchOperationAddModExtension">
         <xpath>/Defs/ResearchProjectDef[defName="TreeSowing"]</xpath>
         <value>
-            <li Class="VFEMedieval.ResearchProjectDefExtension">
+            <li Class="VanillaFactionsExpanded.ResearchProjectDefExtension">
                 <greylistedTags>
                     <li>VFE_MedievalStart</li>
                 </greylistedTags>

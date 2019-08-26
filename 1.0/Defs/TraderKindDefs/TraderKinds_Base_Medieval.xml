@@ -218,7 +218,7 @@
                     <max>10</max>
                 </countRange>
             </li>
-            <li Class="VFEMedieval.StockGenerator_MedievalMercs">
+            <li Class="VanillaFactionsExpanded.StockGenerator_MedievalMercs">
                 <countRange>
                     <min>2</min>
                     <max>4</max>

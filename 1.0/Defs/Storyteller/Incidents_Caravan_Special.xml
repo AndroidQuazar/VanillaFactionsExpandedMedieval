@@ -9,7 +9,7 @@
             <li>Caravan</li>
             <li>Map_TempIncident</li>
         </targetTags>
-        <workerClass>VFEMedieval.IncidentWorker_BlackKnight</workerClass>
+        <workerClass>VanillaFactionsExpanded.IncidentWorker_BlackKnight</workerClass>
         <pointsScaleable>false</pointsScaleable>
         <minRefireDays>0</minRefireDays>
         <letterText>{0} has encountered a mysterious knight in black who appears to be guarding a bridge!</letterText>

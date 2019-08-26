@@ -5,7 +5,7 @@
         <defName>VFE_CastleEdgeWalls</defName>
         <symbol>VFE_castleEdgeWalls</symbol>
         <resolvers>
-            <li Class="VFEMedieval.SymbolResolver_CastleEdgeWalls" />
+            <li Class="VanillaFactionsExpanded.SymbolResolver_CastleEdgeWalls" />
         </resolvers>
     </RuleDef>
 
@@ -13,7 +13,7 @@
         <defName>VFE_CastleEdgeSandbags</defName>
         <symbol>VFE_castleEdgeSandbags</symbol>
         <resolvers>
-            <li Class="VFEMedieval.SymbolResolver_CastleEdgeSandbags" />
+            <li Class="VanillaFactionsExpanded.SymbolResolver_CastleEdgeSandbags" />
         </resolvers>
     </RuleDef>
 

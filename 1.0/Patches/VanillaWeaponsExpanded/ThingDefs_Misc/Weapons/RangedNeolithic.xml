@@ -13,7 +13,7 @@
                 <li Class="PatchOperationAddModExtension">
                     <xpath>/Defs/ThingDef[defName="VWE_Throwing_Rocks"]</xpath>
                     <value>
-                        <li Class="VFEMedieval.ThingDefExtension">
+                        <li Class="VanillaFactionsExpanded.ThingDefExtension">
                             <usableWithShields>true</usableWithShields>
                         </li>
                     </value>

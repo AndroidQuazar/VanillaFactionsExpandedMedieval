@@ -13,7 +13,7 @@
                 <li Class="PatchOperationAddModExtension">
                     <xpath>/Defs/ThingDef[defName="VWE_Gun_Flintlock"]</xpath>
                     <value>
-                        <li Class="VFEMedieval.ThingDefExtension">
+                        <li Class="VanillaFactionsExpanded.ThingDefExtension">
                             <usableWithShields>true</usableWithShields>
                         </li>
                     </value>
@@ -22,7 +22,7 @@
                 <li Class="PatchOperationAddModExtension">
                     <xpath>/Defs/ThingDef[defName="VWE_Throwing_Knives"]</xpath>
                     <value>
-                        <li Class="VFEMedieval.ThingDefExtension">
+                        <li Class="VanillaFactionsExpanded.ThingDefExtension">
                             <usableWithShields>true</usableWithShields>
                         </li>
                     </value>
@@ -31,7 +31,7 @@
                 <li Class="PatchOperationAddModExtension">
                     <xpath>/Defs/ThingDef[defName="VWE_Tool_Whip"]</xpath>
                     <value>
-                        <li Class="VFEMedieval.ThingDefExtension">
+                        <li Class="VanillaFactionsExpanded.ThingDefExtension">
                             <usableWithShields>true</usableWithShields>
                         </li>
                     </value>
