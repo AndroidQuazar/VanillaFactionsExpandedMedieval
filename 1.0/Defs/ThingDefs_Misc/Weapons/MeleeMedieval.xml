@@ -3,7 +3,7 @@
 
     <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
         <!-- Identical to the longsword but exclusive to the black knight and cannot be purchased or produced -->
-        <defName>VFE_MeleeWeapon_Claymore</defName>
+        <defName>VFEM_MeleeWeapon_Claymore</defName>
         <label>claymore</label>
         <description>The ancient weapon of kings, the longsword can be used for slashing or stabbing.</description>
         <graphicData>

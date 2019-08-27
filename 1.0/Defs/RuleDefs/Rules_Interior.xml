@@ -2,10 +2,10 @@
 <Defs>
 
     <RuleDef>
-        <defName>VFE_Interior_Winery</defName>
-        <symbol>VFE_interior_winery</symbol>
+        <defName>VFEM_Interior_Winery</defName>
+        <symbol>VFEM_interior_winery</symbol>
         <resolvers>
-            <li Class="VanillaFactionsExpanded.SymbolResolver_Interior_Winery">
+            <li Class="VFEMedieval.SymbolResolver_Interior_Winery">
                 <minRectSize>(2, 2)</minRectSize>
             </li>
         </resolvers>

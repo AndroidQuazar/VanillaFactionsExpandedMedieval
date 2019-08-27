@@ -16,7 +16,7 @@ namespace VFEMedieval
         {
             get
             {
-                return ThingRequest.ForDef(ThingDefOf.VFE_WineBarrel);
+                return ThingRequest.ForDef(ThingDefOf.VFEM_WineBarrel);
             }
         }
 
@@ -52,7 +52,7 @@ namespace VFEMedieval
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            return new Job(JobDefOf.VFE_TakeWineOutOfWineBarrel, t);
+            return new Job(JobDefOf.VFEM_TakeWineOutOfWineBarrel, t);
         }
 
     }

@@ -2,7 +2,7 @@
 <Defs>
 
     <DamageDef ParentName="CutBase">
-        <defName>VFE_CutBlackKnight</defName>
+        <defName>VFEM_CutBlackKnight</defName>
         <workerClass>DamageWorker_AddInjury</workerClass>
         <cutExtraTargetsCurve IsNull="True"/>
         <cutCleaveBonus>1</cutCleaveBonus>

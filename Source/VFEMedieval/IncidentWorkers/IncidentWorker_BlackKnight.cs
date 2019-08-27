@@ -32,7 +32,7 @@ namespace VFEMedieval
             var pawnList = new List<Pawn>();
 
             // Spawn the legend himself
-            var blackKnight = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.VFE_BlackKnight, Find.FactionManager.FirstFactionOfDef(PawnKindDefOf.VFE_BlackKnight.defaultFactionType), mustBeCapableOfViolence: true, fixedGender: Gender.Male));
+            var blackKnight = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.VFEM_BlackKnight, Find.FactionManager.FirstFactionOfDef(PawnKindDefOf.VFEM_BlackKnight.defaultFactionType), mustBeCapableOfViolence: true, fixedGender: Gender.Male));
             pawnList.Add(blackKnight);
 
             return pawnList;

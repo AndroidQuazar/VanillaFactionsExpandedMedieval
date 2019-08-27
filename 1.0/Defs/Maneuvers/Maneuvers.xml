@@ -2,11 +2,11 @@
 <Defs>
 
     <ManeuverDef>
-        <defName>VFE_SlashBlackKnight</defName>
-        <requiredCapacity>VFE_CutBlackKnight</requiredCapacity>
+        <defName>VFEM_SlashBlackKnight</defName>
+        <requiredCapacity>VFEM_CutBlackKnight</requiredCapacity>
         <verb>
             <verbClass>Verb_MeleeAttackDamage</verbClass>
-            <meleeDamageDef>VFE_CutBlackKnight</meleeDamageDef>
+            <meleeDamageDef>VFEM_CutBlackKnight</meleeDamageDef>
         </verb>
         <logEntryDef>MeleeAttack</logEntryDef>
         <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>

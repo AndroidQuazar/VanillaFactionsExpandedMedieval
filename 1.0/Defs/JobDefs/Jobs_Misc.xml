@@ -2,23 +2,23 @@
 <Defs>
 
     <JobDef>
-        <defName>VFE_EquipShield</defName>
-        <driverClass>VanillaFactionsExpanded.JobDriver_EquipShield</driverClass>
+        <defName>VFEM_EquipShield</defName>
+        <driverClass>VFECore.JobDriver_EquipShield</driverClass>
         <reportString>equipping TargetA.</reportString>
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     </JobDef>
 
     <JobDef>
-        <defName>VFE_FillWineBarrel</defName>
-        <driverClass>VanillaFactionsExpanded.JobDriver_FillWineBarrel</driverClass>
+        <defName>VFEM_FillWineBarrel</defName>
+        <driverClass>VFEMedieval.JobDriver_FillWineBarrel</driverClass>
         <reportString>filling TargetA.</reportString>
         <suspendable>false</suspendable>
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     </JobDef>
 
     <JobDef>
-        <defName>VFE_TakeWineOutOfWineBarrel</defName>
-        <driverClass>VanillaFactionsExpanded.JobDriver_TakeWineOutOfWineBarrel</driverClass>
+        <defName>VFEM_TakeWineOutOfWineBarrel</defName>
+        <driverClass>VFEMedieval.JobDriver_TakeWineOutOfWineBarrel</driverClass>
         <reportString>taking wine out of TargetA.</reportString>
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     </JobDef>

@@ -13,7 +13,7 @@
                 <li Class="PatchOperationAddModExtension">
                     <xpath>/Defs/ThingDef[defName="VWE_CombatHandgun"]</xpath>
                     <value>
-                        <li Class="VanillaFactionsExpanded.ThingDefExtension">
+                        <li Class="VFECore.ThingDefExtension">
                             <usableWithShields>true</usableWithShields>
                         </li>
                     </value>

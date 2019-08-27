@@ -13,8 +13,8 @@ namespace VFEMedieval
     public static class PawnKindDefOf
     {
 
-        public static PawnKindDef VFE_BlackKnight;
-        public static PawnKindDef VFE_SellSword;
+        public static PawnKindDef VFEM_BlackKnight;
+        public static PawnKindDef VFEM_SellSword;
 
     }
 

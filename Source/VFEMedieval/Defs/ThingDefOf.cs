@@ -13,10 +13,10 @@ namespace VFEMedieval
     public static class ThingDefOf
     {
 
-        public static ThingDef VFE_CobblestoneWall;
-        public static ThingDef VFE_Must;
-        public static ThingDef VFE_WineBarrel;
-        public static ThingDef VFE_Wine;
+        public static ThingDef VFEM_CobblestoneWall;
+        public static ThingDef VFEM_Must;
+        public static ThingDef VFEM_WineBarrel;
+        public static ThingDef VFEM_Wine;
 
         // Vanilla defs
         public static ThingDef MeleeWeapon_LongSword;

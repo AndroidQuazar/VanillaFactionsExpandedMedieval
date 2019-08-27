@@ -5,9 +5,9 @@
     <Operation Class="PatchOperationAddModExtension">
         <xpath>/Defs/ResearchProjectDef[defName="PsychoidBrewing"]</xpath>
         <value>
-            <li Class="VanillaFactionsExpanded.ResearchProjectDefExtension">
+            <li Class="VFECore.ResearchProjectDefExtension">
                 <greylistedTags>
-                    <li>VFE_MedievalStart</li>
+                    <li>VFEM_MedievalStart</li>
                 </greylistedTags>
             </li>
         </value>
@@ -16,9 +16,9 @@
     <Operation Class="PatchOperationAddModExtension">
         <xpath>/Defs/ResearchProjectDef[defName="TreeSowing"]</xpath>
         <value>
-            <li Class="VanillaFactionsExpanded.ResearchProjectDefExtension">
+            <li Class="VFECore.ResearchProjectDefExtension">
                 <greylistedTags>
-                    <li>VFE_MedievalStart</li>
+                    <li>VFEM_MedievalStart</li>
                 </greylistedTags>
             </li>
         </value>
@@ -42,28 +42,28 @@
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ResearchProjectDef[defName="Brewing"]/tags</xpath>
         <value>
-            <li>VFE_MedievalStart</li>
+            <li>VFEM_MedievalStart</li>
         </value>
     </Operation>
 
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ResearchProjectDef[defName="ComplexFurniture"]/tags</xpath>
         <value>
-            <li>VFE_MedievalStart</li>
+            <li>VFEM_MedievalStart</li>
         </value>
     </Operation>
 
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ResearchProjectDef[defName="Stonecutting"]/tags</xpath>
         <value>
-            <li>VFE_MedievalStart</li>
+            <li>VFEM_MedievalStart</li>
         </value>
     </Operation>
 
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ResearchProjectDef[defName="ComplexClothing"]/tags</xpath>
         <value>
-            <li>VFE_MedievalStart</li>
+            <li>VFEM_MedievalStart</li>
         </value>
     </Operation>
 
@@ -85,7 +85,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ResearchProjectDef[defName="Smithing"]/tags</xpath>
         <value>
-            <li>VFE_MedievalStart</li>
+            <li>VFEM_MedievalStart</li>
         </value>
     </Operation>
 

@@ -7,7 +7,7 @@
             <li>[RF] Editable Backstories and Names [1.0]</li>
         </mods>
         <match Class="PatchOperationReplace">
-            <xpath>/Defs/PawnKindDef[defName="VFE_Subject"]/backstoryCategories/li[text()="Tribal"]</xpath>
+            <xpath>/Defs/PawnKindDef[defName="VFEM_Subject"]/backstoryCategories/li[text()="Tribal"]</xpath>
             <value>
                 <li>Medieval</li>
             </value>

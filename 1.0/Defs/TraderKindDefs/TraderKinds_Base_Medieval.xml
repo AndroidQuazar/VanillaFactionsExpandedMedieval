@@ -2,7 +2,7 @@
 <Defs>
 
     <TraderKindDef>
-        <defName>VFE_Base_Medieval_Standard</defName>
+        <defName>VFEM_Base_Medieval_Standard</defName>
         <stockGenerators>
             <li Class="StockGenerator_SingleDef">
                 <thingDef>Silver</thingDef>
@@ -58,7 +58,7 @@
                 </countRange>
             </li>
             <li Class="StockGenerator_SingleDef">
-                <thingDef>VFE_Wine</thingDef>
+                <thingDef>VFEM_Wine</thingDef>
                 <countRange>
                     <min>-40</min>
                     <max>100</max>
@@ -160,7 +160,7 @@
                 <categoryDef>WeaponsMelee</categoryDef>
                 <maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
                 <excludedCategories>
-                    <li>VFE_Shields</li> <!-- Handled in another StockGenerator -->
+                    <li>VFEM_Shields</li> <!-- Handled in another StockGenerator -->
                 </excludedCategories>
                 <thingDefCountRange>
                     <min>3</min>
@@ -172,7 +172,7 @@
                 </countRange>
             </li>
             <li Class="StockGenerator_Category">
-                <categoryDef>VFE_Shields</categoryDef>
+                <categoryDef>VFEM_Shields</categoryDef>
                 <maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
                 <thingDefCountRange>
                     <min>2</min>
@@ -218,7 +218,7 @@
                     <max>10</max>
                 </countRange>
             </li>
-            <li Class="VanillaFactionsExpanded.StockGenerator_MedievalMercs">
+            <li Class="VFEMedieval.StockGenerator_MedievalMercs">
                 <countRange>
                     <min>2</min>
                     <max>4</max>

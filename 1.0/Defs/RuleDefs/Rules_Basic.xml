@@ -2,18 +2,18 @@
 <Defs>
 
     <RuleDef>
-        <defName>VFE_CastleEdgeWalls</defName>
-        <symbol>VFE_castleEdgeWalls</symbol>
+        <defName>VFEM_CastleEdgeWalls</defName>
+        <symbol>VFEM_castleEdgeWalls</symbol>
         <resolvers>
-            <li Class="VanillaFactionsExpanded.SymbolResolver_CastleEdgeWalls" />
+            <li Class="VFEMedieval.SymbolResolver_CastleEdgeWalls" />
         </resolvers>
     </RuleDef>
 
     <RuleDef>
-        <defName>VFE_CastleEdgeSandbags</defName>
-        <symbol>VFE_castleEdgeSandbags</symbol>
+        <defName>VFEM_CastleEdgeSandbags</defName>
+        <symbol>VFEM_castleEdgeSandbags</symbol>
         <resolvers>
-            <li Class="VanillaFactionsExpanded.SymbolResolver_CastleEdgeSandbags" />
+            <li Class="VFEMedieval.SymbolResolver_CastleEdgeSandbags" />
         </resolvers>
     </RuleDef>
 

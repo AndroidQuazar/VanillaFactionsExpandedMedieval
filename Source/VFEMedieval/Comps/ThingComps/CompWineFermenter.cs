@@ -178,7 +178,7 @@ namespace VFEMedieval
                 Log.Warning("Tried to get wine but it's not yet fermented.", false);
                 return null;
             }
-            var wine = ThingMaker.MakeThing(ThingDefOf.VFE_Wine, null);
+            var wine = ThingMaker.MakeThing(ThingDefOf.VFEM_Wine, null);
             wine.stackCount = mustCount;
             if (wine.TryGetComp<CompQuality>() is CompQuality qualityComp)
                 qualityComp.SetQuality(CurrentQuality, ArtGenerationContext.Colony);
@@ -222,7 +222,7 @@ namespace VFEMedieval
             yield return new Command_SetTargetWineQuality()
             {
                 defaultDesc = "VanillaFactionsExpanded.TargetWineQuality_Description".Translate(),
-                icon = ThingDefOf.VFE_Wine.uiIcon,
+                icon = ThingDefOf.VFEM_Wine.uiIcon,
                 wineFermenter = this,
             };
 

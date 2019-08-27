@@ -24,7 +24,7 @@ namespace VFEMedieval
                 if (!Find.FactionManager.AllFactionsVisible.Where(f => f.def.techLevel == TechLevel.Medieval && f != Faction.OfPlayer && f.def.humanlikeFaction).TryRandomElement(out Faction mercFaction))
                     yield break;
 
-                PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.VFE_SellSword, mercFaction, PawnGenerationContext.NonPlayer, forTile, mustBeCapableOfViolence: true);
+                PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.VFEM_SellSword, mercFaction, PawnGenerationContext.NonPlayer, forTile, mustBeCapableOfViolence: true);
                 var merc = PawnGenerator.GeneratePawn(request);
                 
                 // Geralt!

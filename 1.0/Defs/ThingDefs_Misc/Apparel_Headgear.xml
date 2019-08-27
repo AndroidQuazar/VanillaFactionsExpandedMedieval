@@ -2,7 +2,7 @@
 <Defs>
 
     <ThingDef ParentName="ArmorHelmetMakeableBase">
-        <defName>VFE_Apparel_PlateHelmetLight</defName>
+        <defName>VFEM_Apparel_PlateHelmetLight</defName>
         <label>light plate helmet</label>
         <description>A lightweight medieval helmet that provides moderate protection against sharp attacks. Not effective against blunt weapons.</description>
         <techLevel>Medieval</techLevel>
@@ -50,7 +50,7 @@
     </ThingDef>
 
     <ThingDef ParentName="ArmorHelmetMakeableBase">
-        <defName>VFE_Apparel_PlateHelmetHeavy</defName>
+        <defName>VFEM_Apparel_PlateHelmetHeavy</defName>
         <label>heavy plate helmet</label>
         <description>A bulky medieval helmet that provides full-head coverage. Offers a considerable amount of protectuon but restricts the wearer's field of vision.</description>
         <techLevel>Medieval</techLevel>

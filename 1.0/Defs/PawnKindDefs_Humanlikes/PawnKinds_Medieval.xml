@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <PawnKindDef Name="VFE_MedievalPawnKindBase" Abstract="True">
+    <PawnKindDef Name="VFEM_MedievalPawnKindBase" Abstract="True">
         <race>Human</race>
-        <defaultFactionType>VFE_KingdomCivil</defaultFactionType>
+        <defaultFactionType>VFEM_KingdomCivil</defaultFactionType>
         <backstoryCategories>
             <li>Tribal</li>
         </backstoryCategories>
@@ -15,7 +15,7 @@
             <li>MedievalBasic</li>
         </apparelTags>
         <modExtensions>
-            <li Class="VanillaFactionsExpanded.PawnKindDefExtension">
+            <li Class="VFECore.PawnKindDefExtension">
                 <factionColourApparelPartList>
                     <li>Torso</li>
                     <li>Torso</li>
@@ -27,25 +27,25 @@
                     <li>OnSkin</li>
                     <li>Middle</li>
                     <li>Shell</li>
-                    <li>OuterShell</li>
+                    <li>VFEC_OuterShell</li>
                     <li>OnSkin</li>
                 </factionColourApparelLayerList>
             </li>
         </modExtensions>
     </PawnKindDef>
 
-    <PawnKindDef Name="VFE_MedievalMilitaryBase" ParentName="VFE_MedievalPawnKindBase" Abstract="True">
+    <PawnKindDef Name="VFEM_MedievalMilitaryBase" ParentName="VFEM_MedievalPawnKindBase" Abstract="True">
         <minGenerationAge>20</minGenerationAge>
         <apparelRequired>
-            <li>VFE_Apparel_Tabard</li>
+            <li>VFEM_Apparel_Tabard</li>
         </apparelRequired>
         <modExtensions Inherit="False">
-            <li Class="VanillaFactionsExpanded.PawnKindDefExtension">
+            <li Class="VFECore.PawnKindDefExtension">
                 <factionColourApparelPartList>
                     <li>Torso</li>
                 </factionColourApparelPartList>
                 <factionColourApparelLayerList>
-                    <li>OuterShell</li>
+                    <li>VFEC_OuterShell</li>
                 </factionColourApparelLayerList>
                 <shieldMoney>
                     <min>150</min>
@@ -58,15 +58,15 @@
         </modExtensions>
     </PawnKindDef>
 
-    <PawnKindDef Name="VFE_MedievalEliteMilitaryBase" ParentName="VFE_MedievalMilitaryBase" Abstract="True">
+    <PawnKindDef Name="VFEM_MedievalEliteMilitaryBase" ParentName="VFEM_MedievalMilitaryBase" Abstract="True">
         <maxGenerationAge>45</maxGenerationAge>
         <modExtensions Inherit="False">
-            <li Class="VanillaFactionsExpanded.PawnKindDefExtension">
+            <li Class="VFECore.PawnKindDefExtension">
                 <factionColourApparelPartList>
                     <li>Torso</li>
                 </factionColourApparelPartList>
                 <factionColourApparelLayerList>
-                    <li>OuterShell</li>
+                    <li>VFEC_OuterShell</li>
                 </factionColourApparelLayerList>
                 <shieldMoney>
                     <min>300</min>
@@ -80,8 +80,8 @@
     </PawnKindDef>
 
     <!-- Poverty tier - peasant -->
-    <PawnKindDef ParentName="VFE_MedievalPawnKindBase">
-        <defName>VFE_Medieval_Peasant</defName>
+    <PawnKindDef ParentName="VFEM_MedievalPawnKindBase">
+        <defName>VFEM_Medieval_Peasant</defName>
         <label>peasant</label>
         <combatPower>35</combatPower>
         <chemicalAddictionChance>0.10</chemicalAddictionChance>
@@ -116,8 +116,8 @@
     </PawnKindDef>
 
     <!-- Low-tier - merchant, squire -->
-    <PawnKindDef ParentName="VFE_MedievalPawnKindBase">
-        <defName>VFE_Medieval_Merchant</defName>
+    <PawnKindDef ParentName="VFEM_MedievalPawnKindBase">
+        <defName>VFEM_Medieval_Merchant</defName>
         <label>merchant</label>
         <combatPower>40</combatPower>
         <trader>true</trader>
@@ -140,8 +140,8 @@
         <modExtensions Inherit="False"/>
     </PawnKindDef>
 
-    <PawnKindDef ParentName="VFE_MedievalPawnKindBase">
-        <defName>VFE_Medieval_Squire</defName>
+    <PawnKindDef ParentName="VFEM_MedievalPawnKindBase">
+        <defName>VFEM_Medieval_Squire</defName>
         <label>squire</label>
         <combatPower>50</combatPower>
         <canBeSapper>true</canBeSapper>
@@ -166,8 +166,8 @@
     </PawnKindDef>
 
     <!-- Mid-tier - footsoldier, bowman -->
-    <PawnKindDef ParentName="VFE_MedievalMilitaryBase">
-        <defName>VFE_Medieval_Footsoldier</defName>
+    <PawnKindDef ParentName="VFEM_MedievalMilitaryBase">
+        <defName>VFEM_Medieval_Footsoldier</defName>
         <label>footsoldier</label>
         <combatPower>70</combatPower>
         <canBeSapper>true</canBeSapper>
@@ -191,8 +191,8 @@
         </weaponTags>
     </PawnKindDef>
 
-    <PawnKindDef ParentName="VFE_MedievalMilitaryBase">
-        <defName>VFE_Medieval_Bowman</defName>
+    <PawnKindDef ParentName="VFEM_MedievalMilitaryBase">
+        <defName>VFEM_Medieval_Bowman</defName>
         <label>bowman</label>
         <combatPower>70</combatPower>
         <gearHealthRange>
@@ -213,8 +213,8 @@
     </PawnKindDef>
 
     <!-- High-tier - knight, lord -->
-    <PawnKindDef Name="VFE_Medieval_Knight" ParentName="VFE_MedievalEliteMilitaryBase">
-        <defName>VFE_Medieval_Knight</defName>
+    <PawnKindDef Name="VFEM_Medieval_Knight" ParentName="VFEM_MedievalEliteMilitaryBase">
+        <defName>VFEM_Medieval_Knight</defName>
         <label>knight</label>
         <combatPower>100</combatPower>
         <itemQuality>Good</itemQuality>
@@ -237,8 +237,8 @@
         </weaponTags>
     </PawnKindDef>
 
-    <PawnKindDef ParentName="VFE_Medieval_Knight">
-        <defName>VFE_Medieval_Lord</defName>
+    <PawnKindDef ParentName="VFEM_Medieval_Knight">
+        <defName>VFEM_Medieval_Lord</defName>
         <label>lord</label>
         <combatPower>140</combatPower>
         <baseRecruitDifficulty>0.90</baseRecruitDifficulty>

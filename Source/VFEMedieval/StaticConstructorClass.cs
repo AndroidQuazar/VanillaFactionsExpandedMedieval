@@ -15,9 +15,6 @@ namespace VFEMedieval
 
         static StaticConstructorClass()
         {
-            PawnShieldGenerator.Reset();
-            CustomSiegeUtility.SetCache();
-            ScenPartUtility.SetCache();
             foreach (var tDef in DefDatabase<ThingDef>.AllDefs)
             {
                 // Implied stuffProps for stone chunks
@@ -34,7 +31,7 @@ namespace VFEMedieval
             {
                 stuffAdjective = referenceProps.stuffAdjective,
                 commonality = referenceProps.commonality,
-                categories = new List<StuffCategoryDef>() { StuffCategoryDefOf.Rocks },
+                categories = new List<StuffCategoryDef>() { StuffCategoryDefOf.VFEM_StoneChunks },
                 smeltable = referenceProps.smeltable,
                 statOffsets = new List<StatModifier>(),
                 statFactors = new List<StatModifier>(),

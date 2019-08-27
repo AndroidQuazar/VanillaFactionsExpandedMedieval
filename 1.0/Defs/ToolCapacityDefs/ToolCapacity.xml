@@ -2,7 +2,7 @@
 <Defs>
 
     <ToolCapacityDef>
-        <defName>VFE_CutBlackKnight</defName>
+        <defName>VFEM_CutBlackKnight</defName>
     </ToolCapacityDef>
 
 </Defs>

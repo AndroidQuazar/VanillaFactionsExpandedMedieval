@@ -17,7 +17,7 @@ namespace VFEMedieval
         {
             get
             {
-                return ThingRequest.ForDef(ThingDefOf.VFE_WineBarrel);
+                return ThingRequest.ForDef(ThingDefOf.VFEM_WineBarrel);
             }
         }
 
@@ -67,7 +67,7 @@ namespace VFEMedieval
         {
             var wineFermenter = t.TryGetComp<CompWineFermenter>();
             Thing t2 = this.FindMust(pawn, wineFermenter);
-            return new Job(JobDefOf.VFE_FillWineBarrel, t, t2);
+            return new Job(JobDefOf.VFEM_FillWineBarrel, t, t2);
         }
 
         private Thing FindMust(Pawn pawn, CompWineFermenter wineFermenter)
@@ -75,7 +75,7 @@ namespace VFEMedieval
             Predicate<Thing> predicate = (Thing x) => !x.IsForbidden(pawn) && pawn.CanReserve(x, 1, -1, null, false);
             IntVec3 position = pawn.Position;
             Map map = pawn.Map;
-            ThingRequest thingReq = ThingRequest.ForDef(ThingDefOf.VFE_Must);
+            ThingRequest thingReq = ThingRequest.ForDef(ThingDefOf.VFEM_Must);
             PathEndMode peMode = PathEndMode.ClosestTouch;
             TraverseParms traverseParams = TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false);
             Predicate<Thing> validator = predicate;

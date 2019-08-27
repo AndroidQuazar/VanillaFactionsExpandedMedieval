@@ -2,7 +2,7 @@
 <Defs>
 
     <ThingDef ParentName="ArmorSmithableBase">
-        <defName>VFE_Apparel_PlateArmorHeavy</defName>
+        <defName>VFEM_Apparel_PlateArmorHeavy</defName>
         <label>heavy plate armor</label>
         <description>Overlapping solid plates of armor covering the entire body from neck to feet. The plates have been reinforced which offers significantly more protection, but at the cost of mobility.</description>
         <recipeMaker>
@@ -59,7 +59,7 @@
     </ThingDef>
 
     <ThingDef ParentName="ApparelMakeableBase">
-        <defName>VFE_Apparel_Tabard</defName>
+        <defName>VFEM_Apparel_Tabard</defName>
         <label>tabard</label>
         <description>A garment that is worn over armour by medieval militia which depicts their kingdom's coat of arms.</description>
         <graphicData>
@@ -90,7 +90,7 @@
             </bodyPartGroups>
             <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Tabard/Tabard</wornGraphicPath>
             <layers>
-                <li>OuterShell</li>
+                <li>VFEC_OuterShell</li>
             </layers>
             <defaultOutfitTags>
                 <li>Soldier</li>

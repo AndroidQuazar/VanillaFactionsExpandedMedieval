@@ -2,7 +2,7 @@
 <Defs>
 
     <ThingDef ParentName="PlantFoodRawBase">
-        <defName>VFE_RawGrapes</defName>
+        <defName>VFEM_RawGrapes</defName>
         <label>grapes</label>
         <description>Raw grapes. Nice to eat, even when raw. Grapes can also be made into must which can then be used to make wine.</description>
         <graphicData>

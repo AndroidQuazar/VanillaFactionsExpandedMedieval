@@ -2,14 +2,14 @@
 <Defs>
 
     <IncidentDef>
-        <defName>VFE_BlackKnight</defName>
+        <defName>VFEM_BlackKnight</defName>
         <label>none shall pass</label>
         <category>ThreatBig</category>
         <targetTags>
             <li>Caravan</li>
             <li>Map_TempIncident</li>
         </targetTags>
-        <workerClass>VanillaFactionsExpanded.IncidentWorker_BlackKnight</workerClass>
+        <workerClass>VFEMedieval.IncidentWorker_BlackKnight</workerClass>
         <pointsScaleable>false</pointsScaleable>
         <minRefireDays>0</minRefireDays>
         <letterText>{0} has encountered a mysterious knight in black who appears to be guarding a bridge!</letterText>

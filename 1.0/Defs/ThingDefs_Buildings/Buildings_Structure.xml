@@ -2,7 +2,7 @@
 <Defs>
 
     <ThingDef ParentName="Wall">
-        <defName>VFE_CobblestoneWall</defName>
+        <defName>VFEM_CobblestoneWall</defName>
         <label>cobblestone wall</label>
         <graphicData>
             <texPath>Things/Building/Linked/RockWall</texPath>
@@ -13,7 +13,7 @@
         </statBases>
         <costStuffCount>1</costStuffCount>
         <stuffCategories Inherit="False">
-            <li>Rocks</li>
+            <li>VFEM_StoneChunks</li>
         </stuffCategories>
     </ThingDef>
 

@@ -2,41 +2,41 @@
 <Defs>
 
     <RuleDef>
-        <defName>VFE_MedievalSettlement</defName>
-        <symbol>VFE_medievalSettlement</symbol>
+        <defName>VFEM_MedievalSettlement</defName>
+        <symbol>VFEM_medievalSettlement</symbol>
         <resolvers>
-            <li Class="VanillaFactionsExpanded.SymbolResolver_MedievalSettlement">
+            <li Class="VFEMedieval.SymbolResolver_MedievalSettlement">
                 <minRectSize>(12, 12)</minRectSize>
             </li>
         </resolvers>
     </RuleDef>
 
     <RuleDef>
-        <defName>VFE_MedievalEdgeDefense</defName>
-        <symbol>VFE_medievalEdgeDefense</symbol>
+        <defName>VFEM_MedievalEdgeDefense</defName>
+        <symbol>VFEM_medievalEdgeDefense</symbol>
         <resolvers>
-            <li Class="VanillaFactionsExpanded.SymbolResolver_MedievalEdgeDefense">
+            <li Class="VFEMedieval.SymbolResolver_MedievalEdgeDefense">
                 <minRectSize>(2, 2)</minRectSize>
             </li>
         </resolvers>
     </RuleDef>
 
     <RuleDef>
-        <defName>VFE_Winery</defName>
-        <symbol>VFE_winery</symbol>
+        <defName>VFEM_Winery</defName>
+        <symbol>VFEM_winery</symbol>
         <resolvers>
             <li Class="SymbolResolver_GenericRoom">
                 <minRectSize>(4, 4)</minRectSize>
-                <interior>VFE_interior_winery</interior>
+                <interior>VFEM_interior_winery</interior>
             </li>
         </resolvers>
     </RuleDef>
 
     <RuleDef>
-        <defName>VFE_AddMustToWineBarrels</defName>
-        <symbol>VFE_addMustToWineBarrels</symbol>
+        <defName>VFEM_AddMustToWineBarrels</defName>
+        <symbol>VFEM_addMustToWineBarrels</symbol>
         <resolvers>
-            <li Class="VanillaFactionsExpanded.SymbolResolver_AddMustToWineBarrels" />
+            <li Class="VFEMedieval.SymbolResolver_AddMustToWineBarrels" />
         </resolvers>
     </RuleDef>
 

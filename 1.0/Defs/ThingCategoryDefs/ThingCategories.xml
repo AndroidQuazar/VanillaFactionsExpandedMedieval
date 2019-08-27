@@ -2,7 +2,7 @@
 <Defs>
 
     <ThingCategoryDef>
-        <defName>VFE_Shields</defName>
+        <defName>VFEM_Shields</defName>
         <label>shields</label>
         <parent>WeaponsMelee</parent>
     </ThingCategoryDef>

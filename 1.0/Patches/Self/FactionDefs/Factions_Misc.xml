@@ -7,7 +7,7 @@
             <li>[RF] Editable Backstories and Names [1.0]</li>
         </mods>
         <match Class="PatchOperationReplace">
-            <xpath>/Defs/FactionDef[@Name="VFE_MedievalFactionBase"]/backstoryCategories/li[text()="Tribal"]</xpath>
+            <xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/backstoryCategories/li[text()="Tribal"]</xpath>
             <value>
                 <li>Medieval</li>
             </value>
@@ -24,14 +24,14 @@
             <operations>
 
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/FactionDef[@Name="VFE_MedievalFactionBase"]</xpath>
+                    <xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]</xpath>
                     <value>
                         <canSiege>true</canSiege>
                     </value>
                 </li>
 
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/FactionDef[@Name="VFE_MedievalFactionBase"]/modExtensions/li[@Class="VanillaFactionsExpanded.FactionDefExtension"]</xpath>
+                    <xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/modExtensions/li[@Class="VFECore.FactionDefExtension"]</xpath>
                     <value>
                         <artilleryBuildingTags>
                             <li>ArtilleryMedieval_BaseDestroyer</li>

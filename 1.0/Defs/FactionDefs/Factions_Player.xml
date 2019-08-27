@@ -2,13 +2,13 @@
 <Defs>
 
     <FactionDef ParentName="PlayerFactionBase">
-        <defName>VFE_PlayerKingdom</defName>
+        <defName>VFEM_PlayerKingdom</defName>
         <label>New Kingdom</label>
         <description>A small kingdom.</description>
         <isPlayer>true</isPlayer>
         <pawnSingular>subject</pawnSingular>
         <pawnsPlural>subjects</pawnsPlural>
-        <basicMemberKind>VFE_Subject</basicMemberKind>
+        <basicMemberKind>VFEM_Subject</basicMemberKind>
         <techLevel>Medieval</techLevel>
         <backstoryCategories>
             <li>Tribal</li>
@@ -16,12 +16,12 @@
         <expandingIconTexture>World/WorldObjects/Expanding/Castle</expandingIconTexture>
         <homeIconPath>World/WorldObjects/MedievalSettlement</homeIconPath>
         <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
-        <factionNameMaker>VFE_NamerFactionMedieval</factionNameMaker>
-        <settlementNameMaker>VFE_NamerSettlementMedieval</settlementNameMaker>
+        <factionNameMaker>VFEM_NamerFactionMedieval</factionNameMaker>
+        <settlementNameMaker>VFEM_NamerSettlementMedieval</settlementNameMaker>
         <geneticVariance>1</geneticVariance>
         <startingResearchTags>
             <li>TribalStart</li>
-            <li>VFE_MedievalStart</li>
+            <li>VFEM_MedievalStart</li>
         </startingResearchTags>
         <hairTags>
             <li>Rural</li>
@@ -31,6 +31,11 @@
                 <li>Cloth</li>
             </thingDefs>
         </apparelStuffFilter>
+        <modExtensions>
+            <li Class="VFECore.FactionDefExtension">
+                <packAnimalTexNameSuffix>MedievalPack</packAnimalTexNameSuffix>
+            </li>
+        </modExtensions>
     </FactionDef>
 
 </Defs>

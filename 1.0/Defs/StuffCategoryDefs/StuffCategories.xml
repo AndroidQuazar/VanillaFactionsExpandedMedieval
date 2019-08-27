@@ -2,8 +2,8 @@
 <Defs>
 
     <StuffCategoryDef>
-        <defName>Rocks</defName>
-        <label>rocks</label>
+        <defName>VFEM_StoneChunks</defName>
+        <label>stone chunks</label>
     </StuffCategoryDef>
 
 </Defs>

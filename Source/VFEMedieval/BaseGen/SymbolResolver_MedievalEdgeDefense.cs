@@ -28,7 +28,7 @@ namespace VFEMedieval
             BaseGen.symbolStack.Push("VFE_castleEdgeSandbags", sandbagParams);
 
             // Generate perimeter
-            edgeWallParams.GetCustom<VFEResolveParams>(VFEResolveParams.Name).edgeWallDef = ThingDefOf.VFE_CobblestoneWall;
+            edgeWallParams.GetCustom<VFEResolveParams>(VFEResolveParams.Name).edgeWallDef = ThingDefOf.VFEM_CobblestoneWall;
             BaseGen.symbolStack.Push("VFE_castleEdgeWalls", rp);
         }
 

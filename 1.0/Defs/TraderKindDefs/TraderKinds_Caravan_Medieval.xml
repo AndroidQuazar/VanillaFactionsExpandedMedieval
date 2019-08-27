@@ -2,7 +2,7 @@
 <Defs>
 
   <TraderKindDef>
-    <defName>VFE_Caravan_Medieval_Farmer</defName>
+    <defName>VFEM_Caravan_Medieval_Farmer</defName>
     <label>animal herder</label>
     <commonality>3</commonality>
     <stockGenerators>
@@ -77,7 +77,7 @@
   </TraderKindDef>
 
   <TraderKindDef>
-    <defName>VFE_Caravan_Medieval_WineMerchant</defName>
+    <defName>VFEM_Caravan_Medieval_WineMerchant</defName>
     <label>wine merchant</label>
     <commonality>2</commonality>
     <stockGenerators>
@@ -89,14 +89,14 @@
         </countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
-        <thingDef>VFE_Wine</thingDef>
+        <thingDef>VFEM_Wine</thingDef>
         <countRange>
           <min>50</min>
           <max>150</max>
         </countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
-        <thingDef>VFE_RawGrapes</thingDef>
+        <thingDef>VFEM_RawGrapes</thingDef>
         <countRange>
           <min>400</min>
           <max>600</max>
@@ -107,7 +107,7 @@
   </TraderKindDef>
 
   <TraderKindDef>
-    <defName>VFE_Caravan_Medieval_ArtPatron</defName>
+    <defName>VFEM_Caravan_Medieval_ArtPatron</defName>
     <label>art patron</label>
     <commonality>1</commonality>
     <stockGenerators>
@@ -172,7 +172,7 @@
   </TraderKindDef>
 
   <TraderKindDef>
-    <defName>VFE_Caravan_Medieval_Armourer</defName>
+    <defName>VFEM_Caravan_Medieval_Armourer</defName>
     <label>armorsmith</label>
     <commonality>2</commonality>
     <stockGenerators>
@@ -198,14 +198,14 @@
         </countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
-        <thingDef>VFE_Apparel_Tabard</thingDef>
+        <thingDef>VFEM_Apparel_Tabard</thingDef>
         <countRange>
           <min>2</min>
           <max>5</max>
         </countRange>
       </li>
       <li Class="StockGenerator_Category">
-        <categoryDef>VFE_Shields</categoryDef>
+        <categoryDef>VFEM_Shields</categoryDef>
         <thingDefCountRange>
           <min>2</min>
           <max>3</max>
@@ -220,7 +220,7 @@
   </TraderKindDef>
 
   <TraderKindDef>
-    <defName>VFE_Caravan_Medieval_Weaponsmith</defName>
+    <defName>VFEM_Caravan_Medieval_Weaponsmith</defName>
     <label>weaponsmith</label>
     <commonality>2</commonality>
     <stockGenerators>
@@ -290,7 +290,7 @@
 
 
   <TraderKindDef>
-    <defName>VFE_Caravan_Medieval_Sellswords</defName>
+    <defName>VFEM_Caravan_Medieval_Sellswords</defName>
     <label>sellswords</label>
     <commonality>1</commonality>
     <commonalityMultFromPopulationIntent>
@@ -330,7 +330,7 @@
           <max>20</max>
         </countRange>
       </li>
-      <li Class="VanillaFactionsExpanded.StockGenerator_MedievalMercs">
+      <li Class="VFEMedieval.StockGenerator_MedievalMercs">
         <countRange>
           <min>2</min>
           <max>3</max>

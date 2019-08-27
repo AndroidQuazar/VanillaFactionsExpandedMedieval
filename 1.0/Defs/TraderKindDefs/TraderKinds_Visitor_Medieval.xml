@@ -2,7 +2,7 @@
 <Defs>
 
     <TraderKindDef>
-        <defName>VFE_Visitor_Medieval_Standard</defName>
+        <defName>VFEM_Visitor_Medieval_Standard</defName>
         <label>trader</label>
         <stockGenerators>
             <li Class="StockGenerator_SingleDef">
@@ -42,7 +42,7 @@
                 </countRange>
             </li>
             <li Class="StockGenerator_SingleDef">
-                <thingDef>VFE_Wine</thingDef>
+                <thingDef>VFEM_Wine</thingDef>
                 <countRange>
                     <min>1</min>
                     <max>10</max>

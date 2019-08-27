@@ -5,7 +5,7 @@
     <Operation Class="PatchOperationAddModExtension">
         <xpath>/Defs/ThingDef[defName="Gun_Revolver"]</xpath>
         <value>
-            <li Class="VanillaFactionsExpanded.ThingDefExtension">
+            <li Class="VFECore.ThingDefExtension">
                 <usableWithShields>true</usableWithShields>
             </li>
         </value>
@@ -14,7 +14,7 @@
     <Operation Class="PatchOperationAddModExtension">
         <xpath>/Defs/ThingDef[defName="Gun_Autopistol"]</xpath>
         <value>
-            <li Class="VanillaFactionsExpanded.ThingDefExtension">
+            <li Class="VFECore.ThingDefExtension">
                 <usableWithShields>true</usableWithShields>
             </li>
         </value>
@@ -23,7 +23,7 @@
     <Operation Class="PatchOperationAddModExtension">
         <xpath>/Defs/ThingDef[defName="Gun_MachinePistol"]</xpath>
         <value>
-            <li Class="VanillaFactionsExpanded.ThingDefExtension">
+            <li Class="VFECore.ThingDefExtension">
                 <usableWithShields>true</usableWithShields>
             </li>
         </value>

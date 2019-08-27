@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <ThingDef Name="VFE_BaseShield" ParentName="BaseMeleeWeapon_Blunt_Quality" Abstract="True">
+    <ThingDef Name="VFEM_BaseShield" ParentName="BaseMeleeWeapon_Blunt_Quality" Abstract="True">
         <techLevel>Medieval</techLevel>
         <thingCategories Inherit="False">
-            <li>VFE_Shields</li>
+            <li>VFEM_Shields</li>
         </thingCategories>
         <equippedStatOffsets>
             <MeleeHitChance>-2</MeleeHitChance>
@@ -39,18 +39,18 @@
             </li>
         </tools>
         <modExtensions>
-            <li Class="VanillaFactionsExpanded.ThingDefExtension">
+            <li Class="VFECore.ThingDefExtension">
                 <useFactionColourForPawnKinds>
-                    <li>VFE_Medieval_Footsoldier</li>
-                    <li>VFE_Medieval_Knight</li>
-                    <li>VFE_Medieval_Lord</li>
+                    <li>VFEM_Medieval_Footsoldier</li>
+                    <li>VFEM_Medieval_Knight</li>
+                    <li>VFEM_Medieval_Lord</li>
                 </useFactionColourForPawnKinds>
             </li>
         </modExtensions>
     </ThingDef>
 
-    <ThingDef ParentName="VFE_BaseShield">
-        <defName>VFE_Shield_Kite</defName>
+    <ThingDef ParentName="VFEM_BaseShield">
+        <defName>VFEM_Shield_Kite</defName>
         <label>kite shield</label>
         <description>A medium-sized wooden shield, with the front decoratively covered by leather. Offers a moderate amount of protection against melee and ranged attacks.</description>
         <graphicData>
@@ -72,9 +72,8 @@
             <Mass>2</Mass>
         </statBases>
         <comps>
-            <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-            </li>
-            <li Class="VanillaFactionsExpanded.CompProperties_Shield">
+            <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon"/>
+            <li Class="VFECore.CompProperties_Shield">
                 <shieldTags>
                     <li>MedievalBasic</li>
                 </shieldTags>
@@ -110,8 +109,8 @@
         </comps>
     </ThingDef>
 
-    <ThingDef ParentName="VFE_BaseShield">
-        <defName>VFE_Shield_Heater</defName>
+    <ThingDef ParentName="VFEM_BaseShield">
+        <defName>VFEM_Shield_Heater</defName>
         <label>heater shield</label>
         <description>A heavy medium-sized steel shield, with the front decoratively covered by leather. Offers a significant amount of protection against melee and ranged attacks.</description>
         <graphicData>
@@ -133,9 +132,8 @@
             <Mass>4</Mass>
         </statBases>
         <comps>
-            <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-            </li>
-            <li Class="VanillaFactionsExpanded.CompProperties_Shield">
+            <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon"/>
+            <li Class="VFECore.CompProperties_Shield">
                 <shieldTags>
                     <li>MedievalDecent</li>
                 </shieldTags>

@@ -2,7 +2,7 @@
 <Defs>
 
     <ThingDef ParentName="BuildingBase">
-        <defName>VFE_WineBarrel</defName>
+        <defName>VFEM_WineBarrel</defName>
         <label>wine barrel</label>
         <description>A barrel for fermenting raw must into wine.</description>
         <graphicData>
@@ -39,7 +39,7 @@
                 <maxSafeTemperature>32</maxSafeTemperature>
                 <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
             </li>
-            <li Class="VanillaFactionsExpanded.CompProperties_WineFermenter">
+            <li Class="VFEMedieval.CompProperties_WineFermenter">
                 <mustCapacity>10</mustCapacity>
                 <awfulQualityAgeDaysThreshold>1</awfulQualityAgeDaysThreshold>
                 <poorQualityAgeDaysThreshold>3</poorQualityAgeDaysThreshold>

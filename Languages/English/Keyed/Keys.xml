@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-    <!-- Shield -->
-    <VanillaFactionsExpanded.EquipShield>Equip {0} as shield</VanillaFactionsExpanded.EquipShield>
-    <VanillaFactionsExpanded.EquipWarningShieldUnusable>(unusable with {0})</VanillaFactionsExpanded.EquipWarningShieldUnusable>
-    <VanillaFactionsExpanded.EquipWarningShieldUnusableWithWeapon>({0} will be unusable)</VanillaFactionsExpanded.EquipWarningShieldUnusableWithWeapon>
-
-    <VanillaFactionsExpanded.Protects>Protects</VanillaFactionsExpanded.Protects>
-
     <!-- Wine barrel -->
     <VanillaFactionsExpanded.NoMust>need must</VanillaFactionsExpanded.NoMust>
     <VanillaFactionsExpanded.ContainsMust>Contains {0} / {1} must</VanillaFactionsExpanded.ContainsMust>
@@ -15,15 +8,5 @@
     <VanillaFactionsExpanded.TargetWineQuality>Target quality: {0}</VanillaFactionsExpanded.TargetWineQuality>
     <VanillaFactionsExpanded.TargetWineQualityMulti>Set target quality</VanillaFactionsExpanded.TargetWineQualityMulti>
     <VanillaFactionsExpanded.TargetWineQuality_Description>Your colonists will remove the wine from this barrel when it reaches the specified target quality.</VanillaFactionsExpanded.TargetWineQuality_Description>
-
-    <!-- Scenario parts -->
-    <VanillaFactionsExpanded.ScenPart_ForcedFactionRelations>Faction relation modifiers</VanillaFactionsExpanded.ScenPart_ForcedFactionRelations>
-    <VanillaFactionsExpanded.NumberRange>{0} to {1}</VanillaFactionsExpanded.NumberRange>
-    <VanillaFactionsExpanded.AllFactions>All factions</VanillaFactionsExpanded.AllFactions>
-    <VanillaFactionsExpanded.AllFactionsIncludingHidden>All factions including hidden</VanillaFactionsExpanded.AllFactionsIncludingHidden>
-    <VanillaFactionsExpanded.AlwaysHostile>Always hostile</VanillaFactionsExpanded.AlwaysHostile>
-    <VanillaFactionsExpanded.AffectHiddenFactions>Affect hidden</VanillaFactionsExpanded.AffectHiddenFactions>
-    <VanillaFactionsExpanded.StartingGoodwill>Starting</VanillaFactionsExpanded.StartingGoodwill>
-    <VanillaFactionsExpanded.NaturalGoodwill>Natural</VanillaFactionsExpanded.NaturalGoodwill>
 
 </LanguageData>

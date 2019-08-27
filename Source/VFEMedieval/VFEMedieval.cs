@@ -10,12 +10,12 @@ using Harmony;
 namespace VFEMedieval
 {
 
-    public class VanillaFactionsExpanded : Mod
+    public class VFEMedieval : Mod
     {
 
-        public VanillaFactionsExpanded(ModContentPack content) : base(content)
+        public VFEMedieval(ModContentPack content) : base(content)
         {
-            harmonyInstance = HarmonyInstance.Create("OskarPotocki.VanillaFactionsExpanded");
+            harmonyInstance = HarmonyInstance.Create("OskarPotocki.VFEMedieval");
         }
 
         public static HarmonyInstance harmonyInstance;

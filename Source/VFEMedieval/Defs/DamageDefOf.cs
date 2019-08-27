@@ -13,7 +13,7 @@ namespace VFEMedieval
     public static class DamageDefOf
     {
 
-        public static DamageDef VFE_CutBlackKnight;
+        public static DamageDef VFEM_CutBlackKnight;
 
     }
 

@@ -2,8 +2,8 @@
 <Defs>
 
     <!-- Ugh, that stench -->
-    <PawnKindDef ParentName="VFE_MedievalPawnKindBase">
-        <defName>VFE_SellSword</defName>
+    <PawnKindDef ParentName="VFEM_MedievalPawnKindBase">
+        <defName>VFEM_SellSword</defName>
         <label>sellsword</label>
         <combatPower>90</combatPower>
         <apparelMoney>
@@ -23,7 +23,7 @@
             <li>MedievalMeleeAdvanced</li>
         </weaponTags>
         <modExtensions Inherit="False">
-            <li Class="VanillaFactionsExpanded.PawnKindDefExtension">
+            <li Class="VFECore.PawnKindDefExtension">
                 <shieldMoney>
                     <min>-100</min>
                     <max>500</max>
@@ -36,8 +36,8 @@
     </PawnKindDef>
 
     <!-- It's just a flesh wound! -->
-    <PawnKindDef ParentName="VFE_Medieval_Knight">
-        <defName>VFE_BlackKnight</defName>
+    <PawnKindDef ParentName="VFEM_Medieval_Knight">
+        <defName>VFEM_BlackKnight</defName>
         <label>black knight</label>
         <defaultFactionType>AncientsHostile</defaultFactionType>
         <apparelIgnoreSeasons>true</apparelIgnoreSeasons>

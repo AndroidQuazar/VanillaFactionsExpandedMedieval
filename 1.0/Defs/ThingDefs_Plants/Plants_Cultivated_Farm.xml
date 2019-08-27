@@ -2,7 +2,7 @@
 <Defs>
 
     <ThingDef ParentName="PlantBase">
-        <defName>VFE_Plant_Grape</defName>
+        <defName>VFEM_Plant_Grape</defName>
         <label>grape plant</label>
         <description>A medium-sized vine that yields grapes when harvested - an essential ingredient in the production of wine that also tastes nice when eaten raw. Takes a long time to initially grow but can be harvested repeatedly in a single lifespan.</description>
         <statBases>
@@ -22,7 +22,7 @@
             <dieIfLeafless>true</dieIfLeafless>
             <harvestTag>Standard</harvestTag>
             <harvestAfterGrowth>0.30</harvestAfterGrowth>
-            <harvestedThingDef>VFE_RawGrapes</harvestedThingDef>
+            <harvestedThingDef>VFEM_RawGrapes</harvestedThingDef>
             <harvestYield>12</harvestYield>
             <sowMinSkill>5</sowMinSkill>
             <sowTags>

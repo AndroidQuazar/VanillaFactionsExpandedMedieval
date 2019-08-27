@@ -19,7 +19,7 @@ namespace VFEMedieval
         {
             get
             {
-                return ThingDefOf.VFE_WineBarrel.GetCompProperties<CompProperties_TemperatureRuinable>().maxSafeTemperature;
+                return ThingDefOf.VFEM_WineBarrel.GetCompProperties<CompProperties_TemperatureRuinable>().maxSafeTemperature;
             }
         }
 
@@ -49,7 +49,7 @@ namespace VFEMedieval
             }
             BaseGen.symbolStack.Push("VFE_addMustToWineBarrels", rp);
             ResolveParams resolveParams3 = rp;
-            resolveParams3.singleThingDef = ThingDefOf.VFE_WineBarrel;
+            resolveParams3.singleThingDef = ThingDefOf.VFEM_WineBarrel;
             resolveParams3.thingRot = new Rot4?((!Rand.Bool) ? Rot4.East : Rot4.North);
             int? fillWithThingsPadding = rp.fillWithThingsPadding;
             resolveParams3.fillWithThingsPadding = new int?((fillWithThingsPadding == null) ? 1 : fillWithThingsPadding.Value);

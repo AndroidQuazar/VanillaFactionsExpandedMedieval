@@ -20,7 +20,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_CombatSupplier"]/stockGenerators/li[categoryDef="WeaponsMelee"]/excludedCategories</xpath>
         <value>
-            <li>VFE_Shields</li>
+            <li>VFEM_Shields</li>
         </value>
     </Operation>
 
