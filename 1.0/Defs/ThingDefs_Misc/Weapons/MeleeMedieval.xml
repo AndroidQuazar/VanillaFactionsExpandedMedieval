@@ -5,7 +5,7 @@
         <!-- Identical to the longsword but exclusive to the black knight and cannot be purchased or produced -->
         <defName>VFEM_MeleeWeapon_Claymore</defName>
         <label>claymore</label>
-        <description>The ancient weapon of kings, the longsword can be used for slashing or stabbing.</description>
+        <description>An ancient two-handed weapon, very rarely seen in use on the rim. Very effective at slashing and stabbing.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/WeaponMelee/Claymore</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -20,7 +20,7 @@
             <WorkToMake>18000</WorkToMake>
             <Mass>1.6</Mass>
         </statBases>
-        <equippedAngleOffset>-65</equippedAngleOffset>
+        <equippedAngleOffset>-45</equippedAngleOffset>
         <stuffCategories>
             <li>Metallic</li>
             <li>Woody</li>

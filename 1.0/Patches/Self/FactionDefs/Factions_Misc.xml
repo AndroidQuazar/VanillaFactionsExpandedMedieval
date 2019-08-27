@@ -17,7 +17,7 @@
     <!-- If Vanilla Furniture Expanded: Security is loaded, medieval factions can siege -->
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>Vanilla Furniture Expanded: Security</li>
+            <li>Vanilla Furniture Expanded - Security</li>
         </mods>
         <match Class="PatchOperationSequence">
             <success>Always</success>
@@ -33,9 +33,7 @@
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/modExtensions/li[@Class="VFECore.FactionDefExtension"]</xpath>
                     <value>
-                        <artilleryBuildingTags>
-                            <li>ArtilleryMedieval_BaseDestroyer</li>
-                        </artilleryBuildingTags>
+                        <siegeParameterSet>VFEM_Medieval</siegeParameterSet>
                     </value>
                 </li>
 
