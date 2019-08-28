@@ -95,7 +95,7 @@
 
     <RecipeDef>
         <defName>VFEM_Make_Must</defName>
-        <label>make must</label>
+        <label>make grape must</label>
         <description>Make must from grapes.</description>
         <jobString>Making must.</jobString>
         <workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -130,7 +130,7 @@
 
     <ThingDef ParentName="ResourceBase">
         <defName>VFEM_Must</defName>
-        <label>must</label>
+        <label>grape must</label>
         <description>Un-fermented wine. This substance needs to ferment in a wine barrel before it becomes drinkable wine.</description>
         <graphicData>
             <texPath>Things/Item/Resource/Must</texPath>

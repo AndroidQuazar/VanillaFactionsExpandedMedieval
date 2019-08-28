@@ -25,7 +25,7 @@ namespace VFEMedieval
 
         public override void Resolve(ResolveParams rp)
         {
-            BaseGen.symbolStack.Push("VFE_winery", rp);
+            BaseGen.symbolStack.Push("VFEM_winery", rp);
             BaseGen.globalSettings.basePart_breweriesCoverage += (float)rp.rect.Area / BaseGen.globalSettings.mainRect.Area;
         }
 

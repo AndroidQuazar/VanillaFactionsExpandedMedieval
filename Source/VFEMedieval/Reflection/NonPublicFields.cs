@@ -7,6 +7,7 @@ using System.Text;
 using UnityEngine;
 using Verse;
 using RimWorld;
+using Harmony;
 
 namespace VFEMedieval
 {
@@ -15,7 +16,7 @@ namespace VFEMedieval
     public static class NonPublicFields
     {
 
-        public static FieldInfo DamageInfo_armorPenetrationInt = typeof(DamageInfo).GetField("armorPenetrationInt", BindingFlags.NonPublic | BindingFlags.Instance);
+        public static FieldInfo DamageInfo_armorPenetrationInt = AccessTools.Field(typeof(DamageInfo), "armorPenetrationInt");
 
     }
 

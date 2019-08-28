@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Integration with VGP -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VGP Garden Drinks</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+            
+                <!-- Remove wine from fermenting barrels -->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="FermentingBarrel" or defName="VG_LargeFermentingBarrel"]/comps/li[@Class="Drinks.CompProperties_UniversalFermenter"]/products/li[thingDef="Wine"]</xpath>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

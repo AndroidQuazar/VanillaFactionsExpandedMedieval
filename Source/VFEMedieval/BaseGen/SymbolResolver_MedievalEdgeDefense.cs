@@ -25,11 +25,11 @@ namespace VFEMedieval
             var sandbagParams = rp;
             sandbagParams.wallStuff = edgeWallParams.wallStuff?.butcherProducts?.FirstOrDefault(p => p.thingDef.IsStuff)?.thingDef;
             sandbagParams.GetCustom<VFEResolveParams>(VFEResolveParams.Name).symmetricalSandbags = true;
-            BaseGen.symbolStack.Push("VFE_castleEdgeSandbags", sandbagParams);
+            BaseGen.symbolStack.Push("VFEM_castleEdgeSandbags", sandbagParams);
 
             // Generate perimeter
             edgeWallParams.GetCustom<VFEResolveParams>(VFEResolveParams.Name).edgeWallDef = ThingDefOf.VFEM_CobblestoneWall;
-            BaseGen.symbolStack.Push("VFE_castleEdgeWalls", rp);
+            BaseGen.symbolStack.Push("VFEM_castleEdgeWalls", rp);
         }
 
     }

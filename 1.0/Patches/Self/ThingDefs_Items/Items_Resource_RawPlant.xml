@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Integration with RimCuisine 2 -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[1.0] RimCuisine 2 Core</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+            
+                <!-- Give our grapes the thoughts that RC2's grapes gave -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFEM_RawGrapes"]/ingestible</xpath>
+                    <value>
+                        <tasteThought>AteRareFood</tasteThought>
+                        <specialThoughtAsIngredient>AteRareAsIngredient</specialThoughtAsIngredient>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

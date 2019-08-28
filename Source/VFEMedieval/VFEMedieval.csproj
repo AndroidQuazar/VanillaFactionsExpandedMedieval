@@ -81,7 +81,9 @@
     <Compile Include="Defs\JobDefOf.cs" />
     <Compile Include="HarmonyPatches\Patch_BackCompatibility.cs" />
     <Compile Include="HarmonyPatches\Patch_Pawn.cs" />
+    <Compile Include="HarmonyPatches\RimCuisine2\Patch_RimCuisineBBDrugPolicies_HarmonyPatches.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_BlackKnight.cs" />
+    <Compile Include="Reflection\NonPublicTypes.cs" />
     <Compile Include="Utilities\BlackKnightUtility.cs" />
     <Compile Include="StaticConstructorClass.cs" />
     <Compile Include="ModCompatibilityCheck.cs" />

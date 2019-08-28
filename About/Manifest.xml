@@ -5,6 +5,10 @@
     <dependencies>
         <li>VanillaFactionsExpandedCore</li>
     </dependencies>
+    <loadAfter>
+        <li>[1.0]RimCuisine2Core</li>
+        <li>[1.0]RimCuisine2:BottlingandBoozeExpansion</li>
+    </loadAfter>
     <!-- <manifestUri></manifestUri>
     <downloadUri></downloadUri> -->
 </Manifest>

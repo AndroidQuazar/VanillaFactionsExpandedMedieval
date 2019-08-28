@@ -79,4 +79,81 @@
         </match>
     </Operation>
 
+    <!-- Integration with Giddy-Up -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Giddy-up! Core</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- Prevent some pawns from using mounts... -->
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>/Defs/PawnKindDef[@Name="VFEM_MedievalPawnKindBase" or @Name="VFEM_MedievalMilitaryBase"]</xpath>
+                    <value>
+                        <li Class="GiddyUpCore.CustomMountsPatch">
+                            <mountChance>0</mountChance>
+                        </li>
+                    </value>
+                </li>
+
+                <!-- Allow high-tiers to use mounts -->
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>/Defs/PawnKindDef[@Name="VFEM_MedievalEliteMilitaryBase"]</xpath>
+                    <value>
+                        <li Class="GiddyUpCore.CustomMountsPatch">
+                            <mountChance>30</mountChance>
+                            <possibleMounts>
+                                <li>
+                                    <key>Muffalo</key>
+                                    <value>25</value>
+                                </li>
+                                <li>
+                                    <key>Dromedary</key>
+                                    <value>25</value>
+                                </li>
+                            </possibleMounts>
+                        </li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>/Defs/PawnKindDef[defName="VFEM_Medieval_Lord"]</xpath>
+                    <value>
+                        <li Class="GiddyUpCore.CustomMountsPatch">
+                            <mountChance>100</mountChance>
+                            <possibleMounts>
+                                <li>
+                                    <key>Muffalo</key>
+                                    <value>25</value>
+                                </li>
+                                <li>
+                                    <key>Dromedary</key>
+                                    <value>25</value>
+                                </li>
+                            </possibleMounts>
+                        </li>
+                    </value>
+                </li>
+
+                <!-- If Vanilla Animals Expanded - Livestock is added, add horses to the mix -->
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Vanilla Animals Expanded — Livestock</li>
+                    </mods>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/PawnKindDef[@Name="VFEM_MedievalEliteMilitaryBase" or defName="VFEM_Medieval_Lord"]/modExtensions/li[@Class="GiddyUpCore.CustomMountsPatch"]/possibleMounts</xpath>
+                        <value>
+                            <li>
+                                <key>AEXP_Horse</key>
+                                <value>100</value>
+                            </li>
+                        </value>
+                    </match>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
 </Patch>

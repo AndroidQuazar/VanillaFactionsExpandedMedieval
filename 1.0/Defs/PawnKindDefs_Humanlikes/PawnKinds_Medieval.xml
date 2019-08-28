@@ -218,7 +218,6 @@
         <label>knight</label>
         <combatPower>100</combatPower>
         <itemQuality>Good</itemQuality>
-        <canBeSapper>true</canBeSapper>
         <apparelMoney>
             <min>1000</min>
             <max>1600</max>
@@ -246,7 +245,6 @@
         <maxGenerationAge>999</maxGenerationAge>
         <itemQuality>Excellent</itemQuality>
         <factionLeader>true</factionLeader>
-        <canBeSapper>true</canBeSapper>
         <apparelMoney>
             <min>1600</min>
             <max>2400</max>

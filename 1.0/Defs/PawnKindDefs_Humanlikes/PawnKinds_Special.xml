@@ -58,6 +58,7 @@
         </techHediffsTags>
         <apparelColor>(30,30,30)</apparelColor>
         <techHediffsChance>1</techHediffsChance>
+        <modExtensions Inherit="False"/>
     </PawnKindDef>
 
 </Defs>
