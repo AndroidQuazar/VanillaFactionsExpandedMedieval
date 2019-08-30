@@ -22,6 +22,7 @@ namespace VFEMedieval
                     ResolveImpliedStoneChunkStuffProperties(tDef, firstStuffProduct.stuffProps);
             }
             ResourceCounter.ResetDefs();
+            MedievalTournamentUtility.SetCache();
         }
 
         private static void ResolveImpliedStoneChunkStuffProperties(ThingDef stoneChunk, StuffProperties referenceProps)

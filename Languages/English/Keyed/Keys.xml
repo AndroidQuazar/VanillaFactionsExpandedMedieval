@@ -9,4 +9,32 @@
     <VanillaFactionsExpanded.TargetWineQualityMulti>Set target quality</VanillaFactionsExpanded.TargetWineQualityMulti>
     <VanillaFactionsExpanded.TargetWineQuality_Description>Your colonists will remove the wine from this barrel when it reaches the specified target quality.</VanillaFactionsExpanded.TargetWineQuality_Description>
 
+    <!-- Tournaments -->
+    <VanillaFactionsExpanded.MedievalTournamentInspectString>Prize: {0} ({1} left)</VanillaFactionsExpanded.MedievalTournamentInspectString>
+    <VanillaFactionsExpanded.TournamentCategory_Melee>melee</VanillaFactionsExpanded.TournamentCategory_Melee>
+    <VanillaFactionsExpanded.TournamentCategory_Jousting>jousting</VanillaFactionsExpanded.TournamentCategory_Jousting>
+    <VanillaFactionsExpanded.TournamentCategory_Archery>archery</VanillaFactionsExpanded.TournamentCategory_Archery>
+
+    <VanillaFactionsExpanded.AttendMedievalTournament>Attend {0}</VanillaFactionsExpanded.AttendMedievalTournament>
+    <VanillaFactionsExpanded.CaravanAttending>Attending {0}</VanillaFactionsExpanded.CaravanAttending>
+
+    <VanillaFactionsExpanded.MedievalTournamentInitial>Placeholder.</VanillaFactionsExpanded.MedievalTournamentInitial>
+
+    <VanillaFactionsExpanded.Participate>Participate</VanillaFactionsExpanded.Participate>
+    <VanillaFactionsExpanded.ParticipateInitial>Placeholder.</VanillaFactionsExpanded.ParticipateInitial>
+    <VanillaFactionsExpanded.PredictedPerformance>odds</VanillaFactionsExpanded.PredictedPerformance>
+    <VanillaFactionsExpanded.CannotParticipate>cannot participate</VanillaFactionsExpanded.CannotParticipate>
+
+    <VanillaFactionsExpanded.TournamentWinLetter>Tournament won</VanillaFactionsExpanded.TournamentWinLetter>
+    <VanillaFactionsExpanded.TournamentWinLetter_Text>Congratulations, {PAWN_labelShort} has finished {0} out of {1} in the tournament! You have gained goodwill with {2} and won the following prizes:\n\n{3}</VanillaFactionsExpanded.TournamentWinLetter_Text>
+
+    <VanillaFactionsExpanded.TournamentLossLetter>Tournament lost</VanillaFactionsExpanded.TournamentLossLetter>>
+    <VanillaFactionsExpanded.TournamentLossLetter_Text>{PAWN_labelShort} was unfortunately not able to win the tournament this time. {PAWN_pronoun} finished {0} out of {1} place.</VanillaFactionsExpanded.TournamentLossLetter_Text>
+
+    <VanillaFactionsExpanded.TournamentXPGain_Melee>{PAWN_labelShort} has gained {0} melee experience.</VanillaFactionsExpanded.TournamentXPGain_Melee>
+    <VanillaFactionsExpanded.TournamentXPGain_Jousting>{PAWN_labelShort} has gained {0} melee and animal handling experience.</VanillaFactionsExpanded.TournamentXPGain_Jousting>
+    <VanillaFactionsExpanded.TournamentXPGain_Archery>{PAWN_labelShort} has gained {0} shooting experience.</VanillaFactionsExpanded.TournamentXPGain_Archery>
+
+    <VanillaFactionsExpanded.Leave>Leave</VanillaFactionsExpanded.Leave>
+
 </LanguageData>

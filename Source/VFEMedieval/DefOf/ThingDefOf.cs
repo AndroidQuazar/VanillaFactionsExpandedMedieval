@@ -19,6 +19,7 @@ namespace VFEMedieval
         public static ThingDef VFEM_Wine;
 
         // Vanilla defs
+        public static ThingDef Bow_Great;
         public static ThingDef MeleeWeapon_LongSword;
 
     }
