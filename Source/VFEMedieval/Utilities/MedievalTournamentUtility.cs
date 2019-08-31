@@ -16,14 +16,32 @@ namespace VFEMedieval
         private const float MeleeEffectivenessNormaliser = 15.1f;
         private const float JoustEffectivenessNormaliser = 8.4f;
         public static readonly IntRange QuestSiteTournamentTimeoutDaysRange = new IntRange(7, 15);
-        public static readonly IntRange CompetitorCountRange = new IntRange(4, 9);
+        public static readonly IntRange CompetitorCountRange = new IntRange(3, 6);
+        public static readonly SimpleCurve EffectivenessAdvantageToWinChanceCurve = new SimpleCurve()
+        {
+            new CurvePoint(-5, 0.02f),
+            new CurvePoint(-4, 0.04f),
+            new CurvePoint(-3, 0.07f),
+            new CurvePoint(-2, 0.13f),
+            new CurvePoint(-1, 0.25f),
+            new CurvePoint(0, 0.5f),
+            new CurvePoint(1, 0.75f),
+            new CurvePoint(2, 0.87f),
+            new CurvePoint(3, 0.93f),
+            new CurvePoint(4, 0.96f),
+            new CurvePoint(5, 0.98f)
+        };
+
+        private const float ExistingPawnSelectChance = 0.7f;
 
         private static float archeryDistance;
+        public static float archeryDisasterDamage;
 
         public static void SetCache()
         {
             var verbProps = ThingDefOf.Bow_Great.Verbs.First(v => v.isPrimary);
             archeryDistance = Mathf.Round(Mathf.Lerp(verbProps.minRange, verbProps.range, 0.75f));
+            archeryDisasterDamage = verbProps.defaultProjectile.projectile.GetDamageAmount(1);
         }
 
         private static float MentalBreakThresholdMultiplierFor(Pawn pawn, float weight)
@@ -38,40 +56,35 @@ namespace VFEMedieval
         private static float BaseMeleeEffectivenessFor(Pawn pawn)
         {
             float accuracy = pawn.GetStatValue(StatDefOf.MeleeHitChance);
-            return Mathf.Pow(accuracy, 3.6f) * MentalBreakThresholdMultiplierFor(pawn, 0.25f) * MeleeEffectivenessNormaliser;
+            return Mathf.Pow(accuracy, 3.6f) * MentalBreakThresholdMultiplierFor(pawn, 0.1f) * MeleeEffectivenessNormaliser;
         }
 
         private static float BaseJoustEffectivenessFor(Pawn pawn)
         {
             float accuracy = pawn.GetStatValue(StatDefOf.MeleeHitChance);
             float tameChance = pawn.GetStatValue(StatDefOf.TameAnimalChance);
-            return (Mathf.Pow(accuracy, 3.6f) * JoustEffectivenessNormaliser + Mathf.Pow(tameChance, 0.625f) * JoustEffectivenessNormaliser) * MentalBreakThresholdMultiplierFor(pawn, 0.25f);
+            return (Mathf.Pow(accuracy, 3.6f) * JoustEffectivenessNormaliser + Mathf.Pow(tameChance, 0.625f) * JoustEffectivenessNormaliser) * MentalBreakThresholdMultiplierFor(pawn, 0.1f);
         }
 
         private static float BaseArcheryEffectivenessFor(Pawn pawn)
         {
             float accuracy = ShotReport.HitFactorFromShooter(pawn, archeryDistance);
-            return accuracy * MentalBreakThresholdMultiplierFor(pawn, 0.5f) * ArcheryEffectivenessNormaliser;
+            return accuracy * MentalBreakThresholdMultiplierFor(pawn, 0.25f) * ArcheryEffectivenessNormaliser;
         }
 
         public static float TournamentEffectivenessFor(Pawn pawn, TournamentCategory category)
         {
-            float baseEffectiveness = 0;
             switch(category)
             {
                 case TournamentCategory.Melee:
-                    baseEffectiveness = BaseMeleeEffectivenessFor(pawn);
-                    break;
+                    return BaseMeleeEffectivenessFor(pawn);
                 case TournamentCategory.Jousting:
-                    baseEffectiveness = BaseJoustEffectivenessFor(pawn);
-                    break;
+                    return BaseJoustEffectivenessFor(pawn);
                 case TournamentCategory.Archery:
-                    baseEffectiveness = BaseArcheryEffectivenessFor(pawn);
-                    break;
+                    return BaseArcheryEffectivenessFor(pawn);
                 default:
                     throw new NotImplementedException();
             }
-            return Mathf.Pow(baseEffectiveness, 2);
         }
 
         public static bool CanParticipate(Pawn pawn, TournamentCategory category)
@@ -93,13 +106,13 @@ namespace VFEMedieval
         public static string TournamentEffectivenessString(float effectiveness)
         {
             string resultStr;
-            if (effectiveness < 5)
+            if (effectiveness < 2)
                 resultStr = "QualityCategory_Awful".Translate();
-            else if (effectiveness < 20)
+            else if (effectiveness < 4)
                 resultStr = "QualityCategory_Poor".Translate();
-            else if (effectiveness < 40)
+            else if (effectiveness < 6)
                 resultStr = "Average".Translate();
-            else if (effectiveness < 70)
+            else if (effectiveness < 8)
                 resultStr = "QualityCategory_Good".Translate();
             else
                 resultStr = "QualityCategory_Excellent".Translate();
@@ -134,6 +147,24 @@ namespace VFEMedieval
         public static Pawn GenerateNewCompetitor(TournamentCategory category, Faction faction)
         {
             return PawnGenerator.GeneratePawn(new PawnGenerationRequest(faction.RandomPawnKind(), faction, forceGenerateNewPawn: true, validatorPreGear: p => CanParticipate(p, category)));
+        }
+
+        public static List<Pawn> GenerateCompetitors(int count, TournamentCategory category, Faction faction, IEnumerable<Pawn> existingPawns = null)
+        {
+            var potentialCompetitors = existingPawns?.ToList() ?? null;
+            var resultList = new List<Pawn>();
+            for (int i = 0; i < count; i++)
+            {
+                if (!potentialCompetitors.NullOrEmpty() && Rand.Chance(ExistingPawnSelectChance))
+                {
+                    var pawn = potentialCompetitors.RandomElement();
+                    resultList.Add(pawn);
+                    potentialCompetitors.Remove(pawn);
+                }
+                else
+                    resultList.Add(GenerateNewCompetitor(category, faction));
+            }
+            return resultList;
         }
 
     }

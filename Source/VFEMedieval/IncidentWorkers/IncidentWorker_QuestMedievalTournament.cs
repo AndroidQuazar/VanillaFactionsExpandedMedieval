@@ -44,16 +44,26 @@ namespace VFEMedieval
             tournament.GenerateRewards();
             Find.WorldObjects.Add(tournament);
 
-            string letterText = def.letterText.Formatted(hostFaction.def.leaderTitle, hostFaction.Name, settlementName, GenLabel.ThingsLabel(tournament.rewards),
-                tournamentCategory.ToStringHuman(), durationDays, hostFaction.leader.Named("PAWN")).AdjustedFor(hostFaction.leader);
-            Find.LetterStack.ReceiveLetter(def.letterLabel, letterText, def.letterDef, tournament, hostFaction);
+            Find.LetterStack.ReceiveLetter(def.letterLabel, GetLetterText(settlementName, tournament, durationDays), def.letterDef, tournament, hostFaction);
 
             return true;
         }
 
+        private string GetLetterText(string settlementName, MedievalTournament tournament, int durationDays)
+        {
+            var hostFaction = tournament.Faction;
+            var textBuilder = new StringBuilder();
+            textBuilder.AppendLine(def.letterText.Formatted(hostFaction.def.leaderTitle, hostFaction.Name, settlementName, GenLabel.ThingsLabel(tournament.rewards), hostFaction.leader.Named("PAWN")).AdjustedFor(hostFaction.leader));
+            textBuilder.AppendLine();
+            textBuilder.AppendLine($"VanillaFactionsExpanded.TournamentIncidentLetterText_{tournament.category}".Translate());
+            textBuilder.AppendLine();
+            textBuilder.AppendLine("VanillaFactionsExpanded.TournamentDurationDays".Translate(durationDays));
+            return textBuilder.ToString().TrimEndNewlines();
+        }
+
         private bool TryFindFaction(out Faction faction)
         {
-            return Find.FactionManager.AllFactions.Where(f => f.def.techLevel == TechLevel.Medieval && !f.defeated && !f.def.hidden && !TournamentExists(f) && !f.HostileTo(Faction.OfPlayer)).TryRandomElement(out faction);
+            return Find.FactionManager.AllFactions.Where(f => !f.IsPlayer && f.def.techLevel == TechLevel.Medieval && !f.defeated && !f.def.hidden && !TournamentExists(f) && !f.HostileTo(Faction.OfPlayer)).TryRandomElement(out faction);
         }
 
         private bool TryFindTile(Faction hostFaction, out int tile, out string settlementName)

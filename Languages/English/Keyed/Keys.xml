@@ -10,6 +10,11 @@
     <VanillaFactionsExpanded.TargetWineQuality_Description>Your colonists will remove the wine from this barrel when it reaches the specified target quality.</VanillaFactionsExpanded.TargetWineQuality_Description>
 
     <!-- Tournaments -->
+    <VanillaFactionsExpanded.TournamentIncidentLetterText_Melee>The category for this tournament is melee. Having a colonist with a high melee accuracy would be an advantage.</VanillaFactionsExpanded.TournamentIncidentLetterText_Melee>
+    <VanillaFactionsExpanded.TournamentIncidentLetterText_Jousting>The category for this tournament is jousting. Having a colonist with high melee accuracy and animal handling skill would be an advantage.</VanillaFactionsExpanded.TournamentIncidentLetterText_Jousting>
+    <VanillaFactionsExpanded.TournamentIncidentLetterText_Archery>The category for this tournament is archery. Having a colonist with a high shooting accuracy and low mental break threshold would be an advantage.</VanillaFactionsExpanded.TournamentIncidentLetterText_Archery>
+    <VanillaFactionsExpanded.TournamentDurationDays>The tournament will last {0} days.</VanillaFactionsExpanded.TournamentDurationDays>
+
     <VanillaFactionsExpanded.MedievalTournamentInspectString>Prize: {0} ({1} left)</VanillaFactionsExpanded.MedievalTournamentInspectString>
     <VanillaFactionsExpanded.TournamentCategory_Melee>melee</VanillaFactionsExpanded.TournamentCategory_Melee>
     <VanillaFactionsExpanded.TournamentCategory_Jousting>jousting</VanillaFactionsExpanded.TournamentCategory_Jousting>
@@ -18,10 +23,10 @@
     <VanillaFactionsExpanded.AttendMedievalTournament>Attend {0}</VanillaFactionsExpanded.AttendMedievalTournament>
     <VanillaFactionsExpanded.CaravanAttending>Attending {0}</VanillaFactionsExpanded.CaravanAttending>
 
-    <VanillaFactionsExpanded.MedievalTournamentInitial>Placeholder.</VanillaFactionsExpanded.MedievalTournamentInitial>
+    <VanillaFactionsExpanded.MedievalTournamentInitial>This tournament is being hosted by {0} of {1}, and the category is {2}. There are {3} other competitors in this tournament, all eager to have a chance at winning the following prizes:\n\n{4}</VanillaFactionsExpanded.MedievalTournamentInitial>
 
     <VanillaFactionsExpanded.Participate>Participate</VanillaFactionsExpanded.Participate>
-    <VanillaFactionsExpanded.ParticipateInitial>Placeholder.</VanillaFactionsExpanded.ParticipateInitial>
+    <VanillaFactionsExpanded.ParticipateInitial>You have chosen to participate in this tournament. Name your champion:</VanillaFactionsExpanded.ParticipateInitial>
     <VanillaFactionsExpanded.PredictedPerformance>odds</VanillaFactionsExpanded.PredictedPerformance>
     <VanillaFactionsExpanded.CannotParticipate>cannot participate</VanillaFactionsExpanded.CannotParticipate>
 
