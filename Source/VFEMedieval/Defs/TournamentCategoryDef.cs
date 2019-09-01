@@ -5,19 +5,17 @@ using System.Text;
 using UnityEngine;
 using Verse;
 using RimWorld;
-using RimWorld.Planet;
 using Harmony;
 
 namespace VFEMedieval
 {
 
-    public enum TournamentCategory
+    public class TournamentCategoryDef : Def
     {
 
-        Undetermined,
-        Melee,
-        Jousting,
-        Archery
+        public float commonality = 1;
+        public Dictionary<SkillDef, float> skillExpGains;
+        public RulePackDef rulePack;
 
     }
 

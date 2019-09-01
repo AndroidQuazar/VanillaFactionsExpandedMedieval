@@ -19,7 +19,7 @@ namespace VFEMedieval
         private const float BaseXPGain = 6000;
         
 
-        public override string Label => $"{base.Label} ({category.ToStringHuman()})";
+        public override string Label => $"{base.Label} ({category.label})";
 
         private TimeoutComp TimeoutComp => GetComponent<TimeoutComp>();
 
@@ -43,7 +43,7 @@ namespace VFEMedieval
 
             // Create dialogue tree
             var leader = Faction.leader;
-            var tourneyNode = new DiaNode("VanillaFactionsExpanded.MedievalTournamentInitial".Translate(leader.LabelShort, Faction.Name, category.ToStringHuman(), competitorCount, GenLabel.ThingsLabel(rewards), leader.Named("PAWN")));
+            var tourneyNode = new DiaNode("VanillaFactionsExpanded.MedievalTournamentInitial".Translate(leader.LabelShort, Faction.Name, category.label, competitorCount, GenLabel.ThingsLabel(rewards), leader.Named("PAWN")));
 
             // Option 1: Participate
             var participateNode = new DiaNode("VanillaFactionsExpanded.ParticipateInitial".Translate());
@@ -128,118 +128,209 @@ namespace VFEMedieval
         private void DoTournament(Caravan caravan, Pawn participant)
         {
             var competitorPool = MedievalTournamentUtility.GenerateCompetitors(competitorCount, category, Faction, PossibleCompetitors);
-            var disasterPool = competitorPool.Concat(caravan.PawnsListForReading).ToList();
+            var fullAudience = competitorPool.Concat(caravan.PawnsListForReading).Where(p => p != participant).ToList();
             float participantEff = MedievalTournamentUtility.TournamentEffectivenessFor(participant, category);
+            var entries = new List<BattleLogEntry_Event>();
+            bool cancelled = false;
 
             // Simulate a progression through the rounds
             int curPlace = competitorCount + 1;
             for (int i = 0; i < competitorCount; i++)
             {
-                Pawn competitor = competitorPool.RandomElement();
+                var competitor = competitorPool.RandomElement();
                 competitorPool.Remove(competitor);
 
                 // This is where battle simulation happens
                 float competitorEff = MedievalTournamentUtility.TournamentEffectivenessFor(competitor, category);
                 float winChance = MedievalTournamentUtility.EffectivenessAdvantageToWinChanceCurve.Evaluate(participantEff - competitorEff);
-                if (!ResolveDisaster(participant, competitor, disasterPool, winChance))
+                var victor = Rand.Chance(winChance) ? participant : competitor;
+                var loser = (participant == victor) ? competitor : participant;
+                if (!ResolveDisaster(victor, loser, fullAudience.Where(p => p != competitor).ToList(), out var victim, out var disEntry))
                 {
-                    if (Rand.Chance(winChance))
+                    if (category.rulePack != null)
+                        entries.Add(new BattleLogEntry_Event(loser, category.rulePack, victor));
+                    if (participant == victor)
                         curPlace--;
                     else
                         break;
                 }
                 else
                 {
-                    Find.WorldObjects.Remove(this);
-                    return;
+                    if (disEntry != null)
+                        entries.Add(disEntry);
+                    cancelled = true;
+                    break;
                 }
             }
-            ResolveOutcome(participant, curPlace, caravan);
+            ResolveOutcome(participant, entries, curPlace, cancelled, caravan);
             Find.WorldObjects.Remove(this);
         }
 
-        private bool ResolveDisaster(Pawn participant, Pawn competitor, List<Pawn> pool, float winChance)
+        private bool ResolveDisaster(Pawn victor, Pawn loser, List<Pawn> audience, out Pawn victim, out BattleLogEntry_Event entry)
         {
-            float partChance = (1 - winChance) / 20;
-            float compChance = winChance / 20;
-            switch (category)
+            victim = null;
+            entry = null;
+
+            // Disaster doesn't happen
+            if (!Rand.Chance(MedievalTournamentUtility.DisasterChancePerRound))
+                return false;
+
+            // Resolve disaster
+            if (category == TournamentCategoryDefOf.VFEM_Melee)
+                ResolveDisaster_Melee(victor, loser, audience, ref victim, ref entry);
+            else if (category == TournamentCategoryDefOf.VFEM_Jousting)
+                ResolveDisaster_Jousting(victor, loser, audience, ref victim, ref entry);
+            else if (category == TournamentCategoryDefOf.VFEM_Archery)
+                ResolveDisaster_Archery(victor, loser, audience, ref victim, ref entry);
+            else
+                throw new NotImplementedException();
+
+            return true;
+        }
+
+        private void ResolveDisaster_Melee(Pawn victor, Pawn loser, List<Pawn> audience, ref Pawn victim, ref BattleLogEntry_Event entry)
+        {
+            // Apply injury
+            victim = loser;
+            var randValue = Rand.Value;
+
+            // 90% chance: injury
+            if (randValue <= 0.9f)
             {
-                case TournamentCategory.Melee:
-                    return ResolveDisaster_Melee(participant, competitor, pool, partChance, compChance);
-                case TournamentCategory.Jousting:
-                    return ResolveDisaster_Jousting(participant, competitor, pool, partChance, compChance);
-                case TournamentCategory.Archery:
-                    return ResolveDisaster_Archery(participant, competitor, pool, partChance, compChance);
-                default:
-                    throw new NotImplementedException();
+                var damResult = victim.TakeDamage(new DamageInfo(RimWorld.DamageDefOf.Cut, Rand.RangeInclusive(14, 22), weapon: ThingDefOf.MeleeWeapon_Gladius));
+
+                // 33% chance: will scar
+                if (Rand.Chance(0.33f))
+                {
+                    foreach (var hediff in damResult.hediffs)
+                        if (hediff.TryGetComp<HediffComp_GetsPermanent>() is HediffComp_GetsPermanent scarComp && !scarComp.IsPermanent && scarComp.permanentDamageThreshold == 9999)
+                            scarComp.permanentDamageThreshold = Rand.Range(1, hediff.Severity / 2);
+                }
+            }
+
+            // 10% chance: missing part (try not to kill)
+            else
+            {
+                int i = 0;
+                var part = victim.health.hediffSet.GetRandomNotMissingPart(RimWorld.DamageDefOf.Cut);
+                while (victim.health.WouldDieAfterAddingHediff(HediffDefOf.MissingBodyPart, part, 0.01f))
+                {
+                    if (i >= 1000)
+                    {
+                        Log.Error($"Tried to do non-lethal part removal for {victim} but failed after 1000 attempts.");
+                        return;
+                    }
+                    part = victim.health.hediffSet.GetRandomNotMissingPart(RimWorld.DamageDefOf.Cut);
+                    i++;
+                }
+                victim.health.AddHediff(RimWorld.HediffDefOf.MissingBodyPart, part);
             }
         }
 
-        private bool ResolveDisaster_Melee(Pawn participant, Pawn competitor, List<Pawn> pool, float partChance, float compChance)
+        private void ResolveDisaster_Jousting(Pawn victor, Pawn loser, List<Pawn> audience, ref Pawn victim, ref BattleLogEntry_Event entry)
         {
+            var randValue = Rand.Value;
 
+            // 50% chance: Apply standard melee disaster
+            if (randValue <= 0.5f)
+                ResolveDisaster_Melee(victor, loser, audience, ref victim, ref entry);
+
+            // 50% chance: Horse derp
+            else
+            {
+                victim = loser;
+                victim.TakeDamage(new DamageInfo(RimWorld.DamageDefOf.Blunt, Rand.Range(12, 20)));
+            }
         }
 
-        private bool ResolveDisaster_Jousting(Pawn participant, Pawn competitor, List<Pawn> pool, float partChance, float compChance)
+        private void ResolveDisaster_Archery(Pawn victor, Pawn loser, List<Pawn> audience, ref Pawn victim, ref BattleLogEntry_Event entry)
         {
+            float randValue = Rand.Value;
 
-        }
+            // 60% chance: severe injury to participant or competitor
+            if (randValue <= 0.6f)
+            {
+                victim = loser;
+                victim.TakeDamage(new DamageInfo(RimWorld.DamageDefOf.Cut, Rand.RangeInclusive(10, 14)));
+            }
 
-        private bool ResolveDisaster_Archery(Pawn participant, Pawn competitor, List<Pawn> pool, float partChance, float compChance)
-        {
+            // 40% chance: random audience pawn gets hit
+            else
+            {
+                victim = audience.RandomElement();
+                victim.TakeDamage(new DamageInfo(RimWorld.DamageDefOf.Arrow, 17, 0.15f, weapon: ThingDefOf.Bow_Great));
+                victim.Faction.TryAffectGoodwillWith(Faction.OfPlayer, -15);
+            }
+       }
 
-        }
-
-        private void ResolveOutcome(Pawn participant, int place, Caravan caravan)
+        private void ResolveOutcome(Pawn participant, List<BattleLogEntry_Event> entries, int place, bool cancelled, Caravan caravan)
         {
             string placeOrdinal = Find.ActiveLanguageWorker.OrdinalNumber(place);
             string totalOrdinal = Find.ActiveLanguageWorker.OrdinalNumber(competitorCount + 1);
             string letterLabel;
-            string letterTextMain;
+            var letterTextBuilder = new StringBuilder();
             LetterDef letterDef;
-            if (place == 1)
+            if (!cancelled || place == 1)
             {
-                letterLabel = "VanillaFactionsExpanded.TournamentWinLetter".Translate();
-                letterTextMain = "VanillaFactionsExpanded.TournamentWinLetter_Text".Translate(placeOrdinal, totalOrdinal, Faction, GenLabel.ThingsLabel(rewards), participant.Named("PAWN"));
-                letterDef = LetterDefOf.PositiveEvent;
+                if (place == 1)
+                {
+                    letterLabel = "VanillaFactionsExpanded.TournamentWinLetter".Translate();
+                    letterTextBuilder.AppendLine("VanillaFactionsExpanded.TournamentWinLetter_Text".Translate(placeOrdinal, totalOrdinal, Faction, GenLabel.ThingsLabel(rewards), participant.Named("PAWN")));
+                    letterDef = LetterDefOf.PositiveEvent;
 
-                Faction.TryAffectGoodwillWith(Faction.OfPlayer, GoodwillBonus);
-                for (int i = 0; i < rewards.Count; i++)
-                    caravan.AddPawnOrItem(rewards[i], true);
+                    // Give rewards
+                    Faction.TryAffectGoodwillWith(Faction.OfPlayer, GoodwillBonus);
+                    for (int i = 0; i < rewards.Count; i++)
+                        caravan.AddPawnOrItem(rewards[i], true);
+                }
+                else
+                {
+                    letterLabel = "VanillaFactionsExpanded.TournamentLossLetter".Translate();
+                    letterTextBuilder.AppendLine("VanillaFactionsExpanded.TournamentLossLetter_Text".Translate(placeOrdinal, totalOrdinal, participant.Named("PAWN")));
+                    letterDef = LetterDefOf.NeutralEvent;
+                }
             }
             else
             {
-                letterLabel = "VanillaFactionsExpanded.TournamentLossLetter".Translate();
-                letterTextMain = "VanillaFactionsExpanded.TournamentLossLetter_Text".Translate(placeOrdinal, totalOrdinal, participant.Named("PAWN"));
-                letterDef = LetterDefOf.NeutralEvent;
+                letterLabel = "VanillaFactionsExpanded.TournamentCancelledLetter".Translate();
+                letterTextBuilder.AppendLine("VanillaFactionsExpanded.TournamentCancelledLetter_Text".Translate());
+                letterDef = LetterDefOf.NegativeEvent;
             }
+
+            // XP gains
             ResolveXPGains(participant, out string xpText);
-            letterTextMain += $"\n\n{xpText}";
-            Find.LetterStack.ReceiveLetter(letterLabel, letterTextMain, letterDef);
+            if (xpText != null)
+            {
+                letterTextBuilder.AppendLine();
+                letterTextBuilder.AppendLine(xpText);
+            }
+
+            // Add log entries
+            if (entries.Any())
+            {
+                letterTextBuilder.AppendLine();
+                for (int i = 0; i < entries.Count; i++)
+                    letterTextBuilder.AppendLine("VanillaFactionsExpanded.LogEntryLine".Translate(i + 1, entries[i].ToGameStringFromPOV(null)));
+            }
+
+            // Add letter to letter stack
+            Find.LetterStack.ReceiveLetter(letterLabel, letterTextBuilder.ToString().TrimEndNewlines(), letterDef);
         }
 
         private void ResolveXPGains(Pawn pawn, out string xpText)
         {
-            string baseTextKey = $"VanillaFactionsExpanded.TournamentXPGain_{category}";
-            switch (category)
+            if (category.skillExpGains != null && category.skillExpGains.Any())
             {
-                case TournamentCategory.Melee:
-                    pawn.skills.Learn(SkillDefOf.Melee, BaseXPGain, true);
-                    xpText = baseTextKey.Translate(BaseXPGain, pawn.Named("PAWN"));
-                    return;
-                case TournamentCategory.Jousting:
-                    float xpGain = BaseXPGain / 2;
-                    pawn.skills.Learn(SkillDefOf.Melee, xpGain, true);
-                    pawn.skills.Learn(SkillDefOf.Animals, xpGain, true);
-                    xpText = baseTextKey.Translate(xpGain, pawn.Named("PAWN"));
-                    return;
-                case TournamentCategory.Archery:
-                    pawn.skills.Learn(SkillDefOf.Shooting, BaseXPGain, true);
-                    xpText = baseTextKey.Translate(BaseXPGain, pawn.Named("PAWN"));
-                    return;
-                default:
-                    throw new NotImplementedException();
+                var expReadouts = new List<string>();
+                foreach (var gain in category.skillExpGains)
+                {
+                    pawn.skills.Learn(gain.Key, gain.Value, true);
+                    expReadouts.Add($"{gain.Value} {gain.Key.label}");
+                }
+                xpText = "VanillaFactionsExpanded.TournamentExpGains".Translate(expReadouts.ToCommaList(true), pawn.Named("PAWN"));
             }
+            else
+                xpText = null;
         }
 
         public void GenerateRewards()
@@ -261,13 +352,13 @@ namespace VFEMedieval
 
         public override void ExposeData()
         {
-            Scribe_Values.Look(ref category, "category");
+            Scribe_Defs.Look(ref category, "category");
             Scribe_Values.Look(ref competitorCount, "competitorCount");
             Scribe_Collections.Look(ref rewards, "rewards", LookMode.Deep);
             base.ExposeData();
         }
 
-        public TournamentCategory category;
+        public TournamentCategoryDef category;
         public int competitorCount;
         public List<Thing> rewards;
 

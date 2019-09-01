@@ -15,6 +15,7 @@ namespace VFEMedieval
         private const float ArcheryEffectivenessNormaliser = 12.6f;
         private const float MeleeEffectivenessNormaliser = 15.1f;
         private const float JoustEffectivenessNormaliser = 8.4f;
+        public const float DisasterChancePerRound = 0.04f;
         public static readonly IntRange QuestSiteTournamentTimeoutDaysRange = new IntRange(7, 15);
         public static readonly IntRange CompetitorCountRange = new IntRange(3, 6);
         public static readonly SimpleCurve EffectivenessAdvantageToWinChanceCurve = new SimpleCurve()
@@ -35,13 +36,11 @@ namespace VFEMedieval
         private const float ExistingPawnSelectChance = 0.7f;
 
         private static float archeryDistance;
-        public static float archeryDisasterDamage;
 
         public static void SetCache()
         {
             var verbProps = ThingDefOf.Bow_Great.Verbs.First(v => v.isPrimary);
             archeryDistance = Mathf.Round(Mathf.Lerp(verbProps.minRange, verbProps.range, 0.75f));
-            archeryDisasterDamage = verbProps.defaultProjectile.projectile.GetDamageAmount(1);
         }
 
         private static float MentalBreakThresholdMultiplierFor(Pawn pawn, float weight)
@@ -72,35 +71,30 @@ namespace VFEMedieval
             return accuracy * MentalBreakThresholdMultiplierFor(pawn, 0.25f) * ArcheryEffectivenessNormaliser;
         }
 
-        public static float TournamentEffectivenessFor(Pawn pawn, TournamentCategory category)
+        public static float TournamentEffectivenessFor(Pawn pawn, TournamentCategoryDef category)
         {
-            switch(category)
-            {
-                case TournamentCategory.Melee:
-                    return BaseMeleeEffectivenessFor(pawn);
-                case TournamentCategory.Jousting:
-                    return BaseJoustEffectivenessFor(pawn);
-                case TournamentCategory.Archery:
-                    return BaseArcheryEffectivenessFor(pawn);
-                default:
-                    throw new NotImplementedException();
-            }
+            if (category == TournamentCategoryDefOf.VFEM_Melee)
+                return BaseMeleeEffectivenessFor(pawn);
+            if (category == TournamentCategoryDefOf.VFEM_Jousting)
+                return BaseJoustEffectivenessFor(pawn);
+            if (category == TournamentCategoryDefOf.VFEM_Archery)
+                return BaseArcheryEffectivenessFor(pawn);
+            throw new NotImplementedException();
         }
 
-        public static bool CanParticipate(Pawn pawn, TournamentCategory category)
+        public static bool CanParticipate(Pawn pawn, TournamentCategoryDef category)
         {
-            bool eligible = !pawn.Downed && pawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation);
-            switch (category)
-            {
-                case TournamentCategory.Melee:
-                    return eligible && !StatDefOf.MeleeHitChance.Worker.IsDisabledFor(pawn);
-                case TournamentCategory.Jousting:
-                    return eligible && (!StatDefOf.MeleeHitChance.Worker.IsDisabledFor(pawn) || !StatDefOf.TameAnimalChance.Worker.IsDisabledFor(pawn));
-                case TournamentCategory.Archery:
-                    return eligible && !StatDefOf.ShootingAccuracyPawn.Worker.IsDisabledFor(pawn);
-                default:
-                    throw new NotImplementedException();
-            }
+            if (pawn.Downed || !pawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation))
+                return false;
+
+            if (category == TournamentCategoryDefOf.VFEM_Melee)
+                return !StatDefOf.MeleeHitChance.Worker.IsDisabledFor(pawn);
+            if (category == TournamentCategoryDefOf.VFEM_Jousting)
+                return !StatDefOf.MeleeHitChance.Worker.IsDisabledFor(pawn) && !StatDefOf.TameAnimalChance.Worker.IsDisabledFor(pawn);
+            if (category == TournamentCategoryDefOf.VFEM_Archery)
+                return !StatDefOf.ShootingAccuracyPawn.Worker.IsDisabledFor(pawn);
+
+            throw new NotImplementedException();
         }
 
         public static string TournamentEffectivenessString(float effectiveness)
@@ -119,7 +113,7 @@ namespace VFEMedieval
             return resultStr.UncapitalizeFirst();
         }
 
-        public static string ParticipantOptionText(Pawn pawn, TournamentCategory category)
+        public static string ParticipantOptionText(Pawn pawn, TournamentCategoryDef category)
         {
             string pawnName = pawn.Name.ToStringShort;
             if (CanParticipate(pawn, category))
@@ -127,7 +121,7 @@ namespace VFEMedieval
             return $"{pawnName} ({"VanillaFactionsExpanded.CannotParticipate".Translate()})";
         }
 
-        public static void GroupParticipants(IEnumerable<Pawn> inPawns, TournamentCategory category, List<Pawn> outParticipants, List<Pawn> outNonParticipants)
+        public static void GroupParticipants(IEnumerable<Pawn> inPawns, TournamentCategoryDef category, List<Pawn> outParticipants, List<Pawn> outNonParticipants)
         {
             foreach (var pawn in inPawns)
             {
@@ -139,17 +133,12 @@ namespace VFEMedieval
             outParticipants.SortByDescending(p => TournamentEffectivenessFor(p, category));
         }
 
-        public static string ToStringHuman(this TournamentCategory category)
-        {
-            return $"VanillaFactionsExpanded.TournamentCategory_{category}".Translate();
-        }
-
-        public static Pawn GenerateNewCompetitor(TournamentCategory category, Faction faction)
+        public static Pawn GenerateNewCompetitor(TournamentCategoryDef category, Faction faction)
         {
             return PawnGenerator.GeneratePawn(new PawnGenerationRequest(faction.RandomPawnKind(), faction, forceGenerateNewPawn: true, validatorPreGear: p => CanParticipate(p, category)));
         }
 
-        public static List<Pawn> GenerateCompetitors(int count, TournamentCategory category, Faction faction, IEnumerable<Pawn> existingPawns = null)
+        public static List<Pawn> GenerateCompetitors(int count, TournamentCategoryDef category, Faction faction, IEnumerable<Pawn> existingPawns = null)
         {
             var potentialCompetitors = existingPawns?.ToList() ?? null;
             var resultList = new List<Pawn>();

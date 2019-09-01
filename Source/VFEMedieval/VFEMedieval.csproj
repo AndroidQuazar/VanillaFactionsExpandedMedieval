@@ -37,7 +37,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -47,7 +47,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VFECore">
@@ -74,6 +74,7 @@
     <Compile Include="Comps\ThingComps\CompIngestedThoughtFromQuality.cs" />
     <Compile Include="Comps\ThingComps\CompWineFermenter.cs" />
     <Compile Include="Commands\Command_SetWineTargetQuality.cs" />
+    <Compile Include="DefOf\TournamentCategoryDefOf.cs" />
     <Compile Include="DefOf\ThingSetMakerDefOf.cs" />
     <Compile Include="DefOf\WorldObjectDefOf.cs" />
     <Compile Include="DefOf\RiverDefOf.cs" />
@@ -82,7 +83,7 @@
     <Compile Include="DefOf\DamageDefOf.cs" />
     <Compile Include="DefOf\ThingDefOf.cs" />
     <Compile Include="DefOf\JobDefOf.cs" />
-    <Compile Include="Enums\TournamentCategory.cs" />
+    <Compile Include="Defs\TournamentCategoryDef.cs" />
     <Compile Include="HarmonyPatches\Patch_BackCompatibility.cs" />
     <Compile Include="HarmonyPatches\Patch_DrugPolicyDatabase.cs" />
     <Compile Include="HarmonyPatches\Patch_WITab_Caravan_Gear.cs" />

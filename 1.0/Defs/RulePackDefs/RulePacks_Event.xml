@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Melee -->
+    <RulePackDef>
+        <defName>VFEM_Event_MeleeRound</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_logentry->[INITIATOR_definite] [skillfully] [surpassed] [SUBJECT_definite]'s swordsmanship.</li>
+                <li>r_logentry->[INITIATOR_definite] [skillfully] [surpassed] [SUBJECT_definite]'s swordsmanship with [skill].</li>
+
+                <li>skillfully->skillfully</li>
+                <li>skillfully->trivially</li>
+                <li>skillfully->adeptly</li>
+                <li>skillfully->handily</li>
+                <li>skillfully->easily</li>
+
+                <li>surpassed->surpassed</li>
+                <li>surpassed->beat</li>
+                <li>surpassed->outclassed</li>
+                <li>surpassed->outshone</li>
+
+                <li>r_logentry->[INITIATOR_definite] and [SUBJECT_definite] [intensely] [battled], to [INITIATOR_definite]'s victory.</li>
+
+                <li>intensely->intensely</li>
+                <li>intensely->valiantly</li>
+                <li>intensely->closely</li>
+
+                <li>battled->battled</li>
+                <li>battled->fought</li>
+                <li>battled->brawled</li>
+                <li>battled->clashed</li>
+                <li>battled->tussled</li>
+
+                <li>r_logentry->[SUBJECT_definite] [fell] like a [toppleableThing] to [INITIATOR_definite]'s [skill].</li>
+
+                <li>fell->fell</li>
+                <li>fell->toppled</li>
+                <li>fell->submitted</li>
+
+                <li>toppleableThing->domino</li>
+                <li>toppleableThing->matchstick</li>
+
+                <li>skill->skill</li>
+                <li>skill->might</li>
+                <li>skill->finnesse</li>
+
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <!-- Jousting -->
+    <RulePackDef>
+        <defName>VFEM_Event_JoustingRound</defName>
+        <rulePack>
+            <rulesStrings>
+
+                <li>r_logentry->[INITIATOR_definite] [demonstrated] [superior] [skill] with [steedControl] and with [weapon].</li>
+
+                <li>demonstrated->demonstrated</li>
+                <li>demonstrated->boasted</li>
+
+                <li>superior->superior</li>
+                <li>superior->greater</li>
+                <li>superior->better</li>
+
+                <li>skill->skill</li>
+                <li>skill->precision</li>
+                <li>skill->firmness</li>
+
+                <li>steedControl->reins</li>
+                <li>steedControl->stirrup</li>
+                <li>steedControl->saddle</li>
+
+                <li>weapon->lance</li>
+                <li>weapon->spear</li>
+                <li>weapon->pike</li>
+
+                <li>r_logentry->[SUBJECT_definite] [failed] to [control] their [steed].</li>
+
+                <li>failed->failed</li>
+                <li>failed->was unable</li>
+
+                <li>control->control</li>
+                <li>control->manage</li>
+                <li>control->command</li>
+                <li>control->yell at</li>
+
+                <li>steed->muffalo</li>
+                <li>steed->horse</li>
+                <li>steed->dromedary</li>
+                <li>steed->bear</li>
+                <li>steed->lion</li>
+                <li>steed->rhinoceros</li>
+                <li>steed(p=0.5)->cow</li>
+                <li>steed(p=0.1)->dinosaur</li>
+                <li>steed(p=0.1)->megatortoise</li>
+                <li>steed(p=0.1)->thrumbo</li>
+
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <!-- Archery -->
+    <RulePackDef>
+        <defName>VFEM_Event_ArcheryRound</defName>
+        <rulePack>
+            <rulesStrings>
+
+                <li>r_logentry->[INITIATOR_definite] [accurately] [hitPast] their targets.</li>
+                <li>r_logentry->[INITIATOR_definite] [accurately] [hitPast] their targets with [speed].</li>
+
+                <li>accurately->accurately</li>
+                <li>accurately->skillfully</li>
+                <li>accurately->precisely</li>
+
+                <li>hitPast->hit</li>
+                <li>hitPast->struck</li>
+                <li>hitPast->landed shots on</li>
+
+                <li>speed->speed</li>
+                <li>speed->dexterity</li>
+                <li>speed->finesse</li>
+
+                <li>r_logentry->[SUBJECT_definite] was [unable] to [hit] their targets.</li>
+
+                <li>unable->unable</li>
+                <li>unable->not able</li>
+                <li>unable->not skilled enough</li>
+
+                <li>hit->hit</li>
+                <li>hit->strike</li>
+                <li>hit->land shots on</li>
+
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+</Defs>

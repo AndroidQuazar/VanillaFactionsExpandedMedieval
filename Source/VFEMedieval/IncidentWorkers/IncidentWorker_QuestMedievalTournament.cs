@@ -36,7 +36,7 @@ namespace VFEMedieval
             var tournament = (MedievalTournament)WorldObjectMaker.MakeWorldObject(WorldObjectDefOf.VFEM_MedievalTournament);
             tournament.Tile = tile;
             tournament.SetFaction(hostFaction);
-            var tournamentCategory = (TournamentCategory)Rand.RangeInclusive(1, 3);
+            var tournamentCategory = DefDatabase<TournamentCategoryDef>.AllDefsListForReading.RandomElementByWeight(c => c.commonality);
             tournament.category = tournamentCategory;
             tournament.competitorCount = MedievalTournamentUtility.CompetitorCountRange.RandomInRange;
             int durationDays = MedievalTournamentUtility.QuestSiteTournamentTimeoutDaysRange.RandomInRange;
@@ -55,7 +55,7 @@ namespace VFEMedieval
             var textBuilder = new StringBuilder();
             textBuilder.AppendLine(def.letterText.Formatted(hostFaction.def.leaderTitle, hostFaction.Name, settlementName, GenLabel.ThingsLabel(tournament.rewards), hostFaction.leader.Named("PAWN")).AdjustedFor(hostFaction.leader));
             textBuilder.AppendLine();
-            textBuilder.AppendLine($"VanillaFactionsExpanded.TournamentIncidentLetterText_{tournament.category}".Translate());
+            textBuilder.AppendLine(tournament.category.description);
             textBuilder.AppendLine();
             textBuilder.AppendLine("VanillaFactionsExpanded.TournamentDurationDays".Translate(durationDays));
             return textBuilder.ToString().TrimEndNewlines();

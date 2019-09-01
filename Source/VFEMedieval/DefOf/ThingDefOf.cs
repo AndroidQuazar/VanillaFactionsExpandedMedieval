@@ -21,6 +21,7 @@ namespace VFEMedieval
         // Vanilla defs
         public static ThingDef Bow_Great;
         public static ThingDef MeleeWeapon_LongSword;
+        public static ThingDef MeleeWeapon_Gladius;
 
     }
 
