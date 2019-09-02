@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-    <!-- If Vanilla Furniture Expanded: Security is loaded, add siege parameter set for medieval factions -->
     <Operation Class="PatchOperationLoadOnDemand.XML">
         <source>1.0/Defs_OnDemand</source>
         <mods>
-            <li>Vanilla Furniture Expanded - Security</li>
+            <li>[RF] Editable Backstories and Names [1.0]</li>
         </mods>
         <folders>
-            <li>VFESecurity</li>
+            <li>EditableBackstories</li>
         </folders>
     </Operation>
 

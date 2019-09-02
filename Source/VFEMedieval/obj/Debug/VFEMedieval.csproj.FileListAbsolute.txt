@@ -6,3 +6,4 @@ E:\Documents\GitHub\VanillaFactionsExpandedMedieval\Source\VFEMedieval\obj\Debug
 E:\Documents\GitHub\VanillaFactionsExpandedMedieval\Source\VFEMedieval\obj\Debug\VFEMedieval.csproj.CoreCompileInputs.cache
 E:\Documents\GitHub\VanillaFactionsExpandedMedieval\Source\VFEMedieval\obj\Debug\VFEMedieval.dll
 E:\Documents\GitHub\VanillaFactionsExpandedMedieval\1.0\Assemblies\VFEMedieval.dll
+E:\Documents\GitHub\VanillaFactionsExpandedMedieval\Source\VFEMedieval\obj\Debug\VFEMedieval.csproj.CopyComplete

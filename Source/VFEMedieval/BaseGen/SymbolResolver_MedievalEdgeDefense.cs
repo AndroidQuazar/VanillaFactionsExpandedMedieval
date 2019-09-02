@@ -9,6 +9,7 @@ using Verse.AI.Group;
 using RimWorld;
 using RimWorld.BaseGen;
 using Harmony;
+using VFECore;
 
 namespace VFEMedieval
 {

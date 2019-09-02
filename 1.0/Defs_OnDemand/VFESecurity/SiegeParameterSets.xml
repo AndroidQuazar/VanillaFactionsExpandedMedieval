@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <VFECore.SiegeParameterSetDef>
+        <defName>VFEM_Medieval</defName>
+        <coverDef>VFES_ShortWall</coverDef>
+        <artilleryBuildingTags>
+            <li>ArtilleryMedieval_BaseDestroyer</li>
+        </artilleryBuildingTags>
+        <artilleryCountRange>1~2</artilleryCountRange>
+        <mealDef>Pemmican</mealDef>
+    </VFECore.SiegeParameterSetDef>
+
+</Defs>

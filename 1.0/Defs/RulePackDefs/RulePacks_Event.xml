@@ -19,6 +19,7 @@
                 <li>surpassed->beat</li>
                 <li>surpassed->outclassed</li>
                 <li>surpassed->outshone</li>
+                <li>surpassed->dominated</li>
 
                 <li>r_logentry->[INITIATOR_definite] and [SUBJECT_definite] [intensely] [battled], to [INITIATOR_definite]'s victory.</li>
 
@@ -44,7 +45,24 @@
                 <li>skill->skill</li>
                 <li>skill->might</li>
                 <li>skill->finnesse</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
 
+    <RulePackDef>
+        <defName>VFEM_Event_MeleeDisasterCut</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_logentry->[INITIATOR_definite] [skillfully] [surpassed] [SUBJECT_definite]'s swordsmanship.</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>VFEM_Event_MeleeDisasterPartLoss</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_logentry->[INITIATOR_definite] [skillfully] [surpassed] [SUBJECT_definite]'s swordsmanship.</li>
             </rulesStrings>
         </rulePack>
     </RulePackDef>
@@ -54,7 +72,6 @@
         <defName>VFEM_Event_JoustingRound</defName>
         <rulePack>
             <rulesStrings>
-
                 <li>r_logentry->[INITIATOR_definite] [demonstrated] [superior] [skill] with [steedControl] and with [weapon].</li>
 
                 <li>demonstrated->demonstrated</li>
@@ -96,7 +113,15 @@
                 <li>steed(p=0.1)->dinosaur</li>
                 <li>steed(p=0.1)->megatortoise</li>
                 <li>steed(p=0.1)->thrumbo</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
 
+    <RulePackDef>
+        <defName>VFEM_Event_JoustingDisaster</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_logentry->[INITIATOR_definite] [skillfully] [surpassed] [SUBJECT_definite]'s swordsmanship.</li>
             </rulesStrings>
         </rulePack>
     </RulePackDef>
@@ -106,7 +131,6 @@
         <defName>VFEM_Event_ArcheryRound</defName>
         <rulePack>
             <rulesStrings>
-
                 <li>r_logentry->[INITIATOR_definite] [accurately] [hitPast] their targets.</li>
                 <li>r_logentry->[INITIATOR_definite] [accurately] [hitPast] their targets with [speed].</li>
 
@@ -131,7 +155,39 @@
                 <li>hit->hit</li>
                 <li>hit->strike</li>
                 <li>hit->land shots on</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
 
+    <RulePackDef>
+        <defName>VFEM_Event_ArcheryDisaster</defName>
+        <include>
+            <li>VFEM_Event_ArcheryRound</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_logentry->[INITIATOR_definite] [skillfully] [surpassed] [SUBJECT_definite]'s swordsmanship.</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>VFEM_Event_ArcheryDisasterAudience</defName>
+        <include>
+            <li>VFEM_Event_ArcheryRound</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_logentry->[INITIATOR_definite]'s arrow [flew] [far] off course and [hitPast] [SUBJECT_definite].</li>
+
+                <li>flew->flew</li>
+                <li>flew->strayed</li>
+                <li>flew->travelled</li>
+                <li>flew->sailed</li>
+
+                <li>far->far</li>
+                <li>far->wildly</li>
+                <li>far->way</li>
             </rulesStrings>
         </rulePack>
     </RulePackDef>

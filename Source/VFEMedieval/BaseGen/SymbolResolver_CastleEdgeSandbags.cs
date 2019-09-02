@@ -9,6 +9,7 @@ using Verse.AI.Group;
 using RimWorld;
 using RimWorld.BaseGen;
 using Harmony;
+using VFECore;
 
 namespace VFEMedieval
 {
@@ -40,22 +41,22 @@ namespace VFEMedieval
             bool symmetrical = medievalrp?.symmetricalSandbags ?? Rand.Bool;
 
             // North
-            GenerateSandbags(Rot4.North, rp.rect, map, faction, rp.wallStuff, towerRadius, symmetrical);
+            GenerateSandbags(Rot4.North, rp, map, faction, towerRadius, symmetrical);
 
             // East
-            GenerateSandbags(Rot4.East, rp.rect, map, faction, rp.wallStuff, towerRadius, symmetrical);
+            GenerateSandbags(Rot4.East, rp, map, faction, towerRadius, symmetrical);
 
             // South
-            GenerateSandbags(Rot4.South, rp.rect, map, faction, rp.wallStuff, towerRadius, symmetrical);
+            GenerateSandbags(Rot4.South, rp, map, faction, towerRadius, symmetrical);
 
             // West
-            GenerateSandbags(Rot4.West, rp.rect, map, faction, rp.wallStuff, towerRadius, symmetrical);
+            GenerateSandbags(Rot4.West, rp, map, faction, towerRadius, symmetrical);
         }
 
-        private void GenerateSandbags(Rot4 direction, CellRect rect, Map map, Faction faction, ThingDef stuff, float towerRadius, bool symmetrical)
+        private void GenerateSandbags(Rot4 direction, ResolveParams rp, Map map, Faction faction, float towerRadius, bool symmetrical)
         {
             int towerRadInt = (int)towerRadius;
-            var potentialCells = rect.GetEdgeCells(direction);
+            var potentialCells = rp.rect.GetEdgeCells(direction);
 
             // Make sure we actually have enough cells to work with for sandbag placement
             if (towerRadInt * 2 + 2 >= potentialCells.Count())
@@ -73,9 +74,10 @@ namespace VFEMedieval
                 }
                 if (lineCellsToDo > 0)
                 {
-                    TrySpawnSandbags(potentialCellList[i], map, faction, stuff);
-                    if (symmetrical)
-                        TrySpawnSandbags(potentialCellList[potentialCellList.Count - i], map, faction, stuff);
+                    if (!rp.chanceToSkipWallBlock.HasValue || !Rand.Chance(rp.chanceToSkipWallBlock.Value))
+                        TrySpawnSandbags(potentialCellList[i], map, faction, rp.wallStuff);
+                    if (symmetrical && (!rp.chanceToSkipWallBlock.HasValue || !Rand.Chance(rp.chanceToSkipWallBlock.Value)))
+                        TrySpawnSandbags(potentialCellList[potentialCellList.Count - i], map, faction, rp.wallStuff);
                     lineCellsToDo--;
                 }
                 else if (gapCellsToDo > 0)
@@ -92,6 +94,18 @@ namespace VFEMedieval
 
             if (TryClearCell(c, map))
             {
+                // Try and make it buildable
+                if (!GenConstruct.CanBuildOnTerrain(DefToUse, c, map, Rot4.North))
+                {
+                    if (GenConstruct.CanBuildOnTerrain(TerrainDefOf.PavedTile, c, map, Rot4.North))
+                        map.terrainGrid.SetTerrain(c, TerrainDefOf.PavedTile);
+                    else if (GenConstruct.CanBuildOnTerrain(TerrainDefOf.Bridge, c, map, Rot4.North))
+                        map.terrainGrid.SetTerrain(c, TerrainDefOf.Bridge);
+                }
+
+                if (!GenConstruct.CanBuildOnTerrain(DefToUse, c, map, Rot4.North))
+                    return;
+
                 var usedStuff = DefToUse.MadeFromStuff ? (stuff ?? GenStuff.DefaultStuffFor(DefToUse)) : null;
                 Thing thing = ThingMaker.MakeThing(DefToUse, usedStuff);
                 thing.SetFaction(faction, null);

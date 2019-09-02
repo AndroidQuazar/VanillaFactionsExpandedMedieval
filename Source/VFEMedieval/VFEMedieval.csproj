@@ -40,6 +40,9 @@
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="LoadOnDemand, Version=1.0.7184.15751, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\RimWorld.PatchOperationLoadOnDemand.1.0.0\lib\net35\LoadOnDemand.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,7 +64,6 @@
     <Compile Include="AI\JobDrivers\JobDriver_TakeWineOutOfWineBarrel.cs" />
     <Compile Include="AI\JobDrivers\JobDriver_FillWineBarrel.cs" />
     <Compile Include="ArrivalActions\CaravanArrivalAction_AttendMedievalTournament.cs" />
-    <Compile Include="BaseGen\MedievalResolveParams.cs" />
     <Compile Include="BaseGen\SymbolResolver_AddMustToWineBarrels.cs" />
     <Compile Include="BaseGen\SymbolResolver_Interior_Winery.cs" />
     <Compile Include="BaseGen\SymbolResolver_CastleEdgeSandbags.cs" />
@@ -74,6 +76,8 @@
     <Compile Include="Comps\ThingComps\CompIngestedThoughtFromQuality.cs" />
     <Compile Include="Comps\ThingComps\CompWineFermenter.cs" />
     <Compile Include="Commands\Command_SetWineTargetQuality.cs" />
+    <Compile Include="DefOf\SiteCoreDefOf.cs" />
+    <Compile Include="DefOf\RulePackDefOf.cs" />
     <Compile Include="DefOf\TournamentCategoryDefOf.cs" />
     <Compile Include="DefOf\ThingSetMakerDefOf.cs" />
     <Compile Include="DefOf\WorldObjectDefOf.cs" />
@@ -84,11 +88,13 @@
     <Compile Include="DefOf\ThingDefOf.cs" />
     <Compile Include="DefOf\JobDefOf.cs" />
     <Compile Include="Defs\TournamentCategoryDef.cs" />
+    <Compile Include="GenSteps\GenStep_CastleRuins.cs" />
     <Compile Include="HarmonyPatches\Patch_BackCompatibility.cs" />
     <Compile Include="HarmonyPatches\Patch_DrugPolicyDatabase.cs" />
     <Compile Include="HarmonyPatches\Patch_WITab_Caravan_Gear.cs" />
     <Compile Include="HarmonyPatches\Patch_Pawn.cs" />
     <Compile Include="HarmonyPatches\RimCuisine2\Patch_RimCuisineBBDrugPolicies_HarmonyPatches.cs" />
+    <Compile Include="IncidentWorkers\IncidentWorker_QuestCastleRuins.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_QuestMedievalTournament.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_BlackKnight.cs" />
     <Compile Include="Reflection\NonPublicTypes.cs" />
@@ -103,6 +109,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorldObjects\MedievalTournament.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

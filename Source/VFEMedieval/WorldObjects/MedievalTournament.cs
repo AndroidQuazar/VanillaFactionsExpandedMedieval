@@ -206,6 +206,8 @@ namespace VFEMedieval
                         if (hediff.TryGetComp<HediffComp_GetsPermanent>() is HediffComp_GetsPermanent scarComp && !scarComp.IsPermanent && scarComp.permanentDamageThreshold == 9999)
                             scarComp.permanentDamageThreshold = Rand.Range(1, hediff.Severity / 2);
                 }
+
+                entry = new BattleLogEntry_Event(victim, RulePackDefOf.VFEM_Event_MeleeDisasterCut, null);
             }
 
             // 10% chance: missing part (try not to kill)
@@ -224,6 +226,7 @@ namespace VFEMedieval
                     i++;
                 }
                 victim.health.AddHediff(RimWorld.HediffDefOf.MissingBodyPart, part);
+                entry = new BattleLogEntry_Event(victim, RulePackDefOf.VFEM_Event_MeleeDisasterPartLoss, null);
             }
         }
 
@@ -240,6 +243,7 @@ namespace VFEMedieval
             {
                 victim = loser;
                 victim.TakeDamage(new DamageInfo(RimWorld.DamageDefOf.Blunt, Rand.Range(12, 20)));
+                entry = new BattleLogEntry_Event(victim, RulePackDefOf.VFEM_Event_JoustingDisaster, null);
             }
         }
 
@@ -252,6 +256,7 @@ namespace VFEMedieval
             {
                 victim = loser;
                 victim.TakeDamage(new DamageInfo(RimWorld.DamageDefOf.Cut, Rand.RangeInclusive(10, 14)));
+                entry = new BattleLogEntry_Event(victim, RulePackDefOf.VFEM_Event_ArcheryDisaster, null);
             }
 
             // 40% chance: random audience pawn gets hit
@@ -260,6 +265,7 @@ namespace VFEMedieval
                 victim = audience.RandomElement();
                 victim.TakeDamage(new DamageInfo(RimWorld.DamageDefOf.Arrow, 17, 0.15f, weapon: ThingDefOf.Bow_Great));
                 victim.Faction.TryAffectGoodwillWith(Faction.OfPlayer, -15);
+                entry = new BattleLogEntry_Event(victim, RulePackDefOf.VFEM_Event_ArcheryDisasterAudience, loser);
             }
        }
 
@@ -310,7 +316,11 @@ namespace VFEMedieval
             {
                 letterTextBuilder.AppendLine();
                 for (int i = 0; i < entries.Count; i++)
-                    letterTextBuilder.AppendLine("VanillaFactionsExpanded.LogEntryLine".Translate(i + 1, entries[i].ToGameStringFromPOV(null)));
+                {
+                    var curEntry = entries[i];
+                    letterTextBuilder.AppendLine("VanillaFactionsExpanded.LogEntryLine".Translate(i + 1, curEntry.ToGameStringFromPOV(null)));
+                    Find.PlayLog.Add(curEntry);
+                }
             }
 
             // Add letter to letter stack

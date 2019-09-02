@@ -25,8 +25,10 @@ namespace VFEMedieval
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
+            var hostFaction = parms.faction;
+
             // No faction
-            if (!TryFindFaction(out var hostFaction))
+            if (hostFaction == null && !TryFindFaction(out hostFaction))
                 return false;
 
             // No tile

@@ -34,6 +34,9 @@
                                     <li>Weapons</li>
                                     <li>Apparel</li>
                                 </categories>
+                                <disallowedThingDefs>
+                                    <li>VFEM_MeleeWeapon_Claymore</li>
+                                </disallowedThingDefs>
                             </filter>
                         </fixedParams>
                     </thingSetMaker>

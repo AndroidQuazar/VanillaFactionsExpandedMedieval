@@ -9,6 +9,7 @@ using Verse.AI.Group;
 using RimWorld;
 using RimWorld.BaseGen;
 using Harmony;
+using VFECore;
 
 namespace VFEMedieval
 {
@@ -45,13 +46,16 @@ namespace VFEMedieval
             }
 
             // Generate tower entrances
-            foreach (var pos in potentialTowerDoorCells)
+            if (medievalrp.hasDoors != false)
             {
-                TrySpawnFloor(pos, map);
-                var doorStuff = faction.def.techLevel.IsNeolithicOrWorse() ? RimWorld.ThingDefOf.WoodLog : RimWorld.ThingDefOf.Steel;
-                var door = ThingMaker.MakeThing(RimWorld.ThingDefOf.Door, doorStuff);
-                door.SetFaction(faction);
-                GenSpawn.Spawn(door, pos, map);
+                foreach (var pos in potentialTowerDoorCells)
+                {
+                    TrySpawnFloor(pos, map);
+                    var doorStuff = faction.def.techLevel.IsNeolithicOrWorse() ? RimWorld.ThingDefOf.WoodLog : RimWorld.ThingDefOf.Steel;
+                    var door = ThingMaker.MakeThing(RimWorld.ThingDefOf.Door, doorStuff);
+                    door.SetFaction(faction);
+                    GenSpawn.Spawn(door, pos, map);
+                }
             }
             potentialTowerDoorCells.Clear();
 
@@ -91,7 +95,7 @@ namespace VFEMedieval
             TrySpawnFloor(c, map);
 
             // Roof
-            if (rp.noRoof != false)
+            if (rp.noRoof != true)
                 TrySpawnRoof(c, map);
         }
 
@@ -103,14 +107,17 @@ namespace VFEMedieval
 
             if (TryClearCell(c, map))
             {
-                if (rp.chanceToSkipWallBlock != null && Rand.Chance(rp.chanceToSkipWallBlock.Value))
+                // Try and make it buildable
+                if (!GenConstruct.CanBuildOnTerrain(wallDef, c, map, Rot4.North))
                 {
-                    return;
+                    if (GenConstruct.CanBuildOnTerrain(TerrainDefOf.PavedTile, c, map, Rot4.North))
+                        map.terrainGrid.SetTerrain(c, TerrainDefOf.PavedTile);
+                    else if (GenConstruct.CanBuildOnTerrain(TerrainDefOf.Bridge, c, map, Rot4.North))
+                        map.terrainGrid.SetTerrain(c, TerrainDefOf.Bridge);
                 }
-
-                // Do bridge under wall if possible
-                if (GenConstruct.CanBuildOnTerrain(TerrainDefOf.Bridge, c, map, Rot4.North))
-                    map.terrainGrid.SetTerrain(c, TerrainDefOf.Bridge);
+ 
+                if (!GenConstruct.CanBuildOnTerrain(wallDef, c, map, Rot4.North) || (rp.chanceToSkipWallBlock != null && Rand.Chance(rp.chanceToSkipWallBlock.Value)))
+                    return;
 
                 var wall = ThingMaker.MakeThing(wallDef, wallStuff);
                 wall.SetFaction(rp.faction, null);
