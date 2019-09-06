@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Wine barrel -->
+  <VanillaFactionsExpanded.NoMust>Heeft druivenmost nodig</VanillaFactionsExpanded.NoMust>
+  <VanillaFactionsExpanded.ContainsMust>bevat {0} / {1} most</VanillaFactionsExpanded.ContainsMust>
+  <VanillaFactionsExpanded.ContainsWine>bevat {0} / {1} wijn</VanillaFactionsExpanded.ContainsWine>
+  <VanillaFactionsExpanded.TargetWineQuality>doelkwaliteit: {0}</VanillaFactionsExpanded.TargetWineQuality>
+  <VanillaFactionsExpanded.TargetWineQualityMulti>verander doelkwaliteit</VanillaFactionsExpanded.TargetWineQualityMulti>
+  <VanillaFactionsExpanded.TargetWineQuality_Description>Je kolonisten zullen de wijn verwijderen wanneer deze de juiste kwaliteit heeft behaald.</VanillaFactionsExpanded.TargetWineQuality_Description>
+
+  <!-- Tournaments -->
+  <VanillaFactionsExpanded.TournamentDurationDays>Het toernooi duurt nog {0} dagen.</VanillaFactionsExpanded.TournamentDurationDays>
+  <VanillaFactionsExpanded.MedievalTournamentInspectString>Prijs: {0} ({1} over)</VanillaFactionsExpanded.MedievalTournamentInspectString>
+
+  <VanillaFactionsExpanded.AttendMedievalTournament>neem deel {0}</VanillaFactionsExpanded.AttendMedievalTournament>
+  <VanillaFactionsExpanded.CaravanAttending>neemt deel {0}</VanillaFactionsExpanded.CaravanAttending>
+
+  <VanillaFactionsExpanded.MedievalTournamentInitial>Dit toernooi word georganiseerd door {0} van {1}, en de categorie is {2}. Er zijn {3} andere deelnemers, die graag de volgende prijzen willen winnen:\n\n{4}</VanillaFactionsExpanded.MedievalTournamentInitial>
+
+  <VanillaFactionsExpanded.Participate>Neem deel</VanillaFactionsExpanded.Participate>
+  <VanillaFactionsExpanded.ParticipateInitial>Je neemt deel aan dit toernooi, kies je deelnemer:</VanillaFactionsExpanded.ParticipateInitial>
+  <VanillaFactionsExpanded.PredictedPerformance>Kansen</VanillaFactionsExpanded.PredictedPerformance>
+  <VanillaFactionsExpanded.CannotParticipate>Kan niet deelnemen</VanillaFactionsExpanded.CannotParticipate>
+
+  <VanillaFactionsExpanded.TournamentWinLetter>Toernooi gewonnen</VanillaFactionsExpanded.TournamentWinLetter>
+  <VanillaFactionsExpanded.TournamentWinLetter_Text>Gefeliciteerd, {PAWN_labelShort} was {0} uit de {1} in het toernooi! je kreeg goedwil {2} en de volgende prijzen:\n\n{3}</VanillaFactionsExpanded.TournamentWinLetter_Text>
+
+  <VanillaFactionsExpanded.TournamentLossLetter>Toernooi verloren</VanillaFactionsExpanded.TournamentLossLetter>
+  <VanillaFactionsExpanded.TournamentLossLetter_Text>{PAWN_labelShort} Was niet goed genoeg om te winnen deze keer. {PAWN_pronoun} eindigde als {0} van de {1} plaats.</VanillaFactionsExpanded.TournamentLossLetter_Text>
+
+  <VanillaFactionsExpanded.TournamentCancelledLetter>Toernooi stilgelegd</VanillaFactionsExpanded.TournamentCancelledLetter>
+  <VanillaFactionsExpanded.TournamentCancelledLetter_Text>Het toernooi werd stilgelegd door een incident.</VanillaFactionsExpanded.TournamentCancelledLetter_Text>
+
+  <VanillaFactionsExpanded.TournamentExpGains>{PAWN_labelShort} heeft {0} ervaring gekregen.</VanillaFactionsExpanded.TournamentExpGains>
+  <VanillaFactionsExpanded.LogEntryLine>Ronde {0}: {1}</VanillaFactionsExpanded.LogEntryLine>
+
+  <VanillaFactionsExpanded.Leave>Ga weg</VanillaFactionsExpanded.Leave>
+
+  <!-- Enemy caravans -->
+  <VanillaFactionsExpanded.AttackEnemyCaravan>Val aan {0}</VanillaFactionsExpanded.AttackEnemyCaravan>
+  <VanillaFactionsExpanded.AttackingEnemyCaravan>Valt aan {0}</VanillaFactionsExpanded.AttackingEnemyCaravan>
+
+</LanguageData>

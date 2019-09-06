@@ -9,16 +9,6 @@
             <success>Always</success>
             <operations>
 
-                <!-- Patch appropriate weapons to be usable with shields -->
-                <li Class="PatchOperationAddModExtension">
-                    <xpath>/Defs/ThingDef[defName="VWE_Throwing_Rocks"]</xpath>
-                    <value>
-                        <li Class="VFECore.ThingDefExtension">
-                            <usableWithShields>true</usableWithShields>
-                        </li>
-                    </value>
-                </li>
-
                 <!-- Add weapon tags -->
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/ThingDef[defName="VWE_Throwing_Rocks"]/weaponTags</xpath>
