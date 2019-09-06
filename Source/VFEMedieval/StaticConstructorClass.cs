@@ -45,10 +45,12 @@ namespace VFEMedieval
             };
 
             var chunkProps = stoneChunk.stuffProps;
-            foreach (var statOffset in referenceProps.statOffsets)
-                chunkProps.statOffsets.Add(new StatModifier() { stat = statOffset.stat, value = statOffset.value });
-            foreach (var statFactor in referenceProps.statFactors)
-                chunkProps.statFactors.Add(new StatModifier() { stat = statFactor.stat, value = statFactor.value });
+            if (referenceProps.statOffsets != null)
+                foreach (var statOffset in referenceProps.statOffsets)
+                    chunkProps.statOffsets.Add(new StatModifier() { stat = statOffset.stat, value = statOffset.value });
+            if (referenceProps.statFactors != null)
+                foreach (var statFactor in referenceProps.statFactors)
+                    chunkProps.statFactors.Add(new StatModifier() { stat = statFactor.stat, value = statFactor.value });
 
             ModifyStatModifier(ref chunkProps.statFactors, StatDefOf.WorkToMake, ToStringNumberSense.Factor, factor: 1.5f);
             ModifyStatModifier(ref chunkProps.statFactors, StatDefOf.WorkToBuild, ToStringNumberSense.Factor, factor: 1.5f);

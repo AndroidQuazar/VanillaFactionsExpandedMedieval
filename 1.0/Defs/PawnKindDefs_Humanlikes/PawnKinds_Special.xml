@@ -40,7 +40,7 @@
     <PawnKindDef ParentName="VFEM_Medieval_Knight">
         <defName>VFEM_BlackKnight</defName>
         <label>black knight</label>
-        <defaultFactionType>AncientsHostile</defaultFactionType>
+        <defaultFactionType>VFEM_UnknownKingdomHostile</defaultFactionType>
         <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
         <itemQuality>Normal</itemQuality>
         <weaponMoney>
@@ -60,6 +60,33 @@
         <apparelColor>(30,30,30)</apparelColor>
         <techHediffsChance>1</techHediffsChance>
         <modExtensions Inherit="False"/>
+    </PawnKindDef>
+
+    <!-- Medieval equivalent of man in black -->
+    <PawnKindDef ParentName="VFEM_Medieval_Knight">
+        <defName>VFEM_KnightInBlack</defName>
+        <label>knight in black</label>
+        <labelPlural>knights in black</labelPlural>
+        <minGenerationAge>20</minGenerationAge>
+        <maxGenerationAge>50</maxGenerationAge>
+        <invNutrition>10.0</invNutrition>
+        <invFoodDef>Pemmican</invFoodDef>
+        <inventoryOptions>
+            <subOptionsChooseOne>
+                <li>
+                    <choiceChance>6</choiceChance>
+                    <thingDef>MedicineHerbal</thingDef>
+                    <countRange>5</countRange>
+                </li>
+            </subOptionsChooseOne>
+        </inventoryOptions>
+        <apparelRequired>
+            <li>Apparel_BasicShirt</li>
+            <li>Apparel_Pants</li>
+            <li>Apparel_PlateArmor</li>
+            <li>VFEM_Apparel_PlateHelmetHeavy</li>
+        </apparelRequired>
+        <apparelColor>(57,57,57)</apparelColor>
     </PawnKindDef>
 
 </Defs>
