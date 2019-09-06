@@ -63,6 +63,7 @@
     <Compile Include="AI\WorkGivers\WorkGiver_FillWineBarrel.cs" />
     <Compile Include="AI\JobDrivers\JobDriver_TakeWineOutOfWineBarrel.cs" />
     <Compile Include="AI\JobDrivers\JobDriver_FillWineBarrel.cs" />
+    <None Include="ArrivalActions\CaravanArrivalAction_AttackEnemyCaravan.cs" />
     <Compile Include="ArrivalActions\CaravanArrivalAction_AttendMedievalTournament.cs" />
     <Compile Include="BaseGen\SymbolResolver_AddMustToWineBarrels.cs" />
     <Compile Include="BaseGen\SymbolResolver_Interior_Winery.cs" />
@@ -94,10 +95,12 @@
     <Compile Include="HarmonyPatches\Patch_WITab_Caravan_Gear.cs" />
     <Compile Include="HarmonyPatches\Patch_Pawn.cs" />
     <Compile Include="HarmonyPatches\RimCuisine2\Patch_RimCuisineBBDrugPolicies_HarmonyPatches.cs" />
+    <None Include="IncidentWorkers\IncidentWorker_QuestEnemyCaravan.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_QuestCastleRuins.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_QuestMedievalTournament.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_BlackKnight.cs" />
     <Compile Include="Reflection\NonPublicTypes.cs" />
+    <None Include="Utilities\EnemyCaravanUtility.cs" />
     <Compile Include="Utilities\MedievalTournamentUtility.cs" />
     <Compile Include="Utilities\BlackKnightUtility.cs" />
     <Compile Include="StaticConstructorClass.cs" />
@@ -107,6 +110,7 @@
     <Compile Include="VFEMedieval.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="WorldObjects\EnemyCaravan.cs" />
     <Compile Include="WorldObjects\MedievalTournament.cs" />
   </ItemGroup>
   <ItemGroup>

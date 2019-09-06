@@ -33,4 +33,19 @@
         <minRefireDays>12</minRefireDays>
     </IncidentDef>
 
+    <!-- <IncidentDef>
+        <defName>VFEM_Quest_EnemyCaravan</defName>
+        <label>enemy caravan quest</label>
+        <category>WorldQuest</category>
+        <targetTags>
+            <li>World</li>
+        </targetTags>
+        <workerClass>VFEMedieval.IncidentWorker_QuestEnemyCaravan</workerClass>
+        <letterLabel>Enemy caravan quest</letterLabel>
+        <letterText>Placeholder.</letterText>
+        <letterDef>PositiveEvent</letterDef>
+        <baseChance>1</baseChance>
+        <minRefireDays>12</minRefireDays>
+    </IncidentDef> -->
+
 </Defs>

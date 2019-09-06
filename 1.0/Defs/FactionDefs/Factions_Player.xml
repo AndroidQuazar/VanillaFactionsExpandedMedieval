@@ -34,6 +34,7 @@
         <modExtensions>
             <li Class="VFECore.FactionDefExtension">
                 <packAnimalTexNameSuffix>MedievalPack</packAnimalTexNameSuffix>
+                <strangerInBlackReplacement>VFEM_BlackKnight</strangerInBlackReplacement>
             </li>
         </modExtensions>
     </FactionDef>

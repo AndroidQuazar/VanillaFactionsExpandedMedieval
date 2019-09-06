@@ -13,6 +13,7 @@ namespace VFEMedieval
     public static class WorldObjectDefOf
     {
 
+        //public static WorldObjectDef VFEM_EnemyCaravan;
         public static WorldObjectDef VFEM_MedievalTournament;
 
     }

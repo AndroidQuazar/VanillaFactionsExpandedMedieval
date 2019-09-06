@@ -2,7 +2,7 @@
 <LanguageData>
 
     <!-- Wine barrel -->
-    <VanillaFactionsExpanded.NoMust>need must</VanillaFactionsExpanded.NoMust>
+    <VanillaFactionsExpanded.NoMust>need grape must</VanillaFactionsExpanded.NoMust>
     <VanillaFactionsExpanded.ContainsMust>Contains {0} / {1} must</VanillaFactionsExpanded.ContainsMust>
     <VanillaFactionsExpanded.ContainsWine>Contains {0} / {1} wine</VanillaFactionsExpanded.ContainsWine>
     <VanillaFactionsExpanded.TargetWineQuality>Target quality: {0}</VanillaFactionsExpanded.TargetWineQuality>
@@ -30,11 +30,15 @@
     <VanillaFactionsExpanded.TournamentLossLetter_Text>{PAWN_labelShort} was unfortunately not able to win the tournament this time. {PAWN_pronoun} finished {0} out of {1} place.</VanillaFactionsExpanded.TournamentLossLetter_Text>
 
     <VanillaFactionsExpanded.TournamentCancelledLetter>Tournament cancelled</VanillaFactionsExpanded.TournamentCancelledLetter>
-    <VanillaFactionsExpanded.TournamentCancelledLetter_Text>Placeholder text...</VanillaFactionsExpanded.TournamentCancelledLetter_Text>
+    <VanillaFactionsExpanded.TournamentCancelledLetter_Text>The tournament had to be cancelled due to an incident.</VanillaFactionsExpanded.TournamentCancelledLetter_Text>
 
     <VanillaFactionsExpanded.TournamentExpGains>{PAWN_labelShort} has gained {0} experience.</VanillaFactionsExpanded.TournamentExpGains>
     <VanillaFactionsExpanded.LogEntryLine>Round {0}: {1}</VanillaFactionsExpanded.LogEntryLine>
 
     <VanillaFactionsExpanded.Leave>Leave</VanillaFactionsExpanded.Leave>
+
+    <!-- Enemy caravans -->
+    <VanillaFactionsExpanded.AttackEnemyCaravan>Attack {0}</VanillaFactionsExpanded.AttackEnemyCaravan>
+    <VanillaFactionsExpanded.AttackingEnemyCaravan>Attacking {0}</VanillaFactionsExpanded.AttackingEnemyCaravan>
 
 </LanguageData>

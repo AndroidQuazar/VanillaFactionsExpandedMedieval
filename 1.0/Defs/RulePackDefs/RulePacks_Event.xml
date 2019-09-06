@@ -14,6 +14,7 @@
                 <li>skillfully->adeptly</li>
                 <li>skillfully->handily</li>
                 <li>skillfully->easily</li>
+                <li>skillfully->courageously</li>
 
                 <li>surpassed->surpassed</li>
                 <li>surpassed->beat</li>
@@ -45,6 +46,8 @@
                 <li>skill->skill</li>
                 <li>skill->might</li>
                 <li>skill->finnesse</li>
+                <li>skill->courage</li>
+
             </rulesStrings>
         </rulePack>
     </RulePackDef>
@@ -53,7 +56,20 @@
         <defName>VFEM_Event_MeleeDisasterCut</defName>
         <rulePack>
             <rulesStrings>
-                <li>r_logentry->[INITIATOR_definite] [skillfully] [surpassed] [SUBJECT_definite]'s swordsmanship.</li>
+
+                <li>r_logentry->[SUBJECT_definite] received a [woundDesc] [wound].</li>
+
+                <li>woundDesc->nasty</li>
+                <li>woundDesc->deep</li>
+                <li>woundDesc->bloody</li>
+                <li>woundDesc->horrible</li>
+
+                <li>wound->cut</li>
+                <li>wound->gash</li>
+                <li>wound->scratch</li>
+                <li>wound->scrape</li>
+                <li>wound(p=0.1)->boo-boo</li>
+
             </rulesStrings>
         </rulePack>
     </RulePackDef>
@@ -62,7 +78,26 @@
         <defName>VFEM_Event_MeleeDisasterPartLoss</defName>
         <rulePack>
             <rulesStrings>
-                <li>r_logentry->[INITIATOR_definite] [skillfully] [surpassed] [SUBJECT_definite]'s swordsmanship.</li>
+
+                <li>r_logentry->A body part of [SUBJECT_definite]'s [flew] [away].</li>
+
+                <li>flew->flew</li>
+                <li>flew(p=0.2)->sailed</li>
+
+                <li>away->away</li>
+                <li>away(p=0.2)->off in an arc</li>
+
+                <li>r_logentry->[INITIATOR_definite] [removedAdverb] [removed] one of [SUBJECT_definite]'s body parts.</li>
+
+                <li>removedAdverb->brutally</li>
+                <li>removedAdverb->coldly</li>
+                <li>removedAdverb->skillfully</li>
+                <li>removedAdverb->surgically</li>
+                
+                <li>removed->removed</li>
+                <li>removed->cut off</li>
+                <li>removed->dismembered</li>
+
             </rulesStrings>
         </rulePack>
     </RulePackDef>
@@ -93,7 +128,7 @@
                 <li>weapon->spear</li>
                 <li>weapon->pike</li>
 
-                <li>r_logentry->[SUBJECT_definite] [failed] to [control] their [steed].</li>
+                <li>r_logentry->[SUBJECT_definite] [failed] to [control] [SUBJECT_possessive] [steed].</li>
 
                 <li>failed->failed</li>
                 <li>failed->was unable</li>
@@ -119,9 +154,22 @@
 
     <RulePackDef>
         <defName>VFEM_Event_JoustingDisaster</defName>
+        <include>
+            <li>VFEM_Event_JoustingRound</li>
+        </include>
         <rulePack>
             <rulesStrings>
-                <li>r_logentry->[INITIATOR_definite] [skillfully] [surpassed] [SUBJECT_definite]'s swordsmanship.</li>
+
+                <li>r_logentry->[SUBJECT_definite]'s [steed] reared and [kickPast] [SUBJECT_objective].</li>
+                <li>r_logentry->[SUBJECT_definite] fell off [SUBJECT_possessive] [steed], which then [kickAdj] [kickPast] [SUBJECT_objective].</li>
+
+                <li>kickAdj->brutally</li>
+                <li>kickAdj->savagely</li>
+
+                <li>kickPast->kicked</li>
+                <li>kickPast->booted</li>
+                <li>kickPast->battered</li>
+
             </rulesStrings>
         </rulePack>
     </RulePackDef>
@@ -131,12 +179,12 @@
         <defName>VFEM_Event_ArcheryRound</defName>
         <rulePack>
             <rulesStrings>
-                <li>r_logentry->[INITIATOR_definite] [accurately] [hitPast] their targets.</li>
-                <li>r_logentry->[INITIATOR_definite] [accurately] [hitPast] their targets with [speed].</li>
+                <li>r_logentry->[INITIATOR_definite] [hitAdj] [hitPast] [INITIATOR_possessive] targets.</li>
+                <li>r_logentry->[INITIATOR_definite] [hitAdj] [hitPast] [INITIATOR_possessive] targets with [speed].</li>
 
-                <li>accurately->accurately</li>
-                <li>accurately->skillfully</li>
-                <li>accurately->precisely</li>
+                <li>hitAdj->accurately</li>
+                <li>hitAdj->skillfully</li>
+                <li>hitAdj->precisely</li>
 
                 <li>hitPast->hit</li>
                 <li>hitPast->struck</li>
@@ -146,7 +194,7 @@
                 <li>speed->dexterity</li>
                 <li>speed->finesse</li>
 
-                <li>r_logentry->[SUBJECT_definite] was [unable] to [hit] their targets.</li>
+                <li>r_logentry->[SUBJECT_definite] was [unable] to [hit] [SUBJECT_possessive] targets.</li>
 
                 <li>unable->unable</li>
                 <li>unable->not able</li>
@@ -166,7 +214,10 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>r_logentry->[INITIATOR_definite] [skillfully] [surpassed] [SUBJECT_definite]'s swordsmanship.</li>
+
+                <li>r_logentry->[SUBJECT_definite] [hitPast] [SUBJECT_possessive] target which bursts into fragments, injuring [SUBJECT_objective].</li>
+                <li>r_logentry->[SUBJECT_definite] accidentally flayed [SUBJECT_objective]self while trying to fire [SUBJECT_possessive] bow.</li>
+
             </rulesStrings>
         </rulePack>
     </RulePackDef>

@@ -25,7 +25,7 @@ namespace VFEMedieval
 
         public override string Label => "VanillaFactionsExpanded.AttendMedievalTournament".Translate(tournament.Label);
 
-        public override string ReportString => "CaravanAttending".Translate(tournament.Label);
+        public override string ReportString => "VanillaFactionsExpanded.CaravanAttending".Translate(tournament.Label);
 
         public override void Arrived(Caravan caravan)
         {
@@ -55,7 +55,7 @@ namespace VFEMedieval
 
         public static IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan, MedievalTournament tournament)
         {
-            return CaravanArrivalActionUtility.GetFloatMenuOptions<CaravanArrivalAction_AttendMedievalTournament>(() => CanVisit(caravan, tournament), () => new CaravanArrivalAction_AttendMedievalTournament(tournament),
+            return CaravanArrivalActionUtility.GetFloatMenuOptions(() => CanVisit(caravan, tournament), () => new CaravanArrivalAction_AttendMedievalTournament(tournament),
                 "VanillaFactionsExpanded.AttendMedievalTournament".Translate(tournament.Label), caravan, tournament.Tile, tournament);
         }
 

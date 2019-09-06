@@ -133,6 +133,7 @@
             <li Class="VFECore.FactionDefExtension">
                 <packAnimalTexNameSuffix>MedievalPack</packAnimalTexNameSuffix>
                 <settlementGenerationSymbol>VFEM_medievalSettlement</settlementGenerationSymbol>
+                <hasCities>false</hasCities>
             </li>
         </modExtensions>
     </FactionDef>

@@ -19,14 +19,15 @@ namespace VFEMedieval
             if (respectPopulationIntent && Rand.Value > StorytellerUtilityPopulation.PopulationIntent)
                 yield break;
 
-            for (int i = 0; i < countRange.RandomInRange; i++)
+            int count = countRange.RandomInRange;
+            for (int i = 0; i < count; i++)
             {
                 if (!Find.FactionManager.AllFactionsVisible.Where(f => f.def.techLevel == TechLevel.Medieval && f != Faction.OfPlayer && f.def.humanlikeFaction).TryRandomElement(out Faction mercFaction))
                     yield break;
 
                 PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.VFEM_SellSword, mercFaction, PawnGenerationContext.NonPlayer, forTile, mustBeCapableOfViolence: true);
                 var merc = PawnGenerator.GeneratePawn(request);
-                
+
                 // Geralt!
                 if (Rand.Chance(CosplayChance))
                 {
@@ -48,7 +49,7 @@ namespace VFEMedieval
                         var apparel = merc.apparel.WornApparel[j];
                         if (apparel.def.apparel.layers.Contains(RimWorld.ApparelLayerDefOf.Overhead))
                             merc.apparel.Remove(apparel);
-                    } 
+                    }
                 }
 
                 yield return merc;

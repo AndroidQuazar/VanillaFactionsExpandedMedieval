@@ -24,6 +24,7 @@
         </weaponTags>
         <modExtensions Inherit="False">
             <li Class="VFECore.PawnKindDefExtension">
+                <countAsSlave>true</countAsSlave>
                 <shieldMoney>
                     <min>-100</min>
                     <max>500</max>

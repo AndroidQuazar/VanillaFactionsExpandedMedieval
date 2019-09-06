@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Manifest>
     <identifier>VanillaFactionsExpandedMedieval</identifier>
-    <version>1.0.0.0</version>
+    <version>1.0.1.0</version>
     <dependencies>
-        <li>VanillaFactionsExpandedCore</li>
+        <li>VanillaFactionsExpandedCore >= 1.1.0.0</li>
     </dependencies>
     <loadAfter>
         <li>[1.0]RimCuisine2Core</li>

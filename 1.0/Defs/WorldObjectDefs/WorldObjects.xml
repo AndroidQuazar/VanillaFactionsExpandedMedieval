@@ -14,4 +14,17 @@
         </comps>
     </WorldObjectDef>
 
+    <!-- <WorldObjectDef>
+        <defName>VFEM_EnemyCaravan</defName>
+        <label>enemy caravan</label>
+        <description>A group of traveling people.</description>
+        <worldObjectClass>VFEMedieval.EnemyCaravan</worldObjectClass>
+        <texture>World/WorldObjects/EnemyCaravan</texture>
+        <useDynamicDrawer>true</useDynamicDrawer>
+        <expandingIcon>true</expandingIcon>
+        <expandingIconTexture>World/WorldObjects/Expanding/Caravan</expandingIconTexture>
+        <expandingIconPriority>100</expandingIconPriority>
+        <expandMore>true</expandMore>
+    </WorldObjectDef> -->
+
 </Defs>
