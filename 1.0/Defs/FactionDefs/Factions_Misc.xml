@@ -62,8 +62,8 @@
                     <VFEM_Medieval_Peasant>20</VFEM_Medieval_Peasant>
                     <VFEM_Medieval_Squire>40</VFEM_Medieval_Squire>
                     <VFEM_Medieval_Footsoldier>30</VFEM_Medieval_Footsoldier>
-                    <VFEM_Medieval_Bowman>30</VFEM_Medieval_Bowman>
-                    <VFEM_Medieval_Knight>30</VFEM_Medieval_Knight>
+                    <VFEM_Medieval_Bowman>50</VFEM_Medieval_Bowman>
+                    <VFEM_Medieval_Knight>20</VFEM_Medieval_Knight>
                     <VFEM_Medieval_Lord>10</VFEM_Medieval_Lord>
                 </options>
             </li>
@@ -83,7 +83,7 @@
                     <VFEM_Medieval_Peasant>15</VFEM_Medieval_Peasant>
                     <VFEM_Medieval_Squire>40</VFEM_Medieval_Squire>
                     <VFEM_Medieval_Footsoldier>40</VFEM_Medieval_Footsoldier>
-                    <VFEM_Medieval_Knight>30</VFEM_Medieval_Knight>
+                    <VFEM_Medieval_Knight>20</VFEM_Medieval_Knight>
                     <VFEM_Medieval_Lord>5</VFEM_Medieval_Lord>
                 </options>
             </li>
@@ -93,7 +93,7 @@
                 <options>
                     <VFEM_Medieval_Squire>30</VFEM_Medieval_Squire>
                     <VFEM_Medieval_Footsoldier>30</VFEM_Medieval_Footsoldier>
-                    <VFEM_Medieval_Bowman>30</VFEM_Medieval_Bowman>
+                    <VFEM_Medieval_Bowman>40</VFEM_Medieval_Bowman>
                     <VFEM_Medieval_Knight>20</VFEM_Medieval_Knight>
                     <VFEM_Medieval_Lord>10</VFEM_Medieval_Lord>
                 </options>
@@ -112,18 +112,18 @@
                 <guards>
                     <VFEM_Medieval_Squire>30</VFEM_Medieval_Squire>
                     <VFEM_Medieval_Footsoldier>30</VFEM_Medieval_Footsoldier>
-                    <VFEM_Medieval_Bowman>30</VFEM_Medieval_Bowman>
-                    <VFEM_Medieval_Knight>20</VFEM_Medieval_Knight>
+                    <VFEM_Medieval_Bowman>40</VFEM_Medieval_Bowman>
+                    <VFEM_Medieval_Knight>10</VFEM_Medieval_Knight>
                 </guards>
             </li>
             <li>
                 <kindDef>Settlement</kindDef>
                 <options>
-                    <VFEM_Medieval_Peasant>20</VFEM_Medieval_Peasant>
-                    <VFEM_Medieval_Squire>20</VFEM_Medieval_Squire>
-                    <VFEM_Medieval_Footsoldier>20</VFEM_Medieval_Footsoldier>
+                    <VFEM_Medieval_Peasant>30</VFEM_Medieval_Peasant>
+                    <VFEM_Medieval_Squire>30</VFEM_Medieval_Squire>
+                    <VFEM_Medieval_Footsoldier>30</VFEM_Medieval_Footsoldier>
                     <VFEM_Medieval_Bowman>50</VFEM_Medieval_Bowman>
-                    <VFEM_Medieval_Knight>30</VFEM_Medieval_Knight>
+                    <VFEM_Medieval_Knight>20</VFEM_Medieval_Knight>
                     <VFEM_Medieval_Lord>50</VFEM_Medieval_Lord>
                 </options>
             </li>

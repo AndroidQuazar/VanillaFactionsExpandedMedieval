@@ -1,3 +1,0 @@
-E:\Documents\GitHub\VanillaFactionsExpanded\Source\VanillaFactionsExpanded\obj\Debug\VanillaFactionsExpanded.csprojAssemblyReference.cache
-E:\Documents\GitHub\VanillaFactionsExpanded\Source\VanillaFactionsExpanded\obj\Debug\VanillaFactionsExpanded.csproj.CoreCompileInputs.cache
-E:\Documents\GitHub\VanillaFactionsExpanded\Source\VanillaFactionsExpanded\obj\Debug\VFEMedieval.dll

@@ -7,6 +7,7 @@
             <li>VFEM_Shields</li>
         </thingCategories>
         <equippedStatOffsets>
+            <ShootingAccuracyPawn>-2</ShootingAccuracyPawn>
             <MeleeHitChance>-2</MeleeHitChance>
             <MeleeDodgeChance>-5</MeleeDodgeChance>
         </equippedStatOffsets>
@@ -52,24 +53,24 @@
     <ThingDef ParentName="VFEM_BaseShield">
         <defName>VFEM_Shield_Kite</defName>
         <label>kite shield</label>
-        <description>A medium-sized wooden shield, with the front decoratively covered by leather. Offers a moderate amount of protection against melee and ranged attacks.</description>
+        <description>A large wooden shield, with the front decoratively covered by leather. Offers a moderate amount of protection against melee and ranged attacks.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Shield/KiteShield/KiteShield</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>0.83</drawSize>
         </graphicData>
-        <costStuffCount>20</costStuffCount>
+        <costStuffCount>25</costStuffCount>
         <costList>
-            <WoodLog>60</WoodLog>
+            <WoodLog>70</WoodLog>
         </costList>
         <statBases>
             <MaxHitPoints>120</MaxHitPoints>
             <Flammability>1.0</Flammability>
-            <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
-            <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
-            <ArmorRating_Heat>0.7</ArmorRating_Heat>
+            <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.5</ArmorRating_Heat>
             <WorkToMake>3000</WorkToMake>
-            <Mass>2</Mass>
+            <Mass>2.5</Mass>
         </statBases>
         <comps>
             <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon"/>
@@ -79,6 +80,7 @@
                 </shieldTags>
                 <useDeflectMetalEffect>false</useDeflectMetalEffect>
                 <coveredBodyPartGroups>
+                    <li>Neck</li>
                     <li>Torso</li>
                     <li>Arms</li>
                     <li>Hands</li>
@@ -118,16 +120,16 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>0.75</drawSize>
         </graphicData>
-        <costStuffCount>30</costStuffCount>
+        <costStuffCount>20</costStuffCount>
         <costList>
             <Steel>90</Steel>
         </costList>
         <statBases>
             <MaxHitPoints>180</MaxHitPoints>
             <Flammability>0.4</Flammability>
-            <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
-            <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
-            <ArmorRating_Heat>0.9</ArmorRating_Heat>
+            <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.7</ArmorRating_Heat>
             <WorkToMake>8000</WorkToMake>
             <Mass>4</Mass>
         </statBases>

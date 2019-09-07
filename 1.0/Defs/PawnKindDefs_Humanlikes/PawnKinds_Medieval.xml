@@ -143,7 +143,7 @@
     <PawnKindDef ParentName="VFEM_MedievalPawnKindBase">
         <defName>VFEM_Medieval_Squire</defName>
         <label>squire</label>
-        <combatPower>50</combatPower>
+        <combatPower>60</combatPower>
         <canBeSapper>true</canBeSapper>
         <gearHealthRange>
             <min>0.5</min>
@@ -165,11 +165,11 @@
         </weaponTags>
     </PawnKindDef>
 
-    <!-- Mid-tier - footsoldier, bowman -->
+    <!-- High-tier - footsoldier, bowman -->
     <PawnKindDef ParentName="VFEM_MedievalMilitaryBase">
         <defName>VFEM_Medieval_Footsoldier</defName>
         <label>footsoldier</label>
-        <combatPower>70</combatPower>
+        <combatPower>90</combatPower>
         <canBeSapper>true</canBeSapper>
         <gearHealthRange>
             <min>0.8</min>
@@ -194,7 +194,7 @@
     <PawnKindDef ParentName="VFEM_MedievalMilitaryBase">
         <defName>VFEM_Medieval_Bowman</defName>
         <label>bowman</label>
-        <combatPower>70</combatPower>
+        <combatPower>90</combatPower>
         <gearHealthRange>
             <min>0.8</min>
             <max>1.8</max>
@@ -212,12 +212,11 @@
         </weaponTags>
     </PawnKindDef>
 
-    <!-- High-tier - knight, lord -->
+    <!-- Top-tier - knight, lord -->
     <PawnKindDef Name="VFEM_Medieval_Knight" ParentName="VFEM_MedievalEliteMilitaryBase">
         <defName>VFEM_Medieval_Knight</defName>
         <label>knight</label>
-        <combatPower>100</combatPower>
-        <itemQuality>Good</itemQuality>
+        <combatPower>130</combatPower>
         <apparelMoney>
             <min>1000</min>
             <max>1600</max>
@@ -243,7 +242,7 @@
         <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
         <minGenerationAge>30</minGenerationAge>
         <maxGenerationAge>999</maxGenerationAge>
-        <itemQuality>Excellent</itemQuality>
+        <itemQuality>Good</itemQuality>
         <factionLeader>true</factionLeader>
         <apparelMoney>
             <min>1600</min>

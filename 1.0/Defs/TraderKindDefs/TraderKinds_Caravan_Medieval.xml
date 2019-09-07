@@ -292,7 +292,7 @@
   <TraderKindDef>
     <defName>VFEM_Caravan_Medieval_Sellswords</defName>
     <label>sellswords</label>
-    <commonality>999</commonality> <!-- 1 -->
+    <commonality>1</commonality>
     <commonalityMultFromPopulationIntent>
       <points>
         <li>(-1, 0)</li>

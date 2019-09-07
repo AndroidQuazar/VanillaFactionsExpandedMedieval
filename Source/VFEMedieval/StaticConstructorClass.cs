@@ -27,12 +27,19 @@ namespace VFEMedieval
 
         private static void ResolveImpliedStoneChunkStuffProperties(ThingDef stoneChunk, StuffProperties referenceProps)
         {
+            // For compatibility with other mods that make stone chunks a material
+            var stuffCategories = new List<StuffCategoryDef>() { StuffCategoryDefOf.VFEM_StoneChunks };
+            if (stoneChunk.stuffProps?.categories is List<StuffCategoryDef> oldCats)
+                foreach (var cat in oldCats)
+                    if (!stuffCategories.Contains(cat))
+                        stuffCategories.Add(cat);
+
             stoneChunk.resourceReadoutPriority = ResourceCountPriority.Middle;
             stoneChunk.stuffProps = new StuffProperties()
             {
                 stuffAdjective = referenceProps.stuffAdjective,
                 commonality = referenceProps.commonality,
-                categories = new List<StuffCategoryDef>() { StuffCategoryDefOf.VFEM_StoneChunks },
+                categories = stuffCategories,
                 smeltable = referenceProps.smeltable,
                 statOffsets = new List<StatModifier>(),
                 statFactors = new List<StatModifier>(),

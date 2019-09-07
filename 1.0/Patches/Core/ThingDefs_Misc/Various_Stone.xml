@@ -3,25 +3,26 @@
 
     <!-- For the purpose of passing error checking -->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationTest">
-                <xpath>/Defs/ThingDef[defName="ChunkGranite"]/stuffProps</xpath>
+                <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]/stuffProps</xpath>
+                <success>Invert</success>
             </li>
-            <li Class="PatchOperationRemove">
-                <xpath>/Defs/ThingDef[defName="ChunkGranite"]/stuffProps</xpath>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]</xpath>
+                <value>
+                    <stuffProps>
+                        <categories/>
+                    </stuffProps>
+                </value>
             </li>
         </operations>
     </Operation>
 
     <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="ChunkGranite"]</xpath>
+        <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]/stuffProps/categories</xpath>
         <value>
-            <stuffProps>
-                <categories>
-                    <li>VFEM_StoneChunks</li>
-                </categories>
-            </stuffProps>
+            <li>VFEM_StoneChunks</li>
         </value>
     </Operation>
 

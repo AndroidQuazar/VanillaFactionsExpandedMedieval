@@ -51,6 +51,7 @@
                 <cooldownTime>2.6</cooldownTime>
             </li>
         </tools>
+        <recipeMaker Inherit="False"/>
     </ThingDef>
 
 </Defs>

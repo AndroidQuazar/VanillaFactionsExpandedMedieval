@@ -42,7 +42,6 @@
         <label>black knight</label>
         <defaultFactionType>VFEM_UnknownKingdomHostile</defaultFactionType>
         <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-        <itemQuality>Normal</itemQuality>
         <weaponMoney>
             <min>300</min>
             <max>300</max>
