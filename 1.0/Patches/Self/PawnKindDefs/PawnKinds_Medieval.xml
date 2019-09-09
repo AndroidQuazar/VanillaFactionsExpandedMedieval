@@ -20,9 +20,8 @@
             <li>Vanilla Weapons Expanded</li>
         </mods>
         <match Class="PatchOperationSequence">
-            <success>Always</success>
             <operations>
-            
+
                 <!-- Peasants will be able to throw rocks -->
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/PawnKindDef[defName="VFEM_Medieval_Peasant"]/weaponTags</xpath>
@@ -35,6 +34,16 @@
         </match>
     </Operation>
 
+    <Operation Class="PatchOperationLoadOnDemand.XML">
+        <source>1.0/Defs_OnDemand</source>
+        <mods>
+            <li>Vanilla Weapons Expanded</li>
+        </mods>
+        <folders>
+            <li>VanillaWeaponsExpanded</li>
+        </folders>
+    </Operation>
+
     <!-- Integration with Vanilla Armour Expanded -->
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -45,34 +54,8 @@
             <operations>
 
                 <!-- Modify footman's armour -->
-                <li Class="PatchOperationReplace">
+                <li Class="PatchOperationRemove">
                     <xpath>/Defs/PawnKindDef[defName="VFEM_Medieval_Footsoldier"]/apparelTags/li[text()="MedievalMilitary"]</xpath>
-                    <value>
-                        <li>MedievalArmorDecent</li>
-                    </value>
-                </li>
-
-                <!-- Improve bowman's armour -->
-                <li Class="PatchOperationSequence">
-                    <success>Always</success>
-                    <operations>
-                        <li Class="PatchOperationTest">
-                            <xpath>/Defs/PawnKindDef[defName="VFEM_Medieval_Bowman"]/apparelTags</xpath>
-                            <success>Invert</success>
-                        </li>
-                        <li Class="PatchOperationAdd">
-                            <xpath>/Defs/PawnKindDef[defName="VFEM_Medieval_Bowman"]</xpath>
-                            <value>
-                                <apparelTags/>
-                            </value>
-                        </li>
-                    </operations>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/PawnKindDef[defName="VFEM_Medieval_Bowman"]/apparelTags</xpath>
-                    <value>
-                        <li>MedievalArmorDecent</li>
-                    </value>
                 </li>
 
             </operations>
@@ -89,7 +72,7 @@
 
                 <!-- Prevent some pawns from using mounts... -->
                 <li Class="PatchOperationAddModExtension">
-                    <xpath>/Defs/PawnKindDef[@Name="VFEM_MedievalPawnKindBase" or @Name="VFEM_MedievalMilitaryBase"]</xpath>
+                    <xpath>/Defs/PawnKindDef[@Name="VFEM_MedievalPawnKindBase" or @Name="VFEM_MedievalMilitaryBase" or defName="VFEM_Medieval_Footsoldier"]</xpath>
                     <value>
                         <li Class="GiddyUpCore.CustomMountsPatch">
                             <mountChance>0</mountChance>
@@ -99,10 +82,10 @@
 
                 <!-- Allow high-tiers to use mounts -->
                 <li Class="PatchOperationAddModExtension">
-                    <xpath>/Defs/PawnKindDef[@Name="VFEM_MedievalEliteMilitaryBase"]</xpath>
+                    <xpath>/Defs/PawnKindDef[@Name="VFEM_Medieval_Knight"]</xpath>
                     <value>
                         <li Class="GiddyUpCore.CustomMountsPatch">
-                            <mountChance>30</mountChance>
+                            <mountChance>50</mountChance>
                             <possibleMounts>
                                 <li>
                                     <key>Muffalo</key>

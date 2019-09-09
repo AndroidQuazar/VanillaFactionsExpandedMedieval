@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Musketeer -->
+    <PawnKindDef ParentName="VFEM_MedievalMilitaryBase">
+        <defName>VFEM_Medieval_Musketeer</defName>
+        <label>musketeer</label>
+        <combatPower>80</combatPower>
+        <gearHealthRange>
+            <min>0.8</min>
+            <max>1.8</max>
+        </gearHealthRange>
+        <apparelMoney>
+            <min>500</min>
+            <max>700</max>
+        </apparelMoney>
+        <apparelTags>
+            <li>MedievalArmorDecent</li>
+        </apparelTags>
+        <weaponMoney>
+            <min>300</min>
+            <max>300</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>MedievalRangedAdvanced</li>
+        </weaponTags>
+    </PawnKindDef>
+
+</Defs>

@@ -9,12 +9,25 @@
             <success>Always</success>
             <operations>
 
-                <!-- Add weapon tags -->
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="VWE_Bow_Crossbow"]/weaponTags</xpath>
+                <!-- Replace weapon tags -->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VWE_Bow_Crossbow"]/weaponTags/li[text()="NeolithicRangedHeavy"]</xpath>
                     <value>
                         <li>MedievalRanged</li>
                     </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="VWE_Bow_Crossbow"]/weaponTags/li[text()="NeolithicRangedChief"]</xpath>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VWE_Gun_Musket" or defName="VWE_Gun_Flintlock"]/weaponTags/li[text()="NeolithicRangedHeavy"]</xpath>
+                    <value>
+                        <li>MedievalRangedAdvanced</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="VWE_Gun_Musket" or defName="VWE_Gun_Flintlock"]/weaponTags/li[text()="NeolithicRangedChief"]</xpath>
                 </li>
 
             </operations>

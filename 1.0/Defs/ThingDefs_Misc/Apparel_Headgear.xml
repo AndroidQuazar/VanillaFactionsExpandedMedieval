@@ -29,6 +29,7 @@
             <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
             <EquipDelay>2.5</EquipDelay>
         </statBases>
+        <generateCommonality>0.4</generateCommonality>
         <stuffCategories>
             <li>Metallic</li>
         </stuffCategories>
@@ -42,6 +43,7 @@
             </layers>
             <tags>
                 <li>MedievalArmorBasic</li>
+                <li>MedievalArmorDecent</li>
             </tags>
             <defaultOutfitTags>
                 <li>Soldier</li>
@@ -94,7 +96,7 @@
                 <li>Overhead</li>
             </layers>
             <tags>
-                <li>MedievalArmorDecent</li>
+                <li>MedievalArmorElite</li>
             </tags>
             <defaultOutfitTags>
                 <li>Soldier</li>

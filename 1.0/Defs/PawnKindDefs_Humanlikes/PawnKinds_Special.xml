@@ -5,7 +5,7 @@
     <PawnKindDef ParentName="VFEM_MedievalPawnKindBase">
         <defName>VFEM_SellSword</defName>
         <label>sellsword</label>
-        <combatPower>90</combatPower>
+        <combatPower>100</combatPower>
         <apparelMoney>
             <min>1000</min>
             <max>1600</max>
@@ -79,6 +79,7 @@
                 </li>
             </subOptionsChooseOne>
         </inventoryOptions>
+        <itemQuality>Good</itemQuality>
         <apparelRequired>
             <li>Apparel_BasicShirt</li>
             <li>Apparel_Pants</li>

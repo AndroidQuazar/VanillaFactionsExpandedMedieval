@@ -66,9 +66,9 @@
         <statBases>
             <MaxHitPoints>120</MaxHitPoints>
             <Flammability>1.0</Flammability>
-            <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
-            <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-            <ArmorRating_Heat>0.5</ArmorRating_Heat>
+            <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.65</ArmorRating_Heat>
             <WorkToMake>3000</WorkToMake>
             <Mass>2.5</Mass>
         </statBases>
@@ -122,14 +122,14 @@
         </graphicData>
         <costStuffCount>20</costStuffCount>
         <costList>
-            <Steel>90</Steel>
+            <Steel>80</Steel>
         </costList>
         <statBases>
             <MaxHitPoints>180</MaxHitPoints>
             <Flammability>0.4</Flammability>
-            <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
-            <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
-            <ArmorRating_Heat>0.7</ArmorRating_Heat>
+            <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.9</ArmorRating_Heat>
             <WorkToMake>8000</WorkToMake>
             <Mass>4</Mass>
         </statBases>

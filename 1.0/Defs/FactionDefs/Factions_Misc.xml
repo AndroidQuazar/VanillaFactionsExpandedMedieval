@@ -47,15 +47,15 @@
         <maxPawnCostPerTotalPointsCurve>
             <points>
                 <li>(0,35)</li>
-                <li>(70, 50)</li>
-                <li>(800, 100)</li>
+                <li>(120, 60)</li>
+                <li>(600, 100)</li>
                 <li>(1300, 150)</li>
                 <li>(100000, 10000)</li>
             </points>
         </maxPawnCostPerTotalPointsCurve>
         <pawnGroupMakers>
             <li>
-                <!-- Normal fights, ranged with melee mix-ins -->
+                <!-- Normal fights, melee with ranged mix-ins -->
                 <kindDef>Combat</kindDef>
                 <commonality>100</commonality>
                 <options>
@@ -70,7 +70,7 @@
             <li>
                 <!-- Normal fights, ranged only -->
                 <kindDef>Combat</kindDef>
-                <commonality>60</commonality>
+                <commonality>30</commonality>
                 <options>
                     <VFEM_Medieval_Bowman>100</VFEM_Medieval_Bowman>
                 </options>
@@ -83,8 +83,8 @@
                     <VFEM_Medieval_Peasant>15</VFEM_Medieval_Peasant>
                     <VFEM_Medieval_Squire>40</VFEM_Medieval_Squire>
                     <VFEM_Medieval_Footsoldier>40</VFEM_Medieval_Footsoldier>
-                    <VFEM_Medieval_Knight>20</VFEM_Medieval_Knight>
-                    <VFEM_Medieval_Lord>5</VFEM_Medieval_Lord>
+                    <VFEM_Medieval_Knight>25</VFEM_Medieval_Knight>
+                    <VFEM_Medieval_Lord>10</VFEM_Medieval_Lord>
                 </options>
             </li>
             <li>
@@ -123,8 +123,8 @@
                     <VFEM_Medieval_Squire>30</VFEM_Medieval_Squire>
                     <VFEM_Medieval_Footsoldier>30</VFEM_Medieval_Footsoldier>
                     <VFEM_Medieval_Bowman>50</VFEM_Medieval_Bowman>
-                    <VFEM_Medieval_Knight>20</VFEM_Medieval_Knight>
-                    <VFEM_Medieval_Lord>50</VFEM_Medieval_Lord>
+                    <VFEM_Medieval_Knight>25</VFEM_Medieval_Knight>
+                    <VFEM_Medieval_Lord>60</VFEM_Medieval_Lord>
                 </options>
             </li>
         </pawnGroupMakers>
