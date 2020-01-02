@@ -160,7 +160,7 @@
                 <categoryDef>WeaponsMelee</categoryDef>
                 <maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
                 <excludedCategories>
-                    <li>VFEM_Shields</li> <!-- Handled in another StockGenerator -->
+                    <li>VFEC_Shields</li> <!-- Handled in another StockGenerator -->
                 </excludedCategories>
                 <thingDefCountRange>
                     <min>3</min>
@@ -172,7 +172,7 @@
                 </countRange>
             </li>
             <li Class="StockGenerator_Category">
-                <categoryDef>VFEM_Shields</categoryDef>
+                <categoryDef>VFEC_Shields</categoryDef>
                 <maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
                 <thingDefCountRange>
                     <min>2</min>

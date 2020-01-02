@@ -4,7 +4,7 @@
     <ThingDef Name="VFEM_BaseShield" ParentName="BaseMeleeWeapon_Blunt_Quality" Abstract="True">
         <techLevel>Medieval</techLevel>
         <thingCategories Inherit="False">
-            <li>VFEM_Shields</li>
+            <li>VFEC_Shields</li>
         </thingCategories>
         <equippedStatOffsets>
             <ShootingAccuracyPawn>-2</ShootingAccuracyPawn>

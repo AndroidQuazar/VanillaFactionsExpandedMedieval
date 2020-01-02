@@ -20,7 +20,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/TraderKindDef[defName="Base_Neolithic_Standard"]/stockGenerators/li[categoryDef="WeaponsMelee"]/excludedCategories</xpath>
         <value>
-            <li>VFEM_Shields</li>
+            <li>VFEC_Shields</li>
         </value>
     </Operation>
 

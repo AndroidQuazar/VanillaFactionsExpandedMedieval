@@ -205,7 +205,7 @@
         </countRange>
       </li>
       <li Class="StockGenerator_Category">
-        <categoryDef>VFEM_Shields</categoryDef>
+        <categoryDef>VFEC_Shields</categoryDef>
         <thingDefCountRange>
           <min>2</min>
           <max>3</max>
