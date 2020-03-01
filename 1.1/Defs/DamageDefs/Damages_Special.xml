@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <DamageDef ParentName="CutBase">
+        <defName>VFEM_CutBlackKnight</defName>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <cutExtraTargetsCurve IsNull="True"/>
+        <cutCleaveBonus>1</cutCleaveBonus>
+    </DamageDef>
+
+</Defs>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <RuleDef>
+        <defName>VFEM_CastleEdgeWalls</defName>
+        <symbol>VFEM_castleEdgeWalls</symbol>
+        <resolvers>
+            <li Class="VFEMedieval.SymbolResolver_CastleEdgeWalls" />
+        </resolvers>
+    </RuleDef>
+
+    <RuleDef>
+        <defName>VFEM_CastleEdgeSandbags</defName>
+        <symbol>VFEM_castleEdgeSandbags</symbol>
+        <resolvers>
+            <li Class="VFEMedieval.SymbolResolver_CastleEdgeSandbags" />
+        </resolvers>
+    </RuleDef>
+
+</Defs>

@@ -3,3 +3,7 @@ E:\Documents\GitHub\VanillaFactionsExpandedMedieval\Source\VFEMedieval\obj\Debug
 E:\Documents\GitHub\VanillaFactionsExpandedMedieval\Source\VFEMedieval\obj\Debug\VFEMedieval.csproj.CoreCompileInputs.cache
 E:\Documents\GitHub\VanillaFactionsExpandedMedieval\Source\VFEMedieval\obj\Debug\VFEMedieval.csproj.CopyComplete
 E:\Documents\GitHub\VanillaFactionsExpandedMedieval\Source\VFEMedieval\obj\Debug\VFEMedieval.dll
+D:\Documents\GitHub\VanillaFactionsExpandedMedieval\Source\VFEMedieval\obj\Debug\VFEMedieval.csprojAssemblyReference.cache
+D:\Documents\GitHub\VanillaFactionsExpandedMedieval\Source\VFEMedieval\obj\Debug\VFEMedieval.dll
+D:\Documents\GitHub\VanillaFactionsExpandedMedieval\1.1\Assemblies\VFEMedieval.dll
+D:\Documents\GitHub\VanillaFactionsExpandedMedieval\Source\VFEMedieval\obj\Debug\VFEMedieval.csproj.CopyComplete

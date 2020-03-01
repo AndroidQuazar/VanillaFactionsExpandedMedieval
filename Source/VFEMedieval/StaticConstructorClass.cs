@@ -35,12 +35,12 @@ namespace VFEMedieval
                         stuffCategories.Add(cat);
 
             stoneChunk.resourceReadoutPriority = ResourceCountPriority.Middle;
+            stoneChunk.smeltable = false;
             stoneChunk.stuffProps = new StuffProperties()
             {
                 stuffAdjective = referenceProps.stuffAdjective,
                 commonality = referenceProps.commonality,
                 categories = stuffCategories,
-                smeltable = referenceProps.smeltable,
                 statOffsets = new List<StatModifier>(),
                 statFactors = new List<StatModifier>(),
                 color = referenceProps.color,

@@ -9,18 +9,21 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VFEMedieval</RootNamespace>
     <AssemblyName>VFEMedieval</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\1.0\Assemblies\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>..\..\1.1\Assemblies\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,11 +32,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=1.2.0.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="0Harmony, Version=2.0.0.7, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\1.0\Assemblies\0Harmony.dll</HintPath>
+      <HintPath>..\..\1.1\Assemblies\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
@@ -53,8 +57,16 @@
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="VFECore">
-      <HintPath>..\..\..\VanillaFactionsExpanded-Core\1.0\Assemblies\VFECore.dll</HintPath>
+      <HintPath>..\..\..\VanillaFactionsExpanded-Core\1.1\Assemblies\VFECore.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -77,7 +89,7 @@
     <Compile Include="Comps\ThingComps\CompIngestedThoughtFromQuality.cs" />
     <Compile Include="Comps\ThingComps\CompWineFermenter.cs" />
     <Compile Include="Commands\Command_SetWineTargetQuality.cs" />
-    <Compile Include="DefOf\SiteCoreDefOf.cs" />
+    <None Include="DefOf\SiteCoreDefOf.cs" />
     <Compile Include="DefOf\RulePackDefOf.cs" />
     <Compile Include="DefOf\TournamentCategoryDefOf.cs" />
     <Compile Include="DefOf\ThingSetMakerDefOf.cs" />
@@ -96,7 +108,7 @@
     <Compile Include="HarmonyPatches\Patch_Pawn.cs" />
     <Compile Include="HarmonyPatches\RimCuisine2\Patch_RimCuisineBBDrugPolicies_HarmonyPatches.cs" />
     <None Include="IncidentWorkers\IncidentWorker_QuestEnemyCaravan.cs" />
-    <Compile Include="IncidentWorkers\IncidentWorker_QuestCastleRuins.cs" />
+    <None Include="IncidentWorkers\IncidentWorker_QuestCastleRuins.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_QuestMedievalTournament.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_BlackKnight.cs" />
     <Compile Include="Reflection\NonPublicTypes.cs" />

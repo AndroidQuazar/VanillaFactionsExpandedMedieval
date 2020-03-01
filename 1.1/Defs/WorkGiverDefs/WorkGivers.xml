@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <WorkGiverDef>
+        <defName>VFEM_TakeBeerOutOfWineBarrel</defName>
+        <label>take wine out of wine barrels</label>
+        <giverClass>VFEMedieval.WorkGiver_TakeWineOutOfWineBarrel</giverClass>
+        <workType>Hauling</workType>
+        <verb>take wine</verb>
+        <gerund>taking wine from</gerund>
+        <priorityInType>20</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>VFEM_FillWineBarrel</defName>
+        <label>fill wine barrels</label>
+        <giverClass>VFEMedieval.WorkGiver_FillWineBarrel</giverClass>
+        <workType>Hauling</workType>
+        <verb>fill</verb>
+        <gerund>filling</gerund>
+        <priorityInType>19</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
+</Defs>

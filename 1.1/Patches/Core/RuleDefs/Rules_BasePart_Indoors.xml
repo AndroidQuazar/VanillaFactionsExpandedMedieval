@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Add wineries to the list of options -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RuleDef[defName="BasePart_Indoors_Leaf"]/resolvers</xpath>
+        <value>
+            <li Class="VFEMedieval.SymbolResolver_BasePart_Indoors_Leaf_Winery">
+                <minRectSize>(4, 4)</minRectSize>
+                <selectionWeight>0.75</selectionWeight>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

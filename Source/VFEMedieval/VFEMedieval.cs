@@ -5,7 +5,7 @@ using System.Text;
 using UnityEngine;
 using Verse;
 using RimWorld;
-using Harmony;
+using HarmonyLib;
 
 namespace VFEMedieval
 {
@@ -15,10 +15,10 @@ namespace VFEMedieval
 
         public VFEMedieval(ModContentPack content) : base(content)
         {
-            harmonyInstance = HarmonyInstance.Create("OskarPotocki.VFEMedieval");
+            harmonyInstance = new Harmony("OskarPotocki.VFEMedieval");
         }
 
-        public static HarmonyInstance harmonyInstance;
+        public static Harmony harmonyInstance;
 
     }
 

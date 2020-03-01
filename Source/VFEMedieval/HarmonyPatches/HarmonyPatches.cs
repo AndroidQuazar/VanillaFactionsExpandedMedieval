@@ -6,7 +6,7 @@ using System.Text;
 using UnityEngine;
 using Verse;
 using RimWorld;
-using Harmony;
+using HarmonyLib;
 
 namespace VFEMedieval
 {
@@ -23,7 +23,7 @@ namespace VFEMedieval
             // Compatibility with RimCuisine 2
             if (ModCompatibilityCheck.RimCuisine2BottlingAndBooze)
             {
-                var harmonyPatches = GenTypes.GetTypeInAnyAssemblyNew("RimCuisineBBDrugPolicies.HarmonyPatches", "RimCuisineBBDrugPolicies");
+                var harmonyPatches = GenTypes.GetTypeInAnyAssembly("RimCuisineBBDrugPolicies.HarmonyPatches", "RimCuisineBBDrugPolicies");
                 if (harmonyPatches != null)
                     VFEMedieval.harmonyInstance.Patch(AccessTools.Method(harmonyPatches, "GenerateStartingDrugPolicies_PostFix"), transpiler: new HarmonyMethod(typeof(Patch_RimCuisineBBDrugPolicies_HarmonyPatches.manual_GenerateStartingDrugPolicies_PostFix), "Transpiler"));
                 else

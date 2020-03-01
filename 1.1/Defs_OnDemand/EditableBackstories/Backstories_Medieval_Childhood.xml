@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Blacksmith's apprentice -->
+    <REB_Code.BackstoryDef>
+        <defName>VFEMC001</defName>
+        <slot>Childhood</slot>
+        <title>Blacksmith's apprentice</title>
+        <titleShort>Apprentice</titleShort>
+        <baseDesc>[PAWN_nameDef] was born into a long bloodline of blacksmiths, and started picking up the trade from a young age. One night, [PAWN_possessive] village was invaded.\n\n[PAWN_nameDef] was lucky to escape with [PAWN_possessive] life, but the violence scarred [PAWN_objective] for life.</baseDesc>
+        <skillGains>
+            <li>
+                <key>Crafting</key>
+                <value>4</value>
+            </li>
+        </skillGains>
+        <workDisables>
+            <li>Violent</li>
+        </workDisables>
+        <spawnCategories>
+            <li>Civil</li>
+            <li>Slave</li>
+            <li>Trader</li>
+            <li>Traveler</li>
+            <li>FilterSet1</li>
+            <li>Medieval</li>
+        </spawnCategories>
+    </REB_Code.BackstoryDef>
+
+    <!-- Hunter's child -->
+    <REB_Code.BackstoryDef>
+        <defName>VFEMC002</defName>
+        <slot>Childhood</slot>
+        <title>Hunter's child</title>
+        <titleShort>Hunter</titleShort>
+        <titleShortFemale>Huntress</titleShortFemale>
+        <baseDesc>[PAWN_nameDef] was born into a somewhat poor family who relied on hunting to get by. [PAWN_possessive] parents taught [PAWN_objective] the basics of the trade: shooting, setting up traps and skinning animals - and that animals should only be used for sustenance.</baseDesc>
+        <skillGains>
+            <li>
+                <key>Shooting</key>
+                <value>2</value>
+            </li>
+            <li>
+                <key>Cooking</key>
+                <value>1</value>
+            </li>
+            <li>
+                <key>Crafting</key>
+                <value>1</value>
+            </li>
+        </skillGains>
+        <requiredWorkTags>
+            <li>Violent</li>
+        </requiredWorkTags>
+        <workDisables>
+            <li>Animals</li>
+        </workDisables>
+        <spawnCategories>
+            <li>Civil</li>
+            <li>Raider</li>
+            <li>Slave</li>
+            <li>Trader</li>
+            <li>Traveler</li>
+            <li>FilterSet1</li>
+            <li>Medieval</li>
+        </spawnCategories>
+    </REB_Code.BackstoryDef>
+
+    <!-- Medieval urchin -->
+    <REB_Code.BackstoryDef>
+        <defName>VFEMC003</defName>
+        <slot>Childhood</slot>
+        <title>Medieval urchin</title>
+        <titleShort>Urchin</titleShort>
+        <baseDesc>[PAWN_nameDef] ran away from a bad situation at home and became a street urchin, quickly getting a grasp of pickpocketing, lying and brawling.</baseDesc>
+        <skillGains>
+            <li>
+                <key>Melee</key>
+                <value>2</value>
+            </li>
+            <li>
+                <key>Social</key>
+                <value>1</value>
+            </li>
+        </skillGains>
+        <requiredWorkTags>
+            <li>Violent</li>
+        </requiredWorkTags>
+        <spawnCategories>
+            <li>Civil</li>
+            <li>Raider</li>
+            <li>Slave</li>
+            <li>Trader</li>
+            <li>Traveler</li>
+            <li>FilterSet1</li>
+            <li>Medieval</li>
+        </spawnCategories>
+    </REB_Code.BackstoryDef>
+
+    <!-- Monastery servant -->
+    <REB_Code.BackstoryDef>
+        <defName>VFEMC004</defName>
+        <slot>Childhood</slot>
+        <title>Monastery servant</title>
+        <titleShort>Servant</titleShort>
+        <baseDesc>Overwhelmed by grief after losing someone close, [PAWN_nameDef] didn’t quite know what to do and decided to join a monastery, where [PAWN_pronoun] spent [PAWN_possessive] early years learning to write books and create art for the monks to sell.</baseDesc>
+        <skillGains>
+            <li>
+                <key>Artistic</key>
+                <value>2</value>
+            </li>
+            <li>
+                <key>Intellectual</key>
+                <value>2</value>
+            </li>
+        </skillGains>
+        <workDisables>
+            <li>Violent</li>
+        </workDisables>
+        <spawnCategories>
+            <li>Civil</li>
+            <li>Slave</li>
+            <li>Trader</li>
+            <li>Traveler</li>
+            <li>FilterSet1</li>
+            <li>Medieval</li>
+        </spawnCategories>
+    </REB_Code.BackstoryDef>
+
+    <!-- Warband recruit -->
+    <REB_Code.BackstoryDef>
+        <defName>VFEMC005</defName>
+        <slot>Childhood</slot>
+        <title>Warband recruit</title>
+        <titleShort>Recruit</titleShort>
+        <baseDesc>War ravaged [PAWN_nameDef]’s village, leaving [PAWN_objective] with nothing but the will to do the right thing and enlist in the local army. This was a great opportunity to learn the basic fighting skills needed to survive.</baseDesc>
+        <skillGains>
+            <li>
+                <key>Melee</key>
+                <value>2</value>
+            </li>
+            <li>
+                <key>Shooting</key>
+                <value>1</value>
+            </li>
+        </skillGains>
+        <requiredWorkTags>
+            <li>Violent</li>
+        </requiredWorkTags>
+        <spawnCategories>
+            <li>Civil</li>
+            <li>Raider</li>
+            <li>Slave</li>
+            <li>Trader</li>
+            <li>Traveler</li>
+            <li>FilterSet1</li>
+            <li>Medieval</li>
+        </spawnCategories>
+    </REB_Code.BackstoryDef>
+
+    <!-- Beggar -->
+    <REB_Code.BackstoryDef>
+        <defName>VFEMC006</defName>
+        <slot>Childhood</slot>
+        <title>Beggar</title>
+        <titleShort>Beggar</titleShort>
+        <baseDesc>[PAWN_nameDef] begged on the corners for a dime or a piece of bread from as early as [PAWN_pronoun] can remember, observing, listening and talking with countless travelers.</baseDesc>
+        <skillGains>
+            <li>
+                <key>Social</key>
+                <value>1</value>
+            </li>
+            <li>
+                <key>Intellectual</key>
+                <value>1</value>
+            </li>
+        </skillGains>
+        <spawnCategories>
+            <li>Civil</li>
+            <li>Raider</li>
+            <li>Slave</li>
+            <li>Trader</li>
+            <li>Traveler</li>
+            <li>FilterSet1</li>
+            <li>Medieval</li>
+        </spawnCategories>
+    </REB_Code.BackstoryDef>
+
+    <!-- Quarry child -->
+    <REB_Code.BackstoryDef>
+        <defName>VFEMC007</defName>
+        <slot>Childhood</slot>
+        <title>Quarry child</title>
+        <titleShort>Miner</titleShort>
+        <baseDesc>For [PAWN_possessive] father's crimes, [PAWN_nameDef] was sent to work in a quarry, breaking rocks every day of [PAWN_possessive] childhood.</baseDesc>
+        <skillGains>
+            <li>
+                <key>Mining</key>
+                <value>2</value>
+            </li>
+            <li>
+                <key>Construction</key>
+                <value>1</value>
+            </li>
+        </skillGains>
+        <spawnCategories>
+            <li>Civil</li>
+            <li>Raider</li>
+            <li>Slave</li>
+            <li>Trader</li>
+            <li>Traveler</li>
+            <li>FilterSet1</li>
+            <li>Medieval</li>
+        </spawnCategories>
+    </REB_Code.BackstoryDef>
+
+    <!-- Collier -->
+    <REB_Code.BackstoryDef>
+        <defName>VFEMC008</defName>
+        <slot>Childhood</slot>
+        <title>Collier</title>
+        <titleShort>Collier</titleShort>
+        <baseDesc>[PAWN_nameDef] was born to a family of destitute colliers bound in perpetual debt-slavery. Their lives consisted of toil and misery in the mines.</baseDesc>
+        <skillGains>
+            <li>
+                <key>Mining</key>
+                <value>3</value>
+            </li>
+        </skillGains>
+        <spawnCategories>
+            <li>Civil</li>
+            <li>Raider</li>
+            <li>Slave</li>
+            <li>Trader</li>
+            <li>Traveler</li>
+            <li>FilterSet1</li>
+            <li>Medieval</li>
+        </spawnCategories>
+    </REB_Code.BackstoryDef>
+
+</Defs>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <IncidentDef>
+        <defName>VFEM_Quest_MedievalTournament</defName>
+        <label>medieval tournament quest</label>
+        <category>WorldQuest</category>
+        <targetTags>
+            <li>World</li>
+        </targetTags>
+        <workerClass>VFEMedieval.IncidentWorker_QuestMedievalTournament</workerClass>
+        <letterLabel>Medieval tournament quest</letterLabel>
+        <!-- The second paragraph is in Keys.xml since it depends on tournament type -->
+        <letterText>Word has spread that {PAWN_nameDef}, {0} of {1}, will be hosting a tournament near {2}. This could potentially be a good opportunity to earn goodwill, as well as the following prizes:\n\n{3}</letterText>
+        <letterDef>PositiveEvent</letterDef>
+        <baseChance>1</baseChance>
+        <minRefireDays>12</minRefireDays>
+    </IncidentDef>
+
+    <IncidentDef>
+        <defName>VFEM_Quest_CastleRuins</defName>
+        <label>castle ruins quest</label>
+        <category>WorldQuest</category>
+        <targetTags>
+            <li>World</li>
+        </targetTags>
+        <workerClass>VFEMedieval.IncidentWorker_QuestCastleRuins</workerClass>
+        <letterLabel>Castle ruins quest</letterLabel>
+        <!-- The second paragraph is in Keys.xml since it depends on tournament type -->
+        <letterText>{PAWN_nameDef}, {0} of {1}, has informed you about a nearby set of castle ruins. These ruins could contain valuable loot, but there could also be other scavengers going after said loot.\n\n{0} says that {2}. The ruins will probably be picked clean in {3} days.</letterText>
+        <letterDef>PositiveEvent</letterDef>
+        <baseChance>1</baseChance>
+        <minRefireDays>12</minRefireDays>
+    </IncidentDef>
+
+    <!-- <IncidentDef>
+        <defName>VFEM_Quest_EnemyCaravan</defName>
+        <label>enemy caravan quest</label>
+        <category>WorldQuest</category>
+        <targetTags>
+            <li>World</li>
+        </targetTags>
+        <workerClass>VFEMedieval.IncidentWorker_QuestEnemyCaravan</workerClass>
+        <letterLabel>Enemy caravan quest</letterLabel>
+        <letterText>Placeholder.</letterText>
+        <letterDef>PositiveEvent</letterDef>
+        <baseChance>1</baseChance>
+        <minRefireDays>12</minRefireDays>
+    </IncidentDef> -->
+
+</Defs>

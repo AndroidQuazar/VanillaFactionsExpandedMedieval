@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <RuleDef>
+        <defName>VFEM_Interior_Winery</defName>
+        <symbol>VFEM_interior_winery</symbol>
+        <resolvers>
+            <li Class="VFEMedieval.SymbolResolver_Interior_Winery">
+                <minRectSize>(2, 2)</minRectSize>
+            </li>
+        </resolvers>
+    </RuleDef>
+
+</Defs>

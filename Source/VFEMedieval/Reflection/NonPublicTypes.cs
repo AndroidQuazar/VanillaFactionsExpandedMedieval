@@ -7,7 +7,7 @@ using System.Text;
 using UnityEngine;
 using Verse;
 using RimWorld;
-using Harmony;
+using HarmonyLib;
 
 namespace VFEMedieval
 {
@@ -23,7 +23,7 @@ namespace VFEMedieval
             {
                 if (ModCompatibilityCheck.RimCuisine2BottlingAndBooze)
                 {
-                    RCBBDefOf = GenTypes.GetTypeInAnyAssemblyNew("RimCuisineBBDrugPolicies.RCBBDefOf", "RimCuisineBBDrugPolicies");
+                    RCBBDefOf = GenTypes.GetTypeInAnyAssembly("RimCuisineBBDrugPolicies.RCBBDefOf", "RimCuisineBBDrugPolicies");
                 }
             }
 

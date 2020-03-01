@@ -8,7 +8,7 @@ using Verse.AI;
 using Verse.AI.Group;
 using RimWorld;
 using RimWorld.BaseGen;
-using Harmony;
+using HarmonyLib;
 using VFECore;
 
 namespace VFEMedieval
@@ -52,7 +52,7 @@ namespace VFEMedieval
             return true;
         }
 
-        protected override void ScatterAt(IntVec3 c, Map map, int stackCount = 1)
+        protected override void ScatterAt(IntVec3 c, Map map, GenStepParams parms, int stackCount = 1)
         {
             int randomInRange = SettlementSizeRange.RandomInRange;
             int randomInRange2 = SettlementSizeRange.RandomInRange;

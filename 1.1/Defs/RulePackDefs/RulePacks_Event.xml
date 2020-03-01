@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Melee -->
+    <RulePackDef>
+        <defName>VFEM_Event_MeleeRound</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_logentry->[INITIATOR_definite] [skillfully] [surpassed] [SUBJECT_definite]'s swordsmanship.</li>
+                <li>r_logentry->[INITIATOR_definite] [skillfully] [surpassed] [SUBJECT_definite]'s swordsmanship with [skill].</li>
+
+                <li>skillfully->skillfully</li>
+                <li>skillfully->trivially</li>
+                <li>skillfully->adeptly</li>
+                <li>skillfully->handily</li>
+                <li>skillfully->easily</li>
+                <li>skillfully->courageously</li>
+
+                <li>surpassed->surpassed</li>
+                <li>surpassed->beat</li>
+                <li>surpassed->outclassed</li>
+                <li>surpassed->outshone</li>
+                <li>surpassed->dominated</li>
+
+                <li>r_logentry->[INITIATOR_definite] and [SUBJECT_definite] [intensely] [battled], to [INITIATOR_definite]'s victory.</li>
+
+                <li>intensely->intensely</li>
+                <li>intensely->valiantly</li>
+                <li>intensely->closely</li>
+
+                <li>battled->battled</li>
+                <li>battled->fought</li>
+                <li>battled->brawled</li>
+                <li>battled->clashed</li>
+                <li>battled->tussled</li>
+
+                <li>r_logentry->[SUBJECT_definite] [fell] like a [toppleableThing] to [INITIATOR_definite]'s [skill].</li>
+
+                <li>fell->fell</li>
+                <li>fell->toppled</li>
+                <li>fell->submitted</li>
+
+                <li>toppleableThing->domino</li>
+                <li>toppleableThing->matchstick</li>
+
+                <li>skill->skill</li>
+                <li>skill->might</li>
+                <li>skill->finnesse</li>
+                <li>skill->courage</li>
+
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>VFEM_Event_MeleeDisasterCut</defName>
+        <rulePack>
+            <rulesStrings>
+
+                <li>r_logentry->[SUBJECT_definite] received a [woundDesc] [wound].</li>
+
+                <li>woundDesc->nasty</li>
+                <li>woundDesc->deep</li>
+                <li>woundDesc->bloody</li>
+                <li>woundDesc->horrible</li>
+
+                <li>wound->cut</li>
+                <li>wound->gash</li>
+                <li>wound->scratch</li>
+                <li>wound->scrape</li>
+                <li>wound(p=0.1)->boo-boo</li>
+
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>VFEM_Event_MeleeDisasterPartLoss</defName>
+        <rulePack>
+            <rulesStrings>
+
+                <li>r_logentry->A body part of [SUBJECT_definite]'s [flew] [away].</li>
+
+                <li>flew->flew</li>
+                <li>flew(p=0.2)->sailed</li>
+
+                <li>away->away</li>
+                <li>away(p=0.2)->off in an arc</li>
+
+                <li>r_logentry->[INITIATOR_definite] [removedAdverb] [removed] one of [SUBJECT_definite]'s body parts.</li>
+
+                <li>removedAdverb->brutally</li>
+                <li>removedAdverb->coldly</li>
+                <li>removedAdverb->skillfully</li>
+                <li>removedAdverb->surgically</li>
+                
+                <li>removed->removed</li>
+                <li>removed->cut off</li>
+                <li>removed->dismembered</li>
+
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <!-- Jousting -->
+    <RulePackDef>
+        <defName>VFEM_Event_JoustingRound</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_logentry->[INITIATOR_definite] [demonstrated] [superior] [skill] with [steedControl] and with [weapon].</li>
+
+                <li>demonstrated->demonstrated</li>
+                <li>demonstrated->boasted</li>
+
+                <li>superior->superior</li>
+                <li>superior->greater</li>
+                <li>superior->better</li>
+
+                <li>skill->skill</li>
+                <li>skill->precision</li>
+                <li>skill->firmness</li>
+
+                <li>steedControl->reins</li>
+                <li>steedControl->stirrup</li>
+                <li>steedControl->saddle</li>
+
+                <li>weapon->lance</li>
+                <li>weapon->spear</li>
+                <li>weapon->pike</li>
+
+                <li>r_logentry->[SUBJECT_definite] [failed] to [control] [SUBJECT_possessive] [steed].</li>
+
+                <li>failed->failed</li>
+                <li>failed->was unable</li>
+
+                <li>control->control</li>
+                <li>control->manage</li>
+                <li>control->command</li>
+                <li>control->yell at</li>
+
+                <li>steed->muffalo</li>
+                <li>steed->horse</li>
+                <li>steed->dromedary</li>
+                <li>steed->bear</li>
+                <li>steed->lion</li>
+                <li>steed->rhinoceros</li>
+                <li>steed(p=0.5)->cow</li>
+                <li>steed(p=0.1)->dinosaur</li>
+                <li>steed(p=0.1)->megatortoise</li>
+                <li>steed(p=0.1)->thrumbo</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>VFEM_Event_JoustingDisaster</defName>
+        <include>
+            <li>VFEM_Event_JoustingRound</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+
+                <li>r_logentry->[SUBJECT_definite]'s [steed] reared and [kickPast] [SUBJECT_objective].</li>
+                <li>r_logentry->[SUBJECT_definite] fell off [SUBJECT_possessive] [steed], which then [kickAdj] [kickPast] [SUBJECT_objective].</li>
+
+                <li>kickAdj->brutally</li>
+                <li>kickAdj->savagely</li>
+
+                <li>kickPast->kicked</li>
+                <li>kickPast->booted</li>
+                <li>kickPast->battered</li>
+
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <!-- Archery -->
+    <RulePackDef>
+        <defName>VFEM_Event_ArcheryRound</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_logentry->[INITIATOR_definite] [hitAdj] [hitPast] [INITIATOR_possessive] targets.</li>
+                <li>r_logentry->[INITIATOR_definite] [hitAdj] [hitPast] [INITIATOR_possessive] targets with [speed].</li>
+
+                <li>hitAdj->accurately</li>
+                <li>hitAdj->skillfully</li>
+                <li>hitAdj->precisely</li>
+
+                <li>hitPast->hit</li>
+                <li>hitPast->struck</li>
+                <li>hitPast->landed shots on</li>
+
+                <li>speed->speed</li>
+                <li>speed->dexterity</li>
+                <li>speed->finesse</li>
+
+                <li>r_logentry->[SUBJECT_definite] was [unable] to [hit] [SUBJECT_possessive] targets.</li>
+
+                <li>unable->unable</li>
+                <li>unable->not able</li>
+                <li>unable->not skilled enough</li>
+
+                <li>hit->hit</li>
+                <li>hit->strike</li>
+                <li>hit->land shots on</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>VFEM_Event_ArcheryDisaster</defName>
+        <include>
+            <li>VFEM_Event_ArcheryRound</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+
+                <li>r_logentry->[SUBJECT_definite] [hitPast] [SUBJECT_possessive] target which bursts into fragments, injuring [SUBJECT_objective].</li>
+                <li>r_logentry->[SUBJECT_definite] accidentally flayed [SUBJECT_objective]self while trying to fire [SUBJECT_possessive] bow.</li>
+
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>VFEM_Event_ArcheryDisasterAudience</defName>
+        <include>
+            <li>VFEM_Event_ArcheryRound</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_logentry->[INITIATOR_definite]'s arrow [flew] [far] off course and [hitPast] [SUBJECT_definite].</li>
+
+                <li>flew->flew</li>
+                <li>flew->strayed</li>
+                <li>flew->travelled</li>
+                <li>flew->sailed</li>
+
+                <li>far->far</li>
+                <li>far->wildly</li>
+                <li>far->way</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+</Defs>

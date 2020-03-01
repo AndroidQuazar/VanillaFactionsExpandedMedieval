@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <RulePackDef>
+        <defName>VFEM_NamerFactionMedieval</defName>
+        <include>
+            <li>OutlanderPlaceNameUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name(p=0.35)->[PlaceOutlander]</li>
+                <li>r_name->the [political_union_medieval] of [PlaceOutlander]</li>
+                <li>r_name->[PlaceOutlander] [political_union_medieval]</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>political_union_medieval->Words/Nouns/PoliticalUnions_Medieval</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>VFEM_NamerSettlementMedieval</defName>
+        <include>
+            <li>OutlanderPlaceNameUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name(p=4)->[PlaceOutlander] [medievalSettlementEnd]</li>
+                <li>r_name->[AnimalBadass]'s [medievalSettlementEnd]-on-the-[TerrainFeature]</li>
+                <li>r_name->[AnimalBadass]'s [medievalSettlementEnd]-by-the-[TerrainFeature]</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>medievalSettlementEnd->Words/Nouns/PlaceEnd_Medieval</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+
+</Defs>

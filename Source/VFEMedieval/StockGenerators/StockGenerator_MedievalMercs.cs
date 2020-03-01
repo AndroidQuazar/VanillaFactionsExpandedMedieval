@@ -14,7 +14,7 @@ namespace VFEMedieval
 
         private const float CosplayChance = 0.01f;
 
-        public override IEnumerable<Thing> GenerateThings(int forTile)
+        public override IEnumerable<Thing> GenerateThings(int forTile, Faction faction=null)
         {
             if (respectPopulationIntent && Rand.Value > StorytellerUtilityPopulation.PopulationIntent)
                 yield break;

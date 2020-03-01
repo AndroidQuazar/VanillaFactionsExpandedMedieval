@@ -7,7 +7,7 @@ using Verse;
 using Verse.AI.Group;
 using RimWorld;
 using RimWorld.Planet;
-using Harmony;
+using HarmonyLib;
 
 namespace VFEMedieval
 {

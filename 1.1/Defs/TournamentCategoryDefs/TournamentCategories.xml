@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <VFEMedieval.TournamentCategoryDef>
+        <defName>VFEM_Melee</defName>
+        <label>melee</label>
+        <description>The category for this tournament is melee. Having a colonist with a high melee accuracy would be an advantage.</description>
+        <commonality>1</commonality>
+        <!-- Peace talks give 6000 social exp for reference -->
+        <skillExpGains>
+            <li>
+                <key>Melee</key>
+                <value>6000</value>
+            </li>
+        </skillExpGains>
+        <rulePack>VFEM_Event_MeleeRound</rulePack>
+    </VFEMedieval.TournamentCategoryDef>
+
+    <VFEMedieval.TournamentCategoryDef>
+        <defName>VFEM_Jousting</defName>
+        <label>jousting</label>
+        <description>The category for this tournament is jousting. Having a colonist with high melee accuracy and animal handling skill would be an advantage.</description>
+        <commonality>1</commonality>
+        <skillExpGains>
+            <li>
+                <key>Melee</key>
+                <value>3000</value>
+            </li>
+            <li>
+                <key>Animals</key>
+                <value>3000</value>
+            </li>
+        </skillExpGains>
+        <rulePack>VFEM_Event_JoustingRound</rulePack>
+    </VFEMedieval.TournamentCategoryDef>
+
+    <VFEMedieval.TournamentCategoryDef>
+        <defName>VFEM_Archery</defName>
+        <label>archery</label>
+        <description>The category for this tournament is archery. Having a colonist with a high shooting accuracy and low mental break threshold would be an advantage.</description>
+        <commonality>1</commonality>
+        <skillExpGains>
+            <li>
+                <key>Shooting</key>
+                <value>6000</value>
+            </li>
+        </skillExpGains>
+        <rulePack>VFEM_Event_ArcheryRound</rulePack>
+    </VFEMedieval.TournamentCategoryDef>
+
+</Defs>

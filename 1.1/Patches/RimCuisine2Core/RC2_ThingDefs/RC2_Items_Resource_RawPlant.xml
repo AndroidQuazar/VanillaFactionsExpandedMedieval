@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Integration with RimCuisine 2 -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[1.0] RimCuisine 2 Core</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+            
+                <!-- Remove grapes -->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="RC2_RawGrapes"]</xpath>
+                    <value>
+                        <ThingDef>
+                            <defName>RC2_RawGrapes</defName>
+                            <ignoreConfigErrors>true</ignoreConfigErrors>
+                        </ThingDef>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
