@@ -49,8 +49,10 @@ namespace VFEMedieval
             // Build settlement lists
             var playerSettlements = new List<SettlementBase>();
             var validEnemyAlliedSettlements = new List<SettlementBase>();
-            foreach (var settlement in Find.WorldObjects.SettlementBases)
+            var settlementBases = Find.WorldObjects.SettlementBases;
+            for (int i = 0; i < settlementBases.Count; i++)
             {
+                var settlement = settlementBases[i];
                 if (settlement.Faction == Faction.OfPlayer)
                     playerSettlements.Add(settlement);
                 else if (settlement != start && (settlement.Faction == faction || !settlement.Faction.HostileTo(faction)))

@@ -24,6 +24,18 @@
                     <li>Map_RaidBeacon</li>
                 </disallowedTargetTags>
             </li>
+            <li Class="StorytellerCompProperties_ThreatsGenerator">
+                <allowedTargetTags>
+                    <li>Map_RaidBeacon</li>
+                </allowedTargetTags>
+                <parms>
+                    <allowedThreats>Raids</allowedThreats>
+                    <onDays>1.0</onDays>
+                    <offDays>0.5</offDays>
+                    <minSpacingDays>0.04</minSpacingDays>
+                    <numIncidentsRange>1~2</numIncidentsRange>
+                </parms>
+            </li>
             <li Class="StorytellerCompProperties_OnOffCycle">
                 <category>ThreatSmall</category>
                 <minDaysPassed>11.0</minDaysPassed>

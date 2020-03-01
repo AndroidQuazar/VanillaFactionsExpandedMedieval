@@ -21,20 +21,22 @@ namespace VFEMedieval
             Map map = BaseGen.globalSettings.map;
 
             wineFermenters.Clear();
+
             foreach (var pos in rp.rect)
             {
                 var thingList = pos.GetThingList(map);
-                foreach (var thing in thingList)
+                for (int i = 0; i < thingList.Count; i++)
                 {
-                    var wineFermenterComp = thing.TryGetComp<CompWineFermenter>();
+                    var wineFermenterComp = thingList[i].TryGetComp<CompWineFermenter>();
                     if (wineFermenterComp != null && !wineFermenters.Contains(wineFermenterComp))
                         wineFermenters.Add(wineFermenterComp);
                 }
             }
 
             float legendaryAgeTicksFactor = Rand.Range(0.1f, 1.1f);
-            foreach (var fermenter in wineFermenters)
+            for (int i = 0; i < wineFermenters.Count; i++)
             {
+                var fermenter = wineFermenters[i];
                 fermenter.targetQuality = (QualityCategory)Mathf.Min((int)QualityUtility.GenerateQualityBaseGen() + 1, (int)QualityCategory.Legendary);
                 if (!fermenter.Fermented)
                 {

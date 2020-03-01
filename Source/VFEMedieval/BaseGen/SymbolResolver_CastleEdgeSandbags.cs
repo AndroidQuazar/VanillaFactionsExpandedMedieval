@@ -116,8 +116,9 @@ namespace VFEMedieval
         private bool TryClearCell(IntVec3 c, Map map)
         {
             var thingList = c.GetThingList(map);
-            foreach (var thing in thingList)
+            for (int i = 0; i < thingList.Count; i++)
             {
+                var thing = thingList[i];
                 if (!thing.def.destroyable || thing.def == RimWorld.ThingDefOf.Sandbags || (thing.def.building != null && thing.def.building.isNaturalRock))
                     return false;
             }

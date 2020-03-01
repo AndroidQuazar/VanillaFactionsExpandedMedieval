@@ -39,7 +39,7 @@ namespace VFEMedieval
         {
             var participants = new List<Pawn>();
             var nonParticipants = new List<Pawn>();
-            MedievalTournamentUtility.GroupParticipants(caravan.PlayerPawnsForStoryteller.Where(p => p.RaceProps.Humanlike), category, participants, nonParticipants);
+            MedievalTournamentUtility.GroupParticipants(caravan.PlayerPawnsForStoryteller.Where(p => p.RaceProps.Humanlike).ToList(), category, participants, nonParticipants);
 
             // Create dialogue tree
             var leader = Faction.leader;
@@ -52,8 +52,9 @@ namespace VFEMedieval
                 link = participateNode
             };
             tourneyNode.options.Add(participateOption);
-            foreach (var pawn in participants)
+            for (int i = 0; i < participants.Count; i++)
             {
+                var pawn = participants[i];
                 var pawnOption = new DiaOption(MedievalTournamentUtility.ParticipantOptionText(pawn, category))
                 {
                     action = () => DoTournament(caravan, pawn),
@@ -61,8 +62,9 @@ namespace VFEMedieval
                 };
                 participateNode.options.Add(pawnOption);
             }
-            foreach (var pawn in nonParticipants)
+            for (int i = 0; i < nonParticipants.Count; i++)
             {
+                var pawn = nonParticipants[i];
                 var pawnOption = new DiaOption(MedievalTournamentUtility.ParticipantOptionText(pawn, category))
                 {
                     disabled = true
@@ -93,8 +95,8 @@ namespace VFEMedieval
                         if (hostilePawns.Any())
                             LordMaker.MakeNewLord(Faction, new LordJob_AssaultColony(Faction), map, hostilePawns);
                         Find.TickManager.Notify_GeneratedPotentiallyHostileMap();
-                        foreach (var thing in rewards)
-                            GenPlace.TryPlaceThing(thing, map.Center, map, ThingPlaceMode.Near);
+                        for (int i = 0; i < rewards.Count; i++)
+                            GenPlace.TryPlaceThing(rewards[i], map.Center, map, ThingPlaceMode.Near);
                     },
                     "GeneratingMapForNewEncounter", false, null);
                     Find.WorldObjects.Remove(this);
@@ -202,9 +204,12 @@ namespace VFEMedieval
                 // 33% chance: will scar
                 if (Rand.Chance(0.33f))
                 {
-                    foreach (var hediff in damResult.hediffs)
+                    for (int i = 0; i < damResult.hediffs.Count; i++)
+                    {
+                        var hediff = damResult.hediffs[i];
                         if (hediff.TryGetComp<HediffComp_GetsPermanent>() is HediffComp_GetsPermanent scarComp && !scarComp.IsPermanent && scarComp.permanentDamageThreshold == 9999)
                             scarComp.permanentDamageThreshold = Rand.Range(1, hediff.Severity / 2);
+                    }
                 }
 
                 entry = new BattleLogEntry_Event(victim, RulePackDefOf.VFEM_Event_MeleeDisasterCut, null);

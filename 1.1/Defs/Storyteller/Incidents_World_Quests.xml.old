@@ -4,7 +4,7 @@
     <IncidentDef>
         <defName>VFEM_Quest_MedievalTournament</defName>
         <label>medieval tournament quest</label>
-        <category>WorldQuest</category>
+        <category>GiveQuest</category>
         <targetTags>
             <li>World</li>
         </targetTags>
@@ -20,7 +20,7 @@
     <IncidentDef>
         <defName>VFEM_Quest_CastleRuins</defName>
         <label>castle ruins quest</label>
-        <category>WorldQuest</category>
+        <category>GiveQuest</category>
         <targetTags>
             <li>World</li>
         </targetTags>
@@ -36,7 +36,7 @@
     <!-- <IncidentDef>
         <defName>VFEM_Quest_EnemyCaravan</defName>
         <label>enemy caravan quest</label>
-        <category>WorldQuest</category>
+        <category>GiveQuest</category>
         <targetTags>
             <li>World</li>
         </targetTags>

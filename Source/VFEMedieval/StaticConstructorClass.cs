@@ -15,8 +15,10 @@ namespace VFEMedieval
 
         static StaticConstructorClass()
         {
-            foreach (var tDef in DefDatabase<ThingDef>.AllDefs)
+            var thingDefs = DefDatabase<ThingDef>.AllDefsListForReading;
+            for (int i = 0; i < thingDefs.Count; i++)
             {
+                var tDef = thingDefs[i];
                 // Implied stuffProps for stone chunks
                 if (tDef.IsWithinCategory(ThingCategoryDefOf.StoneChunks) && !tDef.butcherProducts.NullOrEmpty() && tDef.butcherProducts.FirstOrDefault(t => t.thingDef.IsStuff)?.thingDef is ThingDef firstStuffProduct)
                     ResolveImpliedStoneChunkStuffProperties(tDef, firstStuffProduct.stuffProps);
@@ -30,9 +32,14 @@ namespace VFEMedieval
             // For compatibility with other mods that make stone chunks a material
             var stuffCategories = new List<StuffCategoryDef>() { StuffCategoryDefOf.VFEM_StoneChunks };
             if (stoneChunk.stuffProps?.categories is List<StuffCategoryDef> oldCats)
-                foreach (var cat in oldCats)
+            {
+                for (int i = 0; i < oldCats.Count; i++)
+                {
+                    var cat = oldCats[i];
                     if (!stuffCategories.Contains(cat))
                         stuffCategories.Add(cat);
+                }
+            }
 
             stoneChunk.resourceReadoutPriority = ResourceCountPriority.Middle;
             stoneChunk.smeltable = false;
@@ -52,12 +59,24 @@ namespace VFEMedieval
             };
 
             var chunkProps = stoneChunk.stuffProps;
+
             if (referenceProps.statOffsets != null)
-                foreach (var statOffset in referenceProps.statOffsets)
+            {
+                for (int i = 0; i < referenceProps.statOffsets.Count; i++)
+                {
+                    var statOffset = referenceProps.statOffsets[i];
                     chunkProps.statOffsets.Add(new StatModifier() { stat = statOffset.stat, value = statOffset.value });
+                }
+            }
+
             if (referenceProps.statFactors != null)
-                foreach (var statFactor in referenceProps.statFactors)
+            {
+                for (int i = 0; i < referenceProps.statFactors.Count; i++)
+                {
+                    var statFactor = referenceProps.statFactors[i];
                     chunkProps.statFactors.Add(new StatModifier() { stat = statFactor.stat, value = statFactor.value });
+                }
+            }
 
             ModifyStatModifier(ref chunkProps.statFactors, StatDefOf.WorkToMake, ToStringNumberSense.Factor, factor: 1.5f);
             ModifyStatModifier(ref chunkProps.statFactors, StatDefOf.WorkToBuild, ToStringNumberSense.Factor, factor: 1.5f);

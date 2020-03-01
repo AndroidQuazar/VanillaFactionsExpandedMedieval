@@ -43,8 +43,9 @@ namespace VFEMedieval
             // Move all pawns to the point to defend
             var map = generatedPawns.First().Map;
             point = map.AllCells.Where(c => map.terrainGrid.TerrainAt(c) == TerrainDefOf.Bridge).RandomElementByWeight(c => map.Size.x - c.DistanceTo(map.Center));
-            foreach (var pawn in generatedPawns)
+            for (int i = 0; i < generatedPawns.Count; i++)
             {
+                var pawn = generatedPawns[i];
                 pawn.SetPositionDirect(point.RandomAdjacentCell8Way());
                 pawn.Notify_Teleported(false);
             }

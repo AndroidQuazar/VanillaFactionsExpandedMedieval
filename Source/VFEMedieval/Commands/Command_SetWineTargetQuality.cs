@@ -18,8 +18,10 @@ namespace VFEMedieval
             bool multipleSelected = false;
 
             // Determine if multiple barrels are selected that have different target qualities
-            foreach (var obj in Find.Selector.SelectedObjects)
+            var selectedObjects = Find.Selector.SelectedObjectsListForReading;
+            for (int i = 0; i < selectedObjects.Count; i++)
             {
+                var obj = selectedObjects[i];
                 if (obj is ThingWithComps thing && thing.TryGetComp<CompWineFermenter>() is CompWineFermenter wineFermenter)
                 {
                     if (targetQuality.HasValue && targetQuality.Value != wineFermenter.targetQuality)

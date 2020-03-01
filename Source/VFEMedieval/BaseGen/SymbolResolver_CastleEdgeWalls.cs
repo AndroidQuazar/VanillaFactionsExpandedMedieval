@@ -22,22 +22,23 @@ namespace VFEMedieval
 
         public override void Resolve(ResolveParams rp)
         {
-            var perimeterWallCells = rp.rect.EdgeCells;
+            var perimeterWallCells = rp.rect.EdgeCells.ToList();
             var map = BaseGen.globalSettings.map;
             var faction = rp.faction ?? Find.FactionManager.RandomEnemyFaction();
             var medievalrp = rp.GetCustom<VFEResolveParams>(VFEResolveParams.Name);
 
             // Generate towers on each corner of the rect
-            var corners = rp.rect.Corners;
+            var corners = rp.rect.Corners.ToList();
             float towerRadius = medievalrp?.towerRadius ?? 3.9f;
             var wallDef = medievalrp?.edgeWallDef ?? RimWorld.ThingDefOf.Wall;
             var wallStuff = rp.wallStuff ?? GenStuff.RandomStuffInexpensiveFor(wallDef, faction);
-            foreach (var corner in corners)
+            for (int i = 0; i < corners.Count; i++)
             {
+                var corner = corners[i];
                 var towerCells = GenRadial.RadialCellsAround(corner, towerRadius, true).ToList();
                 if (ValidAreaForTower(towerCells, map))
                 {
-                    perimeterWallCells = perimeterWallCells.Where(c => !towerCells.Contains(c));
+                    perimeterWallCells = perimeterWallCells.Where(c => !towerCells.Contains(c)).ToList();
                     var towerInteriorCells = GenRadial.RadialCellsAround(corner, towerRadius - 1.42f, true).ToList();
                     var towerExteriorCells = towerCells.Where(c => !towerInteriorCells.Contains(c)).ToList();
                     TryGenerateTower(towerExteriorCells, towerInteriorCells, map, rp, wallDef, wallStuff);
@@ -48,8 +49,9 @@ namespace VFEMedieval
             // Generate tower entrances
             if (medievalrp.hasDoors != false)
             {
-                foreach (var pos in potentialTowerDoorCells)
+                for (int i = 0; i < potentialTowerDoorCells.Count; i++)
                 {
+                    var pos = potentialTowerDoorCells[i];
                     TrySpawnFloor(pos, map);
                     var doorStuff = faction.def.techLevel.IsNeolithicOrWorse() ? RimWorld.ThingDefOf.WoodLog : RimWorld.ThingDefOf.Steel;
                     var door = ThingMaker.MakeThing(RimWorld.ThingDefOf.Door, doorStuff);
@@ -60,8 +62,11 @@ namespace VFEMedieval
             potentialTowerDoorCells.Clear();
 
             // Generate perimeter walls
-            foreach (var pos in perimeterWallCells)
+            for (int i = 0; i < perimeterWallCells.Count; i++)
+            {
+                var pos = perimeterWallCells[i];
                 TrySpawnWall(pos, map, rp, wallDef, wallStuff);
+            }
         }
 
         private bool ValidAreaForTower(List<IntVec3> cells, Map map)
@@ -77,12 +82,18 @@ namespace VFEMedieval
         private void TryGenerateTower(List<IntVec3> exteriorCells, List<IntVec3> interiorCells, Map map, ResolveParams rp, ThingDef wallDef, ThingDef wallStuff)
         {
             // Walls
-            foreach (var pos in exteriorCells)
+            for (int i = 0; i < exteriorCells.Count; i++)
+            {
+                var pos = exteriorCells[i];
                 TrySpawnWall(pos, map, rp, wallDef, wallStuff);
+            }
 
             // Interior
-            foreach (var pos in interiorCells)
+            for (int i = 0; i < interiorCells.Count; i++)
+            {
+                var pos = interiorCells[i];
                 TryDoTowerInterior(pos, map, rp);
+            }
         }
 
         private void TryDoTowerInterior(IntVec3 c, Map map, ResolveParams rp)
@@ -128,8 +139,9 @@ namespace VFEMedieval
         private bool TryClearCell(IntVec3 c, Map map)
         {
             var thingList = c.GetThingList(map);
-            foreach (var thing in thingList)
+            for (int i = 0; i < thingList.Count; i++)
             {
+                var thing = thingList[i];
                 if (!thing.def.destroyable || thing.def == SymbolResolver_CastleEdgeSandbags.DefToUse || (thing.def.building != null && thing.def.building.isNaturalRock))
                     return false;
             }

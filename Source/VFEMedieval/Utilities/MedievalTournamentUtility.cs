@@ -121,10 +121,11 @@ namespace VFEMedieval
             return $"{pawnName} ({"VanillaFactionsExpanded.CannotParticipate".Translate()})";
         }
 
-        public static void GroupParticipants(IEnumerable<Pawn> inPawns, TournamentCategoryDef category, List<Pawn> outParticipants, List<Pawn> outNonParticipants)
+        public static void GroupParticipants(List<Pawn> inPawnList, TournamentCategoryDef category, List<Pawn> outParticipants, List<Pawn> outNonParticipants)
         {
-            foreach (var pawn in inPawns)
+            for (int i = 0; i < inPawnList.Count(); i++)
             {
+                var pawn = inPawnList[i];
                 if (CanParticipate(pawn, category))
                     outParticipants.Add(pawn);
                 else

@@ -21,8 +21,9 @@ namespace VFEMedieval
             public static void Postfix(ref List<DrugPolicy> ___policies)
             {
                 // Count wine as a recreational drug
-                foreach (var policy in ___policies)
+                for (int i = 0; i < ___policies.Count; i++)
                 {
+                    var policy = ___policies[i];
                     if (policy.label == "SocialDrugs".Translate() || policy.label == "OneDrinkPerDay".Translate())
                     {
                         policy[ThingDefOf.VFEM_Wine].allowedForJoy = true;
