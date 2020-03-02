@@ -66,6 +66,7 @@ namespace VFEMedieval
             resolveParams.chanceToSkipWallBlock = 0.22f;
             resolveParams.SetCustom(VFEResolveParams.Name, new VFEResolveParams());
             var vfeParams = resolveParams.GetCustom<VFEResolveParams>(VFEResolveParams.Name);
+            Log.Message(vfeParams.ToStringSafe());
             vfeParams.hasDoors = false;
             vfeParams.outdoorLighting = false;
             vfeParams.generatePawns = false;

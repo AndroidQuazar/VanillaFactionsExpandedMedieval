@@ -2,10 +2,11 @@
 <Defs>
 
     <QuestScriptDef>
-        <defName>OpportunitySite_ItemStash</defName>
+        <defName>VFEM_OpportunitySite_CastleRuins</defName>
         <rootSelectionWeight>0.6</rootSelectionWeight>
         <rootMinPoints>0</rootMinPoints>
         <autoAccept>true</autoAccept>
+        <defaultChallengeRating>1</defaultChallengeRating>
         <questNameRules>
             <rulesStrings>
                 <li>questName(priority=1)->[asker_nameDef]'s [stash] of [treasure]</li>
@@ -32,13 +33,6 @@
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
             <nodes>
-                <li Class="QuestNode_SubScript">
-                    <def>Util_RandomizePointsChallengeRating</def>
-                    <parms>
-                        <pointsFactorTwoStar>1.5</pointsFactorTwoStar>
-                        <pointsFactorThreeStar>2</pointsFactorThreeStar>
-                    </parms>
-                </li>
                 <li Class="QuestNode_SubScript">
                     <def>Util_GetDefaultRewardValueFromPoints</def>
                 </li>
@@ -87,10 +81,10 @@
                     <storeFactionAs>siteFaction</storeFactionAs>
                     <sitePartsTags>
                         <li>
-                            <tag>ItemStash</tag>
+                            <tag>VFEM_CastleRuins</tag>
                         </li>
                         <li>
-                            <tag>ItemStashQuestThreat</tag>
+                            <tag>VFEM_CastleRuinsQuestThreat</tag>
                             <chance>$siteThreatChance</chance>
                         </li>
                     </sitePartsTags>
@@ -123,7 +117,7 @@
                         <nodes>
                             <li Class="QuestNode_Letter">
                                 <label>Quest expired: [resolvedQuestName]</label>
-                                <text>Intercepted communications indicate the item stash has been claimed by others. The quest [resolvedQuestName] has expired.</text>
+                                <text>Intercepted communications indicate the ruined castle has been scavenged by others. The quest [resolvedQuestName] has expired.</text>
                             </li>
                             <li Class="QuestNode_End">
                                 <outcome>Fail</outcome>
@@ -140,23 +134,5 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
-    <SiteCoreDef>
-        <defName>VFEM_CastleRuins</defName>
-        <label>castle ruins</label>
-        <description>A recently-discovered set of ruins which could contain valuable loot.</description>
-        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
-        <expandingIconTexture>World/WorldObjects/Expanding/Sites/CastleRuins</expandingIconTexture>
-    </SiteCoreDef>
-
-    <GenStepDef>
-        <defName>VFEM_CastleRuins</defName>
-        <linkWithSite>VFEM_CastleRuins</linkWithSite>
-        <order>460</order>
-        <genStep Class="VFEMedieval.GenStep_CastleRuins">
-            <count>1</count>
-            <nearMapCenter>true</nearMapCenter>
-        </genStep>
-    </GenStepDef>
 
 </Defs>
