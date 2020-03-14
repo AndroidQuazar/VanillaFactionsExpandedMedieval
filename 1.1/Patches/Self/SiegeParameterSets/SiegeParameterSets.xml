@@ -2,14 +2,27 @@
 <Patch>
 
     <!-- If Vanilla Furniture Expanded: Security is loaded, add siege parameter set for medieval factions -->
-    <Operation Class="PatchOperationLoadOnDemand.XML">
-        <source>1.0/Defs_OnDemand</source>
+    <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>Vanilla Furniture Expanded - Security</li>
+            <li>VanillaExpanded.VFESecurity</li>
         </mods>
-        <folders>
-            <li>VFESecurity</li>
-        </folders>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+
+                <VFECore.SiegeParameterSetDef>
+                    <defName>VFEM_Medieval</defName>
+                    <coverDef>VFES_ShortWall</coverDef>
+                    <artilleryBuildingTags>
+                        <li>ArtilleryMedieval_BaseDestroyer</li>
+                    </artilleryBuildingTags>
+                    <artilleryCountRange>1~2</artilleryCountRange>
+                    <mealDef>Pemmican</mealDef>
+                </VFECore.SiegeParameterSetDef>
+
+            </value>
+        </match>
     </Operation>
+
 
 </Patch>
