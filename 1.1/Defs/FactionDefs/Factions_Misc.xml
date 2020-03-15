@@ -166,6 +166,7 @@
             <li>(1, 0.65, 0.40)</li>
             <!-- <li>(1.45, 0.93, 0.49)</li> -->
         </colorSpectrum>
+		<factionIconPath>World/WorldObjects/Expanding/CastleRough</factionIconPath>
         <startingGoodwill>
             <min>-20</min>
             <max>-20</max>
@@ -175,5 +176,19 @@
             <max>-80</max>
         </naturalColonyGoodwill>
     </FactionDef>
+	
+	<FactionDef ParentName="VFEM_MedievalFactionBase">
+    <defName>VFEM_KingdomSavage</defName>
+    <label>savage kingdom</label>
+    <description>These people have been here for a shorter period of time than their neolithic bretheren. It is believed that some tribespeople and outlanders had come to embrace the medieval ways of life and decided to unite.\n\nThough still technologically inferior to many other factions, the subjects of this kingdom are well-known for using towering fortifications to protect their assets, as well as adopting the use of shields in combat and fighting in a particularly orderly manner.\n\nThis particular kingdom is driven by a warband styled culture; you will not be able to ally with them!</description>
+    <colorSpectrum>
+      <li>(0.85, 0, 0)</li>
+      <li>(1, 0.1, 0.1)</li>
+    </colorSpectrum>
+    <factionIconPath>World/WorldObjects/Expanding/CastleSavage</factionIconPath>
+    <permanentEnemy>true</permanentEnemy>
+    <goodwillDailyGain>0</goodwillDailyGain>
+    <goodwillDailyFall>0</goodwillDailyFall>
+  </FactionDef>
 
 </Defs>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>VFEM_HeavyCrossbow</defName>
+		<label>heavy crossbow</label>
+		<description>Construct heavy crossbows, capable of firing a projectile unstoppable by most man-made armors.</description>
+		<baseCost>800</baseCost>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>Greatbow</li>
+		</prerequisites>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>5.50</researchViewY>
+	</ResearchProjectDef>
+
+
+</Defs>

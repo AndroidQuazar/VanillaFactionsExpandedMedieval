@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Crossbow -->
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>VFEM_Bow_HeavyCrossbow</defName>
+    <label>heavy crossbow</label>
+    <description>A heavy crossbow has a similar principle to a bow, consisting of a bow-like assembly mounted horizontally on a sturdy frame, which is handheld in a similar fashion to the stock of a long gun.\n\nThis heavy bolt thrower fires devastating bolts, capable of piercing several layers of metal.</description> <!-- Your Text + Inspirations -->
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/HeavyCrossbow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Bow_Large</soundInteract>
+    <costList>
+      <WoodLog>80</WoodLog>
+	  <Steel>25</Steel>
+	  <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>4.6</Mass>
+      <AccuracyTouch>0.64</AccuracyTouch>
+      <AccuracyShort>0.82</AccuracyShort>
+      <AccuracyMedium>0.70</AccuracyMedium>
+      <AccuracyLong>0.22</AccuracyLong>
+      <RangedWeapon_Cooldown>4.6</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>NeolithicRangedChief</li>
+	  <li>MedievalRangedHeavy</li>
+	  <li>MedievalRanged</li>
+    </weaponTags>
+    <recipeMaker>
+	  <recipeUsers>
+		<li>FueledSmithy</li>
+		<li>ElectricSmithy</li>
+	  </recipeUsers>
+      <researchPrerequisite>VFEM_HeavyCrossbow</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>VFEM_Arrow_HeavyBolt</defaultProjectile>
+        <warmupTime>2</warmupTime>
+        <range>17.9</range>
+        <soundCast>VFEM_Shot_HeavyCrossbow</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>VFEM_Arrow_HeavyBolt</defName>
+    <label>heavy crossbow bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Bolt</texPath>
+	  <drawSize>1.2</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Arrow</damageDef>
+      <damageAmountBase>32</damageAmountBase>
+      <stoppingPower>2</stoppingPower>
+	  <armorPenetrationBase>0.86</armorPenetrationBase>
+      <speed>48</speed>
+    </projectile>
+  </ThingDef>
+
+</Defs>
