@@ -4,7 +4,7 @@
     <!-- If Editable Backstories is loaded, make the hidden medieval factions use medieval backstories -->
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>[RF] Editable Backstories and Names [1.0]</li>
+            <li>[RF] Editable Backstories and Names - 1.1</li>
         </mods>
         <match Class="PatchOperationReplace">
             <xpath>/Defs/FactionDef[@Name="VFEM_UnknownKingdomBase"]/backstoryCategories/li[text()="Tribal"]</xpath>

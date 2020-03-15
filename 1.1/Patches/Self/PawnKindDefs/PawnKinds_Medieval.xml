@@ -4,7 +4,7 @@
     <!-- Integration with Editable Backstories -->
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>[RF] Editable Backstories and Names [1.0]</li>
+            <li>[RF] Editable Backstories and Names - 1.1</li>
         </mods>
         <match Class="PatchOperationReplace">
             <xpath>/Defs/PawnKindDef[@Name="VFEM_MedievalPawnKindBase"]/backstoryCategories/li[text()="Tribal"]</xpath>

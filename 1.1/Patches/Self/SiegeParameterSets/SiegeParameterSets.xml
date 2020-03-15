@@ -4,7 +4,7 @@
     <!-- If Vanilla Furniture Expanded: Security is loaded, add siege parameter set for medieval factions -->
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>VanillaExpanded.VFESecurity</li>
+            <li>Vanilla Furniture Expanded - Security</li>
         </mods>
         <match Class="PatchOperationAdd">
             <xpath>/Defs</xpath>

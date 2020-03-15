@@ -4,7 +4,7 @@
     <!-- Editable backstories - add medieval backstories -->
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>editablebackstoriesandnames.rf.rw</li>
+            <li>[RF] Editable Backstories and Names - 1.1</li>
         </mods>
         <match Class="PatchOperationAdd">
             <xpath>/Defs</xpath>
