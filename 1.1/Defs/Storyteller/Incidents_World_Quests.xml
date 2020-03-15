@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <IncidentDef>
+        <defName>VFEM_Quest_MedievalTournament</defName>
+        <label>medieval tournament</label>
+        <category>GiveQuest</category>
+        <targetTags>
+            <li>World</li>
+        </targetTags>
+        <workerClass>VFEMedieval.IncidentWorker_QuestMedievalTournament</workerClass>
+        <letterLabel>Medieval tournament</letterLabel>
+        <!-- The second paragraph is in Keys.xml since it depends on tournament type -->
+        <letterText>Word has spread that {PAWN_nameDef}, {0} of {1}, will be hosting a tournament near {2}. This could potentially be a good opportunity to earn goodwill, as well as the following prizes:\n\n{3}</letterText>
+        <letterDef>PositiveEvent</letterDef>
+        <baseChance>1</baseChance>
+        <minRefireDays>12</minRefireDays>
+    </IncidentDef>
+
+</Defs>
