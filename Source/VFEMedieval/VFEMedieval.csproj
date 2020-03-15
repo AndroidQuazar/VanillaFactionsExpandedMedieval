@@ -106,8 +106,6 @@
     <Compile Include="HarmonyPatches\Patch_WITab_Caravan_Gear.cs" />
     <Compile Include="HarmonyPatches\Patch_Pawn.cs" />
     <Compile Include="HarmonyPatches\RimCuisine2\Patch_RimCuisineBBDrugPolicies_HarmonyPatches.cs" />
-    <None Include="IncidentWorkers\IncidentWorker_QuestEnemyCaravan.cs" />
-    <None Include="IncidentWorkers\IncidentWorker_QuestCastleRuins.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_QuestMedievalTournament.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_BlackKnight.cs" />
     <Compile Include="Reflection\NonPublicTypes.cs" />

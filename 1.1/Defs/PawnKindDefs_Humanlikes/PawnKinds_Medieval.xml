@@ -163,6 +163,7 @@
         </weaponMoney>
         <weaponTags>
             <li>MedievalRanged</li>
+			<li>MedievalRangedHeavy</li>
         </weaponTags>
     </PawnKindDef>
 
