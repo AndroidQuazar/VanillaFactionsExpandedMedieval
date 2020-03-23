@@ -14,6 +14,10 @@
                     <xpath>/Defs/RecipeDef[defName="VG_MakeGrapeMust"]</xpath>
                 </li>
 
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/RecipeDef[defName="VG_MakeBulkGrapeMust"]</xpath>
+                </li>
+
             </operations>
         </match>
     </Operation>
