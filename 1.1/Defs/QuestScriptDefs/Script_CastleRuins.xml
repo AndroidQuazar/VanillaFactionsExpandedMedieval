@@ -10,7 +10,7 @@
         <questNameRules>
             <rulesStrings>
                 <li>questName(priority=1)->[asker_nameDef]'s [journey] to the [ruins]</li>
-                <li>questName->[stash] of [treasure]</li>
+                <li>questName->[stash] in the [ruins]</li>
                 <li>journey->Journey</li>
                 <li>journey->Expedition</li>
                 <li>journey->Treasure hunt</li>
@@ -20,6 +20,12 @@
                 <li>ruins->Destroyed castle</li>
                 <li>ruins->Ruined castle</li>
                 <li>ruins->Empty hold</li>
+                <li>stash->Stash</li>
+                <li>stash->Stockpile</li>
+                <li>stash->Treasure</li>
+				<li>ruins->Ruins</li>
+                <li>ruins->Ruined castle</li>
+                <li>ruins->Destroyed hold</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
