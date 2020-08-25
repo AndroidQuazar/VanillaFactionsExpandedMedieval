@@ -11,6 +11,15 @@
             <MeleeHitChance>-2</MeleeHitChance>
             <MeleeDodgeChance>-5</MeleeDodgeChance>
         </equippedStatOffsets>
+		<thingClass>VFECore.Apparel_Shield</thingClass>
+		<apparel>
+			<bodyPartGroups>
+				<li>LeftHand</li>
+			</bodyPartGroups>
+			<layers>
+				<li>VFEC_OuterShell</li>
+			</layers>
+		</apparel>
         <comps>
             <li>
                 <compClass>CompColorable</compClass>
