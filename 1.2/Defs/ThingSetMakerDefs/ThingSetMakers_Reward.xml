@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingSetMakerDef>
+        <defName>VFEM_Reward_MedievalTournament</defName>
+        <root Class="ThingSetMaker_RandomOption">
+            <fixedParams>
+                <totalMarketValueRange>
+                    <min>1700</min>
+                    <max>3200</max>
+                </totalMarketValueRange>
+                <qualityGenerator>Reward</qualityGenerator>
+                <maxTotalMass>20</maxTotalMass>
+            </fixedParams>
+            <options>
+                <li>
+                    <weight>1</weight>
+                    <thingSetMaker Class="ThingSetMaker_MarketValue">
+                        <fixedParams>
+                            <filter>
+                                <thingDefs>
+                                    <li>Silver</li>
+                                </thingDefs>
+                            </filter>
+                        </fixedParams>
+                    </thingSetMaker>
+                </li>
+                <li>
+                    <weight>1</weight>
+                    <thingSetMaker Class="ThingSetMaker_MarketValue">
+                        <fixedParams>
+                            <filter>
+                                <categories>
+                                    <li>Weapons</li>
+                                    <li>Apparel</li>
+                                </categories>
+                                <disallowedThingDefs>
+                                    <li>VFEM_MeleeWeapon_Claymore</li>
+                                </disallowedThingDefs>
+                            </filter>
+                        </fixedParams>
+                    </thingSetMaker>
+                </li>
+            </options>
+        </root>
+    </ThingSetMakerDef>
+
+</Defs>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ToolCapacityDef>
+        <defName>VFEM_CutBlackKnight</defName>
+    </ToolCapacityDef>
+
+</Defs>

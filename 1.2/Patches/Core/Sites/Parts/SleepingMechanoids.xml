@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Add castle ruins tag to part -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/SitePartDef[defName="SleepingMechanoids"]/tags</xpath>
+        <value>
+            <li>VFEM_CastleRuinsQuestThreat</li>
+        </value>
+    </Operation>
+
+</Patch>

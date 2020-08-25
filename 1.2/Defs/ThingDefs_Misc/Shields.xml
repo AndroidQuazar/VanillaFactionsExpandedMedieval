@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef Name="VFEM_BaseShield" ParentName="BaseMeleeWeapon_Blunt_Quality" Abstract="True">
+        <techLevel>Medieval</techLevel>
+        <thingCategories Inherit="False">
+            <li>VFEC_Shields</li>
+        </thingCategories>
+        <equippedStatOffsets>
+            <ShootingAccuracyPawn>-2</ShootingAccuracyPawn>
+            <MeleeHitChance>-2</MeleeHitChance>
+            <MeleeDodgeChance>-5</MeleeDodgeChance>
+        </equippedStatOffsets>
+        <comps>
+            <li>
+                <compClass>CompColorable</compClass>
+            </li>
+        </comps>
+        <equippedAngleOffset>-30</equippedAngleOffset>
+        <stuffCategories>
+            <li>Leathery</li>
+        </stuffCategories>
+        <tools>
+            <li>
+                <label>base</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>centre</label>
+                <labelUsedInLogging>false</labelUsedInLogging>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="VFECore.ThingDefExtension">
+                <useFactionColourForPawnKinds>
+                    <li>VFEM_Medieval_Footsoldier</li>
+                    <li>VFEM_Medieval_Knight</li>
+                    <li>VFEM_Medieval_Lord</li>
+                </useFactionColourForPawnKinds>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="VFEM_BaseShield">
+        <defName>VFEM_Shield_Kite</defName>
+        <label>kite shield</label>
+        <description>A large wooden shield, with the front decoratively covered by leather. Offers a moderate amount of protection against melee and ranged attacks.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Shield/KiteShield/KiteShield</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.83</drawSize>
+        </graphicData>
+        <costStuffCount>25</costStuffCount>
+        <costList>
+            <WoodLog>70</WoodLog>
+        </costList>
+        <statBases>
+            <MaxHitPoints>120</MaxHitPoints>
+            <Flammability>1.0</Flammability>
+            <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.65</ArmorRating_Heat>
+            <WorkToMake>3000</WorkToMake>
+            <Mass>2.5</Mass>
+        </statBases>
+        <comps>
+            <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon"/>
+            <li Class="VFECore.CompProperties_Shield">
+                <shieldTags>
+                    <li>MedievalBasic</li>
+                </shieldTags>
+                <useDeflectMetalEffect>false</useDeflectMetalEffect>
+                <coveredBodyPartGroups>
+                    <li>Neck</li>
+                    <li>Torso</li>
+                    <li>Arms</li>
+                    <li>Hands</li>
+                </coveredBodyPartGroups>
+                <offHandGraphicData>
+                    <texPath>Things/Item/Equipment/Shield/KiteShield/KiteShield</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                    <drawSize>1.6</drawSize>
+                </offHandGraphicData>
+                <offHandHoldOffset>
+                    <northDefault>
+                        <offset>(0, 0, 0.2)</offset>
+                        <behind>true</behind>
+                    </northDefault>
+                    <east>
+                        <offset>(-0.1, 0, 0.2)</offset>
+                        <behind>true</behind>
+                    </east>
+                    <south>
+                        <offset>(-0.1, -0.04, 0.2)</offset>
+                    </south>
+                    <west>
+                        <offset>(0.1, 0, 0.2)</offset>
+                    </west>
+                </offHandHoldOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="VFEM_BaseShield">
+        <defName>VFEM_Shield_Heater</defName>
+        <label>heater shield</label>
+        <description>A heavy medium-sized steel shield, with the front decoratively covered by leather. Offers a significant amount of protection against melee and ranged attacks.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Shield/HeaterShield/HeaterShield</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.75</drawSize>
+        </graphicData>
+        <costStuffCount>20</costStuffCount>
+        <costList>
+            <Steel>80</Steel>
+        </costList>
+        <statBases>
+            <MaxHitPoints>180</MaxHitPoints>
+            <Flammability>0.4</Flammability>
+            <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.9</ArmorRating_Heat>
+            <WorkToMake>8000</WorkToMake>
+            <Mass>4</Mass>
+        </statBases>
+        <comps>
+            <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon"/>
+            <li Class="VFECore.CompProperties_Shield">
+                <shieldTags>
+                    <li>MedievalDecent</li>
+                </shieldTags>
+                <useDeflectMetalEffect>true</useDeflectMetalEffect>
+                <coveredBodyPartGroups>
+                    <li>Torso</li>
+                    <li>Arms</li>
+                    <li>Hands</li>
+                </coveredBodyPartGroups>
+                <offHandGraphicData>
+                    <texPath>Things/Item/Equipment/Shield/HeaterShield/HeaterShield</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                    <drawSize>1.5</drawSize>
+                </offHandGraphicData>
+                <offHandHoldOffset>
+                    <northDefault>
+                        <offset>(0, 0, 0.2)</offset>
+                        <behind>true</behind>
+                    </northDefault>
+                    <east>
+                        <offset>(-0.05, 0, 0.2)</offset>
+                        <behind>true</behind>
+                    </east>
+                    <south>
+                        <offset>(0, -0.04, 0.2)</offset>
+                    </south>
+                    <west>
+                        <offset>(0.05, 0, 0.2)</offset>
+                    </west>
+                </offHandHoldOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

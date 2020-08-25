@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[RF] Editable Backstories and Names - 1.1</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+
+                <!-- Convent child -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/REB_Code.BackstoryDef[defName="REBC037"]/spawnCategories</xpath>
+                    <value>
+                        <li>Medieval</li>
+                    </value>
+                </li>
+
+                <!-- Feudal farm kid -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/REB_Code.BackstoryDef[defName="REBC038"]/spawnCategories</xpath>
+                    <value>
+                        <li>Medieval</li>
+                    </value>
+                </li>
+
+                <!-- Medieval lordling -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/REB_Code.BackstoryDef[defName="REBC039"]/spawnCategories</xpath>
+                    <value>
+                        <li>Medieval</li>
+                    </value>
+                </li>
+
+                <!-- Medieval peasant -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/REB_Code.BackstoryDef[defName="REBC040"]/spawnCategories</xpath>
+                    <value>
+                        <li>Medieval</li>
+                    </value>
+                </li>
+
+                <!-- Medieval thief -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/REB_Code.BackstoryDef[defName="REBC041"]/spawnCategories</xpath>
+                    <value>
+                        <li>Medieval</li>
+                    </value>
+                </li>
+
+                <!-- Medieval plower -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/REB_Code.BackstoryDef[defName="REBC116"]/spawnCategories</xpath>
+                    <value>
+                        <li>Medieval</li>
+                    </value>
+                </li>
+
+                <!-- Medieval slave -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/REB_Code.BackstoryDef[defName="REBC117"]/spawnCategories</xpath>
+                    <value>
+                        <li>Medieval</li>
+                    </value>
+                </li>
+
+                <!-- Medieval squire -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/REB_Code.BackstoryDef[defName="REBC118"]/spawnCategories</xpath>
+                    <value>
+                        <li>Medieval</li>
+                    </value>
+                </li>
+
+                <!-- Medieval witch -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/REB_Code.BackstoryDef[defName="REBC119"]/spawnCategories</xpath>
+                    <value>
+                        <li>Medieval</li>
+                    </value>
+                </li>
+
+                <!-- Stablehand -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/REB_Code.BackstoryDef[defName="REBC120"]/spawnCategories</xpath>
+                    <value>
+                        <li>Medieval</li>
+                    </value>
+                </li>
+
+                <!-- Trainee alchemist -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/REB_Code.BackstoryDef[defName="REBC121"]/spawnCategories</xpath>
+                    <value>
+                        <li>Medieval</li>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

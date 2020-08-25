@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Integration with Editable Backstories -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[RF] Editable Backstories and Names - 1.1</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/PawnKindDef[@Name="VFEM_MedievalPawnKindBase"]/backstoryCategories/li[text()="Tribal"]</xpath>
+            <value>
+                <li>Medieval</li>
+            </value>
+        </match>
+    </Operation>
+
+    <!-- Integration with Vanilla Weapons Expanded -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Weapons Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- Add musketeer pawn kind -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+
+                        <PawnKindDef ParentName="VFEM_MedievalMilitaryBase">
+                            <defName>VFEM_Medieval_Musketeer</defName>
+                            <label>musketeer</label>
+                            <combatPower>80</combatPower>
+                            <gearHealthRange>
+                                <min>0.8</min>
+                                <max>1.8</max>
+                            </gearHealthRange>
+                            <apparelMoney>
+                                <min>500</min>
+                                <max>700</max>
+                            </apparelMoney>
+                            <apparelTags>
+                                <li>MedievalArmorDecent</li>
+                            </apparelTags>
+                            <weaponMoney>
+                                <min>300</min>
+                                <max>300</max>
+                            </weaponMoney>
+                            <weaponTags>
+                                <li>MedievalRangedAdvanced</li>
+                            </weaponTags>
+                        </PawnKindDef>
+
+                    </value>
+                </li>
+
+
+                <!-- Peasants will be able to throw rocks -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/PawnKindDef[defName="VFEM_Medieval_Peasant"]/weaponTags</xpath>
+                    <value>
+                        <li>MedievalRangedPeasant</li>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+    <!-- Integration with Vanilla Armour Expanded -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Armour Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+
+                <!-- Modify footman's armour -->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/PawnKindDef[defName="VFEM_Medieval_Footsoldier"]/apparelTags/li[text()="MedievalMilitary"]</xpath>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+    <!-- Integration with Giddy-Up -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Giddy-up! Core</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- Prevent some pawns from using mounts... -->
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>/Defs/PawnKindDef[@Name="VFEM_MedievalPawnKindBase" or @Name="VFEM_MedievalMilitaryBase" or defName="VFEM_Medieval_Footsoldier"]</xpath>
+                    <value>
+                        <li Class="GiddyUpCore.CustomMountsPatch">
+                            <mountChance>0</mountChance>
+                        </li>
+                    </value>
+                </li>
+
+                <!-- Allow high-tiers to use mounts -->
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>/Defs/PawnKindDef[@Name="VFEM_Medieval_Knight"]</xpath>
+                    <value>
+                        <li Class="GiddyUpCore.CustomMountsPatch">
+                            <mountChance>50</mountChance>
+                            <possibleMounts>
+                                <li>
+                                    <key>Muffalo</key>
+                                    <value>25</value>
+                                </li>
+                                <li>
+                                    <key>Dromedary</key>
+                                    <value>25</value>
+                                </li>
+                            </possibleMounts>
+                        </li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>/Defs/PawnKindDef[defName="VFEM_Medieval_Lord"]</xpath>
+                    <value>
+                        <li Class="GiddyUpCore.CustomMountsPatch">
+                            <mountChance>100</mountChance>
+                            <possibleMounts>
+                                <li>
+                                    <key>Muffalo</key>
+                                    <value>25</value>
+                                </li>
+                                <li>
+                                    <key>Dromedary</key>
+                                    <value>25</value>
+                                </li>
+                            </possibleMounts>
+                        </li>
+                    </value>
+                </li>
+
+                <!-- If Vanilla Animals Expanded - Livestock is added, add horses to the mix -->
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Vanilla Animals Expanded — Livestock</li>
+                    </mods>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/PawnKindDef[@Name="VFEM_MedievalEliteMilitaryBase" or defName="VFEM_Medieval_Lord"]/modExtensions/li[@Class="GiddyUpCore.CustomMountsPatch"]/possibleMounts</xpath>
+                        <value>
+                            <li>
+                                <key>AEXP_Horse</key>
+                                <value>100</value>
+                            </li>
+                        </value>
+                    </match>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

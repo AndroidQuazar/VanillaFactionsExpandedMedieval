@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="Wall">
+        <defName>VFEM_CobblestoneWall</defName>
+        <label>cobblestone wall</label>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockWall</texPath>
+        </graphicData>
+        <uiIconPath>Things/Building/Linked/RockWall_MenuIcon</uiIconPath>
+        <statBases>
+            <Beauty>-2</Beauty>
+        </statBases>
+        <costStuffCount>1</costStuffCount>
+        <stuffCategories Inherit="False">
+            <li>VFEM_StoneChunks</li>
+        </stuffCategories>
+    </ThingDef>
+
+</Defs>

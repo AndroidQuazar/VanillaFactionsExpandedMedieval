@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Meals will disallow grapes by default -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[@Name="CookMealBase"]/defaultIngredientFilter/disallowedThingDefs</xpath>
+        <value>
+            <li>VFEM_RawGrapes</li>
+        </value>
+    </Operation>
+
+</Patch>

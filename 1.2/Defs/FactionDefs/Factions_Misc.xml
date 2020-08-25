@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <FactionDef Name="VFEM_MedievalFactionBase" ParentName="HumanFactionBase" Abstract="True">
+        <pawnSingular>subject</pawnSingular>
+        <pawnsPlural>subjects</pawnsPlural>
+        <listOrderPriority>25</listOrderPriority>
+        <settlementGenerationWeight>1</settlementGenerationWeight>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <canMakeRandomly>true</canMakeRandomly>
+        <canStageAttacks>true</canStageAttacks>
+        <factionIconPath>World/WorldObjects/Expanding/Castle</factionIconPath>
+        <settlementTexturePath>World/WorldObjects/MedievalSettlement</settlementTexturePath>
+        <geneticVariance>0.1</geneticVariance>
+        <factionNameMaker>VFEM_NamerFactionMedieval</factionNameMaker>
+        <settlementNameMaker>VFEM_NamerSettlementMedieval</settlementNameMaker>
+        <techLevel>Medieval</techLevel>
+        <backstoryCategories>
+            <li>Tribal</li>
+        </backstoryCategories>
+        <leaderTitle>lord</leaderTitle>
+        <hairTags>
+            <li>Rural</li>
+        </hairTags>
+        <raidCommonalityFromPointsCurve>
+            <points>
+                <li>(0, 1)</li>                <!--Constant 1 at all points levels-->
+            </points>
+        </raidCommonalityFromPointsCurve>
+        <caravanTraderKinds>
+            <li>VFEM_Caravan_Medieval_Farmer</li>
+            <li>VFEM_Caravan_Medieval_WineMerchant</li>
+            <li>VFEM_Caravan_Medieval_ArtPatron</li>
+            <li>VFEM_Caravan_Medieval_Armourer</li>
+            <li>VFEM_Caravan_Medieval_Weaponsmith</li>
+            <li>VFEM_Caravan_Medieval_Sellswords</li>
+        </caravanTraderKinds>
+        <visitorTraderKinds>
+            <li>VFEM_Visitor_Medieval_Standard</li>
+        </visitorTraderKinds>
+        <baseTraderKinds>
+            <li>VFEM_Base_Medieval_Standard</li>
+        </baseTraderKinds>
+        <allowedArrivalTemperatureRange>
+            <min>-40</min>
+            <max>45</max>
+        </allowedArrivalTemperatureRange>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0,35)</li>
+                <li>(120, 60)</li>
+                <li>(600, 100)</li>
+                <li>(1300, 150)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+        <pawnGroupMakers>
+            <li>
+                <!-- Normal fights, melee with ranged mix-ins -->
+                <kindDef>Combat</kindDef>
+                <commonality>100</commonality>
+                <options>
+                    <VFEM_Medieval_Peasant>20</VFEM_Medieval_Peasant>
+                    <VFEM_Medieval_Squire>40</VFEM_Medieval_Squire>
+                    <VFEM_Medieval_Footsoldier>30</VFEM_Medieval_Footsoldier>
+                    <VFEM_Medieval_Bowman>50</VFEM_Medieval_Bowman>
+                    <VFEM_Medieval_Knight>20</VFEM_Medieval_Knight>
+                    <VFEM_Medieval_Lord>10</VFEM_Medieval_Lord>
+                </options>
+            </li>
+            <li>
+                <!-- Normal fights, ranged only -->
+                <kindDef>Combat</kindDef>
+                <commonality>30</commonality>
+                <options>
+                    <VFEM_Medieval_Bowman>100</VFEM_Medieval_Bowman>
+                </options>
+            </li>
+            <li>
+                <!-- Normal fights, melee only -->
+                <kindDef>Combat</kindDef>
+                <commonality>60</commonality>
+                <options>
+                    <VFEM_Medieval_Peasant>15</VFEM_Medieval_Peasant>
+                    <VFEM_Medieval_Squire>40</VFEM_Medieval_Squire>
+                    <VFEM_Medieval_Footsoldier>40</VFEM_Medieval_Footsoldier>
+                    <VFEM_Medieval_Knight>25</VFEM_Medieval_Knight>
+                    <VFEM_Medieval_Lord>10</VFEM_Medieval_Lord>
+                </options>
+            </li>
+            <li>
+                <!-- Peaceful -->
+                <kindDef>Peaceful</kindDef>
+                <options>
+                    <VFEM_Medieval_Squire>30</VFEM_Medieval_Squire>
+                    <VFEM_Medieval_Footsoldier>30</VFEM_Medieval_Footsoldier>
+                    <VFEM_Medieval_Bowman>40</VFEM_Medieval_Bowman>
+                    <VFEM_Medieval_Knight>20</VFEM_Medieval_Knight>
+                    <VFEM_Medieval_Lord>10</VFEM_Medieval_Lord>
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <VFEM_Medieval_Merchant>1</VFEM_Medieval_Merchant>
+                </traders>
+                <carriers>
+                    <Muffalo>6</Muffalo>
+                    <Dromedary>5</Dromedary>
+                    <Alpaca>2.5</Alpaca>
+                    <Elephant>2</Elephant>
+                </carriers>
+                <guards>
+                    <VFEM_Medieval_Squire>30</VFEM_Medieval_Squire>
+                    <VFEM_Medieval_Footsoldier>30</VFEM_Medieval_Footsoldier>
+                    <VFEM_Medieval_Bowman>40</VFEM_Medieval_Bowman>
+                    <VFEM_Medieval_Knight>10</VFEM_Medieval_Knight>
+                </guards>
+            </li>
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <VFEM_Medieval_Peasant>30</VFEM_Medieval_Peasant>
+                    <VFEM_Medieval_Squire>30</VFEM_Medieval_Squire>
+                    <VFEM_Medieval_Footsoldier>30</VFEM_Medieval_Footsoldier>
+                    <VFEM_Medieval_Bowman>50</VFEM_Medieval_Bowman>
+                    <VFEM_Medieval_Knight>25</VFEM_Medieval_Knight>
+                    <VFEM_Medieval_Lord>60</VFEM_Medieval_Lord>
+                </options>
+            </li>
+        </pawnGroupMakers>
+        <modExtensions>
+            <li Class="VFECore.FactionDefExtension">
+                <packAnimalTexNameSuffix>MedievalPack</packAnimalTexNameSuffix>
+                <settlementGenerationSymbol>VFEM_medievalSettlement</settlementGenerationSymbol>
+                <hasCities>false</hasCities>
+            </li>
+        </modExtensions>
+    </FactionDef>
+
+    <FactionDef ParentName="VFEM_MedievalFactionBase">
+        <defName>VFEM_KingdomCivil</defName>
+        <label>civil kingdom</label>
+        <description>These people have been here for a shorter period of time than their neolithic bretheren. It is believed that some tribespeople and outlanders had come to embrace the medieval ways of life and decided to unite.\n\nThough still technologically inferior to many other factions, the subjects of this kingdom are well-known for using towering fortifications to protect their assets, as well as adopting the use of shields in combat and fighting in a particularly orderly manner.\n\nThis particular kingdom is open to keeping trade relations good with other settlements to bolster their economic position.</description>
+        <colorSpectrum>
+            <li>(0.34, 0.73, 0.76)</li>
+            <li>(0.47, 1, 1)</li>
+            <!-- <li>(0.47, 1.05, 1.12)</li> -->
+        </colorSpectrum>
+        <startingGoodwill>
+            <min>-0</min>
+            <max>0</max>
+        </startingGoodwill>
+        <naturalColonyGoodwill>
+            <min>-50</min>
+            <max>50</max>
+        </naturalColonyGoodwill>
+    </FactionDef>
+
+    <FactionDef ParentName="VFEM_MedievalFactionBase">
+        <defName>VFEM_KingdomRough</defName>
+        <label>rough kingdom</label>
+        <description>These people have been here for a shorter period of time than their neolithic bretheren. It is believed that some tribespeople and outlanders had come to embrace the medieval ways of life and decided to unite.\n\nThough still technologically inferior to many other factions, the subjects of this kingdom are well-known for using towering fortifications to protect their assets, as well as adopting the use of shields in combat and fighting in a particularly orderly manner.\n\nThis particular kingdom is ruled under a heavy hand and wishes to expand by laying the less fortunate to waste - though it is still possible to befriend them.</description>
+        <colorSpectrum>
+            <li>(0.99, 0.65, 0.40)</li>
+            <li>(1, 0.65, 0.40)</li>
+            <!-- <li>(1.45, 0.93, 0.49)</li> -->
+        </colorSpectrum>
+		<factionIconPath>World/WorldObjects/Expanding/CastleRough</factionIconPath>
+        <startingGoodwill>
+            <min>-20</min>
+            <max>-20</max>
+        </startingGoodwill>
+        <naturalColonyGoodwill>
+            <min>-100</min>
+            <max>-80</max>
+        </naturalColonyGoodwill>
+    </FactionDef>
+	
+	<FactionDef ParentName="VFEM_MedievalFactionBase">
+    <defName>VFEM_KingdomSavage</defName>
+    <label>savage kingdom</label>
+    <description>These people have been here for a shorter period of time than their neolithic bretheren. It is believed that some tribespeople and outlanders had come to embrace the medieval ways of life and decided to unite.\n\nThough still technologically inferior to many other factions, the subjects of this kingdom are well-known for using towering fortifications to protect their assets, as well as adopting the use of shields in combat and fighting in a particularly orderly manner.\n\nThis particular kingdom is driven by a warband styled culture; you will not be able to ally with them!</description>
+    <colorSpectrum>
+      <li>(0.85, 0, 0)</li>
+      <li>(1, 0.1, 0.1)</li>
+    </colorSpectrum>
+    <factionIconPath>World/WorldObjects/Expanding/CastleSavage</factionIconPath>
+    <permanentEnemy>true</permanentEnemy>
+    <goodwillDailyGain>0</goodwillDailyGain>
+    <goodwillDailyFall>0</goodwillDailyFall>
+  </FactionDef>
+
+</Defs>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <JobDef>
+        <defName>VFEM_EquipShield</defName>
+        <driverClass>VFECore.JobDriver_EquipShield</driverClass>
+        <reportString>equipping TargetA.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
+    <JobDef>
+        <defName>VFEM_FillWineBarrel</defName>
+        <driverClass>VFEMedieval.JobDriver_FillWineBarrel</driverClass>
+        <reportString>filling TargetA.</reportString>
+        <suspendable>false</suspendable>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
+    <JobDef>
+        <defName>VFEM_TakeWineOutOfWineBarrel</defName>
+        <driverClass>VFEMedieval.JobDriver_TakeWineOutOfWineBarrel</driverClass>
+        <reportString>taking wine out of TargetA.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
+</Defs>

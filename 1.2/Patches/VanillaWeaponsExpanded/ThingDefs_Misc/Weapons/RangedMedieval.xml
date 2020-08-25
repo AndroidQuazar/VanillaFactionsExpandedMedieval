@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Weapons Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+
+                <!-- Replace weapon tags -->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VWE_Bow_Crossbow"]/weaponTags/li[text()="NeolithicRangedHeavy"]</xpath>
+                    <value>
+                        <li>MedievalRanged</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="VWE_Bow_Crossbow"]/weaponTags/li[text()="NeolithicRangedChief"]</xpath>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VWE_Gun_Musket" or defName="VWE_Gun_Flintlock"]/weaponTags/li[text()="NeolithicRangedHeavy"]</xpath>
+                    <value>
+                        <li>MedievalRangedAdvanced</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="VWE_Gun_Musket" or defName="VWE_Gun_Flintlock"]/weaponTags/li[text()="NeolithicRangedChief"]</xpath>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

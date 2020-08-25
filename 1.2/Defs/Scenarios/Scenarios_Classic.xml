@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ScenarioDef>
+        <defName>VFEM_RenegadeLord</defName>
+        <label>Renegade Lord</label>
+        <description>After years of serving under the unethical and immoral ways of a rough kingdom, you and five of your loyal subjects decided to defect and start anew. However, this decision didn't go unnoticed: a party in the name of your former kingdom is in pursuit in an attempt to bring you to justice.\n\nNote: Since you start without any supplies and research slower than usual, this is a difficult scenario.</description>
+        <scenario>
+            <summary>A lord and their subjects attempt to change their ways. Difficult.</summary>
+            <playerFaction>
+                <def>PlayerFaction</def>
+                <factionDef>VFEM_PlayerKingdom</factionDef>
+            </playerFaction>
+            <parts>
+
+                <!-- Config pages -->
+                <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+                    <def>ConfigPage_ConfigureStartingPawns</def>
+                    <pawnCount>6</pawnCount>
+                    <pawnChoiceCount>8</pawnChoiceCount>
+                </li>
+
+                <!-- Player starting stuff spawn method-->
+                <li Class="ScenPart_PlayerPawnsArriveMethod">
+                    <def>PlayerPawnsArriveMethod</def>
+                    <method>Standing</method>
+                </li>
+
+                <!-- Player pawns modifiers -->
+                <li Class="ScenPart_SetNeedLevel">
+                    <def>SetNeedLevel</def>
+                    <visible>false</visible>
+                    <context>PlayerStarter</context>
+                    <chance>1.0</chance>
+                    <need>Food</need>
+                    <levelRange>
+                        <min>0.5</min>
+                        <max>0.7</max>
+                    </levelRange>
+                </li>
+
+                <!-- Player starting things -->
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Gold</thingDef>
+                    <count>150</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>VFEM_Wine</thingDef>
+                    <count>30</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MeleeWeapon_LongSword</thingDef>
+                    <stuff>Steel</stuff>
+                    <count>1</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>VFEM_Apparel_Tabard</thingDef>
+                    <stuff>Leather_Thrumbo</stuff>
+                    <count>1</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>VFEM_Apparel_PlateHelmetHeavy</thingDef>
+                    <stuff>Steel</stuff>
+                    <count>3</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>VFEM_Apparel_PlateArmorHeavy</thingDef>
+                    <stuff>Steel</stuff>
+                    <count>1</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MeleeWeapon_Gladius</thingDef>
+                    <stuff>Steel</stuff>
+                    <count>2</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>VFEM_Apparel_Tabard</thingDef>
+                    <stuff>Leather_Plain</stuff>
+                    <count>2</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>VFEM_Shield_Heater</thingDef>
+                    <stuff>Leather_Plain</stuff>
+                    <count>2</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Apparel_PlateArmor</thingDef>
+                    <stuff>Steel</stuff>
+                    <count>2</count>
+                </li>
+
+                <!-- Faction relations -->
+                <li Class="VFECore.ScenPart_ForcedFactionGoodwill">
+                    <def>VFEC_ForcedFactionGoodwill</def>
+                    <factionDef>VFEM_KingdomRough</factionDef>
+                    <alwaysHostile>true</alwaysHostile>
+                    <visible>false</visible>
+                </li>
+
+                <!-- Forced incidents -->
+                <li Class="ScenPart_CreateIncident">
+                    <def>CreateIncident</def>
+                    <incident>VFEM_PursuitParty</incident>
+                    <intervalDays>0.1</intervalDays>
+                    <visible>false</visible>
+                </li>
+
+                <!-- Game start dialog -->
+                <li Class="ScenPart_GameStartDialog">
+                    <def>GameStartDialog</def>
+                    <text>After years of serving under the unethical and immoral ways of a rough kingdom, you and five of your loyal subjects decided to defect and start anew. However, this decision didn't go unnoticed: a party in the name of your former kingdom is in pursuit in an attempt to bring you to justice.</text>
+                    <closeSound>GameStartSting</closeSound>
+                </li>
+
+            </parts>
+        </scenario>
+    </ScenarioDef>
+
+</Defs>

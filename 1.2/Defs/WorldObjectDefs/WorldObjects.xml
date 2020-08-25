@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <WorldObjectDef>
+        <defName>VFEM_MedievalTournament</defName>
+        <label>medieval tournament</label>
+        <description>A site designated for a medieval tournament to take place at.</description>
+        <worldObjectClass>VFEMedieval.MedievalTournament</worldObjectClass>
+        <texture>World/WorldObjects/Sites/GenericSite</texture>
+        <expandingIcon>true</expandingIcon>
+        <expandingIconTexture>World/WorldObjects/MedievalTournament</expandingIconTexture>
+        <comps>
+            <li Class="WorldObjectCompProperties_Timeout" />
+        </comps>
+    </WorldObjectDef>
+
+    <!-- <WorldObjectDef>
+        <defName>VFEM_EnemyCaravan</defName>
+        <label>enemy caravan</label>
+        <description>A group of traveling people.</description>
+        <worldObjectClass>VFEMedieval.EnemyCaravan</worldObjectClass>
+        <texture>World/WorldObjects/EnemyCaravan</texture>
+        <useDynamicDrawer>true</useDynamicDrawer>
+        <expandingIcon>true</expandingIcon>
+        <expandingIconTexture>World/WorldObjects/Expanding/Caravan</expandingIconTexture>
+        <expandingIconPriority>100</expandingIconPriority>
+        <expandMore>true</expandMore>
+    </WorldObjectDef> -->
+
+</Defs>

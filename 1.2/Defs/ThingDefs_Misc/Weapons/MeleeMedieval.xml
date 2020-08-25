@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+        <!-- Identical to the longsword but exclusive to the black knight and cannot be purchased or produced -->
+        <defName>VFEM_MeleeWeapon_Claymore</defName>
+        <label>claymore</label>
+        <description>An ancient two-handed weapon, very rarely seen in use on the rim. Very effective at slashing and stabbing.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponMelee/Claymore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Medieval</techLevel>
+        <weaponTags>
+            <li>VFEClaymore</li>
+        </weaponTags>
+        <tradeability>Sellable</tradeability>
+        <costStuffCount>100</costStuffCount>
+        <statBases>
+            <WorkToMake>18000</WorkToMake>
+            <Mass>1.6</Mass>
+        </statBases>
+        <equippedAngleOffset>-45</equippedAngleOffset>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+        </stuffCategories>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>23</power>
+                <cooldownTime>2.6</cooldownTime>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>23</power>
+                <cooldownTime>2.6</cooldownTime>
+            </li>
+        </tools>
+        <recipeMaker Inherit="False"/>
+    </ThingDef>
+	
+ <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>VFEM_MeleeWeapon_HeavyMace</defName>
+    <label>heavy mace</label>
+    <description>A heavy mace consisting of a shaft and a heavy ball adorned with spikes. Very effective at piercing plate armor, this weapon is often used by more vicious knights and mercenaries.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/HeavyMace</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <costStuffCount>75</costStuffCount>
+    <statBases>
+      <WorkToMake>6500</WorkToMake>
+      <Mass>1.25</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <recipeMaker>
+		<skillRequirements>
+			<Crafting>4</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>Smithing</researchPrerequisite>
+    </recipeMaker>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <weaponTags>
+      <li>MedievalMeleeDecent</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>18.7</power>
+		<armorPenetration>0.20</armorPenetration>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+</Defs>

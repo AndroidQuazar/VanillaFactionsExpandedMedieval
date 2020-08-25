@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Editable backstories - add medieval backstories -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[RF] Editable Backstories and Names - 1.1</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+
+                <!-- ========================================= -->
+                <!-- =============== Childhood =============== -->
+                <!-- ========================================= -->
+
+                <!-- Blacksmith's apprentice -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMC001</defName>
+                    <slot>Childhood</slot>
+                    <title>Blacksmith's apprentice</title>
+                    <titleShort>Apprentice</titleShort>
+                    <baseDesc>[PAWN_nameDef] was born into a long bloodline of blacksmiths, and started picking up the trade from a young age. One night, [PAWN_possessive] village was invaded.\n\n[PAWN_nameDef] was lucky to escape with [PAWN_possessive] life, but the violence scarred [PAWN_objective] for life.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Crafting</key>
+                            <value>4</value>
+                        </li>
+                    </skillGains>
+                    <workDisables>
+                        <li>Violent</li>
+                    </workDisables>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Hunter's child -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMC002</defName>
+                    <slot>Childhood</slot>
+                    <title>Hunter's child</title>
+                    <titleShort>Hunter</titleShort>
+                    <titleShortFemale>Huntress</titleShortFemale>
+                    <baseDesc>[PAWN_nameDef] was born into a somewhat poor family who relied on hunting to get by. [PAWN_possessive] parents taught [PAWN_objective] the basics of the trade: shooting, setting up traps and skinning animals - and that animals should only be used for sustenance.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Shooting</key>
+                            <value>2</value>
+                        </li>
+                        <li>
+                            <key>Cooking</key>
+                            <value>1</value>
+                        </li>
+                        <li>
+                            <key>Crafting</key>
+                            <value>1</value>
+                        </li>
+                    </skillGains>
+                    <requiredWorkTags>
+                        <li>Violent</li>
+                    </requiredWorkTags>
+                    <workDisables>
+                        <li>Animals</li>
+                    </workDisables>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Medieval urchin -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMC003</defName>
+                    <slot>Childhood</slot>
+                    <title>Medieval urchin</title>
+                    <titleShort>Urchin</titleShort>
+                    <baseDesc>[PAWN_nameDef] ran away from a bad situation at home and became a street urchin, quickly getting a grasp of pickpocketing, lying and brawling.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Melee</key>
+                            <value>2</value>
+                        </li>
+                        <li>
+                            <key>Social</key>
+                            <value>1</value>
+                        </li>
+                    </skillGains>
+                    <requiredWorkTags>
+                        <li>Violent</li>
+                    </requiredWorkTags>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Monastery servant -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMC004</defName>
+                    <slot>Childhood</slot>
+                    <title>Monastery servant</title>
+                    <titleShort>Servant</titleShort>
+                    <baseDesc>Overwhelmed by grief after losing someone close, [PAWN_nameDef] didn’t quite know what to do and decided to join a monastery, where [PAWN_pronoun] spent [PAWN_possessive] early years learning to write books and create art for the monks to sell.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Artistic</key>
+                            <value>2</value>
+                        </li>
+                        <li>
+                            <key>Intellectual</key>
+                            <value>2</value>
+                        </li>
+                    </skillGains>
+                    <workDisables>
+                        <li>Violent</li>
+                    </workDisables>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Warband recruit -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMC005</defName>
+                    <slot>Childhood</slot>
+                    <title>Warband recruit</title>
+                    <titleShort>Recruit</titleShort>
+                    <baseDesc>War ravaged [PAWN_nameDef]’s village, leaving [PAWN_objective] with nothing but the will to do the right thing and enlist in the local army. This was a great opportunity to learn the basic fighting skills needed to survive.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Melee</key>
+                            <value>2</value>
+                        </li>
+                        <li>
+                            <key>Shooting</key>
+                            <value>1</value>
+                        </li>
+                    </skillGains>
+                    <requiredWorkTags>
+                        <li>Violent</li>
+                    </requiredWorkTags>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Beggar -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMC006</defName>
+                    <slot>Childhood</slot>
+                    <title>Beggar</title>
+                    <titleShort>Beggar</titleShort>
+                    <baseDesc>[PAWN_nameDef] begged on the corners for a dime or a piece of bread from as early as [PAWN_pronoun] can remember, observing, listening and talking with countless travelers.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Social</key>
+                            <value>1</value>
+                        </li>
+                        <li>
+                            <key>Intellectual</key>
+                            <value>1</value>
+                        </li>
+                    </skillGains>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Quarry child -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMC007</defName>
+                    <slot>Childhood</slot>
+                    <title>Quarry child</title>
+                    <titleShort>Miner</titleShort>
+                    <baseDesc>For [PAWN_possessive] father's crimes, [PAWN_nameDef] was sent to work in a quarry, breaking rocks every day of [PAWN_possessive] childhood.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Mining</key>
+                            <value>2</value>
+                        </li>
+                        <li>
+                            <key>Construction</key>
+                            <value>1</value>
+                        </li>
+                    </skillGains>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Collier -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMC008</defName>
+                    <slot>Childhood</slot>
+                    <title>Collier</title>
+                    <titleShort>Collier</titleShort>
+                    <baseDesc>[PAWN_nameDef] was born to a family of destitute colliers bound in perpetual debt-slavery. Their lives consisted of toil and misery in the mines.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Mining</key>
+                            <value>3</value>
+                        </li>
+                    </skillGains>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+
+                <!-- ========================================= -->
+                <!-- =============== Adulthood =============== -->
+                <!-- ========================================= -->
+
+                <!-- Medieval merchant -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA001</defName>
+                    <slot>Adulthood</slot>
+                    <title>Medieval merchant</title>
+                    <titleShort>Merchant</titleShort>
+                    <baseDesc>[PAWN_nameDef] travelled far and wide on a medieval world, peddling many goods and getting into [PAWN_possessive] fair share of trouble. [PAWN_possessive] lifestyle kept [PAWN_objective] in good physical condition, though [PAWN_pronoun] wouldn't appreciate doing most menial labour.</baseDesc>
+                    <requiredWorkTags>
+                        <li>Social</li>
+                    </requiredWorkTags>
+                    <skillGains>
+                        <li>
+                            <key>Social</key>
+                            <value>6</value>
+                        </li>
+                        <li>
+                            <key>Melee</key>
+                            <value>2</value>
+                        </li>
+                        <li>
+                            <key>Plants</key>
+                            <value>-2</value>
+                        </li>
+                        <li>
+                            <key>Mining</key>
+                            <value>-2</value>
+                        </li>
+                    </skillGains>
+                    <workDisables>
+                        <li>ManualDumb</li>
+                    </workDisables>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Medieval herald -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA002</defName>
+                    <slot>Adulthood</slot>
+                    <title>Medieval herald</title>
+                    <titleShort>Herald</titleShort>
+                    <baseDesc>[PAWN_nameDef] was a herald for a medieval kingdom, travelling the kingdom to announce the latest decrees issued by [PAWN_possessive] king wherever it was required while also being trained in the art of medieval warfare to fend for [PAWN_objective]self. [PAWN_pronoun] learnt to tend to himself while out on the road [PAWN_pronoun] travelled.</baseDesc>
+                    <requiredWorkTags>
+                        <li>Violent</li>
+                    </requiredWorkTags>
+                    <skillGains>
+                        <li>
+                            <key>Melee</key>
+                            <value>4</value>
+                        </li>
+                        <li>
+                            <key>Social</key>
+                            <value>2</value>
+                        </li>
+                        <li>
+                            <key>Medicine</key>
+                            <value>2</value>
+                        </li>
+                        <li>
+                            <key>Intellectual</key>
+                            <value>-4</value>
+                        </li>
+                    </skillGains>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Medieval paladin -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA003</defName>
+                    <slot>Adulthood</slot>
+                    <title>Medieval paladin</title>
+                    <titleShort>Paladin</titleShort>
+                    <baseDesc>[PAWN_nameDef] was an anointed knight of the hexagonal table alongside the mythical king Barthur. [PAWN_pronoun] lost track of [PAWN_possessive] companions and king when [PAWN_pronoun] was knocked out on the battlefield and woke up on a different planet.</baseDesc>
+                    <bodyTypeGlobal>Hulk</bodyTypeGlobal>
+                    <requiredWorkTags>
+                        <li>Violent</li>
+                    </requiredWorkTags>
+                    <skillGains>
+                        <li>
+                            <key>Melee</key>
+                            <value>4</value>
+                        </li>
+                        <li>
+                            <key>Medicine</key>
+                            <value>2</value>
+                        </li>
+                        <li>
+                            <key>Animals</key>
+                            <value>2</value>
+                        </li>
+                    </skillGains>
+                    <workDisables>
+                        <li>ManualDumb</li>
+                        <li>PlantWork</li>
+                        <li>Intellectual</li>
+                    </workDisables>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                        <li>Rare</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Idle knight -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA004</defName>
+                    <slot>Adulthood</slot>
+                    <title>Idle knight</title>
+                    <titleShort>Knight</titleShort>
+                    <baseDesc>[PAWN_nameDef] was born to a long line of noble knights and was expected to continue this legacy. Despite eventually receiving [PAWN_possessive] knighthood, [PAWN_nameDef] has always been more interested in more idle and esoteric pursuits.</baseDesc>
+                    <bodyTypeGlobal>Fat</bodyTypeGlobal>
+                    <requiredWorkTags>
+                        <li>Violent</li>
+                    </requiredWorkTags>
+                    <skillGains>
+                        <li>
+                            <key>Intellectual</key>
+                            <value>4</value>
+                        </li>
+                        <li>
+                            <key>Artistic</key>
+                            <value>4</value>
+                        </li>
+                        <li>
+                            <key>Medicine</key>
+                            <value>3</value>
+                        </li>
+                    </skillGains>
+                    <workDisables>
+                        <li>ManualDumb</li>
+                        <li>ManualSkilled</li>
+                    </workDisables>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Drunken monk -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA005</defName>
+                    <slot>Adulthood</slot>
+                    <title>Drunken monk</title>
+                    <titleShort>Monk</titleShort>
+                    <baseDesc>[PAWN_nameDef] was a monk responsible for the production of the high-quality wine vintage [PAWN_possessive] monastery was known for. Despite [PAWN_possessive] vows, [PAWN_nameDef] partook in the fruits of [PAWN_possessive] labor more often than not.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Plants</key>
+                            <value>3</value>
+                        </li>
+                        <li>
+                            <key>Cooking</key>
+                            <value>3</value>
+                        </li>
+                        <li>
+                            <key>Artistic</key>
+                            <value>1</value>
+                        </li>
+                    </skillGains>
+                    <workDisables>
+                        <li>Violent</li>
+                    </workDisables>
+                    <forcedTraits>
+                        <li>
+                            <key>DrugDesire</key>
+                            <value>1</value>
+                        </li>
+                    </forcedTraits>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>  
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Guild Craftsman -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA006</defName>
+                    <slot>Adulthood</slot>
+                    <title>Guild craftsman</title>
+                    <titleShort>Craftsman</titleShort>
+                    <baseDesc>[PAWN_nameDef] was a member of one of the greatest craftsmen guilds of the realm. Unfortunately [PAWN_pronoun] was caught debasing silver currency and pocketing the raw material, and was promptly expelled from the guild and banished.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Crafting</key>
+                            <value>3</value>
+                        </li>
+                        <li>
+                            <key>Construction</key>
+                            <value>3</value>
+                        </li>
+                    </skillGains>
+                    <workDisables>
+                        <li>Social</li>
+                    </workDisables>
+                    <forcedTraits>
+                        <li>
+                            <key>Greedy</key>
+                            <value>0</value>
+                        </li>
+                    </forcedTraits>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                        <li>Uncommon</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Disgraced grandmaster -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA007</defName>
+                    <slot>Adulthood</slot>
+                    <title>Disgraced grandmaster</title>
+                    <titleShort>Grandmaster</titleShort>
+                    <baseDesc>[PAWN_nameDef] was the founder and leader of an order of knights tasked with exterminating the heathen tribals on the outskirts of the kingdom. An ambush in the dead of night while on a major campaign wiped out most of [PAWN_possessive] order and [PAWN_pronoun] was never seen again.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Melee</key>
+                            <value>4</value>
+                        </li>
+                        <li>
+                            <key>Social</key>
+                            <value>2</value>
+                        </li>
+                        <li>
+                            <key>Shooting</key>
+                            <value>-2</value>
+                        </li>
+                    </skillGains>
+                    <requiredWorkTags>
+                        <li>Violent</li>
+                    </requiredWorkTags>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                        <li>Uncommon</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Hunter -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA008</defName>
+                    <slot>Adulthood</slot>
+                    <title>Hunter</title>
+                    <titleFemale>Huntress</titleFemale>
+                    <titleShort>Hunter</titleShort>
+                    <titleShortFemale>Huntress</titleShortFemale>
+                    <baseDesc>[PAWN_nameDef] made a living by hunting big game. Though most of [PAWN_possessive] kills were sold to commonfolk, [PAWN_pronoun] did occasionally hunt for the nobility that ruled [PAWN_nameDef]'s kingdom.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Shooting</key>
+                            <value>4</value>
+                        </li>
+                        <li>
+                            <key>Social</key>
+                            <value>2</value>
+                        </li>
+                        <li>
+                            <key>Animals</key>
+                            <value>-3</value>
+                        </li>
+                    </skillGains>
+                    <requiredWorkTags>
+                        <li>Violent</li>
+                    </requiredWorkTags>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Yeoman archer -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA009</defName>
+                    <slot>Adulthood</slot>
+                    <title>Yeoman archer</title>
+                    <titleShort>Archer</titleShort>
+                    <baseDesc>[PAWN_nameDef] and the rest of [PAWN_possessive] village were decreed to practice archery for 2 hour after church every week. Years later this practice payed off when [PAWN_nameDef]'s village was called to serve [PAWN_possessive] lord as archers.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Shooting</key>
+                            <value>4</value>
+                        </li>
+                    </skillGains>
+                    <requiredWorkTags>
+                        <li>Violent</li>
+                    </requiredWorkTags>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Charlatan -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA010</defName>
+                    <slot>Adulthood</slot>
+                    <title>Charlatan</title>
+                    <titleShort>Charlatan</titleShort>
+                    <baseDesc>After a charlatan fleeced [PAWN_objective] out of all of [PAWN_possessive] money and valuables, [PAWN_nameDef] decided to learn this trade to never be fooled by this deception again.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Social</key>
+                            <value>3</value>
+                        </li>
+                        <li>
+                            <key>Intellectual</key>
+                            <value>1</value>
+                        </li>
+                    </skillGains>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Siege engineer -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA011</defName>
+                    <slot>Adulthood</slot>
+                    <title>Siege engineer</title>
+                    <titleShort>Engineer</titleShort>
+                    <baseDesc>Wherever a siege was, [PAWN_nameDef] would be one of the people in [PAWN_possessive] lord's army responsible for constructing ballistae, trebuchets and the like.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Construction</key>
+                            <value>5</value>
+                        </li>
+                        <li>
+                            <key>Intellectual</key>
+                            <value>1</value>
+                        </li>
+                        <li>
+                            <key>Artistic</key>
+                            <value>-2</value>
+                        </li>
+                    </skillGains>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Carpenter -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA012</defName>
+                    <slot>Adulthood</slot>
+                    <title>Carpenter</title>
+                    <titleShort>Carpenter</titleShort>
+                    <baseDesc>[PAWN_nameDef]'s day-to-day duty was preparing building materials for constructing buildings in [PAWN_possessive] village, while also having picked up some skills from masters of the craft.</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Construction</key>
+                            <value>3</value>
+                        </li>
+                        <li>
+                            <key>Crafting</key>
+                            <value>2</value>
+                        </li>
+                    </skillGains>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>Raider</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+                <!-- Noble servant -->
+                <REB_Code.BackstoryDef>
+                    <defName>VFEMA013</defName>
+                    <slot>Adulthood</slot>
+                    <title>Noble servant</title>
+                    <titleShort>Servant</titleShort>
+                    <baseDesc>[PAWN_nameDef] was a servant in a prestigious household, carrying out mundane tasks such as cooking and cleaning. [PAWN_pronoun] has developed a more pleasant mannerism as a result, as well as an appreciation of the finer arts around [PAWN_objective].</baseDesc>
+                    <skillGains>
+                        <li>
+                            <key>Cooking</key>
+                            <value>4</value>
+                        </li>
+                        <li>
+                            <key>Social</key>
+                            <value>2</value>
+                        </li>
+                        <li>
+                            <key>Artistic</key>
+                            <value>2</value>
+                        </li>
+                    </skillGains>
+                    <workDisables>
+                        <li>Violent</li>
+                    </workDisables>
+                    <spawnCategories>
+                        <li>Offworld</li>
+                        <li>Outlander</li>
+                        <li>FilterSet1</li>
+                        <li>Medieval</li>
+                    </spawnCategories>
+                </REB_Code.BackstoryDef>
+
+            </value>
+        </match>
+    </Operation>
+
+</Patch>

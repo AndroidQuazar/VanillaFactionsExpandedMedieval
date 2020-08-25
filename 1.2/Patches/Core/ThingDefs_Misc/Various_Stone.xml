@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- For the purpose of passing error checking -->
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]/stuffProps</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]</xpath>
+                <value>
+                    <stuffProps>
+                        <categories/>
+                    </stuffProps>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]/stuffProps/categories</xpath>
+        <value>
+            <li>VFEM_StoneChunks</li>
+        </value>
+    </Operation>
+
+</Patch>

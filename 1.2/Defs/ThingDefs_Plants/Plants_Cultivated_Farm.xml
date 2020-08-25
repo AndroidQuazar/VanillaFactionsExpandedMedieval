@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="PlantBase">
+        <defName>VFEM_Plant_Grape</defName>
+        <label>grape plant</label>
+        <description>A medium-sized vine that yields grapes when harvested - an essential ingredient in the production of wine that also tastes nice when eaten raw. Takes a long time to initially grow but can be harvested repeatedly in a single lifespan.</description>
+        <statBases>
+            <MaxHitPoints>85</MaxHitPoints>
+            <Nutrition>0.2</Nutrition>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Plant/GrapePlant</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+        </graphicData>
+        <selectable>true</selectable>
+        <pathCost>10</pathCost>
+        <ingestible />
+        <plant>
+            <fertilitySensitivity>0.7</fertilitySensitivity>
+            <growDays>19.5</growDays>
+            <dieIfLeafless>true</dieIfLeafless>
+            <harvestTag>Standard</harvestTag>
+            <harvestAfterGrowth>0.30</harvestAfterGrowth>
+            <harvestedThingDef>VFEM_RawGrapes</harvestedThingDef>
+            <harvestYield>12</harvestYield>
+            <sowMinSkill>5</sowMinSkill>
+            <sowTags>
+                <li>Ground</li>
+            </sowTags>
+            <topWindExposure>0.1</topWindExposure>
+            <wildOrder>2</wildOrder>
+        </plant>
+    </ThingDef>
+
+</Defs>

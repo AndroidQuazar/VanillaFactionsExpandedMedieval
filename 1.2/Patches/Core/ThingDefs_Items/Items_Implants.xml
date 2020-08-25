@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- I've had worse -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Painstopper"]/techHediffsTags</xpath>
+        <value>
+            <li>Painstopper</li>
+        </value>
+    </Operation>
+
+</Patch>

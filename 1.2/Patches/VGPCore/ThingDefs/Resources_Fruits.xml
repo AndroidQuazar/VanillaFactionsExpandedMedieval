@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Integration with VGP -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VGP Vegetable Garden</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+            
+                <!-- Remove grapes -->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="Rawgrape"]</xpath>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
