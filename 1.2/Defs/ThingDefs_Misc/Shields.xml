@@ -13,6 +13,9 @@
         </equippedStatOffsets>
 		<thingClass>VFECore.Apparel_Shield</thingClass>
 		<apparel>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
 			<bodyPartGroups>
 				<li>LeftHand</li>
 			</bodyPartGroups>
