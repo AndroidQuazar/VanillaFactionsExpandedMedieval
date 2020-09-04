@@ -4,13 +4,14 @@
     <ThingDef ParentName="ArmorHelmetMakeableBase">
         <defName>VFEM_Apparel_PlateHelmetLight</defName>
         <label>light plate helmet</label>
-        <description>A lightweight medieval helmet that provides moderate protection against sharp attacks. Not effective against blunt weapons.</description>
+        <description>A lightweight medieval helmet that provides moderate protection against sharp attacks. Not effective against blunt weapons. Slighty restricts the wearer's field of vision.</description>
         <techLevel>Medieval</techLevel>
         <recipeMaker>
             <recipeUsers>
                 <li>ElectricSmithy</li>
                 <li>FueledSmithy</li>
             </recipeUsers>
+			<researchPrerequisite>PlateArmor</researchPrerequisite>
             <skillRequirements>
                 <Crafting>5</Crafting>
             </skillRequirements>
@@ -24,11 +25,14 @@
             <WorkToMake>3200</WorkToMake>
             <MaxHitPoints>100</MaxHitPoints>
             <Mass>2</Mass>
-            <StuffEffectMultiplierArmor>0.32</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierArmor>0.40</StuffEffectMultiplierArmor>
             <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
             <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
             <EquipDelay>2.5</EquipDelay>
         </statBases>
+        <equippedStatOffsets>
+            <ShootingAccuracyPawn>-4</ShootingAccuracyPawn>
+        </equippedStatOffsets>
         <generateCommonality>0.4</generateCommonality>
         <stuffCategories>
             <li>Metallic</li>
