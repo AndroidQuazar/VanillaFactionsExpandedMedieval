@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+    <SoundDef>
+    <defName>VFEM_Shot_HeavyCrossbow</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/VFEM_Shot_HeavyCrossbow</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>90.70111</min>        
+          <max>97.30627</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>0.902</min>        
+          <max>0.975</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  
+</Defs>

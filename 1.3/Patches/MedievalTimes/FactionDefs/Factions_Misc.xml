@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Medieval Times sieges can use catapults too -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Security</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Medieval Times</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+
+                    <li Class="PatchOperationAddModExtension">
+                        <xpath>/Defs/FactionDef[@Name="MedTimes_MedievalBase"]</xpath>
+                        <value>
+                            <li Class="VFECore.FactionDefExtension">
+                                <siegeParameterSet>VFEM_Medieval</siegeParameterSet>
+                            </li>
+                        </value>
+                    </li>
+
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+</Patch>

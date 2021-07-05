@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Weapons Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+
+                <!-- Add weapon tags -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VWE_Throwing_Rocks"]/weaponTags</xpath>
+                    <value>
+                        <li>MedievalRangedPeasant</li> <!-- We probably don't want peasants using bows -->
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VWE_Bow_Long"]/weaponTags</xpath>
+                    <value>
+                        <li>MedievalRanged</li>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

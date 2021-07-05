@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Apparel Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+
+                <!-- Tunic -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VAE_Apparel_Tunic"]/apparel/tags</xpath>
+                    <value>
+                        <li>MedievalBasic</li>
+                    </value>
+                </li>
+
+                <!-- Blouse -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VAE_Apparel_Blouse"]/apparel/tags</xpath>
+                    <value>
+                        <li>MedievalBasic</li>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

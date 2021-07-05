@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Add apparel tags -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Apparel_BasicShirt" or defName="Apparel_Pants"]/apparel/tags</xpath>
+        <value>
+            <li>MedievalBasic</li>
+        </value>
+    </Operation>
+
+</Patch>

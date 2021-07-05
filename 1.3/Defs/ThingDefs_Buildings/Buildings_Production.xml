@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>VFEM_WineBarrel</defName>
+    <label>wine barrel</label>
+    <description>A barrel for fermenting raw must into wine.</description>
+    <thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/Production/WineBarrel/WineBarrel</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.75, 0.35, 0.33)</volume>
+      </shadowData>
+    </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>60</pathCost>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>10</Steel>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <comps>
+      <li Class="ItemProcessor.CompProperties_ItemProcessor">
+        <buildingOnGraphic>Things/Building/Production/WineBarrel/WineBarrel</buildingOnGraphic>
+        <numberOfInputs>1</numberOfInputs>
+        <qualitySelector>true</qualitySelector>
+        <acceptsNoneAsInput>false</acceptsNoneAsInput>
+        <InsertFirstItemDesc>VanillaFactionsExpanded.Wine.InsertFirstItemDesc</InsertFirstItemDesc>
+
+        <isSemiAutomaticMachine>true</isSemiAutomaticMachine>
+        <resetSemiautomaticIcon>UI/MustReset</resetSemiautomaticIcon>
+        <chooseIngredientsIcon>UI/MustEmpty</chooseIngredientsIcon>
+        <showProgressBar>true</showProgressBar>
+
+        <bringIngredientsText>VanillaFactionsExpanded.Wine.bringIngredientsText</bringIngredientsText>
+        <bringIngredientsDesc>VanillaFactionsExpanded.Wine.bringIngredientsDesc</bringIngredientsDesc>
+        <bringIngredientsIcon>UI/MustInsert</bringIngredientsIcon>
+
+        <cancelIngredientsText>VanillaFactionsExpanded.Wine.cancelIngredientsText</cancelIngredientsText>
+        <cancelIngredientsDesc>VanillaFactionsExpanded.Wine.cancelIngredientsDesc</cancelIngredientsDesc>
+        <cancelIngredientsIcon>UI/MustCancel</cancelIngredientsIcon>
+
+        <noPowerDestroysProgress>false</noPowerDestroysProgress>
+
+        <removeProductText>VanillaFactionsExpanded.Wine.removeProductText</removeProductText>
+        <removeProductDesc>VanillaFactionsExpanded.Wine.removeProductDesc</removeProductDesc>
+        <removeProductIcon>UI/RemoveWine</removeProductIcon>
+
+        <isTemperatureDependingMachine>true</isTemperatureDependingMachine>
+        <minTemp>-1</minTemp>
+        <maxTemp>32</maxTemp>
+
+        <destroyIngredientsAtStartOfProcess>false</destroyIngredientsAtStartOfProcess>
+        <destroyIngredientsAtAwfulQuality>true</destroyIngredientsAtAwfulQuality>
+      </li>
+    </comps>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <designationCategory>Production</designationCategory>
+    <constructEffect>ConstructWood</constructEffect>
+    <researchPrerequisites>
+      <li>Brewing</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <ItemProcessor.ItemAcceptedDef>
+    <defName>VFEM_WineBarrelFirstItem</defName>
+    <building>VFEM_WineBarrel</building>
+    <slot>1</slot>
+    <items>
+      <li>VFEM_Must</li>
+    </items>
+  </ItemProcessor.ItemAcceptedDef>
+
+  <ItemProcessor.CombinationDef>
+    <defName>VFEM_GrapeToWine</defName>
+    <building>VFEM_WineBarrel</building>
+    <items>
+      <li>VFEM_Must</li>
+    </items>
+    <amount>
+      <li>10</li>
+    </amount>
+    <result>VFEM_Wine</result>
+    <yield>10</yield>
+    <useQualityIncreasing>true</useQualityIncreasing>
+    <awfulQualityAgeDaysThreshold>1</awfulQualityAgeDaysThreshold>
+    <poorQualityAgeDaysThreshold>3</poorQualityAgeDaysThreshold>
+    <normalQualityAgeDaysThreshold>8</normalQualityAgeDaysThreshold>
+    <goodQualityAgeDaysThreshold>14</goodQualityAgeDaysThreshold>
+    <excellentQualityAgeDaysThreshold>20</excellentQualityAgeDaysThreshold>
+    <masterworkQualityAgeDaysThreshold>50</masterworkQualityAgeDaysThreshold>
+    <legendaryQualityAgeDaysThreshold>120</legendaryQualityAgeDaysThreshold>
+  </ItemProcessor.CombinationDef>
+</Defs>

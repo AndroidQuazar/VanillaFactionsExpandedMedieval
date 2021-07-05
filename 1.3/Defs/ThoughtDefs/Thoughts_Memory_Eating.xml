@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>VFEM_DrankWine</defName>
+        <!-- <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon> -->
+        <durationDays>1</durationDays>
+        <stages>
+            <!-- Awful wine -->
+            <li>
+                <label>drank awful wine</label>
+                <description>I drank some must which has barely had any time to ferment. Disgusting.</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+
+            <!-- Poor wine -->
+            <li>
+                <label>drank poor wine</label>
+                <description>That wine could have had a few more days to ferment. It wasn't horrible but wasn't great either.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+
+            <!-- Normal wine -->
+            <li>
+                <label>drank normal wine</label>
+                <visible>false</visible>
+                <baseMoodEffect>0</baseMoodEffect>
+            </li>
+
+            <!-- Good wine -->
+            <li>
+                <label>drank good wine</label>
+                <description>I drank some fine wine.</description>
+                <baseMoodEffect>3</baseMoodEffect>
+            </li>
+
+            <!-- Excellent wine -->
+            <li>
+                <label>drank excellent wine</label>
+                <description>I drank some fine wine. You can tell when it has had a good amount of time to mature.</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+
+            <!-- Masterwork wine -->
+            <li>
+                <label>drank masterwork wine</label>
+                <description>That wine was simply amazing! It doesn't get much better than this.</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+
+            <!-- Legendary wine -->
+            <li>
+                <label>drank legendary wine</label>
+                <description>I've drank quite possibly some of the best wine I've ever tasted!</description>
+                <baseMoodEffect>15</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

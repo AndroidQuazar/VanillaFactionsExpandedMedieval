@@ -2,12 +2,13 @@
 <LanguageData>
 
     <!-- Wine barrel -->
-    <VanillaFactionsExpanded.NoMust>need grape must</VanillaFactionsExpanded.NoMust>
-    <VanillaFactionsExpanded.ContainsMust>Contains {0} / {1} must</VanillaFactionsExpanded.ContainsMust>
-    <VanillaFactionsExpanded.ContainsWine>Contains {0} / {1} wine</VanillaFactionsExpanded.ContainsWine>
-    <VanillaFactionsExpanded.TargetWineQuality>Target quality: {0}</VanillaFactionsExpanded.TargetWineQuality>
-    <VanillaFactionsExpanded.TargetWineQualityMulti>Set target quality</VanillaFactionsExpanded.TargetWineQualityMulti>
-    <VanillaFactionsExpanded.TargetWineQuality_Description>Your colonists will remove the wine from this barrel when it reaches the specified target quality.</VanillaFactionsExpanded.TargetWineQuality_Description>
+    <VanillaFactionsExpanded.Wine.InsertFirstItemDesc>Must to Insert</VanillaFactionsExpanded.Wine.InsertFirstItemDesc>
+    <VanillaFactionsExpanded.Wine.bringIngredientsText>Bring must</VanillaFactionsExpanded.Wine.bringIngredientsText>
+    <VanillaFactionsExpanded.Wine.bringIngredientsDesc>Bring wine must to the wine barrel to start fermentation</VanillaFactionsExpanded.Wine.bringIngredientsDesc>
+    <VanillaFactionsExpanded.Wine.cancelIngredientsText>Cancel bringing must</VanillaFactionsExpanded.Wine.cancelIngredientsText>
+    <VanillaFactionsExpanded.Wine.cancelIngredientsDesc>Cancel bringing wine must to the wine barrel.</VanillaFactionsExpanded.Wine.cancelIngredientsDesc>
+    <VanillaFactionsExpanded.Wine.removeProductText>Remove wine ({0})</VanillaFactionsExpanded.Wine.removeProductText>
+    <VanillaFactionsExpanded.Wine.removeProductDesc>Remove wine from the wine barrel. The barrel will be ready at the present quality level ({0})</VanillaFactionsExpanded.Wine.removeProductDesc>
 
     <!-- Tournaments -->
     <VanillaFactionsExpanded.TournamentDurationDays>The tournament will last {0} days.</VanillaFactionsExpanded.TournamentDurationDays>
@@ -36,9 +37,4 @@
     <VanillaFactionsExpanded.LogEntryLine>Round {0}: {1}</VanillaFactionsExpanded.LogEntryLine>
 
     <VanillaFactionsExpanded.Leave>Leave</VanillaFactionsExpanded.Leave>
-
-    <!-- Enemy caravans -->
-    <VanillaFactionsExpanded.AttackEnemyCaravan>Attack {0}</VanillaFactionsExpanded.AttackEnemyCaravan>
-    <VanillaFactionsExpanded.AttackingEnemyCaravan>Attacking {0}</VanillaFactionsExpanded.AttackingEnemyCaravan>
-
 </LanguageData>

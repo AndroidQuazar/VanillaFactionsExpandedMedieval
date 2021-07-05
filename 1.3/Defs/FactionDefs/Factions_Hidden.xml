@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <FactionDef Abstract="True" Name="VFEM_UnknownKingdomBase" ParentName="FactionBase">
+    <label>unknown kingdom</label>
+    <pawnSingular>subject</pawnSingular>
+    <pawnsPlural>subjects</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <fixedName>Unknown kingdom</fixedName>
+    <techLevel>Medieval</techLevel>
+    <backstoryCategories>
+      <li>Tribal</li>
+    </backstoryCategories>
+    <hidden>true</hidden>
+    <rescueesCanJoin>true</rescueesCanJoin>
+    <autoFlee>false</autoFlee>
+    <geneticVariance>0.1</geneticVariance>
+    <modExtensions>
+      <li Class="VFECore.FactionDefExtension">
+        <packAnimalTexNameSuffix>MedievalPack</packAnimalTexNameSuffix>
+        <hasCities>false</hasCities>
+      </li>
+    </modExtensions>
+  </FactionDef>
+
+  <FactionDef ParentName="VFEM_UnknownKingdomBase">
+    <defName>VFEM_UnknownKingdom</defName>
+  </FactionDef>
+
+  <FactionDef ParentName="VFEM_UnknownKingdomBase">
+    <defName>VFEM_UnknownKingdomHostile</defName>
+    <permanentEnemy>true</permanentEnemy>
+  </FactionDef>
+
+</Defs>

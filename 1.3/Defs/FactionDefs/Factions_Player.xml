@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <FactionDef ParentName="PlayerFactionBase">
+    <defName>VFEM_PlayerKingdom</defName>
+    <label>New Kingdom</label>
+    <description>A small kingdom.</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>subject</pawnSingular>
+    <pawnsPlural>subjects</pawnsPlural>
+    <basicMemberKind>VFEM_Subject</basicMemberKind>
+    <techLevel>Medieval</techLevel>
+    <backstoryCategories>
+      <li>Tribal</li>
+    </backstoryCategories>
+    <factionIconPath>World/WorldObjects/Expanding/Castle</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/MedievalSettlement</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>VFEM_NamerFactionMedieval</factionNameMaker>
+    <settlementNameMaker>VFEM_NamerSettlementMedieval</settlementNameMaker>
+    <geneticVariance>1</geneticVariance>
+    <startingResearchTags>
+      <li>TribalStart</li>
+      <li>VFEM_MedievalStart</li>
+    </startingResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Cloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <modExtensions>
+      <li Class="VFECore.FactionDefExtension">
+        <packAnimalTexNameSuffix>MedievalPack</packAnimalTexNameSuffix>
+        <strangerInBlackReplacement>VFEM_KnightInBlack</strangerInBlackReplacement>
+      </li>
+    </modExtensions>
+  </FactionDef>
+
+</Defs>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Prevent trader from generating with shields -->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_WarMerchant"]/stockGenerators/li[categoryDef="WeaponsMelee"]/excludedCategories</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_WarMerchant"]/stockGenerators/li[categoryDef="WeaponsMelee"]</xpath>
+                <value>
+                    <excludedCategories/>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_WarMerchant"]/stockGenerators/li[categoryDef="WeaponsMelee"]/excludedCategories</xpath>
+        <value>
+            <li>VFEC_Shields</li>
+        </value>
+    </Operation>
+
+</Patch>

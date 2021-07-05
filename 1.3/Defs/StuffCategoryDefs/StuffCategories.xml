@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <StuffCategoryDef>
+        <defName>VFEM_StoneChunks</defName>
+        <label>stone chunks</label>
+    </StuffCategoryDef>
+
+</Defs>

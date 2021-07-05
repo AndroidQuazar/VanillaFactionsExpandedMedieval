@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- If Editable Backstories is loaded, make the medieval factions use medieval backstories -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[RF] Editable Backstories and Names - 1.1</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/backstoryCategories/li[text()="Tribal"]</xpath>
+            <value>
+                <li>Medieval</li>
+            </value>
+        </match>
+    </Operation>
+
+    <!-- If Vanilla Weapons Expanded is loaded, add musketeer to the pawn groups that can be generated -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Weapons Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- Normal fights, melee with ranged mix-ins -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+                    <value>
+                        <VFEM_Medieval_Musketeer>10</VFEM_Medieval_Musketeer>
+                    </value>
+                </li>
+
+                <!-- Normal fights, ranged only -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
+                    <value>
+                        <VFEM_Medieval_Musketeer>25</VFEM_Medieval_Musketeer>
+                    </value>
+                </li>
+
+                <!-- Peaceful -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/pawnGroupMakers/li[4]/options</xpath>
+                    <value>
+                        <VFEM_Medieval_Musketeer>5</VFEM_Medieval_Musketeer>
+                    </value>
+                </li>
+
+                <!-- Trader -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/pawnGroupMakers/li[5]/guards</xpath>
+                    <value>
+                        <VFEM_Medieval_Musketeer>5</VFEM_Medieval_Musketeer>
+                    </value>
+                </li>
+
+                <!-- Settlement -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/pawnGroupMakers/li[6]/options</xpath>
+                    <value>
+                        <VFEM_Medieval_Musketeer>15</VFEM_Medieval_Musketeer>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+    <!-- If Vanilla Furniture Expanded - Security is loaded, medieval factions can siege -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Security</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]</xpath>
+                    <value>
+                        <canSiege>true</canSiege>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/modExtensions/li[@Class="VFECore.FactionDefExtension"]</xpath>
+                    <value>
+                        <siegeParameterSet>VFEM_Medieval</siegeParameterSet>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

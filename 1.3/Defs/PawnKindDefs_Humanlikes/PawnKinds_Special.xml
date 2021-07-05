@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Ugh, that stench -->
+  <PawnKindDef ParentName="VFEM_MedievalPawnKindBase">
+    <defName>VFEM_SellSword</defName>
+    <label>sellsword</label>
+    <combatPower>100</combatPower>
+    <apparelMoney>
+      <min>1000</min>
+      <max>1600</max>
+    </apparelMoney>
+    <apparelTags>
+      <li>MedievalMilitary</li>
+      <li>MedievalArmorDecent</li>
+    </apparelTags>
+    <weaponMoney>
+      <min>300</min>
+      <max>300</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>MedievalMeleeDecent</li>
+      <li>MedievalMeleeAdvanced</li>
+    </weaponTags>
+    <modExtensions Inherit="False">
+      <li Class="VFECore.PawnKindDefExtension">
+        <countAsSlave>true</countAsSlave>
+        <shieldMoney>
+          <min>-100</min>
+          <max>500</max>
+        </shieldMoney>
+        <shieldTags>
+          <li>MedievalDecent</li>
+        </shieldTags>
+      </li>
+    </modExtensions>
+    <initialWillRange>2~4</initialWillRange>
+    <initialResistanceRange>14~22</initialResistanceRange>
+  </PawnKindDef>
+
+  <!-- It's just a flesh wound! -->
+  <PawnKindDef ParentName="VFEM_Medieval_Knight">
+    <defName>VFEM_BlackKnight</defName>
+    <label>black knight</label>
+    <defaultFactionType>VFEM_UnknownKingdomHostile</defaultFactionType>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <weaponMoney>
+      <min>300</min>
+      <max>300</max>
+    </weaponMoney>
+    <weaponTags Inherit="False">
+      <li>VFEClaymore</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Painstopper</li>
+    </techHediffsTags>
+    <apparelColor>(30,30,30)</apparelColor>
+    <techHediffsChance>1</techHediffsChance>
+    <modExtensions Inherit="False"/>
+    <initialWillRange>2~4</initialWillRange>
+    <initialResistanceRange>14~25</initialResistanceRange>
+  </PawnKindDef>
+
+  <!-- Medieval equivalent of man in black -->
+  <PawnKindDef ParentName="VFEM_Medieval_Knight">
+    <defName>VFEM_KnightInBlack</defName>
+    <label>knight in black</label>
+    <labelPlural>knights in black</labelPlural>
+    <minGenerationAge>20</minGenerationAge>
+    <maxGenerationAge>50</maxGenerationAge>
+    <invNutrition>10.0</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+    <inventoryOptions>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>6</choiceChance>
+          <thingDef>MedicineHerbal</thingDef>
+          <countRange>5</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <itemQuality>Good</itemQuality>
+    <apparelRequired>
+      <li>Apparel_BasicShirt</li>
+      <li>Apparel_Pants</li>
+      <li>Apparel_PlateArmor</li>
+      <li>VFEM_Apparel_PlateHelmetHeavy</li>
+    </apparelRequired>
+    <apparelColor>(57,57,57)</apparelColor>
+    <initialWillRange>2~4</initialWillRange>
+    <initialResistanceRange>14~25</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>
