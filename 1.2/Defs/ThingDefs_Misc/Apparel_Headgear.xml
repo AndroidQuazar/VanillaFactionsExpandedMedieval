@@ -7,7 +7,7 @@
         <description>A lightweight medieval helmet that provides moderate protection against sharp attacks. Not effective against blunt weapons. Slighty restricts the wearer's field of vision.</description>
         <techLevel>Medieval</techLevel>
         <recipeMaker>
-            <recipeUsers>
+            <recipeUsers Inherit='False'>
                 <li>ElectricSmithy</li>
                 <li>FueledSmithy</li>
             </recipeUsers>
@@ -31,7 +31,7 @@
             <EquipDelay>2.5</EquipDelay>
         </statBases>
         <equippedStatOffsets>
-            <ShootingAccuracyPawn>-4</ShootingAccuracyPawn>
+            <ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
         </equippedStatOffsets>
         <generateCommonality>0.4</generateCommonality>
         <stuffCategories>
@@ -62,7 +62,7 @@
         <techLevel>Medieval</techLevel>
         <recipeMaker>
             <researchPrerequisite>PlateArmor</researchPrerequisite>
-            <recipeUsers>
+            <recipeUsers Inherit='False'>
                 <li>ElectricSmithy</li>
                 <li>FueledSmithy</li>
             </recipeUsers>
@@ -84,7 +84,7 @@
             <EquipDelay>4</EquipDelay>
         </statBases>
         <equippedStatOffsets>
-            <ShootingAccuracyPawn>-8</ShootingAccuracyPawn>
+            <ShootingAccuracyPawn>-1</ShootingAccuracyPawn>
             <MeleeHitChance>-2</MeleeHitChance>
         </equippedStatOffsets>
         <stuffCategories>

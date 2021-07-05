@@ -52,6 +52,7 @@
         </comps>
         <tickerType>Rare</tickerType>
         <rotatable>true</rotatable>
+        <defaultPlacingRot>East</defaultPlacingRot>
         <designationCategory>Production</designationCategory>
         <constructEffect>ConstructWood</constructEffect>
         <researchPrerequisites>

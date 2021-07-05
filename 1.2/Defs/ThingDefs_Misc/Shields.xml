@@ -13,12 +13,16 @@
         </equippedStatOffsets>
 		<thingClass>VFECore.Apparel_Shield</thingClass>
 		<apparel>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
 			<defaultOutfitTags>
 				<li>Soldier</li>
 			</defaultOutfitTags>
-			<bodyPartGroups>
-				<li>LeftHand</li>
-			</bodyPartGroups>
+		<bodyPartGroups>
+			<li>LeftHand</li>
+			<li>Arms</li>
+		</bodyPartGroups>
 			<layers>
 				<li>VFEC_OuterShell</li>
 			</layers>

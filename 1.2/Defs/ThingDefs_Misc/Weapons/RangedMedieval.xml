@@ -76,7 +76,7 @@
       <damageDef>Arrow</damageDef>
       <damageAmountBase>32</damageAmountBase>
       <stoppingPower>2</stoppingPower>
-	  <armorPenetrationBase>0.86</armorPenetrationBase>
+	  <armorPenetrationBase>0.36</armorPenetrationBase>
       <speed>48</speed>
     </projectile>
   </ThingDef>
