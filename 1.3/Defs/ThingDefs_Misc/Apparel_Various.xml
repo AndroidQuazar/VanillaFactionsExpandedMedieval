@@ -203,5 +203,56 @@
     </equippedStatOffsets>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
+  
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>VFEM_Apparel_KingsRobes</defName>
+    <label>king’s robes</label>
+    <description>A long robe worthy of a king. Extremely beautiful.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>5000</WorkToMake>
+      <Mass>0.25</Mass>
+      <StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.3</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2.0</EquipDelay>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+		<li>Legs</li>
+		<li>Shoulders</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+		<li>Shell</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <tags>
+        <li>MedievalApparelNoble</li>
+		<li>King</li>
+      </tags>
+    </apparel>
+    <equippedStatOffsets>
+      <SocialImpact>0.5</SocialImpact>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
 
 </Defs>
