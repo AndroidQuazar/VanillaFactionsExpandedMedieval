@@ -312,6 +312,7 @@
     </statBases>
     <techLevel>Medieval</techLevel>
     <equippedStatOffsets>
+	  <ToxicSensitivity>-0.2</ToxicSensitivity>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">+0.1</SlaveSuppressionOffset>
     </equippedStatOffsets>
 	<tickerType>Normal</tickerType>
