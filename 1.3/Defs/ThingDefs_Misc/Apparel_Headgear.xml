@@ -137,7 +137,7 @@
     <techLevel>Medieval</techLevel>
     <equippedStatOffsets>
       <SocialImpact>0.15</SocialImpact>
-      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.5</SlaveSuppressionOffset>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
     </equippedStatOffsets>
     <apparel>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
