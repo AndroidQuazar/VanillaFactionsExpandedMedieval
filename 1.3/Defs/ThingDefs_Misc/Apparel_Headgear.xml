@@ -243,7 +243,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>VFEM_Apparel_KingsCrown</defName>
     <label>king's crown</label>
-    <description>A beautiful metal crown. The wearer becomes very influential, but at the same time they will refuse to do any work. </description>
+    <description>A beautiful metal crown. The wearer becomes very influential, but at the same time they will refuse to do any work.</description>
     <recipeMaker>
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
     </recipeMaker>
@@ -284,6 +284,65 @@
         <li>Worker</li>
       </defaultOutfitTags>
     </apparel>
+  </ThingDef>
+
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>VFEM_Apparel_PlagueMask</defName>
+    <label>plague mask</label>
+    <description>A mask with a long ‘beak’ filled with herbal medicine that keeps infected pawns at a distance.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/WarMask/WarMask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9, 0.9)</drawSize>
+    </graphicData>
+    <costList>
+      <MedicineHerbal>5</MedicineHerbal>
+      <WoodLog>25</WoodLog>
+    </costList>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToMake>5000</WorkToMake>
+      <Mass>1.0</Mass>
+      <EquipDelay>0.8</EquipDelay>
+	  <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+	  <ArmorRating_Heat>0.10</ArmorRating_Heat>
+	  <Insulation_Cold>4</Insulation_Cold>
+	  <Insulation_Heat>6</Insulation_Heat>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+    <equippedStatOffsets>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">+0.1</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+	<tickerType>Normal</tickerType>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+	  <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/WarMask/WarMask</wornGraphicPath>
+      <hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>MedievalApparelPlague</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+	<comps>
+		<li Class="VFECore.CompProperties_ApparelHediffs">
+			<hediffDefnames>
+				<li>VFEM_PlagueMask</li>
+			</hediffDefnames>
+		</li>
+	</comps>
   </ThingDef>
 
 </Defs>
