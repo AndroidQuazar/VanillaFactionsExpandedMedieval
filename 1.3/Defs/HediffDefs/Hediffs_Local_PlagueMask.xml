@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+  
+  <HediffDef>
+    <defName>VFEM_PlagueMask</defName>
+    <label>plague mask</label>
+    <description>Plague mask prevents the wearer from catching plague.</description>
+    <defaultLabelColor>(30,102,62)</defaultLabelColor>
+    <isBad>false</isBad>
+      <stages>
+        <li>
+          <makeImmuneTo>
+            <li>Plague</li>
+          </makeImmuneTo>
+        </li>
+      </stages>
+  </HediffDef>
+  
+</Defs>
