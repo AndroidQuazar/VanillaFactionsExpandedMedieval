@@ -98,5 +98,55 @@
     </apparel>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
+  
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>VFEM_Apparel_JesterOutfit</defName>
+    <label>jester outfit</label>
+    <description>A colorful jester outfit. It predisposes to conversation, but it's impossible to learn anything in such a suit.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>2000</WorkToMake>
+      <Mass>0.3</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <tags>
+        <li>MedievalApparelBasic</li>
+		<li>Jester</li>
+      </tags>
+    </apparel>
+    <equippedStatOffsets>
+      <SocialImpact>0.5</SocialImpact>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.5</SlaveSuppressionOffset>
+	  <GlobalLearningFactor>-1.0</GlobalLearningFactor>
+    </equippedStatOffsets>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
 
 </Defs>
