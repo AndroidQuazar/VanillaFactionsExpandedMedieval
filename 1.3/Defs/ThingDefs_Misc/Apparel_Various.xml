@@ -145,7 +145,7 @@
       </tags>
     </apparel>
     <equippedStatOffsets>
-      <SocialImpact>0.3</SocialImpact>
+      <SocialImpact>0.15</SocialImpact>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.5</SlaveSuppressionOffset>
 	  <GlobalLearningFactor>-1.0</GlobalLearningFactor>
     </equippedStatOffsets>
@@ -198,7 +198,7 @@
       </tags>
     </apparel>
     <equippedStatOffsets>
-      <SocialImpact>0.4</SocialImpact>
+      <SocialImpact>0.2</SocialImpact>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.2</SlaveSuppressionOffset>
     </equippedStatOffsets>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
@@ -249,7 +249,7 @@
       </tags>
     </apparel>
     <equippedStatOffsets>
-      <SocialImpact>0.5</SocialImpact>
+      <SocialImpact>0.3</SocialImpact>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
     </equippedStatOffsets>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
