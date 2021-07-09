@@ -317,8 +317,12 @@
     </equippedStatOffsets>
 	<tickerType>Normal</tickerType>
     <recipeMaker>
-      <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
 	  <researchPrerequisite>ComplexClothing</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Sculpt</soundWorking>
     </recipeMaker>
     <apparel>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
