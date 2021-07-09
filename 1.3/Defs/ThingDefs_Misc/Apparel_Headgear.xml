@@ -113,7 +113,7 @@
     <label>jester hat</label>
     <description>A hat worthy of a jester. Each half is different from the other one in color.</description>
     <recipeMaker>
-      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+      <researchPrerequisite>VFEM_NobleMedievalApparel</researchPrerequisite>
     </recipeMaker>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/CowboyHat/CowboyHat</texPath>
@@ -179,7 +179,7 @@
     <label>dame hat</label>
     <description>A beautiful long cone hat for a dame.</description>
     <recipeMaker>
-      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+      <researchPrerequisite>VFEM_NobleMedievalApparel</researchPrerequisite>
     </recipeMaker>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/CowboyHat/CowboyHat</texPath>
@@ -245,7 +245,7 @@
     <label>king's crown</label>
     <description>A beautiful metal crown. The wearer becomes very influential, but at the same time they will refuse to do any work.</description>
     <recipeMaker>
-      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+      <researchPrerequisite>VFEM_NobleMedievalApparel</researchPrerequisite>
     </recipeMaker>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/CowboyHat/CowboyHat</texPath>
@@ -318,7 +318,7 @@
 	<tickerType>Normal</tickerType>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
-	  <researchPrerequisite>ComplexClothing</researchPrerequisite>
+	  <researchPrerequisite>VFEM_PlagueMask</researchPrerequisite>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <effectWorking>Sculpt</effectWorking>

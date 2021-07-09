@@ -108,6 +108,9 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>50</costStuffCount>
+    <recipeMaker>
+      <researchPrerequisite>VFEM_NobleMedievalApparel</researchPrerequisite>
+    </recipeMaker>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -161,6 +164,9 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>70</costStuffCount>
+    <recipeMaker>
+      <researchPrerequisite>VFEM_NobleMedievalApparel</researchPrerequisite>
+    </recipeMaker>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -213,6 +219,9 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>40</costStuffCount>
+    <recipeMaker>
+      <researchPrerequisite>VFEM_NobleMedievalApparel</researchPrerequisite>
+    </recipeMaker>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
