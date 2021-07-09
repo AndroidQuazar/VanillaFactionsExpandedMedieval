@@ -8,14 +8,14 @@
     <thingClass>Building</thingClass>
     <category>Building</category>
     <graphicData>
-      <texPath>Things/Building/Linked/Barricade_Atlas</texPath>
+      <texPath>Things/Building/Linked/RockLowWall/RockLowWall_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <linkType>Basic</linkType>
       <linkFlags>
         <li>Barricades</li>
       </linkFlags>
     </graphicData>
-    <uiIconPath>Things/Building/Linked/Barricade_MenuIcon</uiIconPath>
+    <uiIconPath>Things/Building/Linked/RockWall_MenuIcon</uiIconPath>
     <uiIconScale>1.2</uiIconScale>
     <altitudeLayer>Building</altitudeLayer>
     <pathCost>100</pathCost>
