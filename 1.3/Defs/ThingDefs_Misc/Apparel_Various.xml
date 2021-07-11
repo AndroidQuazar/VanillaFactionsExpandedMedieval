@@ -246,7 +246,6 @@
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</wornGraphicPath>
       <layers>
-        <li>OnSkin</li>
 		<li>Shell</li>
       </layers>
       <defaultOutfitTags>
