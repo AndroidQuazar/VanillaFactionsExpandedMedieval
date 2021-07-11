@@ -271,7 +271,115 @@
     <minGenerationAge>30</minGenerationAge>
     <maxGenerationAge>999</maxGenerationAge>
     <itemQuality>Good</itemQuality>
+    <factionLeader>false</factionLeader>
+    <apparelMoney>
+      <min>1600</min>
+      <max>2400</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>500</min>
+      <max>700</max>
+    </weaponMoney>
+    <initialWillRange>3~5</initialWillRange>
+    <initialResistanceRange>20~30</initialResistanceRange>
+  </PawnKindDef>
+  
+<!-- noble kinds -->
+  <PawnKindDef ParentName="VFEM_MedievalPawnKindBase">
+    <defName>VFEM_Medieval_Jester</defName>
+    <label>jester</label>
+    <combatPower>35</combatPower>
+    <chemicalAddictionChance>0.10</chemicalAddictionChance>
+    <itemQuality>Normal</itemQuality>
+    <gearHealthRange>
+      <min>0.2</min>
+      <max>1.1</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>50</min>
+      <max>500</max>
+    </apparelMoney>
+    <apparelRequired>
+      <li>VFEM_Apparel_JesterHat</li>
+      <li>VFEM_Apparel_JesterOutfit</li>
+    </apparelRequired>
+    <apparelTags>
+      <li>Neolithic</li>
+	  <li>Jester</li>
+    </apparelTags>
+    <weaponMoney>
+      <min>90</min>
+      <max>150</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>50</min>
+      <max>150</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.15</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>3~8</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="VFEM_MedievalPawnKindBase">
+    <defName>VFEM_Medieval_Dame</defName>
+    <label>dame</label>
+    <combatPower>20</combatPower>
+    <chemicalAddictionChance>0.1</chemicalAddictionChance>
+    <gearHealthRange>
+      <min>0.2</min>
+      <max>1.1</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>50</min>
+      <max>500</max>
+    </apparelMoney>
+    <apparelRequired>
+      <li>VFEM_Apparel_DameHat</li>
+      <li>VFEM_Apparel_DameDress</li>
+    </apparelRequired>
+    <apparelTags>
+	  <li>Dame</li>
+    </apparelTags>
+    <weaponMoney>
+      <min>90</min>
+      <max>150</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>50</min>
+      <max>150</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.05</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~15</initialResistanceRange>
+	<fixedGender>Female</fixedGender>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="VFEM_Medieval_Knight">
+    <defName>VFEM_Medieval_King</defName>
+    <label>king</label>
+	<labelFemale>queen</labelFemale>
+    <combatPower>150</combatPower>
+    <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+    <minGenerationAge>30</minGenerationAge>
+    <maxGenerationAge>999</maxGenerationAge>
+    <itemQuality>Good</itemQuality>
     <factionLeader>true</factionLeader>
+    <apparelRequired>
+      <li>VFEM_Apparel_KingsCrown</li>
+      <li>VFEM_Apparel_KingsRobes</li>
+    </apparelRequired>
     <apparelMoney>
       <min>1600</min>
       <max>2400</max>
