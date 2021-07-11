@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<KCSG.SymbolDef>
+  <defName>VFEM_CobblestoneWall_ChunkGranite</defName>
+  <thing>VFEM_CobblestoneWall</thing>
+  <stuff>ChunkGranite</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEM_LowRockWall_ChunkGranite</defName>
+  <thing>VFEM_LowRockWall</thing>
+  <stuff>ChunkGranite</stuff>
+</KCSG.SymbolDef>
+
+</Defs>
+
