@@ -134,13 +134,14 @@
         </options>
       </li>
     </pawnGroupMakers>
-    <modExtensions>
-      <li Class="VFECore.FactionDefExtension">
-        <packAnimalTexNameSuffix>MedievalPack</packAnimalTexNameSuffix>
-        <settlementGenerationSymbol>VFEM_medievalSettlement</settlementGenerationSymbol>
-        <hasCities>false</hasCities>
-      </li>
-    </modExtensions>
+      <modExtensions>
+        <li Class="KCSG.FactionSettlement">
+          <useStructureLayout>True</useStructureLayout>
+          <chooseFromlayouts>
+            <li>VFEM_Castle1</li>
+          </chooseFromlayouts>
+        </li>
+      </modExtensions>
   </FactionDef>
 
   <FactionDef ParentName="VFEM_MedievalFactionBase">
