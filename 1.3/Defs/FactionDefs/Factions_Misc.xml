@@ -18,7 +18,10 @@
     <backstoryCategories>
       <li>Tribal</li>
     </backstoryCategories>
-    <leaderTitle>lord</leaderTitle>
+    <leaderTitle>king</leaderTitle>
+    <fixedLeaderKinds>
+        <li>VFEM_Medieval_King</li>
+    </fixedLeaderKinds>
     <raidCommonalityFromPointsCurve>
       <points>
         <li>(0, 1)</li>        <!--Constant 1 at all points levels-->
@@ -94,6 +97,8 @@
           <VFEM_Medieval_Bowman>40</VFEM_Medieval_Bowman>
           <VFEM_Medieval_Knight>20</VFEM_Medieval_Knight>
           <VFEM_Medieval_Lord>10</VFEM_Medieval_Lord>
+		  <VFEM_Medieval_Jester>25</VFEM_Medieval_Jester>
+		  <VFEM_Medieval_Dame>20</VFEM_Medieval_Dame>
         </options>
       </li>
       <li>
@@ -122,7 +127,10 @@
           <VFEM_Medieval_Footsoldier>30</VFEM_Medieval_Footsoldier>
           <VFEM_Medieval_Bowman>50</VFEM_Medieval_Bowman>
           <VFEM_Medieval_Knight>25</VFEM_Medieval_Knight>
-          <VFEM_Medieval_Lord>60</VFEM_Medieval_Lord>
+          <VFEM_Medieval_Lord>10</VFEM_Medieval_Lord>
+		  <VFEM_Medieval_King>60</VFEM_Medieval_King>
+		  <VFEM_Medieval_Jester>25</VFEM_Medieval_Jester>
+		  <VFEM_Medieval_Dame>20</VFEM_Medieval_Dame>
         </options>
       </li>
     </pawnGroupMakers>
