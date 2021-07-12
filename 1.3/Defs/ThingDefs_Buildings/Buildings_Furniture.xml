@@ -7,14 +7,14 @@
     <description>A primitive candle made from meat and fat. It can burn for a long time, but it does not light up the area well.</description>
     <category>Building</category>
     <graphicData>
-      <texPath>Things/Building/Misc/TorchLamp</texPath>
+      <texPath>Things/Building/Furniture/Candle/Candle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawRotated>false</drawRotated>
       <damageData>
         <rect>(0.35,0.35,0.3,0.3)</rect>
       </damageData>
     </graphicData>
-    <uiIconPath>Things/Building/Misc/TorchLamp_MenuIcon</uiIconPath>
+    <uiIconPath>Things/Building/Furniture/Candle/Candle_MenuIcon</uiIconPath>
     <uiIconScale>0.85</uiIconScale>
     <rotatable>false</rotatable>
     <altitudeLayer>Building</altitudeLayer>
@@ -70,7 +70,7 @@
         <glowColor>(252,187,113,0)</glowColor>
       </li>
       <li Class="CompProperties_FireOverlay">
-        <fireSize>0.4</fireSize>
+        <fireSize>0.25</fireSize>
         <offset>(0,0,0.2)</offset>
       </li>
       <li Class="CompProperties_MeditationFocus">

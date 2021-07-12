@@ -39,7 +39,7 @@
     <label>healroot tree</label>
     <description>A tree that produces healroot, genetically engineered to disinfect its own product, and survive in slightly less-warm climates.</description>
     <graphicData>
-      <texPath>Things/Plant/TreeCocoa</texPath>
+      <texPath>Things/Plant/HealTree</texPath>
       <graphicClass>Graphic_Random</graphicClass>
         <shadowData>
           <volume>(0.15, 0.3, 0.15)</volume>
@@ -65,7 +65,7 @@
       </sowResearchPrerequisites>
       <topWindExposure>0.15</topWindExposure>
       <mustBeWildToSow>false</mustBeWildToSow>
-      <immatureGraphicPath>Things/Plant/TreeCocoa_Immature</immatureGraphicPath>
+      <immatureGraphicPath>Things/Plant/LeaflessHealTree</immatureGraphicPath>
       <harvestWork>500</harvestWork>
       <harvestTag>Standard</harvestTag>
       <harvestYield>20</harvestYield>

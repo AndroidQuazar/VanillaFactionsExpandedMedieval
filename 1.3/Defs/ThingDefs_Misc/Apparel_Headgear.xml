@@ -116,7 +116,7 @@
       <researchPrerequisite>VFEM_NobleMedievalApparel</researchPrerequisite>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Pawn/Humanlike/Apparel/CowboyHat/CowboyHat</texPath>
+      <texPath>Things/Pawn/Humanlike/Apparel/JesterHat/JesterHat</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(0.9, 0.9)</drawSize>
     </graphicData>
@@ -144,7 +144,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CowboyHat/CowboyHat</wornGraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/JesterHat/JesterHat</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -182,7 +182,7 @@
       <researchPrerequisite>VFEM_NobleMedievalApparel</researchPrerequisite>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Pawn/Humanlike/Apparel/CowboyHat/CowboyHat</texPath>
+      <texPath>Things/Pawn/Humanlike/Apparel/DameHat/DameHat</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(0.9, 0.9)</drawSize>
     </graphicData>
@@ -210,7 +210,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CowboyHat/CowboyHat</wornGraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/DameHat/DameHat</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -248,7 +248,7 @@
       <researchPrerequisite>VFEM_NobleMedievalApparel</researchPrerequisite>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Pawn/Humanlike/Apparel/CowboyHat/CowboyHat</texPath>
+      <texPath>Things/Pawn/Humanlike/Apparel/KingsCrown/KingsCrown</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(0.9, 0.9)</drawSize>
     </graphicData>
@@ -272,7 +272,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CowboyHat/CowboyHat</wornGraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/KingsCrown/KingsCrown</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -291,7 +291,7 @@
     <label>plague mask</label>
     <description>A mask with a long ‘beak’ filled with herbal medicine that keeps infected pawns at a distance.</description>
     <graphicData>
-      <texPath>Things/Pawn/Humanlike/Apparel/WarMask/WarMask</texPath>
+      <texPath>Things/Pawn/Humanlike/Apparel/PlagueMask/PlagueMask</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(0.9, 0.9)</drawSize>
     </graphicData>
@@ -329,7 +329,7 @@
       <bodyPartGroups>
         <li>FullHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/WarMask/WarMask</wornGraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PlagueMask/PlagueMask</wornGraphicPath>
       <hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
       <layers>
         <li>Overhead</li>
