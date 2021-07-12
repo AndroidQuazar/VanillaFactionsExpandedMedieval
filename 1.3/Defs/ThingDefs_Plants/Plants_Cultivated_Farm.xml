@@ -31,5 +31,50 @@
       <wildOrder>2</wildOrder>
     </plant>
   </ThingDef>
+  
+  <!--=========================== Healroot tree ==============================-->
+
+  <ThingDef ParentName="TreeBase">
+    <defName>VFEM_Plant_TreeHealroot</defName>
+    <label>healroot tree</label>
+    <description>A tree that produces healroot, genetically engineered to disinfect its own product, and survive in slightly less-warm climates.</description>
+    <graphicData>
+      <texPath>Things/Plant/TreeCocoa</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+        <shadowData>
+          <volume>(0.15, 0.3, 0.15)</volume>
+          <offset>(0,0,-0.38)</offset>
+        </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <statBases>
+      <Beauty>4</Beauty>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+    <ingestible />
+    <plant>
+      <dieIfLeafless>true</dieIfLeafless>
+      <growDays>20</growDays>
+      <visualSizeRange>0.8~2.0</visualSizeRange>
+      <sowMinSkill>10</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <sowResearchPrerequisites Inherit="False">
+        <li>VFEM_TreeHealroot</li>
+      </sowResearchPrerequisites>
+      <topWindExposure>0.15</topWindExposure>
+      <mustBeWildToSow>false</mustBeWildToSow>
+      <immatureGraphicPath>Things/Plant/TreeCocoa_Immature</immatureGraphicPath>
+      <harvestWork>500</harvestWork>
+      <harvestTag>Standard</harvestTag>
+      <harvestYield>20</harvestYield>
+      <harvestedThingDef>MedicineHerbal</harvestedThingDef>
+      <harvestFailable>true</harvestFailable>
+      <wildClusterRadius>1</wildClusterRadius>
+      <wildClusterWeight>1</wildClusterWeight>
+	  <harvestAfterGrowth>0.8</harvestAfterGrowth>
+    </plant>
+   </ThingDef>
 
 </Defs>
