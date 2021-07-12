@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef>
+    <defName>VFEM_Make_Candle</defName>
+    <label>make candle</label>
+    <description>Use meat to create candles.</description>
+    <jobString>Making candle.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_Sculpt</soundWorking>
+    <workAmount>450</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <products>
+      <VFEM_Candle>1</VFEM_Candle>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+</Defs>
