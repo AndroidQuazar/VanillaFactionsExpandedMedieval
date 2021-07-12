@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>VFEM_ArcheryTarget</defName>
+    <label>archery target</label>
+    <description>A simple archery target. It's relaxing, and trains shooting skills.</description>
+    <graphicData>
+      <texPath>Things/Building/Joy/HorseshoesPin</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.08, 0.2, 0.08)</volume>
+        <offset>(0, 0, -0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.3,0.3,0.4,0.4)</rect>
+      </damageData>
+    </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <minTechLevelToBuild>Medieval</minTechLevelToBuild>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <thingCategories>
+      <li>BuildingsJoy</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToBuild>100</WorkToBuild>
+      <Mass>3</Mass>
+      <Flammability>1.0</Flammability>
+      <JoyGainFactor>1</JoyGainFactor>
+    </statBases>
+    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <building>
+      <joyKind>Gaming_Dexterity</joyKind>
+      <watchBuildingStandDistanceRange>3~3</watchBuildingStandDistanceRange>
+      <watchBuildingStandRectWidth>3</watchBuildingStandRectWidth>
+      <watchBuildingInSameRoom>true</watchBuildingInSameRoom>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+    </building>
+    <costList>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <pathCost>14</pathCost>
+    <placeWorkers>
+      <li>PlaceWorker_WatchArea</li>
+    </placeWorkers>
+    <designationCategory>Joy</designationCategory>
+  </ThingDef>
+  
+</Defs>
