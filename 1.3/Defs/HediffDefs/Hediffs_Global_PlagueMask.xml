@@ -20,6 +20,8 @@
     <defName>VFEM_AntisepticSmell</defName>
     <label>antiseptic smell</label>
     <description>Essential oils of healroot absorbed into the blood. Causes weakness and confusion.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor>
     <maxSeverity>1.0</maxSeverity>
     <isBad>true</isBad>
     <stages>
