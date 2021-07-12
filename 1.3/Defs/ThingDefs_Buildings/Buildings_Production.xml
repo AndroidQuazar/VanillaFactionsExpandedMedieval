@@ -115,10 +115,11 @@
     <description>A small wooden box that needs to be refueled with wood periodically. Meat of any kind gets inserted into it and then gets smoked to last longer.</description>
     <thingClass>Building_WorkTable</thingClass>
     <graphicData>
-      <texPath>Things/Building/Production/MeatSmokerEmpty</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/Production/MeatSmokerEmpty/MeatSmokerEmpty</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(1,1)</drawSize>
     </graphicData>
+	<uiIconPath>Things/Building/Production/MeatSmokerEmpty/MeatSmoker_MenuIcon</uiIconPath>
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
       <WorkToBuild>1200</WorkToBuild>
