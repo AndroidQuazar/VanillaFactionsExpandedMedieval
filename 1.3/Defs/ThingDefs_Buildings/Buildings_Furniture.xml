@@ -133,6 +133,9 @@
     </costList>
     <building>
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+	  <isInert>true</isInert>
+	  <isEdifice>false</isEdifice>
+	  <canPlaceOverWall>true</canPlaceOverWall>
     </building>
     <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
@@ -196,7 +199,6 @@
       </li>
     </comps>
     <designationCategory>Furniture</designationCategory>
-    <designationHotKey>Misc10</designationHotKey>
   </ThingDef>
 
 </Defs>
