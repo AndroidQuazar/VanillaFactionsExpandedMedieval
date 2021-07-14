@@ -139,6 +139,7 @@
           <useStructureLayout>True</useStructureLayout>
           <chooseFromlayouts>
             <li>VFEM_Castle1</li>
+			<li>VFEM_Castle2</li>
           </chooseFromlayouts>
         </li>
       </modExtensions>

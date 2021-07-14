@@ -13,5 +13,23 @@
   <stuff>ChunkGranite</stuff>
 </KCSG.SymbolDef>
 
+<KCSG.SymbolDef>
+  <defName>VFEM_WineBarrel_North</defName>
+  <thing>VFEM_WineBarrel</thing>
+  <rotation>North</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEM_CobblestoneWall_ChunkLimestone</defName>
+  <thing>VFEM_CobblestoneWall</thing>
+  <stuff>ChunkLimestone</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEM_LowRockWall_ChunkLimestone</defName>
+  <thing>VFEM_LowRockWall</thing>
+  <stuff>ChunkLimestone</stuff>
+</KCSG.SymbolDef>
+
 </Defs>
 
