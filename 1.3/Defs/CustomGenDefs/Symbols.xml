@@ -31,5 +31,27 @@
   <stuff>ChunkLimestone</stuff>
 </KCSG.SymbolDef>
 
+<KCSG.SymbolDef>
+  <defName>VFEM_CobblestoneWall_ChunkSandstone</defName>
+  <thing>VFEM_CobblestoneWall</thing>
+  <stuff>ChunkSandstone</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEM_LowRockWall_ChunkSandstone</defName>
+  <thing>VFEM_LowRockWall</thing>
+  <stuff>ChunkSandstone</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEM_ArcheryTarget</defName>
+  <thing>VFEM_ArcheryTarget</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEM_Bow_HeavyCrossbow</defName>
+  <thing>VFEM_Bow_HeavyCrossbow</thing>
+</KCSG.SymbolDef>
+
 </Defs>
 
