@@ -53,5 +53,17 @@
   <thing>VFEM_Bow_HeavyCrossbow</thing>
 </KCSG.SymbolDef>
 
+<KCSG.SymbolDef>
+  <defName>VFEM_CobblestoneWall_ChunkSlate</defName>
+  <thing>VFEM_CobblestoneWall</thing>
+  <stuff>ChunkSlate</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEM_LowRockWall_ChunkSlate</defName>
+  <thing>VFEM_LowRockWall</thing>
+  <stuff>ChunkSlate</stuff>
+</KCSG.SymbolDef>
+
 </Defs>
 
