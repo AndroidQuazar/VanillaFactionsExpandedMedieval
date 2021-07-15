@@ -142,6 +142,8 @@
 			<li>VFEM_Castle2</li>
 			<li>VFEM_Castle3</li>
 			<li>VFEM_Castle4</li>
+			<li>VFEM_Castle5</li>
+			<li>VFEM_Castle6</li>
           </chooseFromlayouts>
         </li>
       </modExtensions>
