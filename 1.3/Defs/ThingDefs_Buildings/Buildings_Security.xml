@@ -10,9 +10,10 @@
     <graphicData>
       <texPath>Things/Building/Linked/RockLowWall/RockLowWall_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <linkType>Basic</linkType>
+      <linkType>CornerFiller</linkType>
       <linkFlags>
-        <li>Barricades</li>
+        <li>Wall</li>
+        <li>Rock</li>
       </linkFlags>
     </graphicData>
     <uiIconPath>Things/Building/Linked/RockWall_MenuIcon</uiIconPath>
