@@ -1,31 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-
-    <SitePartDef>
-        <defName>VFEM_CastleRuins</defName>
-        <label>castle ruins</label>
-        <description>A recently-discovered set of ruins which could contain valuable loot.</description>
-        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
-        <expandingIconTexture>World/WorldObjects/Expanding/Sites/CastleRuins</expandingIconTexture>
-        <tags>
-            <li>VFEM_CastleRuins</li>
-        </tags>
-    </SitePartDef>
-
-    <GenStepDef>
-        <defName>VFEM_CastleRuins</defName>
-        <linkWithSite>VFEM_CastleRuins</linkWithSite>
-        <order>450</order>
-    <genStep Class="KCSG.GenStep_CustomStructureGen">
-      <structureLayoutDefs>
+   <SitePartDef>
+      <defName>VFEM_CastleRuins</defName>
+      <label>castle ruins</label>
+      <description>A recently-discovered set of ruins which could contain valuable loot.</description>
+      <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+      <expandingIconTexture>World/WorldObjects/Expanding/Sites/CastleRuins</expandingIconTexture>
+      <tags>
+         <li>VFEM_CastleRuins</li>
+      </tags>
+   </SitePartDef>
+   <GenStepDef>
+      <defName>VFEM_CastleRuins</defName>
+      <linkWithSite>VFEM_CastleRuins</linkWithSite>
+      <order>450</order>
+      <genStep Class="KCSG.GenStep_CustomStructureGen">
+         <structureLayoutDefs>
             <li>VFEM_Castle1</li>
-			<li>VFEM_Castle2</li>
-			<li>VFEM_Castle3</li>
-			<li>VFEM_Castle4</li>
-			<li>VFEM_Castle5</li>
-			<li>VFEM_Castle6</li>
-      </structureLayoutDefs>
-    </genStep>
-    </GenStepDef>
-
+            <li>VFEM_Castle2</li>
+            <li>VFEM_Castle3</li>
+            <li>VFEM_Castle4</li>
+            <li>VFEM_Castle5</li>
+            <li>VFEM_Castle6</li>
+         </structureLayoutDefs>
+         <shouldRuin>true</shouldRuin>
+         <filthTypes>
+            <li>Filth_Dirt</li>
+            <li>Filth_Trash</li>
+            <li>Filth_RubbleBuilding</li>
+         </filthTypes>
+         <ruinSymbolResolvers>
+            <li>kcsg_randomdamage</li>
+            <li>kcsg_randomfilth</li>
+            <li>kcsg_randomterrainremoval</li>
+            <li>kcsg_randomroofremoval</li>
+            <li>kcsg_randomitemremoval</li>
+            <li>kcsg_removeperishable</li>
+         </ruinSymbolResolvers>
+      </genStep>
+   </GenStepDef>
 </Defs>
