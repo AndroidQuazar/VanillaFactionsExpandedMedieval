@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <SitePartDef>
+        <defName>VFEM_CastleRuins</defName>
+        <label>castle ruins</label>
+        <description>A recently-discovered set of ruins which could contain valuable loot.</description>
+        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+        <expandingIconTexture>World/WorldObjects/Expanding/Sites/CastleRuins</expandingIconTexture>
+        <tags>
+            <li>VFEM_CastleRuins</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>VFEM_CastleRuins</defName>
+        <linkWithSite>VFEM_CastleRuins</linkWithSite>
+        <order>450</order>
+    <genStep Class="KCSG.GenStep_CustomStructureGen">
+      <structureLayoutDefs>
+            <li>VFEM_Castle1</li>
+			<li>VFEM_Castle2</li>
+			<li>VFEM_Castle3</li>
+			<li>VFEM_Castle4</li>
+			<li>VFEM_Castle5</li>
+			<li>VFEM_Castle6</li>
+      </structureLayoutDefs>
+    </genStep>
+    </GenStepDef>
+
+</Defs>
