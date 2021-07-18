@@ -30,11 +30,6 @@
             <li>Filth_Trash</li>
             <li>Filth_RubbleBuilding</li>
          </filthTypes>
-         <scatterThings>
-            <li>Gold</li>
-            <li>Steel</li>
-         </scatterThings>
-         <scatterChance>0.1</scatterChance>
          <ruinSymbolResolvers>
             <li>kcsg_randomdamage</li>
             <li>kcsg_randomfilth</li>
@@ -43,7 +38,6 @@
             <li>kcsg_randomitemremoval</li>
             <li>kcsg_removeperishable</li>
             <li>kcsg_destroyrefuelablelightsource</li>
-            <li>kcsg_scatterstuffaround</li>
          </ruinSymbolResolvers>
       </genStep>
    </GenStepDef>
