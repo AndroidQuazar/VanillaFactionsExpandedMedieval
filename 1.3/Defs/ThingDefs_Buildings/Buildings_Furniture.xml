@@ -170,9 +170,12 @@
         <heatPushMaxTemperature>23</heatPushMaxTemperature>
       </li>
       <li Class="VanillaFurnitureExpanded.CompProperties_MountableOnWall"/>
-      <li Class="CompProperties_FireOverlay">
+      <li Class="VanillaFurnitureExpanded.CompProperties_FireOverlayRotatable">
         <fireSize>0.3</fireSize>
-        <offset>(0.0,0,0.55)</offset>
+		<northOffset>(0.01, 0, 0.55)</northOffset>
+		<southOffset>(0.01, 0, 0)</southOffset>
+		<eastOffset>(-0.231, 0, 0.41)</eastOffset>
+		<westOffset>(0.231, 0, 0.39)</westOffset>
       </li>
       <li Class="CompProperties_MeditationFocus">
         <statDef>MeditationFocusStrength</statDef>
