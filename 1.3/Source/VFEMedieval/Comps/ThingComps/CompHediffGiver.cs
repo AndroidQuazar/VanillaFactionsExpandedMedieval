@@ -52,6 +52,7 @@ namespace VFEMedieval
                 {
                     if (data.Value >= Props.minTicksToAffect)
                     {
+                        affectedPawns[data.Key] -= Props.minTicksToAffect;
                         HealthUtility.AdjustSeverity(data.Key, Props.hediff, Props.adjustSeverity);
                     }
                 }
