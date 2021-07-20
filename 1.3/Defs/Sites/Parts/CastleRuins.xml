@@ -37,6 +37,7 @@
             <li>kcsg_randomroofremoval</li>
             <li>kcsg_randomitemremoval</li>
             <li>kcsg_removeperishable</li>
+            <li>kcsg_destroyrefuelablelightsource</li>
          </ruinSymbolResolvers>
       </genStep>
    </GenStepDef>

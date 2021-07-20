@@ -9,7 +9,7 @@ namespace VFEMedieval
         private static bool IsValidArthur(Pawn pawn)
         {
             return pawn.RaceProps.Humanlike && pawn.kindDef != PawnKindDefOf.VFEM_BlackKnight && pawn.LabelShort?.ToLower() == "arthur" &&
-                pawn.equipment.Primary is ThingWithComps weapon && (weapon.def == ThingDefOf.MeleeWeapon_LongSword || weapon.def == ThingDefOf.VFEM_MeleeWeapon_Claymore);
+                pawn.equipment.Primary is ThingWithComps weapon && (weapon.def == VFEM_DefOf.MeleeWeapon_LongSword || weapon.def == VFEM_DefOf.VFEM_MeleeWeapon_Claymore);
         }
 
         private static void TryAvoidFleshWound(Pawn pawn, ref DamageInfo dinfo)

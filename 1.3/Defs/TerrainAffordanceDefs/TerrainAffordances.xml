@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<TerrainAffordanceDef>
+		<defName>VFEM_Moatable</defName>
+		<label>moatable</label>
+		<order>3500</order>
+		<visualizeOnAffordanceOverlay>false</visualizeOnAffordanceOverlay>
+	</TerrainAffordanceDef>
+</Defs>

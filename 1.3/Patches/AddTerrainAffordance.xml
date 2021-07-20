@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TerrainDef[defName="SoftSand" or defName="Sand" or defName="Soil" or defName="Gravel" or defName="MossyTerrain" or defName="MarshyTerrain"]/affordances</xpath>
+		<value>
+			<li>VFEM_Moatable</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TerrainDef[defName="Marsh" or defName="WaterShallow"]</xpath>
+		<value>
+			<affordances>
+				<li>VFEM_Moatable</li>
+			</affordances>
+		</value>
+	</Operation>
+</Patch>

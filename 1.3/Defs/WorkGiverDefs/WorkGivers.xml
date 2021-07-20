@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<WorkGiverDef>
+		<defName>ConstructDigTerrain</defName>
+		<label>dig terrain</label>
+		<giverClass>VFEMedieval.WorkGiver_ConstructDigTerrain</giverClass>
+		<workType>Construction</workType>
+		<priorityInType>20</priorityInType>
+		<verb>dig</verb>
+		<gerund>digging</gerund>
+		<scanThings>false</scanThings>
+		<scanCells>true</scanCells>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+		<WorkGiverDef>
+		<defName>ConstructFillTerrain</defName>
+		<label>fill terrain</label>
+		<giverClass>VFEMedieval.WorkGiver_ConstructFillTerrain</giverClass>
+		<workType>Construction</workType>
+		<priorityInType>20</priorityInType>
+		<verb>fill</verb>
+		<gerund>filling</gerund>
+		<scanThings>false</scanThings>
+		<scanCells>true</scanCells>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+</Defs>

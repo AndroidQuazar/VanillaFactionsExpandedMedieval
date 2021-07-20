@@ -6,8 +6,8 @@
     <label>archery target</label>
     <description>A simple archery target. It's relaxing, and trains shooting skills.</description>
     <graphicData>
-      <texPath>Things/Building/Joy/HorseshoesPin</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/Furniture/ArcheryTarget/ArcheryTarget</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
       <shadowData>
         <volume>(0.08, 0.2, 0.08)</volume>
         <offset>(0, 0, -0.1)</offset>
@@ -18,7 +18,6 @@
     </graphicData>
     <minifiedDef>MinifiedThing</minifiedDef>
     <altitudeLayer>Building</altitudeLayer>
-    <rotatable>false</rotatable>
     <socialPropernessMatters>true</socialPropernessMatters>
     <minTechLevelToBuild>Medieval</minTechLevelToBuild>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
@@ -32,11 +31,12 @@
       <Flammability>1.0</Flammability>
       <JoyGainFactor>1</JoyGainFactor>
     </statBases>
+    <defaultPlacingRot>South</defaultPlacingRot>
     <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
     <building>
       <joyKind>Gaming_Dexterity</joyKind>
-      <watchBuildingStandDistanceRange>3~3</watchBuildingStandDistanceRange>
-      <watchBuildingStandRectWidth>3</watchBuildingStandRectWidth>
+      <watchBuildingStandDistanceRange>8~9</watchBuildingStandDistanceRange>
+      <watchBuildingStandRectWidth>5</watchBuildingStandRectWidth>
       <watchBuildingInSameRoom>true</watchBuildingInSameRoom>
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
     </building>
@@ -49,5 +49,45 @@
     </placeWorkers>
     <designationCategory>Joy</designationCategory>
   </ThingDef>
+  
+  <JobDef>
+    <defName>VFEM_Play_Archery</defName>
+    <driverClass>VFEMedieval.JobDriver_PlayArchery</driverClass>
+    <reportString>shooting at archery.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>1</joyMaxParticipants>
+    <joySkill>Shooting</joySkill>
+    <joyXpPerTick>0.003</joyXpPerTick>
+    <joyKind>Gaming_Dexterity</joyKind>
+    <taleOnCompletion>PlayedGame</taleOnCompletion>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  
+  <JoyGiverDef>
+    <defName>VFEM_Play_Archery</defName>
+    <giverClass>JoyGiver_WatchBuilding</giverClass>
+    <baseChance>2.5</baseChance>
+    <thingDefs>
+      <li>VFEM_ArcheryTarget</li>
+    </thingDefs>
+    <jobDef>VFEM_Play_Archery</jobDef>
+    <desireSit>false</desireSit>
+    <joyKind>Gaming_Dexterity</joyKind>
+    <requiredCapacities>
+      <li>Sight</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+  
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>VFEM_ArrowThrowable</defName>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+    </graphicData>
+    <altitudeLayer>MoteLow</altitudeLayer>
+    <solidTime>10</solidTime>
+    <fadeOutTime>4</fadeOutTime>
+    <landSound>StoneImpact</landSound>
+  </FleckDef>
   
 </Defs>

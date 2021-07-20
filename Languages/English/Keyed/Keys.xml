@@ -37,4 +37,5 @@
     <VanillaFactionsExpanded.LogEntryLine>Round {0}: {1}</VanillaFactionsExpanded.LogEntryLine>
 
     <VanillaFactionsExpanded.Leave>Leave</VanillaFactionsExpanded.Leave>
+	<VFEM.BlackPlagueSpreadedFurther>Black plague spreaded further. {PAWN_nameDef} got infected with it.</VFEM.BlackPlagueSpreadedFurther>
 </LanguageData>

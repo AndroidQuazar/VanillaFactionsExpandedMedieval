@@ -18,7 +18,7 @@ namespace VFEMedieval
                     var policy = ___policies[i];
                     if (policy.label == "SocialDrugs".Translate() || policy.label == "OneDrinkPerDay".Translate())
                     {
-                        policy[ThingDefOf.VFEM_Wine].allowedForJoy = true;
+                        policy[VFEM_DefOf.VFEM_Wine].allowedForJoy = true;
                     }
                 }
             }

@@ -24,4 +24,12 @@
     </modExtensions>
   </IncidentDef>
 
+  <IncidentDef ParentName="DiseaseIncident">
+    <defName>VFEM_Disease_BlackPlague</defName>
+    <label>plague</label>
+    <diseaseIncident>VFEM_BlackPlague</diseaseIncident>
+    <letterLabel>Disease: Black Plague</letterLabel>
+	<workerClass>VFEMedieval.IncidentWorker_BlackPlague</workerClass>
+  </IncidentDef>
+  
 </Defs>
