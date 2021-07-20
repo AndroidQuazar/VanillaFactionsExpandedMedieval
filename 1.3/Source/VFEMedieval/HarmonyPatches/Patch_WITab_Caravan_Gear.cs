@@ -12,7 +12,7 @@ namespace VFEMedieval
             public static void Postfix(ThingDef t, ref bool __result)
             {
                 // Don't show wine in the tab (just like wood logs and beer)
-                if (t == ThingDefOf.VFEM_Wine)
+                if (t == VFEM_DefOf.VFEM_Wine)
                     __result = false;
             }
         }

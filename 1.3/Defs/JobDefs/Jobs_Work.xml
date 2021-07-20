@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<JobDef>
+		<defName>VFEM_DigTerrain</defName>
+		<driverClass>VFEMedieval.JobDriver_DigTerrain</driverClass>
+		<reportString>digging terrain.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	<JobDef>
+		<defName>VFEM_FillTerrain</defName>
+		<driverClass>VFEMedieval.JobDriver_FillTerrain</driverClass>
+		<reportString>filling terrain.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+</Defs>

@@ -11,6 +11,7 @@
         <li>
           <makeImmuneTo>
             <li>Plague</li>
+            <li>VFEM_BlackPlague</li>
           </makeImmuneTo>
         </li>
       </stages>

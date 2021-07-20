@@ -19,6 +19,25 @@
         <severityPerDayImmune>-0.3</severityPerDayImmune>
         <immunityPerDayNotSick>-0.02</immunityPerDayNotSick>
       </li>
+	  <li Class="VFECore.HediffCompProperties_Spreadable">
+		<radiusToSpread>1.5</radiusToSpread>
+		<severityToInfect>0.1</severityToInfect>
+		<baseDiseaseContractChance>0.8</baseDiseaseContractChance>
+		<spreadingTickInterval>1000~2000</spreadingTickInterval>
+		<socialInteractionTransmissionChance>0.3</socialInteractionTransmissionChance>
+		<requiresLineOfSightToSpread>true</requiresLineOfSightToSpread>
+		<speciesCanCatch>
+			<li>Humanlike</li>
+		</speciesCanCatch>
+		<apparelsPreventingSpreading>
+			<li>VFEM_Apparel_PlagueMask</li>
+		</apparelsPreventingSpreading>
+		<fleckDefOnPawn>AirPuff</fleckDefOnPawn>
+		<fleckSpawnInterval>10~20</fleckSpawnInterval>
+		<fleckColor>(0,0,0)</fleckColor>
+		<fleckScale>1.1</fleckScale>
+		<spreadingMessageWarningKey>VFEM.BlackPlagueSpreadedFurther</spreadingMessageWarningKey>
+	  </li>
     </comps>
     <stages>
       <li>

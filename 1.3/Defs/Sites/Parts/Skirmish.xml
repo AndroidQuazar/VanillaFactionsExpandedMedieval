@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <SitePartDef>
+    <defName>VFE_Skirmish</defName>
+    <label>a friendly outpost under mech attack</label>
+    <description>A stranded, incapacitated refugee begging for help.</description>
+    <workerClass>VFEMedieval.SitePartWorker_Skirmish</workerClass>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Sites/GenericSite</expandingIconTexture>
+    <forceExitAndRemoveMapCountdownDurationDays>16</forceExitAndRemoveMapCountdownDurationDays>
+    <increasesPopulation>true</increasesPopulation>
+    <handlesWorldObjectTimeoutInspectString>true</handlesWorldObjectTimeoutInspectString>
+    <tags>
+      <li>VFE_Skirmish</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>VFE_Skirmish</defName>
+    <linkWithSite>VFE_Skirmish</linkWithSite>
+    <order>480</order>
+    <genStep Class="VFEMedieval.GenStep_Skirmish">
+    </genStep>
+  </GenStepDef>
+
+</Defs>

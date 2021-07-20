@@ -36,7 +36,7 @@ namespace VFEMedieval
 
                     // Replace equipment with a silver sword
                     merc.equipment.DestroyAllEquipment();
-                    var silverSword = (ThingWithComps)ThingMaker.MakeThing(ThingDefOf.MeleeWeapon_LongSword, RimWorld.ThingDefOf.Silver);
+                    var silverSword = (ThingWithComps)ThingMaker.MakeThing(VFEM_DefOf.MeleeWeapon_LongSword, RimWorld.ThingDefOf.Silver);
                     merc.equipment.AddEquipment(silverSword);
 
                     // Remove headgear

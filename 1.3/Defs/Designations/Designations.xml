@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<DesignationDef>
+		<defName>VFEM_DigTerrain</defName>
+		<texturePath>Designations/DigTerrain_2</texturePath>
+		<targetType>Cell</targetType>
+	</DesignationDef>
+	<DesignationDef>
+		<defName>VFEM_FillTerrain</defName>
+		<texturePath>Designations/FillTerrain_2</texturePath>
+		<targetType>Cell</targetType>
+	</DesignationDef>
+</Defs>
