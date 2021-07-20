@@ -38,6 +38,8 @@
     <defName>VFEM_Plant_TreeHealroot</defName>
     <label>healroot tree</label>
     <description>A tree that produces healroot, genetically engineered to disinfect its own product, and survive in slightly less-warm climates.</description>
+	<thingClass>VFEMedieval.Plant_TickerNormal</thingClass>
+	<tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Plant/HealTree</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -52,6 +54,15 @@
       <Nutrition>1.5</Nutrition>
     </statBases>
     <ingestible />
+    <specialDisplayRadius>5</specialDisplayRadius>
+	<comps>
+		<li Class="VFEMedieval.CompProperties_HediffGiver">
+			<radius>5</radius>
+			<hediff>VFEM_AntisepticSmell</hediff>
+			<minTicksToAffect>1000</minTicksToAffect>
+			<adjustSeverity>1</adjustSeverity>
+		</li>
+	</comps>
     <plant>
       <dieIfLeafless>true</dieIfLeafless>
       <growDays>20</growDays>
