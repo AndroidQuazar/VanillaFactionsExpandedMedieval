@@ -210,14 +210,15 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
   
-  <ThingDef ParentName="ApparelMakeableBase">
+  <ThingDef>
     <defName>VFEM_Apparel_KingsRobes</defName>
     <label>king’s robes</label>
     <description>A long robe worthy of a king. Extremely beautiful.</description>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/KingsRobe/KingsRobe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
+	  <shaderType inherit="False">CutoutComplex</shaderType>
+	  <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
     </graphicData>
     <costStuffCount>40</costStuffCount>
     <costList>
@@ -225,6 +226,27 @@
     </costList>
     <recipeMaker>
       <researchPrerequisite>VFEM_NobleMedievalApparel</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <disallowedThingDefs>
+          <li>Gold</li>
+          <li>Silver</li>
+          <li>Plasteel</li>
+          <li>Jade</li>
+          <li>Uranium</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
     </recipeMaker>
     <stuffCategories>
       <li>Fabric</li>
@@ -241,7 +263,23 @@
       <StuffEffectMultiplierInsulation_Cold>0.35</StuffEffectMultiplierInsulation_Cold>
       <StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>2.0</EquipDelay>
+	  <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-3</Beauty>
     </statBases>
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <drawerType>MapMeshOnly</drawerType>
+    <selectable>True</selectable>
+    <pathCost>14</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <techLevel>Medieval</techLevel>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <burnableByRecipe>true</burnableByRecipe>
+    <smeltable>true</smeltable>
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
@@ -266,6 +304,81 @@
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
     </equippedStatOffsets>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
+    <comps inherit="False">
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
   </ThingDef>
+  
+    <ThingDef ParentName="ApparelMakeableBase">
+    <defName>VFEM_Apparel_KingsRobesT</defName>
+    <label>king’s robes test</label>
+    <description>A long robe worthy of a king. Extremely beautiful.</description>
+		<graphicData>
+<texPath>Things/Pawn/Humanlike/Apparel/KingsRobe/KingsRobe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+        <generateCommonality>0.1</generateCommonality>
+		<costStuffCount>80</costStuffCount>
+		<costList>
+			<Gold>5</Gold>
+		</costList>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToMake>12000</WorkToMake>
+			<Mass>2.4</Mass>
+            <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0.1</StuffEffectMultiplierInsulation_Heat>
+            <EquipDelay>2.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MentalBreakThreshold>-0.10</MentalBreakThreshold>
+		</equippedStatOffsets>
+    <thingCategories Inherit='False'>
+      <li>Apparel</li>
+    </thingCategories>
+		<apparel>
+			<bodyPartGroups>
+				<li>Neck</li>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/KingsRobe/KingsRobe</wornGraphicPath>
+            <useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+				<li>IndustrialMilitary</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+            </defaultOutfitTags>
+		</apparel>
+		<recipeMaker>
+			<researchPrerequisite>VFEM_NobleMedievalApparel</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+    </ThingDef>
 
 </Defs>
