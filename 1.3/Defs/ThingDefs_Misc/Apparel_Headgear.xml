@@ -246,12 +246,25 @@
     <description>A beautiful metal crown. The wearer becomes very influential, but at the same time they will refuse to do any work.</description>
     <recipeMaker>
       <researchPrerequisite>VFEM_NobleMedievalApparel</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+	  <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
     </recipeMaker>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/KingsCrown/KingsCrown</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(0.9, 0.9)</drawSize>
+	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
+    <costList>
+      <Gold>2</Gold>
+    </costList>
     <costStuffCount>50</costStuffCount>
     <stuffCategories>
       <li>Metallic</li>
@@ -283,6 +296,8 @@
       <defaultOutfitTags>
         <li>Worker</li>
       </defaultOutfitTags>
+	  <useDeflectMetalEffect>true</useDeflectMetalEffect>
+	  <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
   </ThingDef>
 
