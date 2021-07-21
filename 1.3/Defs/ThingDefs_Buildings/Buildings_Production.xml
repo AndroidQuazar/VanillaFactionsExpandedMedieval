@@ -85,6 +85,9 @@
 		<statBases>
 			<WorkToBuild>1200</WorkToBuild>
 		</statBases>
+        <researchPrerequisites>
+          <li>VFEM_MeatSmoking</li>
+        </researchPrerequisites>
 		<tickerType>Normal</tickerType>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<useHitPoints>false</useHitPoints>
