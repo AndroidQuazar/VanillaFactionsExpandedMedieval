@@ -104,7 +104,7 @@
     <label>jester outfit</label>
     <description>A colorful jester outfit. It predisposes to conversation, but it's impossible to learn anything in such a suit.</description>
     <graphicData>
-      <texPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</texPath>
+      <texPath>Things/Pawn/Humanlike/Apparel/JesterOutfit/JesterOutfit</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>50</costStuffCount>
@@ -135,7 +135,7 @@
 		<li>Shoulders</li>
         <li>Legs</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</wornGraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/JesterOutfit/JesterOutfit</wornGraphicPath>
       <layers>
         <li>OnSkin</li>
       </layers>
@@ -160,7 +160,7 @@
     <label>dame dress</label>
     <description>A beautiful full body dress for a dame. Wearing such clothes will inevitably lead to getting used to luxury, so the user will not be capable of dumb labor.</description>
     <graphicData>
-      <texPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</texPath>
+      <texPath>Things/Pawn/Humanlike/Apparel/DameDress/DameDress</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>70</costStuffCount>
@@ -190,7 +190,7 @@
 		<li>Arms</li>
         <li>Legs</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</wornGraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/DameDress/DameDress</wornGraphicPath>
       <layers>
         <li>OnSkin</li>
 		<li>Shell</li>
@@ -215,10 +215,14 @@
     <label>king’s robes</label>
     <description>A long robe worthy of a king. Extremely beautiful.</description>
     <graphicData>
-      <texPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</texPath>
+      <texPath>Things/Pawn/Humanlike/Apparel/KingsRobe/KingsRobe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <costStuffCount>40</costStuffCount>
+    <costList>
+      <Gold>8</Gold>
+    </costList>
     <recipeMaker>
       <researchPrerequisite>VFEM_NobleMedievalApparel</researchPrerequisite>
     </recipeMaker>
@@ -233,8 +237,8 @@
       <MaxHitPoints>100</MaxHitPoints>
       <WorkToMake>5000</WorkToMake>
       <Mass>0.25</Mass>
-      <StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.3</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.35</StuffEffectMultiplierInsulation_Cold>
       <StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>2.0</EquipDelay>
     </statBases>
@@ -244,7 +248,7 @@
 		<li>Legs</li>
 		<li>Shoulders</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</wornGraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/KingsRobe/KingsRobe</wornGraphicPath>
       <layers>
 		<li>Shell</li>
       </layers>
@@ -255,6 +259,7 @@
         <li>MedievalApparelNoble</li>
 		<li>King</li>
       </tags>
+	  <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
     <equippedStatOffsets>
       <SocialImpact>0.3</SocialImpact>
