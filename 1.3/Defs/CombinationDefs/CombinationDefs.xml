@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ItemProcessor.CombinationDef>
+		<defName>VFEM_SmokerMeatToSmokedMeat</defName>
+		<building>VFEM_MeatSmoker</building>
+		<isCategoryRecipe>true</isCategoryRecipe>
+		<items>
+			<li>MeatRaw</li>
+		</items>
+		<amount>
+			<li>75</li>
+		</amount>
+		<result>VFEM_SmokedMeat</result>
+		<yield>75</yield>
+		<useQualityIncreasing>false</useQualityIncreasing>
+		<singleTimeIfNotQualityIncreasing>3</singleTimeIfNotQualityIncreasing>
+	</ItemProcessor.CombinationDef>
+	<ItemProcessor.CombinationDef>
+		<defName>VFEM_GrapeToWine</defName>
+		<building>VFEM_WineBarrel</building>
+		<items>
+			<li>VFEM_Must</li>
+		</items>
+		<amount>
+			<li>10</li>
+		</amount>
+		<result>VFEM_Wine</result>
+		<yield>10</yield>
+		<useQualityIncreasing>true</useQualityIncreasing>
+		<awfulQualityAgeDaysThreshold>1</awfulQualityAgeDaysThreshold>
+		<poorQualityAgeDaysThreshold>3</poorQualityAgeDaysThreshold>
+		<normalQualityAgeDaysThreshold>8</normalQualityAgeDaysThreshold>
+		<goodQualityAgeDaysThreshold>14</goodQualityAgeDaysThreshold>
+		<excellentQualityAgeDaysThreshold>20</excellentQualityAgeDaysThreshold>
+		<masterworkQualityAgeDaysThreshold>50</masterworkQualityAgeDaysThreshold>
+		<legendaryQualityAgeDaysThreshold>120</legendaryQualityAgeDaysThreshold>
+	</ItemProcessor.CombinationDef>
+</Defs>

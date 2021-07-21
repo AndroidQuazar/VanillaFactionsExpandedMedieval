@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ItemProcessor.ItemAcceptedDef>
+		<defName>VFEM_SmokerFirstItem</defName>
+		<building>VFEM_MeatSmoker</building>
+		<slot>1</slot>
+		<items>
+			<li>MeatRaw</li>
+		</items>
+	</ItemProcessor.ItemAcceptedDef>
+	<ItemProcessor.ItemAcceptedDef>
+		<defName>VFEM_WineBarrelFirstItem</defName>
+		<building>VFEM_WineBarrel</building>
+		<slot>1</slot>
+		<items>
+			<li>VFEM_Must</li>
+		</items>
+	</ItemProcessor.ItemAcceptedDef>
+</Defs>

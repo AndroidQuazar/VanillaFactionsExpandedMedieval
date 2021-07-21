@@ -9,7 +9,15 @@
     <VanillaFactionsExpanded.Wine.cancelIngredientsDesc>Cancel bringing wine must to the wine barrel.</VanillaFactionsExpanded.Wine.cancelIngredientsDesc>
     <VanillaFactionsExpanded.Wine.removeProductText>Remove wine ({0})</VanillaFactionsExpanded.Wine.removeProductText>
     <VanillaFactionsExpanded.Wine.removeProductDesc>Remove wine from the wine barrel. The barrel will be ready at the present quality level ({0})</VanillaFactionsExpanded.Wine.removeProductDesc>
-
+	
+	
+	<!-- Smoker -->
+    <VanillaFactionsExpanded.Smoker.InsertFirstItemDesc>Meat to Insert</VanillaFactionsExpanded.Smoker.InsertFirstItemDesc>
+    <VanillaFactionsExpanded.Smoker.bringIngredientsText>Bring meat</VanillaFactionsExpanded.Smoker.bringIngredientsText>
+    <VanillaFactionsExpanded.Smoker.bringIngredientsDesc>Bring meat to the Smoker to start smoking</VanillaFactionsExpanded.Smoker.bringIngredientsDesc>
+    <VanillaFactionsExpanded.Smoker.cancelIngredientsText>Cancel bringing meat</VanillaFactionsExpanded.Smoker.cancelIngredientsText>
+    <VanillaFactionsExpanded.Smoker.cancelIngredientsDesc>Cancel bringing meat to the Smoker.</VanillaFactionsExpanded.Smoker.cancelIngredientsDesc>
+   
     <!-- Tournaments -->
     <VanillaFactionsExpanded.TournamentDurationDays>The tournament will last {0} days.</VanillaFactionsExpanded.TournamentDurationDays>
     <VanillaFactionsExpanded.MedievalTournamentInspectString>Prize: {0} ({1} left)</VanillaFactionsExpanded.MedievalTournamentInspectString>
