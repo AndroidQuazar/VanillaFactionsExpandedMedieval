@@ -277,8 +277,10 @@
     </statBases>
     <techLevel>Medieval</techLevel>
     <equippedStatOffsets>
+	  <NegotiationAbility>0.25</NegotiationAbility>
       <SocialImpact>0.25</SocialImpact>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+      <PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">0.083</PsychicEntropyRecoveryRate>
     </equippedStatOffsets>
     <apparel>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
@@ -299,6 +301,13 @@
 	  <useDeflectMetalEffect>true</useDeflectMetalEffect>
 	  <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
+	<modExtensions>
+		<li Class="VanillaApparelExpanded.ApparelExtension">
+			<workDisables>
+				<li>AllWork</li>
+			</workDisables>
+		</li>
+	</modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="HatMakeableBase">
