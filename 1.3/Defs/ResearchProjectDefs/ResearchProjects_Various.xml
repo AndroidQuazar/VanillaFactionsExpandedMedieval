@@ -55,6 +55,20 @@
   <researchViewY>3.5</researchViewY>
 	<tab>VanillaExpanded</tab>
   </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>VFEM_MeatSmoking</defName>
+    <label>meat smoking</label>
+    <description>Grow healroot trees that yield medicine and emit antispetic smell.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>Pemmican</li>
+    </prerequisites>
+  <researchViewX>1.00</researchViewX>
+  <researchViewY>3.5</researchViewY>
+	<tab>VanillaExpanded</tab>
+  </ResearchProjectDef>
 
 
 </Defs>
