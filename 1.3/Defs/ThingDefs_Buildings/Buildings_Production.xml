@@ -85,7 +85,7 @@
 		<statBases>
 			<WorkToBuild>1200</WorkToBuild>
 		</statBases>
-		<tickerType>Rare</tickerType>
+		<tickerType>Normal</tickerType>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<useHitPoints>false</useHitPoints>
 		<size>(1,1)</size>
