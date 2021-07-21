@@ -36,25 +36,36 @@
   </RulePackDef>
   
   <RulePackDef>
+    <defName>VFEM_NamerPersonMedievalUtility</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>Medieval_First_Male->Names/Medieval_First_Male</li>
+        <li>Medieval_First_Female->Names/Medieval_First_Female</li>
+		<li>Medieval_Last->Names/Medieval_Last</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
     <defName>VFEM_NamerPersonMedieval</defName>
-    <include>
-      <li>EmpireNameUtility</li>
+	<include>
+      <li>VFEM_NamerPersonMedievalUtility</li>
     </include>
     <rulePack>
       <rulesStrings>
-        <li>r_name->[Medieval_First_Male] [Medieval_Last]</li>
+        <li>r_name(p=2)->[Medieval_First_Male] [Medieval_Last]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
 
   <RulePackDef>
     <defName>VFEM_NamerPersonMedievalFemale</defName>
-    <include>
-      <li>EmpireNameUtility</li>
+	<include>
+      <li>VFEM_NamerPersonMedievalUtility</li>
     </include>
     <rulePack>
       <rulesStrings>
-        <li>r_name->[Medieval_First_Female] [Medieval_Last]</li>
+        <li>r_name(p=2)->[Medieval_First_Female] [Medieval_Last]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
