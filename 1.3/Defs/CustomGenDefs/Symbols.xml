@@ -79,9 +79,9 @@
     <thing>VFEM_Apparel_PlateArmorHeavy</thing>
   </KCSG.SymbolDef>
   
-  <!-- <KCSG.SymbolDef>
+  <KCSG.SymbolDef>
     <defName>VFEM_ArcheryTarget_North</defName>
     <thing>VFEM_ArcheryTarget</thing>
     <rotation>North</rotation>
-  </KCSG.SymbolDef> -->
+  </KCSG.SymbolDef>
 </Defs>
