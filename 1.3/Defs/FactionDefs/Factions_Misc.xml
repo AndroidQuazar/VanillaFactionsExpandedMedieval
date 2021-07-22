@@ -221,6 +221,8 @@
       <li>(0.47, 1, 1)</li>
       <!-- <li>(0.47, 1.05, 1.12)</li> -->
     </colorSpectrum>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>30</configurationListOrderPriority>
   </FactionDef>
 
   <FactionDef ParentName="VFEM_MedievalFactionBase">
@@ -234,6 +236,8 @@
     </colorSpectrum>
     <factionIconPath>World/WorldObjects/Expanding/CastleRough</factionIconPath>
     <naturalEnemy>true</naturalEnemy>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>30</configurationListOrderPriority>
   </FactionDef>
 
   <FactionDef ParentName="VFEM_MedievalFactionBase">
@@ -246,6 +250,8 @@
     </colorSpectrum>
     <factionIconPath>World/WorldObjects/Expanding/CastleSavage</factionIconPath>
     <permanentEnemy>true</permanentEnemy>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>30</configurationListOrderPriority>
   </FactionDef>
 
 </Defs>
