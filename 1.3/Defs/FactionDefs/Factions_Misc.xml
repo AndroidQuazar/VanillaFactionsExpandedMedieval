@@ -14,16 +14,38 @@
     <geneticVariance>0.1</geneticVariance>
     <factionNameMaker>VFEM_NamerFactionMedieval</factionNameMaker>
     <settlementNameMaker>VFEM_NamerSettlementMedieval</settlementNameMaker>
-    <allowedCultures>
-      <li>VFEM_Feudal</li>
-    </allowedCultures>
+    <allowedCultures><li>VFEM_Feudal</li></allowedCultures>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+    </disallowedMemes>
+    <disallowedPrecepts>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Lovin_FreeApproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Exalted</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Respected</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Approved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Standard</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">BodyMod_Approved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator_Preferred</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">NeuralSupercharge_Preferred</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">AgeReversal_Demanded</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Execution_Abhorrent</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Execution_Horrible</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_Mandatory</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_Mandatory</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_CoveringAnythingButGroinDisapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+    </disallowedPrecepts>
     <structureMemeWeights>
       <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
       <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">3</Structure_TheistAbstract>
       <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
       <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
-      <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginChristian>
-      <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginIslamic>
+      <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">2</Structure_OriginChristian>
+      <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">2</Structure_OriginIslamic>
       <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginHindu>
       <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginBuddhist>
     </structureMemeWeights>
