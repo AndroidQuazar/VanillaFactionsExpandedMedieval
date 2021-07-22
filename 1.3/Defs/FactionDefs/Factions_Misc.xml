@@ -14,7 +14,9 @@
     <geneticVariance>0.1</geneticVariance>
     <factionNameMaker>VFEM_NamerFactionMedieval</factionNameMaker>
     <settlementNameMaker>VFEM_NamerSettlementMedieval</settlementNameMaker>
-    <allowedCultures><li>VFEM_Feudal</li></allowedCultures>
+    <allowedCultures>
+      <li>VFEM_Feudal</li>
+    </allowedCultures>
     <structureMemeWeights>
       <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
       <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">3</Structure_TheistAbstract>
@@ -31,11 +33,11 @@
     </backstoryCategories>
     <leaderTitle>king</leaderTitle>
     <fixedLeaderKinds>
-        <li>VFEM_Medieval_King</li>
+      <li>VFEM_Medieval_King</li>
     </fixedLeaderKinds>
     <raidCommonalityFromPointsCurve>
       <points>
-        <li>(0, 1)</li>        <!--Constant 1 at all points levels-->
+        <li>(0, 1)</li> <!--Constant 1 at all points levels-->
       </points>
     </raidCommonalityFromPointsCurve>
     <caravanTraderKinds>
@@ -108,8 +110,8 @@
           <VFEM_Medieval_Bowman>40</VFEM_Medieval_Bowman>
           <VFEM_Medieval_Knight>20</VFEM_Medieval_Knight>
           <VFEM_Medieval_Lord>10</VFEM_Medieval_Lord>
-		  <VFEM_Medieval_Jester>25</VFEM_Medieval_Jester>
-		  <VFEM_Medieval_Dame>20</VFEM_Medieval_Dame>
+          <VFEM_Medieval_Jester>25</VFEM_Medieval_Jester>
+          <VFEM_Medieval_Dame>20</VFEM_Medieval_Dame>
         </options>
       </li>
       <li>
@@ -139,25 +141,53 @@
           <VFEM_Medieval_Bowman>50</VFEM_Medieval_Bowman>
           <VFEM_Medieval_Knight>25</VFEM_Medieval_Knight>
           <VFEM_Medieval_Lord>10</VFEM_Medieval_Lord>
-		  <VFEM_Medieval_King>60</VFEM_Medieval_King>
-		  <VFEM_Medieval_Jester>25</VFEM_Medieval_Jester>
-		  <VFEM_Medieval_Dame>20</VFEM_Medieval_Dame>
+          <VFEM_Medieval_King>60</VFEM_Medieval_King>
+          <VFEM_Medieval_Jester>25</VFEM_Medieval_Jester>
+          <VFEM_Medieval_Dame>20</VFEM_Medieval_Dame>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Miner>1</Tribal_Miner>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Hunter>1</Tribal_Hunter>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Logger>1</Tribal_Logger>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Farmer>1</Tribal_Farmer>
         </options>
       </li>
     </pawnGroupMakers>
-      <modExtensions>
-        <li Class="KCSG.FactionSettlement">
-          <useStructureLayout>True</useStructureLayout>
-          <chooseFromlayouts>
-            <li>VFEM_Castle1</li>
-			<li>VFEM_Castle2</li>
-			<li>VFEM_Castle3</li>
-			<li>VFEM_Castle4</li>
-			<li>VFEM_Castle5</li>
-			<li>VFEM_Castle6</li>
-          </chooseFromlayouts>
-        </li>
-      </modExtensions>
+    <modExtensions>
+      <li Class="KCSG.FactionSettlement">
+        <useStructureLayout>True</useStructureLayout>
+        <chooseFromlayouts>
+          <li>VFEM_Castle1</li>
+          <li>VFEM_Castle2</li>
+          <li>VFEM_Castle3</li>
+          <li>VFEM_Castle4</li>
+          <li>VFEM_Castle5</li>
+          <li>VFEM_Castle6</li>
+        </chooseFromlayouts>
+      </li>
+    </modExtensions>
   </FactionDef>
 
   <FactionDef ParentName="VFEM_MedievalFactionBase">
