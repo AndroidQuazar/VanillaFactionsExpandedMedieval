@@ -274,6 +274,11 @@
       <WorkToMake>10000</WorkToMake>
       <Mass>1.0</Mass>
       <EquipDelay>0.8</EquipDelay>
+	  <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+	  <ArmorRating_Heat>0.10</ArmorRating_Heat>
+	  <Insulation_Cold>2</Insulation_Cold>
+	  <Insulation_Heat>4</Insulation_Heat>
     </statBases>
     <techLevel>Medieval</techLevel>
     <equippedStatOffsets>
