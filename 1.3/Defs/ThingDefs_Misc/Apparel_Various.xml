@@ -207,6 +207,7 @@
         <li>MedievalApparelNoble</li>
 		<li>Dame</li>
       </tags>
+	  <gender>Female</gender>
     </apparel>
     <equippedStatOffsets>
       <SocialImpact>0.2</SocialImpact>
