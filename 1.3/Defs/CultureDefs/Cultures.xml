@@ -22,7 +22,7 @@
     </preferredWeaponClasses>
     <styleItemTags>
       <li>
-        <tag>Tribal</tag>
+        <tag>Rural</tag>
         <baseWeight>1</baseWeight>
         <weightFactor>1</weightFactor>
       </li>
@@ -34,11 +34,6 @@
       <li>
         <tag>BeardTribal</tag>
         <baseWeight>0.85</baseWeight>
-        <weightFactor>1</weightFactor>
-      </li>
-      <li>
-        <tag>TattooBodyTribal</tag>
-        <baseWeight>0.4</baseWeight>
         <weightFactor>1</weightFactor>
       </li>
       <li>
