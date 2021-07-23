@@ -148,7 +148,7 @@
       </tags>
     </apparel>
     <equippedStatOffsets>
-      <SocialImpact>0.15</SocialImpact>
+      <SocialImpact>0.25</SocialImpact>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.5</SlaveSuppressionOffset>
 	  <GlobalLearningFactor>-1.0</GlobalLearningFactor>
     </equippedStatOffsets>
@@ -225,7 +225,7 @@
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>VFEM_Apparel_KingsRobes</defName>
     <label>king’s robes</label>
-    <description>A long robe worthy of a king. Extremely beautiful.</description>
+    <description>A long robe with golden chestplate, worthy of a king. Extremely beautiful.</description>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/KingsRobe/KingsRobe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -249,7 +249,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <WorkToMake>5000</WorkToMake>
       <Mass>0.25</Mass>
-      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierArmor>0.6</StuffEffectMultiplierArmor>
       <StuffEffectMultiplierInsulation_Cold>0.35</StuffEffectMultiplierInsulation_Cold>
       <StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>2.0</EquipDelay>
