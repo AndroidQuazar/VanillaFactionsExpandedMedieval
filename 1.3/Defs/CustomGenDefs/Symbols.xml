@@ -1,69 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <KCSG.SymbolDef>
+    <defName>VFEM_CobblestoneWall_ChunkGranite</defName>
+    <thing>VFEM_CobblestoneWall</thing>
+    <stuff>ChunkGranite</stuff>
+  </KCSG.SymbolDef>
 
-<KCSG.SymbolDef>
-  <defName>VFEM_CobblestoneWall_ChunkGranite</defName>
-  <thing>VFEM_CobblestoneWall</thing>
-  <stuff>ChunkGranite</stuff>
-</KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>VFEM_LowRockWall_ChunkGranite</defName>
+    <thing>VFEM_LowRockWall</thing>
+    <stuff>ChunkGranite</stuff>
+  </KCSG.SymbolDef>
 
-<KCSG.SymbolDef>
-  <defName>VFEM_LowRockWall_ChunkGranite</defName>
-  <thing>VFEM_LowRockWall</thing>
-  <stuff>ChunkGranite</stuff>
-</KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>VFEM_WineBarrel_North</defName>
+    <thing>VFEM_WineBarrel</thing>
+    <rotation>North</rotation>
+  </KCSG.SymbolDef>
 
-<KCSG.SymbolDef>
-  <defName>VFEM_WineBarrel_North</defName>
-  <thing>VFEM_WineBarrel</thing>
-  <rotation>North</rotation>
-</KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>VFEM_CobblestoneWall_ChunkLimestone</defName>
+    <thing>VFEM_CobblestoneWall</thing>
+    <stuff>ChunkLimestone</stuff>
+  </KCSG.SymbolDef>
 
-<KCSG.SymbolDef>
-  <defName>VFEM_CobblestoneWall_ChunkLimestone</defName>
-  <thing>VFEM_CobblestoneWall</thing>
-  <stuff>ChunkLimestone</stuff>
-</KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>VFEM_LowRockWall_ChunkLimestone</defName>
+    <thing>VFEM_LowRockWall</thing>
+    <stuff>ChunkLimestone</stuff>
+  </KCSG.SymbolDef>
 
-<KCSG.SymbolDef>
-  <defName>VFEM_LowRockWall_ChunkLimestone</defName>
-  <thing>VFEM_LowRockWall</thing>
-  <stuff>ChunkLimestone</stuff>
-</KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>VFEM_CobblestoneWall_ChunkSandstone</defName>
+    <thing>VFEM_CobblestoneWall</thing>
+    <stuff>ChunkSandstone</stuff>
+  </KCSG.SymbolDef>
 
-<KCSG.SymbolDef>
-  <defName>VFEM_CobblestoneWall_ChunkSandstone</defName>
-  <thing>VFEM_CobblestoneWall</thing>
-  <stuff>ChunkSandstone</stuff>
-</KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>VFEM_LowRockWall_ChunkSandstone</defName>
+    <thing>VFEM_LowRockWall</thing>
+    <stuff>ChunkSandstone</stuff>
+  </KCSG.SymbolDef>
 
-<KCSG.SymbolDef>
-  <defName>VFEM_LowRockWall_ChunkSandstone</defName>
-  <thing>VFEM_LowRockWall</thing>
-  <stuff>ChunkSandstone</stuff>
-</KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>VFEM_ArcheryTarget</defName>
+    <thing>VFEM_ArcheryTarget</thing>
+  </KCSG.SymbolDef>
 
-<KCSG.SymbolDef>
-  <defName>VFEM_ArcheryTarget</defName>
-  <thing>VFEM_ArcheryTarget</thing>
-</KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>VFEM_Bow_HeavyCrossbow</defName>
+    <thing>VFEM_Bow_HeavyCrossbow</thing>
+  </KCSG.SymbolDef>
 
-<KCSG.SymbolDef>
-  <defName>VFEM_Bow_HeavyCrossbow</defName>
-  <thing>VFEM_Bow_HeavyCrossbow</thing>
-</KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>VFEM_CobblestoneWall_ChunkSlate</defName>
+    <thing>VFEM_CobblestoneWall</thing>
+    <stuff>ChunkSlate</stuff>
+  </KCSG.SymbolDef>
 
-<KCSG.SymbolDef>
-  <defName>VFEM_CobblestoneWall_ChunkSlate</defName>
-  <thing>VFEM_CobblestoneWall</thing>
-  <stuff>ChunkSlate</stuff>
-</KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>VFEM_LowRockWall_ChunkSlate</defName>
+    <thing>VFEM_LowRockWall</thing>
+    <stuff>ChunkSlate</stuff>
+  </KCSG.SymbolDef>
 
-<KCSG.SymbolDef>
-  <defName>VFEM_LowRockWall_ChunkSlate</defName>
-  <thing>VFEM_LowRockWall</thing>
-  <stuff>ChunkSlate</stuff>
-</KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>VFEM_Wine</defName>
+    <thing>VFEM_Wine</thing>
+  </KCSG.SymbolDef>
 
+  <KCSG.SymbolDef>
+    <defName>VFEM_RawGrapes</defName>
+    <thing>VFEM_RawGrapes</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>VFEM_Apparel_PlateArmorHeavy</defName>
+    <thing>VFEM_Apparel_PlateArmorHeavy</thing>
+  </KCSG.SymbolDef>
+  
+  <KCSG.SymbolDef>
+    <defName>VFEM_ArcheryTarget_North</defName>
+    <thing>VFEM_ArcheryTarget</thing>
+    <rotation>North</rotation>
+  </KCSG.SymbolDef>
 </Defs>
-
