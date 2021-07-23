@@ -68,7 +68,7 @@
       <growDays>20</growDays>
       <visualSizeRange>0.8~2.0</visualSizeRange>
       <sowMinSkill>10</sowMinSkill>
-	  <sowWork>1600</sowWork>
+	  <sowWork>6000</sowWork>
       <sowTags>
         <li>Ground</li>
       </sowTags>
