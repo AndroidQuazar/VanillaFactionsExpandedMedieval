@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Vanilla Hair Expanded</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/CultureDef[@Name = "VFEM_Feudal"]/styleItemTags</xpath>
+               <value>
+                  <li>
+                     <tag>Medieval</tag>
+                     <baseWeight>1</baseWeight>
+                     <weightFactor>1</weightFactor>
+                  </li>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+</Patch>
+
