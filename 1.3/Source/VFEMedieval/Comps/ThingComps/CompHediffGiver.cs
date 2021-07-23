@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 namespace VFEMedieval
@@ -48,12 +49,12 @@ namespace VFEMedieval
                 }
 
                 affectedPawns.RemoveAll(x => !touchedPawns.Contains(x.Key));
-                foreach (var data in affectedPawns)
+                foreach (var pawn in affectedPawns.Keys.ToList())
                 {
-                    if (data.Value >= Props.minTicksToAffect)
+                    if (affectedPawns[pawn] >= Props.minTicksToAffect)
                     {
-                        affectedPawns[data.Key] -= Props.minTicksToAffect;
-                        HealthUtility.AdjustSeverity(data.Key, Props.hediff, Props.adjustSeverity);
+                        affectedPawns[pawn] -= Props.minTicksToAffect;
+                        HealthUtility.AdjustSeverity(pawn, Props.hediff, Props.adjustSeverity);
                     }
                 }
             }
