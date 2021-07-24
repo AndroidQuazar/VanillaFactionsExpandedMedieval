@@ -31,6 +31,11 @@
       <MeditationFocusStrength>0.22</MeditationFocusStrength>
       <Beauty>-2</Beauty>
     </statBases>
+    <building>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/RockWall/RockWall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <altitudeLayer>Building</altitudeLayer>
     <passability>Impassable</passability>
