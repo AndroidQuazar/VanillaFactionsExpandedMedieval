@@ -22,37 +22,7 @@
         <match Class="PatchOperationSequence">
             <operations>
 
-                <!-- Add musketeer pawn kind -->
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs</xpath>
-                    <value>
-
-                        <PawnKindDef ParentName="VFEM_MedievalMilitaryBase">
-                            <defName>VFEM_Medieval_Musketeer</defName>
-                            <label>musketeer</label>
-                            <combatPower>80</combatPower>
-                            <gearHealthRange>
-                                <min>0.8</min>
-                                <max>1.8</max>
-                            </gearHealthRange>
-                            <apparelMoney>
-                                <min>500</min>
-                                <max>700</max>
-                            </apparelMoney>
-                            <apparelTags>
-                                <li>MedievalArmorDecent</li>
-                            </apparelTags>
-                            <weaponMoney>
-                                <min>300</min>
-                                <max>300</max>
-                            </weaponMoney>
-                            <weaponTags>
-                                <li>MedievalRangedAdvanced</li>
-                            </weaponTags>
-                        </PawnKindDef>
-
-                    </value>
-                </li>
+                <!-- musketeer pawn kind is obsolete-->
 
 
                 <!-- Peasants will be able to throw rocks -->
