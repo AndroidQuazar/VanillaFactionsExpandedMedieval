@@ -95,7 +95,6 @@
       <defaultOutfitTags>
         <li>Soldier</li>
       </defaultOutfitTags>
-	  <shellCoversHead>true</shellCoversHead>
     </apparel>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
