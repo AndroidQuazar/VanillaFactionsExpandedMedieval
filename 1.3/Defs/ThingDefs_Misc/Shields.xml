@@ -22,6 +22,7 @@
 			<layers>
 				<li>VFEC_OuterShell</li>
 			</layers>
+			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
 		</apparel>
         <comps>
             <li>
