@@ -3,8 +3,8 @@
   
   <SitePartDef>
     <defName>VFE_Skirmish</defName>
-    <label>a friendly outpost under mech attack</label>
-    <description>A stranded, incapacitated refugee begging for help.</description>
+    <label>A site of battle between two factions</label>
+    <description>A site of battle between two factions at war. Your allies beg for assistance.</description>
     <workerClass>VFEMedieval.SitePartWorker_Skirmish</workerClass>
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/Sites/GenericSite</expandingIconTexture>

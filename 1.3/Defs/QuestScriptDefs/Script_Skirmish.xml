@@ -116,20 +116,19 @@
 					<node Class="QuestNode_End" />
 				</li>
 
-
 				<li Class="QuestNode_Signal">
-					<inSignal>site.AllMechsDefeated</inSignal>
+					<inSignal>site.AllEnemiesDefeated</inSignal>
 					<node Class="QuestNode_Sequence">
 						<nodes>
 							<li Class="QuestNode_Letter">
-								<label TKey="LetterLabelMechsAreDefeated">Enemy defeated.</label>
-								<text TKey="LetterTextMechsAreDefeated">All enemies in the area have been defeated.</text>
+								<label TKey="LetterLabelEnemiesAreDefeated">Enemy defeated.</label>
+								<text TKey="LetterTextEnemiesAreDefeated">All enemies in the area have been defeated.</text>
 							</li>
 						</nodes>
 					</node>
 				</li>
 				<li Class="QuestNode_End">
-					<inSignal>site.AllMechsDefeated</inSignal>
+					<inSignal>site.AllEnemiesDefeated</inSignal>
 					<outcome>Success</outcome>
 				</li>
 			</nodes>
