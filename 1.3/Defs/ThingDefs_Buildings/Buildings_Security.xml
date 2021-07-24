@@ -16,7 +16,7 @@
         <li>Rock</li>
       </linkFlags>
     </graphicData>
-    <uiIconPath>Things/Building/Linked/RockWall_MenuIcon</uiIconPath>
+    <uiIconPath>Things/Building/Linked/RockLowWall/RockLowWall_MenuIcon</uiIconPath>
     <uiIconScale>1.2</uiIconScale>
     <altitudeLayer>Building</altitudeLayer>
     <pathCost>100</pathCost>
@@ -37,7 +37,7 @@
       <isFence>true</isFence>
       <isPlaceOverableWall>true</isPlaceOverableWall>
       <blueprintGraphicData>
-        <texPath>Things/Building/Linked/Barricade_Blueprint_Atlas</texPath>
+        <texPath>Things/Building/Linked/RockLowWall/RockLowWall_Blueprint_Atlas</texPath>
       </blueprintGraphicData>
     </building>
     <placingDraggableDimensions>1</placingDraggableDimensions>
