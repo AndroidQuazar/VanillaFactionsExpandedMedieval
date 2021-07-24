@@ -15,8 +15,8 @@
 		<questDescriptionRules>
 			<rulesStrings>
 				<!-- Faction leader asker -->
-				<li>questDescription(asker_factionLeader==True)->[asker_nameDef], [asker_faction_leaderTitle] of [asker_faction_name], says that [asker_possessive] outpost is under attack by mechanoids.
-\n[asker_nameDef] has nobody to spare to assist them, but says that if you can make it to the outpost in time, the men you save can choose to join you.\n\nYou can expect the defenders to be heavily outnumbered and wounded.</li>
+				<li>questDescription(asker_factionLeader==True)->[asker_nameDef], [asker_faction_leaderTitle] of [asker_faction_name], says that [asker_possessive] forces encountered an enemy and want to battle them in an open field.
+\n[asker_nameDef] has nobody to spare to assist them, but says that if you can make it in time, you will be doing them a great favor.</li>
 			</rulesStrings>
 		</questDescriptionRules>
 
@@ -102,7 +102,7 @@
 						<nodes>
 							<li Class="QuestNode_Letter">
 								<label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
-								<text TKey="LetterTextQuestExpired"> The outpost has fallen to the mechanoid attack force. The quest [resolvedQuestName] has expired.</text>
+								<text TKey="LetterTextQuestExpired"> The battle has resolved. The quest [resolvedQuestName] has expired.</text>
 							</li>
 							<li Class="QuestNode_End">
 								<outcome>Fail</outcome>
@@ -122,8 +122,8 @@
 					<node Class="QuestNode_Sequence">
 						<nodes>
 							<li Class="QuestNode_Letter">
-								<label TKey="LetterLabelMechsAreDefeated">Mechanoids defeated</label>
-								<text TKey="LetterTextMechsAreDefeated">All mechanoids in the area have been defeated.</text>
+								<label TKey="LetterLabelMechsAreDefeated">Enemy defeated.</label>
+								<text TKey="LetterTextMechsAreDefeated">All enemies in the area have been defeated.</text>
 							</li>
 						</nodes>
 					</node>
