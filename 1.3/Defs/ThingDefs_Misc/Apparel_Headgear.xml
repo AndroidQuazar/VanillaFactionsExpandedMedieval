@@ -221,6 +221,7 @@
       <defaultOutfitTags>
         <li>Worker</li>
       </defaultOutfitTags>
+	  <gender>Female</gender>
     </apparel>
     <colorGenerator Class="ColorGenerator_Options">
       <options>
