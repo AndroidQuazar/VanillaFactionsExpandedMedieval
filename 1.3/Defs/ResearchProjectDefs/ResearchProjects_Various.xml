@@ -59,7 +59,7 @@
   <ResearchProjectDef>
     <defName>VFEM_MeatSmoking</defName>
     <label>meat smoking</label>
-    <description>Grow healroot trees that yield medicine and emit antispetic smell.</description>
+    <description>Smoke meat to preserve it for a long amount of time.</description>
     <baseCost>800</baseCost>
     <techLevel>Medieval</techLevel>
     <prerequisites>
