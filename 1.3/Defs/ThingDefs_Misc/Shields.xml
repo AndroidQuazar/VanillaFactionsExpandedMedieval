@@ -30,6 +30,8 @@
             </li>
         </comps>
         <equippedAngleOffset>-30</equippedAngleOffset>
+		<countsAsClothingForNudity>false</countsAsClothingForNudity>
+		<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
         <stuffCategories>
             <li>Leathery</li>
         </stuffCategories>
