@@ -22,7 +22,8 @@
 			<layers>
 				<li>VFEC_OuterShell</li>
 			</layers>
-			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+		<countsAsClothingForNudity>false</countsAsClothingForNudity>
+		<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
 		</apparel>
         <comps>
             <li>
@@ -30,8 +31,6 @@
             </li>
         </comps>
         <equippedAngleOffset>-30</equippedAngleOffset>
-		<countsAsClothingForNudity>false</countsAsClothingForNudity>
-		<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
         <stuffCategories>
             <li>Leathery</li>
         </stuffCategories>
