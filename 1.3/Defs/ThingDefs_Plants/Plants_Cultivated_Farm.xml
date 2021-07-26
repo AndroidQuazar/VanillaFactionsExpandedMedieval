@@ -60,7 +60,7 @@
 			<radius>5</radius>
 			<hediff>VFEM_AntisepticSmell</hediff>
 			<minTicksToAffect>1000</minTicksToAffect>
-			<adjustSeverity>0.2</adjustSeverity>
+			<adjustSeverity>0.02</adjustSeverity>
 		</li>
 	</comps>
     <plant>
