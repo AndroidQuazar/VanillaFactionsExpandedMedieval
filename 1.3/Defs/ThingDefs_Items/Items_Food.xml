@@ -7,7 +7,7 @@
     <description>A piece of meat preserved by smoking. Tastes good. It lasts a long time without refrigeration. Great for traveling.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>MeatRaw</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/SmokedMeat</texPath>
