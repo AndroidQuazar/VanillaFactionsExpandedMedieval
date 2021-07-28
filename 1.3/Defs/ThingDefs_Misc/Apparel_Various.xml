@@ -34,7 +34,7 @@
       <MeleeDodgeChance>-20</MeleeDodgeChance>      <!-- Offsets nimble and the minimum skill to get a dodge chance -->
     </equippedStatOffsets>
     <thingCategories>
-      <li>Apparel</li>
+      <li>ApparelArmor</li>
     </thingCategories>
     <apparel>
       <bodyPartGroups>
