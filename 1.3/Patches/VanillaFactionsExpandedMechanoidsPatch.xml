@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Mechanoids</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/ItemProcessor.CombinationDef[defName = "VFEM_SmokerMeatToSmokedMeat"]/disallowedThingDefs</xpath>
+					<value>
+						<li>VFEM_ProcessedMeat</li>
+						
+					</value>
+				</li>
+				
+				
+
+
+
+
+
+
+
+
+
+
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+
