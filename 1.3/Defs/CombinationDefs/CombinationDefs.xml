@@ -7,6 +7,9 @@
 		<items>
 			<li>MeatRaw</li>
 		</items>
+		<disallowedThingDefs>
+			<li>VFEM_SmokedMeat</li>
+		</disallowedThingDefs>
 		<amount>
 			<li>75</li>
 		</amount>
