@@ -97,9 +97,7 @@
 		<hasInteractionCell>True</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
-		<inspectorTabs>
-			<li>ITab_Bills</li>
-		</inspectorTabs>
+		
 		<costList>
 			<Steel>10</Steel>
 			<WoodLog>20</WoodLog>
