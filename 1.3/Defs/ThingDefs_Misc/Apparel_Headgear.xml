@@ -310,7 +310,7 @@
 	<modExtensions>
 		<li Class="VanillaApparelExpanded.ApparelExtension">
 			<workDisables>
-				<li>AllWork</li>
+				<li>Caring</li>
 			</workDisables>
 		</li>
 	</modExtensions>
