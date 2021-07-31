@@ -310,7 +310,24 @@
 	<modExtensions>
 		<li Class="VanillaApparelExpanded.ApparelExtension">
 			<workDisables>
+				<li>ManualDumb</li>
+				<li>ManualSkilled</li>
+				<li>Violent</li>
 				<li>Caring</li>
+				<li>Commoner</li>
+				<li>Intellectual</li>
+				<li>Animals</li>
+				<li>Artistic</li>
+				<li>Crafting</li>
+				<li>Cooking</li>
+				<li>Firefighting</li>
+				<li>Cleaning</li>
+				<li>Hauling</li>
+				<li>PlantWork</li>
+				<li>Mining</li>
+				<li>Hunting</li>
+				<li>Constructing</li>
+				<li>Shooting</li>
 			</workDisables>
 		</li>
 	</modExtensions>
