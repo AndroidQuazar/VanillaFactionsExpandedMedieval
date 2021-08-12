@@ -110,10 +110,11 @@
       <damageData>
         <rect>(0.35,0.35,0.3,0.3)</rect>
       </damageData>
+		<drawOffset>(0, 0.05, 0)</drawOffset>
     </graphicData>
     <uiIconPath>Things/Building/Furniture/WallTorch/WallTorch_MenuIcon</uiIconPath>
     <uiIconScale>0.85</uiIconScale>
-    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>14</pathCost>
     <constructEffect>ConstructWood</constructEffect>
