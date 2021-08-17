@@ -85,7 +85,7 @@
       <harvestFailable>true</harvestFailable>
       <wildClusterRadius>1</wildClusterRadius>
       <wildClusterWeight>1</wildClusterWeight>
-	  <harvestAfterGrowth>0.8</harvestAfterGrowth>
+	  <!-- <harvestAfterGrowth>0.8</harvestAfterGrowth> -->
     </plant>
    </ThingDef>
 
