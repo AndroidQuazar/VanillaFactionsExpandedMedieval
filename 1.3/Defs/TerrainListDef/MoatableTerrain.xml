@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<VFEMedieval.TerrainListDef>
+		<defName>VFEM_MoatableTerrain</defName>
+		<terrainDefs>
+			<li>WaterShallow</li>
+			<li>Marsh</li>
+			<li>SoftSand</li>
+			<li>Sand</li>
+			<li>Soil</li>
+			<li>Gravel</li>
+			<li>MossyTerrain</li>
+			<li>MarshyTerrain</li>
+		</terrainDefs>
+	</VFEMedieval.TerrainListDef>
+</Defs>

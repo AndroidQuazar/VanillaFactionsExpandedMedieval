@@ -35,12 +35,21 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
     <Reference Include="VFECore">
       <HintPath>..\Refs\VFECore.dll</HintPath>
       <Private>False</Private>
@@ -50,6 +59,7 @@
     <Compile Include="Comps\ThingComps\CompHediffGiver.cs" />
     <Compile Include="Comps\ThingComps\CompProperties_IngestedThoughtFromQuality.cs" />
     <Compile Include="Comps\ThingComps\CompIngestedThoughtFromQuality.cs" />
+    <Compile Include="Defs\TerrainListDef.cs" />
     <Compile Include="DefOf\RiverDefOf.cs" />
     <Compile Include="DefOf\StuffCategoryDefOf.cs" />
     <Compile Include="DefOf\PawnKindDefOf.cs" />

@@ -57,7 +57,7 @@ namespace VFEMedieval
 			{
 				return "TooCloseToMapEdge".Translate();
 			}
-			if (!c.GetTerrain(base.Map).affordances.Contains(VFEM_DefOf.VFEM_Moatable))
+			if (!DefDatabase<TerrainListDef>.GetNamed("VFEM_MoatableTerrain").terrainDefs.Contains(c.GetTerrain(base.Map)))
 			{
 				return "MessageMustDesignateMoatableTerrain".Translate();
 			}
