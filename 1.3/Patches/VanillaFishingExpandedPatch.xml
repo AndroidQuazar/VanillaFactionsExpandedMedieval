@@ -34,7 +34,7 @@
 							</ingestible>
 
 							<uiIconForStackCount>1</uiIconForStackCount>
-							<comps>
+							<comps Inherit="false">
 								<li Class="CompProperties_Rottable">
 									<daysToRotStart>16</daysToRotStart>
 									<rotDestroys>True</rotDestroys>
