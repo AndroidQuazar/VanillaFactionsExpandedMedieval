@@ -88,6 +88,10 @@
                                     <key>Dromedary</key>
                                     <value>25</value>
                                 </li>
+                                <li>
+                                    <key>Horse</key>
+                                    <value>50</value>
+                                </li>
                             </possibleMounts>
                         </li>
                     </value>
@@ -107,26 +111,15 @@
                                     <key>Dromedary</key>
                                     <value>25</value>
                                 </li>
+                                <li>
+                                    <key>Horse</key>
+                                    <value>50</value>
+                                </li>
                             </possibleMounts>
                         </li>
                     </value>
                 </li>
 
-                <!-- If Vanilla Animals Expanded - Livestock is added, add horses to the mix -->
-                <li Class="PatchOperationFindMod">
-                    <mods>
-                        <li>Vanilla Animals Expanded — Livestock</li>
-                    </mods>
-                    <match Class="PatchOperationAdd">
-                        <xpath>/Defs/PawnKindDef[@Name="VFEM_MedievalEliteMilitaryBase" or defName="VFEM_Medieval_Lord"]/modExtensions/li[@Class="GiddyUpCore.CustomMountsPatch"]/possibleMounts</xpath>
-                        <value>
-                            <li>
-                                <key>AEXP_Horse</key>
-                                <value>100</value>
-                            </li>
-                        </value>
-                    </match>
-                </li>
 
             </operations>
         </match>
