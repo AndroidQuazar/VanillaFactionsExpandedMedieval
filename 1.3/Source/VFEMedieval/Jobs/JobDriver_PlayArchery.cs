@@ -33,7 +33,7 @@ namespace VFEMedieval
 			drawLoc += rootLoc + new Vector3(0f, 0f, 0.4f).RotatedBy(num);
 			if (bow is null)
 			{
-				bow = ThingMaker.MakeThing(VFEM_DefOf.Bow_Great);
+				bow = ThingMaker.MakeThing(VFEM_DefOf.Bow_Great, GenStuff.DefaultStuffFor(VFEM_DefOf.Bow_Great));
 			}
 			DrawEquipmentAiming(bow, drawLoc, num);
 		}
