@@ -19,7 +19,6 @@
     <minifiedDef>MinifiedThing</minifiedDef>
     <altitudeLayer>Building</altitudeLayer>
     <socialPropernessMatters>true</socialPropernessMatters>
-    <minTechLevelToBuild>Medieval</minTechLevelToBuild>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <thingCategories>
       <li>BuildingsJoy</li>
@@ -32,7 +31,6 @@
       <JoyGainFactor>1</JoyGainFactor>
     </statBases>
     <defaultPlacingRot>South</defaultPlacingRot>
-    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
     <building>
       <joyKind>Gaming_Dexterity</joyKind>
       <watchBuildingStandDistanceRange>8~9</watchBuildingStandDistanceRange>
